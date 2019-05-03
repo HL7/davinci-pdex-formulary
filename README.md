@@ -6,7 +6,7 @@ FHIR IG: Payer Data Exchange Drug Formulary (PDex-formulary)
 This Repository is used by HL7 to publish the Continuous Integration Build of
 the Da Vinci Payer Data Exchange (PDex) for Plan Formulary (PDex-formulary)
 Implementation Guide (IG). You can find the published IG at:
-http://build.fhir.org/ig/HL7/davinci-pdex-formulary/index.html
+http://build.fhir.org/ig/HL7/davinci-pdex-formulary/
 
 The PDex-formulary IG is the work product of the HL7 Da Vinci Project. More
 information about the Da Vinci Interoperability Project can be found here:
