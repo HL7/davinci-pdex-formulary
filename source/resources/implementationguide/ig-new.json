@@ -7,15 +7,15 @@
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Windows\\Temp\\tmp-6956VqNcaZ7p9vZU\\source\\resources"
+    "valueString" : "C:\\Windows\\Temp\\tmp-6956W78TqucqejcP\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Windows\\Temp\\tmp-6956VqNcaZ7p9vZU\\framework"
+    "valueString" : "C:\\Windows\\Temp\\tmp-6956W78TqucqejcP\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Windows\\Temp\\tmp-6956VqNcaZ7p9vZU\\source\\pages"
+    "valueString" : "C:\\Windows\\Temp\\tmp-6956W78TqucqejcP\\source\\pages"
   }],
   "url" : "http://hl7.org/fhir/us/davinci-pdex/ImplementationGuide/davinci-pdex-formulary",
   "version" : "0.0.1.0",
