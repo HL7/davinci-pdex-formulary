@@ -1,0 +1,135 @@
+---
+# jekyll header
+---
+{% include header.html %}
+
+<!-- ============BreadCrumb=============== -->
+<div id="segment-breadcrumb" class="segmnt">
+  <!-- segment-breadcrumb -->
+  <div class="container">
+    <!-- container -->
+    <ul class="breadcrumb">
+      <li title="home"><a href="index.html"><b>Home</b></a></li>
+      <li><b>Value Sets</b></li>
+    </ul>
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-breadcrumb -->
+
+{% include container-start.html %}
+
+<!-- ============CONTENT CONTENT=============== -->
+
+<h2>Primary local value sets used in this Implementation Guide</h2>
+
+<table class="codes local">
+  <thead>
+    <tr>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Definition</b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+          <td><a href="ValueSet-usdrugformulary-CoinsuranceOptionVS.html">CoinsuranceOptionVS</a></td>
+          <td>{% capture md_text %}As defined by QHP Formulary Spec{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-usdrugformulary-CopayOptionVS.html">CopayOptionVS</a></td>
+          <td>{% capture md_text %}As defined by QHP Formulary Spec{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-usdrugformulary-DrugTierVS.html">DrugTierVS</a></td>
+          <td>{% capture md_text %}The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-usdrugformulary-PharmacyTypeVS.html">PharmacyTypeVS</a></td>
+          <td>{% capture md_text %}Types of Pharmacies...each payer will likely have its own controlled vocabulary{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        
+  </tbody>
+</table>
+
+<h2>Primary external value sets used in this Implementation Guide</h2>
+
+<table class="codes external">
+  <thead>
+    <tr>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Definition</b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/languages">CommonLanguages</a></td>
+        <td>{% capture md_text %}This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47){% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/list-example-codes">ExampleUseCodesForList</a></td>
+        <td>{% capture md_text %}Example use codes for the List resource - typical kinds of use.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/list-empty-reason">ListEmptyReasons</a></td>
+        <td>{% capture md_text %}General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/list-order">ListOrderCodes</a></td>
+        <td>{% capture md_text %}Base values for the order of the items in a list resource.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/list-item-flag">PatientMedicineChangeTypes</a></td>
+        <td>{% capture md_text %}Example Item Flags for the List Resource. In this case, these are the kind of flags that would be used on a medication list at the end of a consultation.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/medication-form-codes">SNOMEDCTFormCodes</a></td>
+        <td>{% capture md_text %}This value set includes all dose form codes from SNOMED CT - provided as an exemplar.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/route-codes">SNOMEDCTRouteCodes</a></td>
+        <td>{% capture md_text %}This value set includes all Route codes from SNOMED CT - provided as an exemplar.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://www.hl7.org/fhir/us/core/ValueSet-us-core-medication-codes.html">USCoreMedicationCodes</a></td>
+        <td>{% capture md_text %}All prescribable medication formulations represented using  either a 'generic' or 'brand-specific' concept. This includes RxNorm codes whose Term Type is SCD (semantic clinical drug), SBD (semantic brand drug), GPCK (generic pack), BPCK (brand pack), SCDG (semantic clinical drug group), SBDG (semantic brand drug group), SCDF (semantic clinical drug form), or SBDF (semantic brand drug form){% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/list-mode|4.0.0">http://hl7.org/fhir/ValueSet/list-mode|4.0.0</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/list-status|4.0.0">http://hl7.org/fhir/ValueSet/list-status|4.0.0</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/medication-status|4.0.0">http://hl7.org/fhir/ValueSet/medication-status|4.0.0</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/medicationknowledge-status|4.0.0">http://hl7.org/fhir/ValueSet/medicationknowledge-status|4.0.0</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/medicationknowledge-characteristic">medicationKnowledge Characteristic Codes</a></td>
+        <td>{% capture md_text %}MedicationKnowledge Characteristic Codes{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/medicationknowledge-package-type">medicationKnowledge Package Type Codes</a></td>
+        <td>{% capture md_text %}MedicationKnowledge Package Type Codes{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      
+  </tbody>
+</table>
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+{% include footer.html %}

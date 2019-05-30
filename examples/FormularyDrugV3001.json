@@ -1,0 +1,90 @@
+{
+  "resourceType": "MedicationKnowledge",
+  "id": "FormularyDrugV3001",
+  "meta": {
+    "profile": [
+      "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/StructureDefinition/usdrugformulary-FormularyDrug"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
+  },
+  "extension": [
+    {
+      "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/StructureDefinition/usdrugformulary-DrugTierID-extension",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/CodeSystem/usdrugformulary-DrugTierCS",
+            "code": "BRAND",
+            "display": "Brand"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/StructureDefinition/usdrugformulary-PriorAuthorization-extension",
+      "valueBoolean": false
+    },
+    {
+      "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/StructureDefinition/usdrugformulary-StepTherapyLimit-extension",
+      "valueBoolean": false
+    },
+    {
+      "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/StructureDefinition/usdrugformulary-QuantityLimit-extension",
+      "valueBoolean": false
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "1049640",
+        "display": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet [Percocet]"
+      }
+    ]
+  },
+  "medicineClassification": [
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "PlanID"
+          }
+        ]
+      },
+      "classification": [
+        {
+          "coding": [
+            {
+              "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/CodeSystem/usdrugformulary-PlanIDCS",
+              "code": "12345XX9876543",
+              "display": "Sample Gold Health Plan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "display": "DrugTierID"
+          }
+        ]
+      },
+      "classification": [
+        {
+          "coding": [
+            {
+              "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/CodeSystem/usdrugformulary-DrugTierCS",
+              "code": "BRAND",
+              "display": "Brand"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "id": "usdrugformulary-CopayOptionVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CopayOptionVS ValueSet</b></p>\n<p>As defined by QHP Formulary Spec</p>\n</div>"
+  },
+  "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/ValueSet/usdrugformulary-CopayOptionVS",
+  "identifier": [
+    {
+      "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open",
+      "value": "usdrugformulary.CopayOptionVS"
+    }
+  ],
+  "name": "CopayOptionVS",
+  "title": "CopayOptionVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-05-30",
+  "description": "As defined by QHP Formulary Spec",
+  "compose": {
+    "include": [
+      {
+        "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/CodeSystem/usdrugformulary-CopayOptionCS",
+        "concept": [
+          {
+            "code": "AFTER-DEDUCTIBLE",
+            "display": "AFTER-DEDUCTIBLE"
+          },
+          {
+            "code": "BEFORE-DEDUCTIBLE",
+            "display": "BEFORE-DEDUCTIBLE"
+          },
+          {
+            "code": "NO-CHARGE",
+            "display": "NO-CHARGE"
+          },
+          {
+            "code": "NO-CHARGE-AFTER-DEDUCTIBLE",
+            "display": "NO-CHARGE-AFTER-DEDUCTIBLE"
+          }
+        ]
+      }
+    ]
+  }
+}

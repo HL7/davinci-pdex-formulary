@@ -1,0 +1,266 @@
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+    <id value="usdrugformulary-0.2.1" />
+    <url value="https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/ImplementationGuide/usdrugformulary-0.2.1" />
+    <name value="US_Drug_Formularies" />
+    <title value="US Drug Formularies" />
+    <status value="draft" />
+    <packageId value="usdrugformulary"/>
+    <fhirVersion value="4.0.0"/>
+    <definition>
+        <grouping>
+            <name value="Profiles in this Implementation Guide"/>
+            <description value="Profiles in this Implementation Guide"/>
+        </grouping>
+        <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-CoveragePlan" />
+          </reference>
+          <name value="usdrugformulary-CoveragePlan" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-FormularyDrug" />
+          </reference>
+          <name value="usdrugformulary-FormularyDrug" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-FormularyDrugOption2" />
+          </reference>
+          <name value="usdrugformulary-FormularyDrugOption2" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-CoInsuranceRate-extension" />
+          </reference>
+          <name value="usdrugformulary-CoInsuranceRate" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-CoinsuranceOption-extension" />
+          </reference>
+          <name value="usdrugformulary-CoinsuranceOption" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-CopayAmount-extension" />
+          </reference>
+          <name value="usdrugformulary-CopayAmount" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-CopayOption-extension" />
+          </reference>
+          <name value="usdrugformulary-CopayOption" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-CostSharing-extension" />
+          </reference>
+          <name value="usdrugformulary-CostSharing" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-DrugTierDefinition-extension" />
+          </reference>
+          <name value="usdrugformulary-DrugTierDefinition" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-DrugTierID-extension" />
+          </reference>
+          <name value="usdrugformulary-DrugTierID" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-EmailPlanContact-extension" />
+          </reference>
+          <name value="usdrugformulary-EmailPlanContact" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-FormularyURL-extension" />
+          </reference>
+          <name value="usdrugformulary-FormularyURL" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-MailOrder-extension" />
+          </reference>
+          <name value="usdrugformulary-MailOrder" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-MarketingURL-extension" />
+          </reference>
+          <name value="usdrugformulary-MarketingURL" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-Network-extension" />
+          </reference>
+          <name value="usdrugformulary-Network" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-PharmacyType-extension" />
+          </reference>
+          <name value="usdrugformulary-PharmacyType" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-PlanIDType-extension" />
+          </reference>
+          <name value="usdrugformulary-PlanIDType" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-PriorAuthorization-extension" />
+          </reference>
+          <name value="usdrugformulary-PriorAuthorization" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-QuantityLimit-extension" />
+          </reference>
+          <name value="usdrugformulary-QuantityLimit" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdrugformulary-StepTherapyLimit-extension" />
+          </reference>
+          <name value="usdrugformulary-StepTherapyLimit" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/usdrugformulary-CoinsuranceOptionVS" />
+          </reference>
+          <name value="CoinsuranceOptionVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/usdrugformulary-CopayOptionVS" />
+          </reference>
+          <name value="CopayOptionVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/usdrugformulary-DrugTierVS" />
+          </reference>
+          <name value="DrugTierVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/usdrugformulary-PharmacyTypeVS" />
+          </reference>
+          <name value="PharmacyTypeVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/usdrugformulary-CoinsuranceOptionCS" />
+          </reference>
+          <name value="CoinsuranceOptionCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/usdrugformulary-CopayOptionCS" />
+          </reference>
+          <name value="CopayOptionCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/usdrugformulary-DrugTierCS" />
+          </reference>
+          <name value="DrugTierCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/usdrugformulary-PharmacyTypeCS" />
+          </reference>
+          <name value="PharmacyTypeCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="List/covplanV1002" />
+          </reference>
+          <name value="Example: covplanV1002" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="List/covplanV2002" />
+          </reference>
+          <name value="Example: covplanV2002" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="List/CoveragePlanV3001" />
+          </reference>
+          <name value="Example: CoveragePlanV3001" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="List/CoveragePlanV3002" />
+          </reference>
+          <name value="Example: CoveragePlanV3002" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="MedicationKnowledge/formularydrugV1002" />
+          </reference>
+          <name value="Example: formularydrugV1002" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="Medication/formularydrugV2002" />
+          </reference>
+          <name value="Example: formularydrugV2002" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="MedicationKnowledge/FormularyDrugV3001" />
+          </reference>
+          <name value="Example: FormularyDrugV3001" />
+      </resource>
+      
+        <page>
+            <nameUrl value="index.html" />
+            <title value="US Drug Formularies" />
+            <generation value="html" />
+        </page>
+    </definition>
+</ImplementationGuide>

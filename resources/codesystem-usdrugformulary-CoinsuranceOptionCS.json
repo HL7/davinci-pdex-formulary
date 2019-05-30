@@ -1,0 +1,51 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "usdrugformulary-CoinsuranceOptionCS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CoinsuranceOptionCS CodeSystem</b></p>\n<p>As defined by QHP Formulary Spec</p>\n</div>"
+  },
+  "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/CodeSystem/usdrugformulary-CoinsuranceOptionCS",
+  "identifier": [
+    {
+      "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open",
+      "value": "usdrugformulary.CoinsuranceOptionCS"
+    }
+  ],
+  "name": "CoinsuranceOptionCS",
+  "title": "CoinsuranceOptionCS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-05-30",
+  "description": "As defined by QHP Formulary Spec",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 3,
+  "concept": [
+    {
+      "code": "AFTER-DEDUCTIBLE",
+      "definition": "AFTER-DEDUCTIBLE",
+      "display": "AFTER-DEDUCTIBLE"
+    },
+    {
+      "code": "NO-CHARGE",
+      "definition": "NO-CHARGE",
+      "display": "NO-CHARGE"
+    },
+    {
+      "code": "NO-CHARGE-AFTER-DEDUCTIBLE",
+      "definition": "NO-CHARGE-AFTER-DEDUCTIBLE",
+      "display": "NO-CHARGE-AFTER-DEDUCTIBLE"
+    }
+  ]
+}
