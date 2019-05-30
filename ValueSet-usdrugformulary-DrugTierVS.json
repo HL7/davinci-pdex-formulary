@@ -1,0 +1,77 @@
+{
+  "resourceType": "ValueSet",
+  "id": "usdrugformulary-DrugTierVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>DrugTierVS ValueSet</b></p>\n<p>The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV</p>\n</div>"
+  },
+  "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-DrugTierVS",
+  "identifier": [
+    {
+      "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open",
+      "value": "usdrugformulary.DrugTierVS"
+    }
+  ],
+  "version": "0.2.0",
+  "name": "DrugTierVS",
+  "title": "DrugTierVS",
+  "status": "draft",
+  "date": "2019-05-19T00:00:00-04:00",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV",
+  "compose": {
+    "include": [
+      {
+        "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS",
+        "concept": [
+          {
+            "code": "GENERIC",
+            "display": "Generic"
+          },
+          {
+            "code": "PREFERRED-GENERIC",
+            "display": "Preferred generic"
+          },
+          {
+            "code": "NON-PREFERRED-GENERIC",
+            "display": "Non-preferred generic"
+          },
+          {
+            "code": "SPECIALTY",
+            "display": "Specialty"
+          },
+          {
+            "code": "BRAND",
+            "display": "Brand"
+          },
+          {
+            "code": "PREFERRED-BRAND",
+            "display": "Preferred brand"
+          },
+          {
+            "code": "NON-PREFERRED-BRAND",
+            "display": "Non-preferred brand"
+          },
+          {
+            "code": "ZERO-COST-SHARE-PREVENTIVE",
+            "display": "Zero-cost share preventative"
+          },
+          {
+            "code": "MEDICAL-SERVICE",
+            "display": "Medical service"
+          }
+        ]
+      }
+    ]
+  }
+}

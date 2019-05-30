@@ -1,0 +1,296 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "63b98849-1b4c-49f3-ba7b-e79b11084ce4",
+  "meta" : {
+    "lastUpdated" : "2019-05-19T18:59:25.681-04:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-CoinsuranceOptionVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "usdrugformulary-CoinsuranceOptionVS",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CoinsuranceOptionCS version 0.2.0</p><p>All codes from system <a href=\"CodeSystem-usdrugformulary-CoinsuranceOptionCS.html\"><code>https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CoinsuranceOptionCS</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-CoinsuranceOptionCS-AFTER-DEDUCTIBLE\"> </a><a href=\"CodeSystem-usdrugformulary-CoinsuranceOptionCS.html#usdrugformulary-CoinsuranceOptionCS-AFTER-DEDUCTIBLE\">AFTER-DEDUCTIBLE</a></td><td>AFTER-DEDUCTIBLE</td><td>AFTER-DEDUCTIBLE</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-CoinsuranceOptionCS-NO-CHARGE\"> </a><a href=\"CodeSystem-usdrugformulary-CoinsuranceOptionCS.html#usdrugformulary-CoinsuranceOptionCS-NO-CHARGE\">NO-CHARGE</a></td><td>NO-CHARGE</td><td>NO-CHARGE</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-CoinsuranceOptionCS-NO-CHARGE-AFTER-DEDUCTIBLE\"> </a><a href=\"CodeSystem-usdrugformulary-CoinsuranceOptionCS.html#usdrugformulary-CoinsuranceOptionCS-NO-CHARGE-AFTER-DEDUCTIBLE\">NO-CHARGE-AFTER-DEDUCTIBLE</a></td><td>NO-CHARGE-AFTER-DEDUCTIBLE</td><td>NO-CHARGE-AFTER-DEDUCTIBLE</td></tr></table></div>"
+      },
+      "url" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-CoinsuranceOptionVS",
+      "identifier" : [{
+        "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open",
+        "value" : "usdrugformulary.CoinsuranceOptionVS"
+      }],
+      "version" : "0.2.0",
+      "name" : "CoinsuranceOptionVS",
+      "title" : "CoinsuranceOptionVS",
+      "status" : "draft",
+      "date" : "2019-05-19T00:00:00-04:00",
+      "publisher" : "The MITRE Corporation",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://www.standardhealthrecord.org"
+        }]
+      }],
+      "description" : "As defined by QHP Formulary Spec",
+      "expansion" : {
+        "identifier" : "urn:uuid:3f62ed6a-0161-4cdc-a0e9-031aa076abc5",
+        "timestamp" : "2019-05-19T18:59:39-04:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CoinsuranceOptionCS|0.2.0"
+        }],
+        "contains" : [{
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CoinsuranceOptionCS",
+          "code" : "AFTER-DEDUCTIBLE",
+          "display" : "AFTER-DEDUCTIBLE"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CoinsuranceOptionCS",
+          "code" : "NO-CHARGE",
+          "display" : "NO-CHARGE"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CoinsuranceOptionCS",
+          "code" : "NO-CHARGE-AFTER-DEDUCTIBLE",
+          "display" : "NO-CHARGE-AFTER-DEDUCTIBLE"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-CopayOptionVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "usdrugformulary-CopayOptionVS",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 4 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CopayOptionCS version 0.2.0</p><p>All codes from system <a href=\"CodeSystem-usdrugformulary-CopayOptionCS.html\"><code>https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CopayOptionCS</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-CopayOptionCS-AFTER-DEDUCTIBLE\"> </a><a href=\"CodeSystem-usdrugformulary-CopayOptionCS.html#usdrugformulary-CopayOptionCS-AFTER-DEDUCTIBLE\">AFTER-DEDUCTIBLE</a></td><td>AFTER-DEDUCTIBLE</td><td>AFTER-DEDUCTIBLE</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-CopayOptionCS-BEFORE-DEDUCTIBLE\"> </a><a href=\"CodeSystem-usdrugformulary-CopayOptionCS.html#usdrugformulary-CopayOptionCS-BEFORE-DEDUCTIBLE\">BEFORE-DEDUCTIBLE</a></td><td>BEFORE-DEDUCTIBLE</td><td>BEFORE-DEDUCTIBLE</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-CopayOptionCS-NO-CHARGE\"> </a><a href=\"CodeSystem-usdrugformulary-CopayOptionCS.html#usdrugformulary-CopayOptionCS-NO-CHARGE\">NO-CHARGE</a></td><td>NO-CHARGE</td><td>NO-CHARGE</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-CopayOptionCS-NO-CHARGE-AFTER-DEDUCTIBLE\"> </a><a href=\"CodeSystem-usdrugformulary-CopayOptionCS.html#usdrugformulary-CopayOptionCS-NO-CHARGE-AFTER-DEDUCTIBLE\">NO-CHARGE-AFTER-DEDUCTIBLE</a></td><td>NO-CHARGE-AFTER-DEDUCTIBLE</td><td>NO-CHARGE-AFTER-DEDUCTIBLE</td></tr></table></div>"
+      },
+      "url" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-CopayOptionVS",
+      "identifier" : [{
+        "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open",
+        "value" : "usdrugformulary.CopayOptionVS"
+      }],
+      "version" : "0.2.0",
+      "name" : "CopayOptionVS",
+      "title" : "CopayOptionVS",
+      "status" : "draft",
+      "date" : "2019-05-19T00:00:00-04:00",
+      "publisher" : "The MITRE Corporation",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://www.standardhealthrecord.org"
+        }]
+      }],
+      "description" : "As defined by QHP Formulary Spec",
+      "expansion" : {
+        "identifier" : "urn:uuid:3bfb004a-9cba-47ea-a559-d4e064a33682",
+        "timestamp" : "2019-05-19T18:59:39-04:00",
+        "total" : 4,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CopayOptionCS|0.2.0"
+        }],
+        "contains" : [{
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CopayOptionCS",
+          "code" : "AFTER-DEDUCTIBLE",
+          "display" : "AFTER-DEDUCTIBLE"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CopayOptionCS",
+          "code" : "BEFORE-DEDUCTIBLE",
+          "display" : "BEFORE-DEDUCTIBLE"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CopayOptionCS",
+          "code" : "NO-CHARGE",
+          "display" : "NO-CHARGE"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CopayOptionCS",
+          "code" : "NO-CHARGE-AFTER-DEDUCTIBLE",
+          "display" : "NO-CHARGE-AFTER-DEDUCTIBLE"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-DrugTierVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "usdrugformulary-DrugTierVS",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 9 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS version 0.2.0</p><p>All codes from system <a href=\"CodeSystem-usdrugformulary-DrugTierCS.html\"><code>https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-DrugTierCS-GENERIC\"> </a><a href=\"CodeSystem-usdrugformulary-DrugTierCS.html#usdrugformulary-DrugTierCS-GENERIC\">GENERIC</a></td><td>Generic</td><td>Generic</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-DrugTierCS-PREFERRED-GENERIC\"> </a><a href=\"CodeSystem-usdrugformulary-DrugTierCS.html#usdrugformulary-DrugTierCS-PREFERRED-GENERIC\">PREFERRED-GENERIC</a></td><td>Preferred generic</td><td>Preferred generic</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-DrugTierCS-NON-PREFERRED-GENERIC\"> </a><a href=\"CodeSystem-usdrugformulary-DrugTierCS.html#usdrugformulary-DrugTierCS-NON-PREFERRED-GENERIC\">NON-PREFERRED-GENERIC</a></td><td>Non-preferred generic</td><td>Non-preferred generic</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-DrugTierCS-SPECIALTY\"> </a><a href=\"CodeSystem-usdrugformulary-DrugTierCS.html#usdrugformulary-DrugTierCS-SPECIALTY\">SPECIALTY</a></td><td>Specialty</td><td>Specialty</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-DrugTierCS-BRAND\"> </a><a href=\"CodeSystem-usdrugformulary-DrugTierCS.html#usdrugformulary-DrugTierCS-BRAND\">BRAND</a></td><td>Brand</td><td>Brand</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-DrugTierCS-PREFERRED-BRAND\"> </a><a href=\"CodeSystem-usdrugformulary-DrugTierCS.html#usdrugformulary-DrugTierCS-PREFERRED-BRAND\">PREFERRED-BRAND</a></td><td>Preferred brand</td><td>Preferred brand</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-DrugTierCS-NON-PREFERRED-BRAND\"> </a><a href=\"CodeSystem-usdrugformulary-DrugTierCS.html#usdrugformulary-DrugTierCS-NON-PREFERRED-BRAND\">NON-PREFERRED-BRAND</a></td><td>Non-preferred brand</td><td>Non-preferred brand</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-DrugTierCS-ZERO-COST-SHARE-PREVENTIVE\"> </a><a href=\"CodeSystem-usdrugformulary-DrugTierCS.html#usdrugformulary-DrugTierCS-ZERO-COST-SHARE-PREVENTIVE\">ZERO-COST-SHARE-PREVENTIVE</a></td><td>Zero-cost share preventative</td><td>Zero-cost share preventative</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-DrugTierCS-MEDICAL-SERVICE\"> </a><a href=\"CodeSystem-usdrugformulary-DrugTierCS.html#usdrugformulary-DrugTierCS-MEDICAL-SERVICE\">MEDICAL-SERVICE</a></td><td>Medical service</td><td>Medical service</td></tr></table></div>"
+      },
+      "url" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-DrugTierVS",
+      "identifier" : [{
+        "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open",
+        "value" : "usdrugformulary.DrugTierVS"
+      }],
+      "version" : "0.2.0",
+      "name" : "DrugTierVS",
+      "title" : "DrugTierVS",
+      "status" : "draft",
+      "date" : "2019-05-19T00:00:00-04:00",
+      "publisher" : "The MITRE Corporation",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://www.standardhealthrecord.org"
+        }]
+      }],
+      "description" : "The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV",
+      "expansion" : {
+        "identifier" : "urn:uuid:905cb90e-3344-40c8-a027-5097952867ab",
+        "timestamp" : "2019-05-19T18:59:40-04:00",
+        "total" : 9,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS|0.2.0"
+        }],
+        "contains" : [{
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS",
+          "code" : "GENERIC",
+          "display" : "Generic"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS",
+          "code" : "PREFERRED-GENERIC",
+          "display" : "Preferred generic"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS",
+          "code" : "NON-PREFERRED-GENERIC",
+          "display" : "Non-preferred generic"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS",
+          "code" : "SPECIALTY",
+          "display" : "Specialty"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS",
+          "code" : "BRAND",
+          "display" : "Brand"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS",
+          "code" : "PREFERRED-BRAND",
+          "display" : "Preferred brand"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS",
+          "code" : "NON-PREFERRED-BRAND",
+          "display" : "Non-preferred brand"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS",
+          "code" : "ZERO-COST-SHARE-PREVENTIVE",
+          "display" : "Zero-cost share preventative"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS",
+          "code" : "MEDICAL-SERVICE",
+          "display" : "Medical service"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-PharmacyTypeVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "usdrugformulary-PharmacyTypeVS",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 8 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS version 0.2.0</p><p>All codes from system <a href=\"CodeSystem-usdrugformulary-PharmacyTypeCS.html\"><code>https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-PharmacyTypeCS-1-MONTH-IN-RETAIL\"> </a><a href=\"CodeSystem-usdrugformulary-PharmacyTypeCS.html#usdrugformulary-PharmacyTypeCS-1-MONTH-IN-RETAIL\">1-MONTH-IN-RETAIL</a></td><td>1-MONTH-IN-RETAIL</td><td>1-MONTH-IN-RETAIL</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-PharmacyTypeCS-1-MONTH-OUT-RETAIL\"> </a><a href=\"CodeSystem-usdrugformulary-PharmacyTypeCS.html#usdrugformulary-PharmacyTypeCS-1-MONTH-OUT-RETAIL\">1-MONTH-OUT-RETAIL</a></td><td>1-MONTH-OUT-RETAIL</td><td>1-MONTH-OUT-RETAIL</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-PharmacyTypeCS-1-MONTH-IN-MAIL\"> </a><a href=\"CodeSystem-usdrugformulary-PharmacyTypeCS.html#usdrugformulary-PharmacyTypeCS-1-MONTH-IN-MAIL\">1-MONTH-IN-MAIL</a></td><td>1-MONTH-IN-MAIL</td><td>1-MONTH-IN-MAIL</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-PharmacyTypeCS-1-MONTH-OUT-MAIL\"> </a><a href=\"CodeSystem-usdrugformulary-PharmacyTypeCS.html#usdrugformulary-PharmacyTypeCS-1-MONTH-OUT-MAIL\">1-MONTH-OUT-MAIL</a></td><td>1-MONTH-OUT-MAIL</td><td>1-MONTH-OUT-MAIL</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-PharmacyTypeCS-3-MONTH-IN-RETAIL\"> </a><a href=\"CodeSystem-usdrugformulary-PharmacyTypeCS.html#usdrugformulary-PharmacyTypeCS-3-MONTH-IN-RETAIL\">3-MONTH-IN-RETAIL</a></td><td>3-MONTH-IN-RETAIL</td><td>3-MONTH-IN-RETAIL</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-PharmacyTypeCS-3-MONTH-OUT-RETAIL\"> </a><a href=\"CodeSystem-usdrugformulary-PharmacyTypeCS.html#usdrugformulary-PharmacyTypeCS-3-MONTH-OUT-RETAIL\">3-MONTH-OUT-RETAIL</a></td><td>3-MONTH-OUT-RETAIL</td><td>3-MONTH-OUT-RETAIL</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-PharmacyTypeCS-3-MONTH-IN-MAIL\"> </a><a href=\"CodeSystem-usdrugformulary-PharmacyTypeCS.html#usdrugformulary-PharmacyTypeCS-3-MONTH-IN-MAIL\">3-MONTH-IN-MAIL</a></td><td>3-MONTH-IN-MAIL</td><td>3-MONTH-IN-MAIL</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---api-v8-r4.hspconsortium.org-DrugFormulary1-open-CodeSystem-usdrugformulary-PharmacyTypeCS-3-MONTH-OUT-MAIL\"> </a><a href=\"CodeSystem-usdrugformulary-PharmacyTypeCS.html#usdrugformulary-PharmacyTypeCS-3-MONTH-OUT-MAIL\">3-MONTH-OUT-MAIL</a></td><td>3-MONTH-OUT-MAIL</td><td>3-MONTH-OUT-MAIL</td></tr></table></div>"
+      },
+      "url" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-PharmacyTypeVS",
+      "identifier" : [{
+        "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open",
+        "value" : "usdrugformulary.PharmacyTypeVS"
+      }],
+      "version" : "0.2.0",
+      "name" : "PharmacyTypeVS",
+      "title" : "PharmacyTypeVS",
+      "status" : "draft",
+      "date" : "2019-05-19T00:00:00-04:00",
+      "publisher" : "The MITRE Corporation",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://www.standardhealthrecord.org"
+        }]
+      }],
+      "description" : "Types of Pharmacies...each payer will likely have its own controlled vocabulary",
+      "expansion" : {
+        "identifier" : "urn:uuid:d65ac418-ee2f-4b43-9512-fd1a92ce3bc0",
+        "timestamp" : "2019-05-19T18:59:40-04:00",
+        "total" : 8,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS|0.2.0"
+        }],
+        "contains" : [{
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS",
+          "code" : "1-MONTH-IN-RETAIL",
+          "display" : "1-MONTH-IN-RETAIL"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS",
+          "code" : "1-MONTH-OUT-RETAIL",
+          "display" : "1-MONTH-OUT-RETAIL"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS",
+          "code" : "1-MONTH-IN-MAIL",
+          "display" : "1-MONTH-IN-MAIL"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS",
+          "code" : "1-MONTH-OUT-MAIL",
+          "display" : "1-MONTH-OUT-MAIL"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS",
+          "code" : "3-MONTH-IN-RETAIL",
+          "display" : "3-MONTH-IN-RETAIL"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS",
+          "code" : "3-MONTH-OUT-RETAIL",
+          "display" : "3-MONTH-OUT-RETAIL"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS",
+          "code" : "3-MONTH-IN-MAIL",
+          "display" : "3-MONTH-IN-MAIL"
+        },
+        {
+          "system" : "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS",
+          "code" : "3-MONTH-OUT-MAIL",
+          "display" : "3-MONTH-OUT-MAIL"
+        }]
+      }
+    }
+  }]
+}
