@@ -1,0 +1,488 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ImplementationGuide/usdrugformulary-0.2.0> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "usdrugformulary-0.2.0"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>US_Drug_Formularies</h2><p>The official URL for this implementation guide is: </p><pre>https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ImplementationGuide/usdrugformulary-0.2.0</pre></div>"
+  ];
+  fhir:ImplementationGuide.url [ fhir:value "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ImplementationGuide/usdrugformulary-0.2.0"];
+  fhir:ImplementationGuide.version [ fhir:value "0.2.0"];
+  fhir:ImplementationGuide.name [ fhir:value "US_Drug_Formularies"];
+  fhir:ImplementationGuide.title [ fhir:value "US Drug Formularies"];
+  fhir:ImplementationGuide.status [ fhir:value "draft"];
+  fhir:ImplementationGuide.packageId [ fhir:value "usdrugformulary"];
+  fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.0.0";
+     fhir:index 0
+  ];
+  fhir:ImplementationGuide.definition [
+     fhir:ImplementationGuide.definition.grouping [
+       fhir:index 0;
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Profiles in this Implementation Guide" ];
+       fhir:ImplementationGuide.definition.grouping.description [ fhir:value "Profiles in this Implementation Guide" ]
+     ];
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-CoveragePlan.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-CoveragePlan>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-CoveragePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-CoveragePlan" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-FormularyDrug.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-FormularyDrug>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-FormularyDrug" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-FormularyDrug" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-FormularyDrugOption2.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-FormularyDrugOption2>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-FormularyDrugOption2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-FormularyDrugOption2" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-CoInsuranceRate-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-CoInsuranceRate-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-CoInsuranceRate-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-CoInsuranceRate" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-CoinsuranceOption-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-CoinsuranceOption-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-CoinsuranceOption-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-CoinsuranceOption" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-CopayAmount-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-CopayAmount-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-CopayAmount-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-CopayAmount" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-CopayOption-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-CopayOption-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-CopayOption-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-CopayOption" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-CostSharing-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-CostSharing-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-CostSharing-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-CostSharing" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-DrugClass-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-DrugClass-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-DrugClass-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-DrugClass" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-DrugTierDefinition-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-DrugTierDefinition-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-DrugTierDefinition-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-DrugTierDefinition" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-DrugTierID-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-DrugTierID-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-DrugTierID-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-DrugTierID" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-EmailPlanContact-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-EmailPlanContact-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-EmailPlanContact-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-EmailPlanContact" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-FormularyURL-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-FormularyURL-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-FormularyURL-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-FormularyURL" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-MailOrder-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-MailOrder-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-MailOrder-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-MailOrder" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-MarketingURL-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-MarketingURL-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-MarketingURL-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-MarketingURL" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-Network-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-Network-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-Network-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-Network" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-PharmacyType-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-PharmacyType-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-PharmacyType-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-PharmacyType" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-PlanID-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-PlanID-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-PlanID-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-PlanID" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-PlanIDType-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-PlanIDType-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-PlanIDType-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-PlanIDType" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-PriorAuthorization-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-PriorAuthorization-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-PriorAuthorization-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-PriorAuthorization" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-QuantityLimit-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-QuantityLimit-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-QuantityLimit-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-QuantityLimit" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-usdrugformulary-StepTherapyLimit-extension.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/StructureDefinition/usdrugformulary-StepTherapyLimit-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/usdrugformulary-StepTherapyLimit-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "usdrugformulary-StepTherapyLimit" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-usdrugformulary-CoinsuranceOptionVS.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-CoinsuranceOptionVS>;
+         fhir:Reference.reference [ fhir:value "ValueSet/usdrugformulary-CoinsuranceOptionVS" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CoinsuranceOptionVS" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-usdrugformulary-CopayOptionVS.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-CopayOptionVS>;
+         fhir:Reference.reference [ fhir:value "ValueSet/usdrugformulary-CopayOptionVS" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CopayOptionVS" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-usdrugformulary-DrugTierVS.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-DrugTierVS>;
+         fhir:Reference.reference [ fhir:value "ValueSet/usdrugformulary-DrugTierVS" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DrugTierVS" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-usdrugformulary-PharmacyTypeVS.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-PharmacyTypeVS>;
+         fhir:Reference.reference [ fhir:value "ValueSet/usdrugformulary-PharmacyTypeVS" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PharmacyTypeVS" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-usdrugformulary-CoinsuranceOptionCS.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CoinsuranceOptionCS>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/usdrugformulary-CoinsuranceOptionCS" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CoinsuranceOptionCS" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-usdrugformulary-CopayOptionCS.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CopayOptionCS>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/usdrugformulary-CopayOptionCS" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CopayOptionCS" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-usdrugformulary-DrugTierCS.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/usdrugformulary-DrugTierCS" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DrugTierCS" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-usdrugformulary-PharmacyTypeCS.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/usdrugformulary-PharmacyTypeCS" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PharmacyTypeCS" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "List-covplanV1002.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/List/covplanV1002>;
+         fhir:Reference.reference [ fhir:value "List/covplanV1002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example: covplanV1002" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "List-covplanV2002.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/List/covplanV2002>;
+         fhir:Reference.reference [ fhir:value "List/covplanV2002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example: covplanV2002" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MedicationKnowledge-formularydrugV1002.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/MedicationKnowledge/formularydrugV1002>;
+         fhir:Reference.reference [ fhir:value "MedicationKnowledge/formularydrugV1002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example: formularydrugV1002" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Medication-formularydrugV2002.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/Medication/formularydrugV2002>;
+         fhir:Reference.reference [ fhir:value "Medication/formularydrugV2002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example: formularydrugV2002" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ];
+     fhir:ImplementationGuide.definition.page [
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "US Drug Formularies" ];
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ImplementationGuide/usdrugformulary-0.2.0.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

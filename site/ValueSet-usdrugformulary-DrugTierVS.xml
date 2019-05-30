@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="usdrugformulary-DrugTierVS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p><b>DrugTierVS ValueSet</b></p>
+<p>The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV</p>
+</div>
+  </text>
+  <url value="https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-DrugTierVS"/>
+  <identifier>
+    <system value="https://api-v8-r4.hspconsortium.org/DrugFormulary1/open"/>
+    <value value="usdrugformulary.DrugTierVS"/>
+  </identifier>
+  <version value="0.2.0"/>
+  <name value="DrugTierVS"/>
+  <title value="DrugTierVS"/>
+  <status value="draft"/>
+  <date value="2019-05-19T00:00:00-04:00"/>
+  <publisher value="The MITRE Corporation"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV"/>
+  <compose>
+    <include>
+      <system value="https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS"/>
+      <concept>
+        <code value="GENERIC"/>
+        <display value="Generic"/>
+      </concept>
+      <concept>
+        <code value="PREFERRED-GENERIC"/>
+        <display value="Preferred generic"/>
+      </concept>
+      <concept>
+        <code value="NON-PREFERRED-GENERIC"/>
+        <display value="Non-preferred generic"/>
+      </concept>
+      <concept>
+        <code value="SPECIALTY"/>
+        <display value="Specialty"/>
+      </concept>
+      <concept>
+        <code value="BRAND"/>
+        <display value="Brand"/>
+      </concept>
+      <concept>
+        <code value="PREFERRED-BRAND"/>
+        <display value="Preferred brand"/>
+      </concept>
+      <concept>
+        <code value="NON-PREFERRED-BRAND"/>
+        <display value="Non-preferred brand"/>
+      </concept>
+      <concept>
+        <code value="ZERO-COST-SHARE-PREVENTIVE"/>
+        <display value="Zero-cost share preventative"/>
+      </concept>
+      <concept>
+        <code value="MEDICAL-SERVICE"/>
+        <display value="Medical service"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="usdrugformulary-CopayOptionVS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p><b>CopayOptionVS ValueSet</b></p>
+<p>As defined by QHP Formulary Spec</p>
+</div>
+  </text>
+  <url value="https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-CopayOptionVS"/>
+  <identifier>
+    <system value="https://api-v8-r4.hspconsortium.org/DrugFormulary1/open"/>
+    <value value="usdrugformulary.CopayOptionVS"/>
+  </identifier>
+  <version value="0.2.0"/>
+  <name value="CopayOptionVS"/>
+  <title value="CopayOptionVS"/>
+  <status value="draft"/>
+  <date value="2019-05-19T00:00:00-04:00"/>
+  <publisher value="The MITRE Corporation"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="As defined by QHP Formulary Spec"/>
+  <compose>
+    <include>
+      <system value="https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CopayOptionCS"/>
+      <concept>
+        <code value="AFTER-DEDUCTIBLE"/>
+        <display value="AFTER-DEDUCTIBLE"/>
+      </concept>
+      <concept>
+        <code value="BEFORE-DEDUCTIBLE"/>
+        <display value="BEFORE-DEDUCTIBLE"/>
+      </concept>
+      <concept>
+        <code value="NO-CHARGE"/>
+        <display value="NO-CHARGE"/>
+      </concept>
+      <concept>
+        <code value="NO-CHARGE-AFTER-DEDUCTIBLE"/>
+        <display value="NO-CHARGE-AFTER-DEDUCTIBLE"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

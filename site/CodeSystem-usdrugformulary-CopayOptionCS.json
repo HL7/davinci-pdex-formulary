@@ -1,0 +1,57 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "usdrugformulary-CopayOptionCS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CopayOptionCS CodeSystem</b></p>\n<p>As defined by QHP Formulary Spec</p>\n</div>"
+  },
+  "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CopayOptionCS",
+  "identifier": [
+    {
+      "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open",
+      "value": "usdrugformulary.CopayOptionCS"
+    }
+  ],
+  "version": "0.2.0",
+  "name": "CopayOptionCS",
+  "title": "CopayOptionCS",
+  "status": "draft",
+  "date": "2019-05-19T00:00:00-04:00",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "As defined by QHP Formulary Spec",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 4,
+  "concept": [
+    {
+      "code": "AFTER-DEDUCTIBLE",
+      "display": "AFTER-DEDUCTIBLE",
+      "definition": "AFTER-DEDUCTIBLE"
+    },
+    {
+      "code": "BEFORE-DEDUCTIBLE",
+      "display": "BEFORE-DEDUCTIBLE",
+      "definition": "BEFORE-DEDUCTIBLE"
+    },
+    {
+      "code": "NO-CHARGE",
+      "display": "NO-CHARGE",
+      "definition": "NO-CHARGE"
+    },
+    {
+      "code": "NO-CHARGE-AFTER-DEDUCTIBLE",
+      "display": "NO-CHARGE-AFTER-DEDUCTIBLE",
+      "definition": "NO-CHARGE-AFTER-DEDUCTIBLE"
+    }
+  ]
+}

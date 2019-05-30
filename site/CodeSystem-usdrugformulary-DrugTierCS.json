@@ -1,0 +1,82 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "usdrugformulary-DrugTierCS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>DrugTierCS CodeSystem</b></p>\n<p>The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV</p>\n</div>"
+  },
+  "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS",
+  "identifier": [
+    {
+      "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open",
+      "value": "usdrugformulary.DrugTierCS"
+    }
+  ],
+  "version": "0.2.0",
+  "name": "DrugTierCS",
+  "title": "DrugTierCS",
+  "status": "draft",
+  "date": "2019-05-19T00:00:00-04:00",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "description": "The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 9,
+  "concept": [
+    {
+      "code": "GENERIC",
+      "display": "Generic",
+      "definition": "Generic"
+    },
+    {
+      "code": "PREFERRED-GENERIC",
+      "display": "Preferred generic",
+      "definition": "Preferred generic"
+    },
+    {
+      "code": "NON-PREFERRED-GENERIC",
+      "display": "Non-preferred generic",
+      "definition": "Non-preferred generic"
+    },
+    {
+      "code": "SPECIALTY",
+      "display": "Specialty",
+      "definition": "Specialty"
+    },
+    {
+      "code": "BRAND",
+      "display": "Brand",
+      "definition": "Brand"
+    },
+    {
+      "code": "PREFERRED-BRAND",
+      "display": "Preferred brand",
+      "definition": "Preferred brand"
+    },
+    {
+      "code": "NON-PREFERRED-BRAND",
+      "display": "Non-preferred brand",
+      "definition": "Non-preferred brand"
+    },
+    {
+      "code": "ZERO-COST-SHARE-PREVENTIVE",
+      "display": "Zero-cost share preventative",
+      "definition": "Zero-cost share preventative"
+    },
+    {
+      "code": "MEDICAL-SERVICE",
+      "display": "Medical service",
+      "definition": "Medical service"
+    }
+  ]
+}

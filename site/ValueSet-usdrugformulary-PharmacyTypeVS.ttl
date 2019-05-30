@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-PharmacyTypeVS> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "usdrugformulary-PharmacyTypeVS"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>PharmacyTypeVS ValueSet</b></p>\n<p>Types of Pharmacies...each payer will likely have its own controlled vocabulary</p>\n</div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-PharmacyTypeVS"];
+  fhir:ValueSet.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open" ];
+     fhir:Identifier.value [ fhir:value "usdrugformulary.PharmacyTypeVS" ]
+  ];
+  fhir:ValueSet.version [ fhir:value "0.2.0"];
+  fhir:ValueSet.name [ fhir:value "PharmacyTypeVS"];
+  fhir:ValueSet.title [ fhir:value "PharmacyTypeVS"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2019-05-19T00:00:00-04:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "The MITRE Corporation"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "Types of Pharmacies...each payer will likely have its own controlled vocabulary"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1-MONTH-IN-RETAIL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "1-MONTH-IN-RETAIL" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1-MONTH-OUT-RETAIL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "1-MONTH-OUT-RETAIL" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1-MONTH-IN-MAIL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "1-MONTH-IN-MAIL" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1-MONTH-OUT-MAIL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "1-MONTH-OUT-MAIL" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3-MONTH-IN-RETAIL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "3-MONTH-IN-RETAIL" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3-MONTH-OUT-RETAIL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "3-MONTH-OUT-RETAIL" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3-MONTH-IN-MAIL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "3-MONTH-IN-MAIL" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3-MONTH-OUT-MAIL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "3-MONTH-OUT-MAIL" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-PharmacyTypeVS.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="usdrugformulary-DrugTierCS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p><b>DrugTierCS CodeSystem</b></p>
+<p>The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV</p>
+</div>
+  </text>
+  <url value="https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS"/>
+  <identifier>
+    <system value="https://api-v8-r4.hspconsortium.org/DrugFormulary1/open"/>
+    <value value="usdrugformulary.DrugTierCS"/>
+  </identifier>
+  <version value="0.2.0"/>
+  <name value="DrugTierCS"/>
+  <title value="DrugTierCS"/>
+  <status value="draft"/>
+  <date value="2019-05-19T00:00:00-04:00"/>
+  <publisher value="The MITRE Corporation"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="9"/>
+  <concept>
+    <code value="GENERIC"/>
+    <display value="Generic"/>
+    <definition value="Generic"/>
+  </concept>
+  <concept>
+    <code value="PREFERRED-GENERIC"/>
+    <display value="Preferred generic"/>
+    <definition value="Preferred generic"/>
+  </concept>
+  <concept>
+    <code value="NON-PREFERRED-GENERIC"/>
+    <display value="Non-preferred generic"/>
+    <definition value="Non-preferred generic"/>
+  </concept>
+  <concept>
+    <code value="SPECIALTY"/>
+    <display value="Specialty"/>
+    <definition value="Specialty"/>
+  </concept>
+  <concept>
+    <code value="BRAND"/>
+    <display value="Brand"/>
+    <definition value="Brand"/>
+  </concept>
+  <concept>
+    <code value="PREFERRED-BRAND"/>
+    <display value="Preferred brand"/>
+    <definition value="Preferred brand"/>
+  </concept>
+  <concept>
+    <code value="NON-PREFERRED-BRAND"/>
+    <display value="Non-preferred brand"/>
+    <definition value="Non-preferred brand"/>
+  </concept>
+  <concept>
+    <code value="ZERO-COST-SHARE-PREVENTIVE"/>
+    <display value="Zero-cost share preventative"/>
+    <definition value="Zero-cost share preventative"/>
+  </concept>
+  <concept>
+    <code value="MEDICAL-SERVICE"/>
+    <display value="Medical service"/>
+    <definition value="Medical service"/>
+  </concept>
+</CodeSystem>

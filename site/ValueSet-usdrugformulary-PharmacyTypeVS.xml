@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="usdrugformulary-PharmacyTypeVS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<p><b>PharmacyTypeVS ValueSet</b></p>
+<p>Types of Pharmacies...each payer will likely have its own controlled vocabulary</p>
+</div>
+  </text>
+  <url value="https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-PharmacyTypeVS"/>
+  <identifier>
+    <system value="https://api-v8-r4.hspconsortium.org/DrugFormulary1/open"/>
+    <value value="usdrugformulary.PharmacyTypeVS"/>
+  </identifier>
+  <version value="0.2.0"/>
+  <name value="PharmacyTypeVS"/>
+  <title value="PharmacyTypeVS"/>
+  <status value="draft"/>
+  <date value="2019-05-19T00:00:00-04:00"/>
+  <publisher value="The MITRE Corporation"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.standardhealthrecord.org"/>
+    </telecom>
+  </contact>
+  <description value="Types of Pharmacies...each payer will likely have its own controlled vocabulary"/>
+  <compose>
+    <include>
+      <system value="https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-PharmacyTypeCS"/>
+      <concept>
+        <code value="1-MONTH-IN-RETAIL"/>
+        <display value="1-MONTH-IN-RETAIL"/>
+      </concept>
+      <concept>
+        <code value="1-MONTH-OUT-RETAIL"/>
+        <display value="1-MONTH-OUT-RETAIL"/>
+      </concept>
+      <concept>
+        <code value="1-MONTH-IN-MAIL"/>
+        <display value="1-MONTH-IN-MAIL"/>
+      </concept>
+      <concept>
+        <code value="1-MONTH-OUT-MAIL"/>
+        <display value="1-MONTH-OUT-MAIL"/>
+      </concept>
+      <concept>
+        <code value="3-MONTH-IN-RETAIL"/>
+        <display value="3-MONTH-IN-RETAIL"/>
+      </concept>
+      <concept>
+        <code value="3-MONTH-OUT-RETAIL"/>
+        <display value="3-MONTH-OUT-RETAIL"/>
+      </concept>
+      <concept>
+        <code value="3-MONTH-IN-MAIL"/>
+        <display value="3-MONTH-IN-MAIL"/>
+      </concept>
+      <concept>
+        <code value="3-MONTH-OUT-MAIL"/>
+        <display value="3-MONTH-OUT-MAIL"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

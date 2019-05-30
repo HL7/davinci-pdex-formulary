@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-CoinsuranceOptionVS> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "usdrugformulary-CoinsuranceOptionVS"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CoinsuranceOptionVS ValueSet</b></p>\n<p>As defined by QHP Formulary Spec</p>\n</div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-CoinsuranceOptionVS"];
+  fhir:ValueSet.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open" ];
+     fhir:Identifier.value [ fhir:value "usdrugformulary.CoinsuranceOptionVS" ]
+  ];
+  fhir:ValueSet.version [ fhir:value "0.2.0"];
+  fhir:ValueSet.name [ fhir:value "CoinsuranceOptionVS"];
+  fhir:ValueSet.title [ fhir:value "CoinsuranceOptionVS"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2019-05-19T00:00:00-04:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "The MITRE Corporation"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "As defined by QHP Formulary Spec"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-CoinsuranceOptionCS" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AFTER-DEDUCTIBLE" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "AFTER-DEDUCTIBLE" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NO-CHARGE" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "NO-CHARGE" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NO-CHARGE-AFTER-DEDUCTIBLE" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "NO-CHARGE-AFTER-DEDUCTIBLE" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/ValueSet/usdrugformulary-CoinsuranceOptionVS.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

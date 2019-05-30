@@ -1,0 +1,92 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "usdrugformulary-DrugTierCS"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>DrugTierCS CodeSystem</b></p>\n<p>The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV</p>\n</div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS"];
+  fhir:CodeSystem.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://api-v8-r4.hspconsortium.org/DrugFormulary1/open" ];
+     fhir:Identifier.value [ fhir:value "usdrugformulary.DrugTierCS" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "0.2.0"];
+  fhir:CodeSystem.name [ fhir:value "DrugTierCS"];
+  fhir:CodeSystem.title [ fhir:value "DrugTierCS"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2019-05-19T00:00:00-04:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "The MITRE Corporation"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.standardhealthrecord.org" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "9"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "GENERIC" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Generic" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Generic" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "PREFERRED-GENERIC" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Preferred generic" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Preferred generic" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "NON-PREFERRED-GENERIC" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Non-preferred generic" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Non-preferred generic" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "SPECIALTY" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Specialty" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Specialty" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "BRAND" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Brand" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Brand" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "PREFERRED-BRAND" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Preferred brand" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Preferred brand" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "NON-PREFERRED-BRAND" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Non-preferred brand" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Non-preferred brand" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "ZERO-COST-SHARE-PREVENTIVE" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Zero-cost share preventative" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Zero-cost share preventative" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "MEDICAL-SERVICE" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Medical service" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Medical service" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://api-v8-r4.hspconsortium.org/DrugFormulary1/open/CodeSystem/usdrugformulary-DrugTierCS.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
