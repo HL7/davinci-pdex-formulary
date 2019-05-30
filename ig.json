@@ -42,7 +42,7 @@
 			"template-base": "ex.html"
 		},
 		"SearchParameter": {
-			"template-base": "index.html"
+			"template-base": "base.html"
 		},
 		"StructureDefinition": {
 			"template-mappings": "sd-mappings.html",
@@ -62,32 +62,32 @@
 			"profiles": false
 		},
 		"ConceptMap": {
-			"template-base": "index.html"
+			"template-base": "base.html"
 		},
 		"Practitioner": {
 			"template-base": "ex.html"
 		},
 		"OperationDefinition": {
-			"template-base": "index.html"
+			"template-base": "base.html"
 		},
 		"CodeSystem": {
-			"template-base": "index.html"
+			"template-base": "base.html"
 		},
 		"Communication": {
 			"template-base": "ex.html"
 		},
 		"Any": {
 			"template-format": "format.html",
-			"template-base": "index.html"
+			"template-base": "base.html"
 		},
 		"PractitionerRole": {
 			"template-base": "ex.html"
 		},
 		"ValueSet": {
-			"template-base": "index.html"
+			"template-base": "base.html"
 		},
 		"CapabilityStatement": {
-			"template-base": "index.html"
+			"template-base": "base.html"
 		},
 		"Observation": {
 			"template-base": "ex.html"
@@ -95,6 +95,6 @@
 	},
 	"resources": {},
 	"version": "4.0.0",
-	"fixed-business-version": "0.0.1.1",
+	"fixed-business-version": "0.0.1.0",
 	"dependencyList": []
 }
