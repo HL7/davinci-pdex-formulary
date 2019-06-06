@@ -40,19 +40,14 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="StructureDefinition-usdrugformulary-CoveragePlan.html">CoveragePlan</a></td>
+      <td><a href="StructureDefinition-usdf-CoveragePlan.html">CoveragePlan</a></td>
       <td><a href="http://hl7.org/fhir/R4/list.html">List</a></td>
-      <td>{% capture md_text %}A health plan which contains a list of formulary drugs covered under that plan.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}A health plan which contains links to administrative information,  a list of formulary drugs covered under that plan, and a definition of drug tiers and their associated cost-sharing models.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-usdrugformulary-FormularyDrug.html">FormularyDrug</a></td>
+      <td><a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a></td>
       <td><a href="http://hl7.org/fhir/R4/medicationknowledge.html">MedicationKnowledge</a></td>
       <td>{% capture md_text %}Drug information which is part of a formulary.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-usdrugformulary-FormularyDrugOption2.html">FormularyDrugOption2</a></td>
-      <td><a href="http://hl7.org/fhir/R4/medication.html">Medication</a></td>
-      <td>{% capture md_text %}A drug that is included in a formulary. This profile is an alternate representation using the FHIR Medication resource.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     
   </tbody>

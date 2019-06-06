@@ -1,0 +1,56 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "usdf-CopayOptionCS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CopayOptionCS CodeSystem</b></p>\n<p>Qualifier of copay amount</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/Davinci-drug-formulary",
+      "value": "usdf.CopayOptionCS"
+    }
+  ],
+  "name": "CopayOptionCS",
+  "title": "CopayOptionCS",
+  "status": "draft",
+  "publisher": "Example Publisher",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://example.com"
+        }
+      ]
+    }
+  ],
+  "date": "2019-06-06",
+  "description": "Qualifier of copay amount",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 4,
+  "concept": [
+    {
+      "code": "AFTER-DEDUCTIBLE",
+      "definition": "After Deductible",
+      "display": "After Deductible"
+    },
+    {
+      "code": "BEFORE-DEDUCTIBLE",
+      "definition": "Before Deductible",
+      "display": "Before Deductible"
+    },
+    {
+      "code": "NO-CHARGE",
+      "definition": "No Charge",
+      "display": "No Charge"
+    },
+    {
+      "code": "NO-CHARGE-AFTER-DEDUCTIBLE",
+      "definition": "No Charge After Deductible",
+      "display": "No Charge After Deductible"
+    }
+  ]
+}

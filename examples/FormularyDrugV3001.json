@@ -3,7 +3,7 @@
   "id": "FormularyDrugV3001",
   "meta": {
     "profile": [
-      "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/StructureDefinition/usdrugformulary-FormularyDrug"
+      "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
     ]
   },
   "text": {
@@ -12,11 +12,11 @@
   },
   "extension": [
     {
-      "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/StructureDefinition/usdrugformulary-DrugTierID-extension",
+      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/CodeSystem/usdrugformulary-DrugTierCS",
+            "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
             "code": "BRAND",
             "display": "Brand"
           }
@@ -24,16 +24,20 @@
       }
     },
     {
-      "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/StructureDefinition/usdrugformulary-PriorAuthorization-extension",
+      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PriorAuthorization-extension",
       "valueBoolean": false
     },
     {
-      "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/StructureDefinition/usdrugformulary-StepTherapyLimit-extension",
+      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-StepTherapyLimit-extension",
       "valueBoolean": false
     },
     {
-      "url": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/StructureDefinition/usdrugformulary-QuantityLimit-extension",
+      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-QuantityLimit-extension",
       "valueBoolean": false
+    },
+    {
+      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PlanID-extension",
+      "valueString": "40308VA0240008"
     }
   ],
   "code": {
@@ -44,47 +48,5 @@
         "display": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet [Percocet]"
       }
     ]
-  },
-  "medicineClassification": [
-    {
-      "type": {
-        "coding": [
-          {
-            "display": "PlanID"
-          }
-        ]
-      },
-      "classification": [
-        {
-          "coding": [
-            {
-              "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/CodeSystem/usdrugformulary-PlanIDCS",
-              "code": "12345XX9876543",
-              "display": "Sample Gold Health Plan"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "display": "DrugTierID"
-          }
-        ]
-      },
-      "classification": [
-        {
-          "coding": [
-            {
-              "system": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open/CodeSystem/usdrugformulary-DrugTierCS",
-              "code": "BRAND",
-              "display": "Brand"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  }
 }

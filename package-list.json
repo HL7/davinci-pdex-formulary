@@ -1,0 +1,23 @@
+{
+  "package-id": "hl7.fhir.us.Davinci-drug-formulary",
+  "title": "US Drug Formulary",
+  "canonical": "http://hl7.org/fhir/us/Davinci-drug-formulary",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://build.fhir.org/ig/HL7/xxx",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "0.3",
+      "date": "2019-06-06",
+      "desc": "Initial version",
+      "path": "http://hl7.org/fhir/us/Davinci-drug-formulary",
+      "status": "draft",
+      "sequence": "STU 1",
+      "fhir-version": "4.0.0"
+    }
+  ]
+}

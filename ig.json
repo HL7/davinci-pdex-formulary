@@ -1,7 +1,7 @@
 {
   "source": "ig.xml",
   "version": "4.0.0",
-  "fixed-business-version": "0.2.1",
+  "fixed-business-version": "0.3",
   "license": "CC0-1.0",
   "paths": {
     "resources": [
@@ -13,13 +13,14 @@
     "output": "output",
     "txCache": "txCache",
     "qa": "qa",
-    "specification": "http://hl7.org/fhir/R4"
+    "specification": "http://hl7.org/fhir/R4",
+    "history": "http://hl7.org/fhir/us/Davinci-drug-formulary/history.html"
   },
-  "npm-name": "usdrugformulary",
+  "npm-name": "hl7.fhir.us.Davinci-drug-formulary",
   "sct-edition": "http://snomed.info/sct/731000124108",
   "gen-examples": "false",
   "do-transforms": "false",
-  "canonicalBase": "https://api-v8-r4.hspconsortium.org/DrugFormulary2/open",
+  "canonicalBase": "http://hl7.org/fhir/us/Davinci-drug-formulary",
   "dependencyList": [
     {
       "package": "hl7.fhir.us.core.r4",
@@ -53,124 +54,125 @@
     "MedicationKnowledge": {
       "template-base": "ex.html",
       "template-format": "ex.html"
-    },
-    "Medication": {
-      "template-base": "ex.html",
-      "template-format": "ex.html"
     }
   },
   "extraTemplates": [
     "examples"
   ],
   "resources": {
-    "StructureDefinition/usdrugformulary-CoveragePlan": {
-      "base": "StructureDefinition-usdrugformulary-CoveragePlan.html"
+    "StructureDefinition/usdf-CoveragePlan": {
+      "base": "StructureDefinition-usdf-CoveragePlan.html"
     },
-    "StructureDefinition/usdrugformulary-FormularyDrug": {
-      "base": "StructureDefinition-usdrugformulary-FormularyDrug.html"
+    "StructureDefinition/usdf-FormularyDrug": {
+      "base": "StructureDefinition-usdf-FormularyDrug.html"
     },
-    "StructureDefinition/usdrugformulary-FormularyDrugOption2": {
-      "base": "StructureDefinition-usdrugformulary-FormularyDrugOption2.html"
-    },
-    "StructureDefinition/usdrugformulary-CoInsuranceRate-extension": {
-      "base": "StructureDefinition-usdrugformulary-CoInsuranceRate-extension.html",
+    "StructureDefinition/usdf-CoInsuranceRate-extension": {
+      "base": "StructureDefinition-usdf-CoInsuranceRate-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-CoinsuranceOption-extension": {
-      "base": "StructureDefinition-usdrugformulary-CoinsuranceOption-extension.html",
+    "StructureDefinition/usdf-CoinsuranceOption-extension": {
+      "base": "StructureDefinition-usdf-CoinsuranceOption-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-CopayAmount-extension": {
-      "base": "StructureDefinition-usdrugformulary-CopayAmount-extension.html",
+    "StructureDefinition/usdf-CopayAmount-extension": {
+      "base": "StructureDefinition-usdf-CopayAmount-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-CopayOption-extension": {
-      "base": "StructureDefinition-usdrugformulary-CopayOption-extension.html",
+    "StructureDefinition/usdf-CopayOption-extension": {
+      "base": "StructureDefinition-usdf-CopayOption-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-CostSharing-extension": {
-      "base": "StructureDefinition-usdrugformulary-CostSharing-extension.html",
+    "StructureDefinition/usdf-CostSharing-extension": {
+      "base": "StructureDefinition-usdf-CostSharing-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-DrugTierDefinition-extension": {
-      "base": "StructureDefinition-usdrugformulary-DrugTierDefinition-extension.html",
+    "StructureDefinition/usdf-DrugAlternatives-extension": {
+      "base": "StructureDefinition-usdf-DrugAlternatives-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-DrugTierID-extension": {
-      "base": "StructureDefinition-usdrugformulary-DrugTierID-extension.html",
+    "StructureDefinition/usdf-DrugTierDefinition-extension": {
+      "base": "StructureDefinition-usdf-DrugTierDefinition-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-EmailPlanContact-extension": {
-      "base": "StructureDefinition-usdrugformulary-EmailPlanContact-extension.html",
+    "StructureDefinition/usdf-DrugTierID-extension": {
+      "base": "StructureDefinition-usdf-DrugTierID-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-FormularyURL-extension": {
-      "base": "StructureDefinition-usdrugformulary-FormularyURL-extension.html",
+    "StructureDefinition/usdf-EmailPlanContact-extension": {
+      "base": "StructureDefinition-usdf-EmailPlanContact-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-MailOrder-extension": {
-      "base": "StructureDefinition-usdrugformulary-MailOrder-extension.html",
+    "StructureDefinition/usdf-FormularyURL-extension": {
+      "base": "StructureDefinition-usdf-FormularyURL-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-MarketingURL-extension": {
-      "base": "StructureDefinition-usdrugformulary-MarketingURL-extension.html",
+    "StructureDefinition/usdf-MailOrder-extension": {
+      "base": "StructureDefinition-usdf-MailOrder-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-Network-extension": {
-      "base": "StructureDefinition-usdrugformulary-Network-extension.html",
+    "StructureDefinition/usdf-MarketingURL-extension": {
+      "base": "StructureDefinition-usdf-MarketingURL-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-PharmacyType-extension": {
-      "base": "StructureDefinition-usdrugformulary-PharmacyType-extension.html",
+    "StructureDefinition/usdf-Network-extension": {
+      "base": "StructureDefinition-usdf-Network-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-PlanIDType-extension": {
-      "base": "StructureDefinition-usdrugformulary-PlanIDType-extension.html",
+    "StructureDefinition/usdf-PharmacyType-extension": {
+      "base": "StructureDefinition-usdf-PharmacyType-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-PriorAuthorization-extension": {
-      "base": "StructureDefinition-usdrugformulary-PriorAuthorization-extension.html",
+    "StructureDefinition/usdf-PlanID-extension": {
+      "base": "StructureDefinition-usdf-PlanID-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-QuantityLimit-extension": {
-      "base": "StructureDefinition-usdrugformulary-QuantityLimit-extension.html",
+    "StructureDefinition/usdf-PlanIDType-extension": {
+      "base": "StructureDefinition-usdf-PlanIDType-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/usdrugformulary-StepTherapyLimit-extension": {
-      "base": "StructureDefinition-usdrugformulary-StepTherapyLimit-extension.html",
+    "StructureDefinition/usdf-PriorAuthorization-extension": {
+      "base": "StructureDefinition-usdf-PriorAuthorization-extension.html",
       "template-base": "sd-extension.html"
     },
-    "ValueSet/usdrugformulary-CoinsuranceOptionVS": {
-      "base": "ValueSet-usdrugformulary-CoinsuranceOptionVS.html"
+    "StructureDefinition/usdf-QuantityLimit-extension": {
+      "base": "StructureDefinition-usdf-QuantityLimit-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/usdrugformulary-CopayOptionVS": {
-      "base": "ValueSet-usdrugformulary-CopayOptionVS.html"
+    "StructureDefinition/usdf-StepTherapyLimit-extension": {
+      "base": "StructureDefinition-usdf-StepTherapyLimit-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/usdrugformulary-DrugTierVS": {
-      "base": "ValueSet-usdrugformulary-DrugTierVS.html"
+    "StructureDefinition/usdf-SummaryURL-extension": {
+      "base": "StructureDefinition-usdf-SummaryURL-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/usdrugformulary-PharmacyTypeVS": {
-      "base": "ValueSet-usdrugformulary-PharmacyTypeVS.html"
+    "ValueSet/usdf-CoinsuranceOptionVS": {
+      "base": "ValueSet-usdf-CoinsuranceOptionVS.html"
     },
-    "CodeSystem/usdrugformulary-CoinsuranceOptionCS": {
-      "base": "CodeSystem-usdrugformulary-CoinsuranceOptionCS.html"
+    "ValueSet/usdf-CopayOptionVS": {
+      "base": "ValueSet-usdf-CopayOptionVS.html"
     },
-    "CodeSystem/usdrugformulary-CopayOptionCS": {
-      "base": "CodeSystem-usdrugformulary-CopayOptionCS.html"
+    "ValueSet/usdf-DrugTierVS": {
+      "base": "ValueSet-usdf-DrugTierVS.html"
     },
-    "CodeSystem/usdrugformulary-DrugTierCS": {
-      "base": "CodeSystem-usdrugformulary-DrugTierCS.html"
+    "ValueSet/usdf-PharmacyTypeVS": {
+      "base": "ValueSet-usdf-PharmacyTypeVS.html"
     },
-    "CodeSystem/usdrugformulary-PharmacyTypeCS": {
-      "base": "CodeSystem-usdrugformulary-PharmacyTypeCS.html"
+    "CodeSystem/usdf-CoinsuranceOptionCS": {
+      "base": "CodeSystem-usdf-CoinsuranceOptionCS.html"
+    },
+    "CodeSystem/usdf-CopayOptionCS": {
+      "base": "CodeSystem-usdf-CopayOptionCS.html"
+    },
+    "CodeSystem/usdf-DrugTierCS": {
+      "base": "CodeSystem-usdf-DrugTierCS.html"
+    },
+    "CodeSystem/usdf-PharmacyTypeCS": {
+      "base": "CodeSystem-usdf-PharmacyTypeCS.html"
     },
     "List/covplanV1002": {
       "base": "List-covplanV1002.html",
       "source": "CoveragePlanV1002.json"
-    },
-    "List/covplanV2002": {
-      "base": "List-covplanV2002.html",
-      "source": "CoveragePlanV2002.json"
     },
     "List/CoveragePlanV3001": {
       "base": "List-CoveragePlanV3001.html",
@@ -180,17 +182,21 @@
       "base": "List-CoveragePlanV3002.html",
       "source": "CoveragePlanV3002.json"
     },
+    "List/CoveragePlanV3004t": {
+      "base": "List-CoveragePlanV3004t.html",
+      "source": "CoveragePlanV3004t.json"
+    },
     "MedicationKnowledge/formularydrugV1002": {
       "base": "MedicationKnowledge-formularydrugV1002.html",
       "source": "FormularyDrugV1002.json"
     },
-    "Medication/formularydrugV2002": {
-      "base": "Medication-formularydrugV2002.html",
-      "source": "FormularyDrugV2002.json"
-    },
     "MedicationKnowledge/FormularyDrugV3001": {
       "base": "MedicationKnowledge-FormularyDrugV3001.html",
       "source": "FormularyDrugV3001.json"
+    },
+    "MedicationKnowledge/cmsip9": {
+      "base": "MedicationKnowledge-cmsip9.html",
+      "source": "FormularyDrugcmsip9.json"
     }
   },
   "special-urls": [],

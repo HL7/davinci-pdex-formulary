@@ -36,20 +36,20 @@
   </thead>
   <tbody>
     <tr>
-          <td><a href="ValueSet-usdrugformulary-CoinsuranceOptionVS.html">CoinsuranceOptionVS</a></td>
-          <td>{% capture md_text %}As defined by QHP Formulary Spec{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="ValueSet-usdf-CoinsuranceOptionVS.html">CoinsuranceOptionVS</a></td>
+          <td>{% capture md_text %}Qualifier for coinsurance rate{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-usdrugformulary-CopayOptionVS.html">CopayOptionVS</a></td>
-          <td>{% capture md_text %}As defined by QHP Formulary Spec{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="ValueSet-usdf-CopayOptionVS.html">CopayOptionVS</a></td>
+          <td>{% capture md_text %}Qualifier of copay amount{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-usdrugformulary-DrugTierVS.html">DrugTierVS</a></td>
-          <td>{% capture md_text %}The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own CV{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="ValueSet-usdf-DrugTierVS.html">DrugTierVS</a></td>
+          <td>{% capture md_text %}The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own controlled vocabulary.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-usdrugformulary-PharmacyTypeVS.html">PharmacyTypeVS</a></td>
-          <td>{% capture md_text %}Types of Pharmacies...each payer will likely have its own controlled vocabulary{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="ValueSet-usdf-PharmacyTypeVS.html">PharmacyTypeVS</a></td>
+          <td>{% capture md_text %}Types of Pharmacies. Each payer will have its own controlled vocabulary.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         
   </tbody>
@@ -82,8 +82,20 @@
         <td>{% capture md_text %}General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/list-mode">ListMode</a></td>
+        <td>{% capture md_text %}The processing mode that applies to this list.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/list-order">ListOrderCodes</a></td>
         <td>{% capture md_text %}Base values for the order of the items in a list resource.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/list-status">ListStatus</a></td>
+        <td>{% capture md_text %}The current state of the list.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/medicationknowledge-status">MedicationKnowledge Status Codes</a></td>
+        <td>{% capture md_text %}MedicationKnowledge Status Codes{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/list-item-flag">PatientMedicineChangeTypes</a></td>
@@ -100,22 +112,6 @@
       <tr>
         <td><a href="http://www.hl7.org/fhir/us/core/ValueSet-us-core-medication-codes.html">USCoreMedicationCodes</a></td>
         <td>{% capture md_text %}All prescribable medication formulations represented using  either a 'generic' or 'brand-specific' concept. This includes RxNorm codes whose Term Type is SCD (semantic clinical drug), SBD (semantic brand drug), GPCK (generic pack), BPCK (brand pack), SCDG (semantic clinical drug group), SBDG (semantic brand drug group), SCDF (semantic clinical drug form), or SBDF (semantic brand drug form){% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/list-mode|4.0.0">http://hl7.org/fhir/ValueSet/list-mode|4.0.0</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/list-status|4.0.0">http://hl7.org/fhir/ValueSet/list-status|4.0.0</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/medication-status|4.0.0">http://hl7.org/fhir/ValueSet/medication-status|4.0.0</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/medicationknowledge-status|4.0.0">http://hl7.org/fhir/ValueSet/medicationknowledge-status|4.0.0</a></td>
-        <td></td>
       </tr>
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/medicationknowledge-characteristic">medicationKnowledge Characteristic Codes</a></td>
