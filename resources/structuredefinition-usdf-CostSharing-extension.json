@@ -15,7 +15,7 @@
   "name": "CostSharing",
   "title": "usdf-CostSharing",
   "status": "draft",
-  "date": "2019-06-06",
+  "date": "2019-06-14",
   "publisher": "Example Publisher",
   "contact": [
     {
@@ -135,7 +135,7 @@
           "extensions",
           "user content"
         ],
-        "min": 4,
+        "min": 5,
         "max": "*",
         "base": {
           "path": "Element.extension",
@@ -276,7 +276,7 @@
         "id": "Extension:costsharing.extension:coinsuranceoption",
         "path": "Extension.extension",
         "definition": "A code that qualifies the coinsurance rate",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "Element.extension",
@@ -517,7 +517,7 @@
       {
         "id": "Extension:costsharing.extension",
         "path": "Extension.extension",
-        "min": 4,
+        "min": 5,
         "max": "*"
       },
       {
@@ -640,7 +640,7 @@
         "id": "Extension:costsharing.extension:coinsuranceoption",
         "path": "Extension.extension",
         "definition": "A code that qualifies the coinsurance rate",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "Element.extension",
