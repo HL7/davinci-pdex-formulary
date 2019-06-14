@@ -25,7 +25,7 @@
   "dependsOn" : [{
     "id" : "uscore",
     "uri" : "http://hl7.org/fhir/us/core",
-    "packageId" : "hl7.fhir.us.core.r4",
+    "packageId" : "hl7.fhir.us.core",
     "version" : "current"
   }],
   "definition" : {
