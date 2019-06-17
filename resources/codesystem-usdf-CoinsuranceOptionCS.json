@@ -15,18 +15,18 @@
   "name": "CoinsuranceOptionCS",
   "title": "CoinsuranceOptionCS",
   "status": "draft",
-  "publisher": "Example Publisher",
+  "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
       "telecom": [
         {
           "system": "url",
-          "value": "http://example.com"
+          "value": "http://www.hl7.org/Special/committees/medication/"
         }
       ]
     }
   ],
-  "date": "2019-06-06",
+  "date": "2019-06-17",
   "description": "Qualifier for coinsurance rate",
   "caseSensitive": true,
   "content": "complete",

@@ -4,6 +4,14 @@
     <name value="US_Drug_Formulary" />
     <title value="US Drug Formulary" />
     <status value="draft" />
+    <publisher value="HL7 Pharmacy WG"/>
+    <contact>
+      <telecom>
+        <system value="url"/>
+        <value value="http://www.hl7.org/Special/committees/medication/"/>
+      </telecom>
+    </contact>
+
     <packageId value="hl7.fhir.us.Davinci-drug-formulary"/>
     <fhirVersion value="4.0.0"/>
     <definition>
@@ -221,21 +229,21 @@
           </reference>
           <name value="PharmacyTypeCS" />
       </resource>
-   <resource>
-<exampleBoolean value="false" />
-<reference>
-<reference value="SearchParameter/DrugTier" />
-</reference>
-<name value="DrugTier" />
-</resource>
-<resource>
-<exampleBoolean value="false" />
-<reference>
-<reference value="SearchParameter/DrugPlan" />
-</reference>
-<name value="DrugPlan" />
-</resource>
-   <resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="SearchParameter/DrugPlan" />
+          </reference>
+          <name value="DrugPlan" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="SearchParameter/DrugTier" />
+          </reference>
+          <name value="DrugTier" />
+      </resource>
+      <resource>
           <exampleBoolean value="true" />
           <reference>
             <reference value="List/covplanV1002" />
