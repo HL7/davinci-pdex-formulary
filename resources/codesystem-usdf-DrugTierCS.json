@@ -15,18 +15,18 @@
   "name": "DrugTierCS",
   "title": "DrugTierCS",
   "status": "draft",
-  "publisher": "Example Publisher",
+  "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
       "telecom": [
         {
           "system": "url",
-          "value": "http://example.com"
+          "value": "http://www.hl7.org/Special/committees/medication/"
         }
       ]
     }
   ],
-  "date": "2019-06-06",
+  "date": "2019-06-17",
   "description": "The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own controlled vocabulary.",
   "caseSensitive": true,
   "content": "complete",

@@ -170,6 +170,12 @@
     "CodeSystem/usdf-PharmacyTypeCS": {
       "base": "CodeSystem-usdf-PharmacyTypeCS.html"
     },
+    "SearchParameter/DrugPlan": {
+      "base": "SearchParameter-DrugPlan.html"
+    },
+    "SearchParameter/DrugTier": {
+      "base": "SearchParameter-DrugTier.html"
+    },
     "List/covplanV1002": {
       "base": "List-covplanV1002.html",
       "source": "CoveragePlanV1002.json"

@@ -1,17 +1,17 @@
 {
-    "resourceType": "SearchParameter",
-    "id": "DrugTier",
-   "status": "active",
-    "code": "DrugTier",
-    "name": "DrugTier",
-    "description": "Accesses the DrugTier ID of a FormularyDrug",
-    "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/SearchParameter/DrugTier",
-    "base": [
-        "MedicationKnowledge"
-    ],
-    "type": "token",
-    "expression": "MedicationKnowledge.extension.where(url='http://www.hl7.org/fhir/us/usdf/StructureDefinition/usdrugformulary-DrugTierID-extension').value",
-    "comparator": [
-        "eq"
-    ]
+  "resourceType": "SearchParameter",
+  "id": "DrugTier",
+  "status": "active",
+  "code": "DrugTier",
+  "name": "DrugTier",
+  "description": "Accesses the DrugTier ID of a FormularyDrug",
+  "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/SearchParameter/DrugTier",
+  "base": [
+    "MedicationKnowledge"
+  ],
+  "type": "token",
+  "expression": "MedicationKnowledge.extension.where(url='http://www.hl7.org/fhir/us/usdf/StructureDefinition/usdrugformulary-DrugTierID-extension').value",
+  "comparator": [
+    "eq"
+  ]
 }
