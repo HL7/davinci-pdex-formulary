@@ -1,7 +1,7 @@
 {
   "source": "ig.xml",
   "version": "4.0.0",
-  "fixed-business-version": "0.3",
+  "fixed-business-version": "0.1.0",
   "license": "CC0-1.0",
   "paths": {
     "resources": [

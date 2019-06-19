@@ -1,6 +1,6 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-    <id value="hl7.fhir.us.Davinci-drug-formulary-0.3" />
-    <url value="http://hl7.org/fhir/us/Davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.Davinci-drug-formulary-0.3" />
+    <id value="hl7.fhir.us.Davinci-drug-formulary-0.1.0" />
+    <url value="http://hl7.org/fhir/us/Davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.Davinci-drug-formulary-0.1.0" />
     <name value="US_Drug_Formulary" />
     <title value="US Drug Formulary" />
     <status value="draft" />
