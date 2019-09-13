@@ -6,16 +6,10 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>CostSharing Extension</b></p>\n  <p>Definition of the patients responsibility for a portion of the cost not covered by insurance for a particular pharmacy type within a drug tier</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/Davinci-drug-formulary",
-      "value": "usdf.CostSharing"
-    }
-  ],
   "name": "CostSharing",
   "title": "usdf-CostSharing",
   "status": "draft",
-  "date": "2019-06-21",
+  "date": "2019-09-13",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
@@ -43,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:costsharing",
+        "id": "Extension",
         "path": "Extension",
         "short": "CostSharing",
         "definition": "Definition of the patients responsibility for a portion of the cost not covered by insurance for a particular pharmacy type within a drug tier",
@@ -87,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:costsharing.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -116,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:costsharing.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -157,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:costsharing.extension:pharmacytype",
+        "id": "Extension.extension:pharmacytype",
         "path": "Extension.extension",
         "definition": "A code that describes the network (in/out) status of a pharmacy, the duration of supply, and whether this is a mail order pharmacy.",
         "min": 1,
@@ -186,7 +180,7 @@
         "sliceName": "pharmacytype"
       },
       {
-        "id": "Extension:costsharing.extension:copayamount",
+        "id": "Extension.extension:copayamount",
         "path": "Extension.extension",
         "definition": "A standard, nominal fee charged for each prescription of a drug",
         "min": 1,
@@ -215,7 +209,7 @@
         "sliceName": "copayamount"
       },
       {
-        "id": "Extension:costsharing.extension:copayoption",
+        "id": "Extension.extension:copayoption",
         "path": "Extension.extension",
         "definition": "A code that qualifies the copay amount",
         "min": 1,
@@ -244,7 +238,7 @@
         "sliceName": "copayoption"
       },
       {
-        "id": "Extension:costsharing.extension:coinsurancerate",
+        "id": "Extension.extension:coinsurancerate",
         "path": "Extension.extension",
         "definition": "A fee charged for each prescription of a drug, expressed as a percentage of that drug's overall cost",
         "min": 1,
@@ -273,7 +267,7 @@
         "sliceName": "coinsurancerate"
       },
       {
-        "id": "Extension:costsharing.extension:coinsuranceoption",
+        "id": "Extension.extension:coinsuranceoption",
         "path": "Extension.extension",
         "definition": "A code that qualifies the coinsurance rate",
         "min": 1,
@@ -302,7 +296,7 @@
         "sliceName": "coinsuranceoption"
       },
       {
-        "id": "Extension:costsharing.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -333,7 +327,7 @@
         "fixedUri": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension"
       },
       {
-        "id": "Extension:costsharing.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -507,7 +501,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:costsharing",
+        "id": "Extension",
         "path": "Extension",
         "short": "CostSharing",
         "definition": "Definition of the patients responsibility for a portion of the cost not covered by insurance for a particular pharmacy type within a drug tier",
@@ -515,13 +509,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:costsharing.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 5,
         "max": "*"
       },
       {
-        "id": "Extension:costsharing.extension:pharmacytype",
+        "id": "Extension.extension:pharmacytype",
         "path": "Extension.extension",
         "definition": "A code that describes the network (in/out) status of a pharmacy, the duration of supply, and whether this is a mail order pharmacy.",
         "min": 1,
@@ -550,7 +544,7 @@
         "sliceName": "pharmacytype"
       },
       {
-        "id": "Extension:costsharing.extension:copayamount",
+        "id": "Extension.extension:copayamount",
         "path": "Extension.extension",
         "definition": "A standard, nominal fee charged for each prescription of a drug",
         "min": 1,
@@ -579,7 +573,7 @@
         "sliceName": "copayamount"
       },
       {
-        "id": "Extension:costsharing.extension:copayoption",
+        "id": "Extension.extension:copayoption",
         "path": "Extension.extension",
         "definition": "A code that qualifies the copay amount",
         "min": 1,
@@ -608,7 +602,7 @@
         "sliceName": "copayoption"
       },
       {
-        "id": "Extension:costsharing.extension:coinsurancerate",
+        "id": "Extension.extension:coinsurancerate",
         "path": "Extension.extension",
         "definition": "A fee charged for each prescription of a drug, expressed as a percentage of that drug's overall cost",
         "min": 1,
@@ -637,7 +631,7 @@
         "sliceName": "coinsurancerate"
       },
       {
-        "id": "Extension:costsharing.extension:coinsuranceoption",
+        "id": "Extension.extension:coinsuranceoption",
         "path": "Extension.extension",
         "definition": "A code that qualifies the coinsurance rate",
         "min": 1,
@@ -666,7 +660,7 @@
         "sliceName": "coinsuranceoption"
       },
       {
-        "id": "Extension:costsharing.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -676,7 +670,7 @@
         "fixedUri": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension"
       },
       {
-        "id": "Extension:costsharing.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

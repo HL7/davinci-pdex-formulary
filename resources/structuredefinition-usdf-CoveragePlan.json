@@ -3,12 +3,12 @@
   "id": "usdf-CoveragePlan",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>CoveragePlan Profile</b></p>\n  <p>A health plan which contains links to administrative information,  a list of formulary drugs covered under that plan, and a definition of drug tiers and their associated cost-sharing models.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>usdf.CoveragePlan maps to List:\n  PlanIdentifier maps to identifier\n  CoveragePlanMode maps to mode\n  CoveragePlanStatus maps to status\n  MarketingName maps to title\n  FormularyDrugEntry maps to entry.item\n  DrugTierDefinition maps to extension\n  Network maps to extension\n  SummaryURL maps to extension\n  FormularyURL maps to extension\n  EmailPlanContact maps to extension\n  MarketingURL maps to extension\n  LastUpdatedOn maps to date\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>CoveragePlan Profile</b></p>\n  <p>A health plan which contains links to administrative information,  a list of formulary drugs covered under that plan, and a definition of drug tiers and their associated cost-sharing models.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>usdf.CoveragePlan maps to List:\n  PlanIdentifier maps to identifier\n  CoveragePlanMode maps to mode\n  CoveragePlanStatus maps to status\n  MarketingName maps to title\n  FormularyDrug maps to entry.item\n  DrugTierDefinition maps to extension\n  Network maps to extension\n  SummaryURL maps to extension\n  FormularyURL maps to extension\n  EmailPlanContact maps to extension\n  MarketingURL maps to extension\n  LastUpdatedOn maps to date\n  constrain entry to 1..*\n  constrain identifier to 1..*\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan",
   "name": "CoveragePlan",
   "status": "draft",
-  "date": "2019-06-21",
+  "date": "2019-09-13",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
@@ -42,7 +42,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "List:usdf-CoveragePlan",
+        "id": "List",
         "path": "List",
         "short": "usdf-CoveragePlan",
         "definition": "A health plan which contains links to administrative information,  a list of formulary drugs covered under that plan, and a definition of drug tiers and their associated cost-sharing models.",
@@ -145,7 +145,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.id",
+        "id": "List.id",
         "path": "List.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -166,7 +166,7 @@
         "isSummary": true
       },
       {
-        "id": "List:usdf-CoveragePlan.meta",
+        "id": "List.meta",
         "path": "List.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -186,7 +186,7 @@
         "isSummary": true
       },
       {
-        "id": "List:usdf-CoveragePlan.implicitRules",
+        "id": "List.implicitRules",
         "path": "List.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -208,7 +208,7 @@
         "isSummary": true
       },
       {
-        "id": "List:usdf-CoveragePlan.language",
+        "id": "List.language",
         "path": "List.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -248,7 +248,7 @@
         }
       },
       {
-        "id": "List:usdf-CoveragePlan.text",
+        "id": "List.text",
         "path": "List.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -281,7 +281,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.contained",
+        "id": "List.contained",
         "path": "List.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -313,7 +313,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.extension",
+        "id": "List.extension",
         "path": "List.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -355,7 +355,7 @@
         }
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:drugtierdefinition",
+        "id": "List.extension:drugtierdefinition",
         "path": "List.extension",
         "definition": "A description of the drug tiers used by the formulary and how those tiers implement copay and coinsurance amounts. Drug tiers do not have any inherent meaning that is consistent across all formularies. Rather, each tier is defined using this element.",
         "min": 1,
@@ -379,7 +379,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:network",
+        "id": "List.extension:network",
         "path": "List.extension",
         "definition": "Array of Networks within a plan.",
         "min": 1,
@@ -403,7 +403,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:summaryurl",
+        "id": "List.extension:summaryurl",
         "path": "List.extension",
         "definition": "The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.",
         "min": 1,
@@ -427,7 +427,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:formularyurl",
+        "id": "List.extension:formularyurl",
         "path": "List.extension",
         "definition": "The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.",
         "min": 0,
@@ -451,7 +451,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:emailplancontact",
+        "id": "List.extension:emailplancontact",
         "path": "List.extension",
         "definition": "An email address for developers/public to report mistakes in the network and formulary data",
         "min": 0,
@@ -475,7 +475,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:marketingurl",
+        "id": "List.extension:marketingurl",
         "path": "List.extension",
         "definition": "The URL that goes directly to the plan brochure for the specific standard plan or plan variation",
         "min": 0,
@@ -499,7 +499,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:planidtype",
+        "id": "List.extension:planidtype",
         "path": "List.extension",
         "definition": "Type of Plan ID. For all Marketplace plans this should be: HIOS-PLAN-ID",
         "min": 1,
@@ -523,7 +523,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.modifierExtension",
+        "id": "List.modifierExtension",
         "path": "List.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -556,7 +556,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.identifier",
+        "id": "List.identifier",
         "path": "List.identifier",
         "short": "Business identifier",
         "definition": "Identifier for the List assigned for business purposes outside the context of FHIR.",
@@ -569,7 +569,10 @@
         },
         "type": [
           {
-            "code": "Identifier"
+            "code": "Identifier",
+            "profile": [
+              "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PlanIdentifier"
+            ]
           }
         ],
         "isModifier": false,
@@ -587,7 +590,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.status",
+        "id": "List.status",
         "path": "List.status",
         "short": "current | retired | entered-in-error",
         "definition": "Indicates the current state of this list.",
@@ -631,7 +634,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.mode",
+        "id": "List.mode",
         "path": "List.mode",
         "short": "working | snapshot | changes",
         "definition": "How this list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.",
@@ -676,7 +679,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.title",
+        "id": "List.title",
         "path": "List.title",
         "short": "Descriptive name for the list",
         "definition": "A label for the list assigned by the author.",
@@ -703,7 +706,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.code",
+        "id": "List.code",
         "path": "List.code",
         "short": "What the purpose of this list is",
         "definition": "This code defines the purpose of the list - why it was created.",
@@ -746,7 +749,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.subject",
+        "id": "List.subject",
         "path": "List.subject",
         "short": "If all resources have the same subject",
         "definition": "The common subject (or patient) of the resources that are in the list if there is one.",
@@ -788,7 +791,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.encounter",
+        "id": "List.encounter",
         "path": "List.encounter",
         "short": "Context in which list created",
         "definition": "The encounter that is the context in which this list was created.",
@@ -821,7 +824,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.date",
+        "id": "List.date",
         "path": "List.date",
         "short": "When the list was prepared",
         "definition": "The date that the list was prepared.",
@@ -853,7 +856,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.source",
+        "id": "List.source",
         "path": "List.source",
         "short": "Who and/or what defined the list contents (aka Author)",
         "definition": "The entity responsible for deciding what the contents of the list were. Where the list was created by a human, this is the same as the author of the list.",
@@ -894,7 +897,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.orderedBy",
+        "id": "List.orderedBy",
         "path": "List.orderedBy",
         "short": "What order the list has",
         "definition": "What order applies to the items in the list.",
@@ -933,7 +936,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.note",
+        "id": "List.note",
         "path": "List.note",
         "short": "Comments about the list",
         "definition": "Comments that apply to the overall list.",
@@ -959,12 +962,12 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.entry",
+        "id": "List.entry",
         "path": "List.entry",
         "short": "Entries in the list",
         "definition": "Entries in this list.",
         "comment": "If there are no entries in the list, an emptyReason SHOULD be provided.",
-        "min": 0,
+        "min": 1,
         "max": "*",
         "base": {
           "path": "List.entry",
@@ -999,7 +1002,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.entry.id",
+        "id": "List.entry.id",
         "path": "List.entry.id",
         "representation": [
           "xmlAttr"
@@ -1028,7 +1031,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.entry.extension",
+        "id": "List.entry.extension",
         "path": "List.entry.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1059,7 +1062,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.entry.modifierExtension",
+        "id": "List.entry.modifierExtension",
         "path": "List.entry.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1093,7 +1096,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.entry.flag",
+        "id": "List.entry.flag",
         "path": "List.entry.flag",
         "short": "Status/Workflow information about this item",
         "definition": "The flag allows the system constructing the list to indicate the role and significance of the item in the list.",
@@ -1132,7 +1135,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.entry.deleted",
+        "id": "List.entry.deleted",
         "path": "List.entry.deleted",
         "short": "If this item is actually marked as deleted",
         "definition": "True if this item is marked as deleted in the list.",
@@ -1165,7 +1168,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.entry.date",
+        "id": "List.entry.date",
         "path": "List.entry.date",
         "short": "When item added to list",
         "definition": "When this item was added to the list.",
@@ -1192,7 +1195,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.entry.item",
+        "id": "List.entry.item",
         "path": "List.entry.item",
         "short": "Actual entry",
         "definition": "A reference to the actual resource from which data was derived.",
@@ -1221,7 +1224,7 @@
         ]
       },
       {
-        "id": "List:usdf-CoveragePlan.emptyReason",
+        "id": "List.emptyReason",
         "path": "List.emptyReason",
         "short": "Why list is empty",
         "definition": "If the list is empty, why the list is empty.",
@@ -1267,7 +1270,7 @@
   "differential": {
     "element": [
       {
-        "id": "List:usdf-CoveragePlan",
+        "id": "List",
         "path": "List",
         "short": "usdf-CoveragePlan",
         "definition": "A health plan which contains links to administrative information,  a list of formulary drugs covered under that plan, and a definition of drug tiers and their associated cost-sharing models.",
@@ -1275,7 +1278,7 @@
         "isSummary": false
       },
       {
-        "id": "List:usdf-CoveragePlan.extension",
+        "id": "List.extension",
         "path": "List.extension",
         "slicing": {
           "id": "1",
@@ -1292,7 +1295,7 @@
         "max": "*"
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:drugtierdefinition",
+        "id": "List.extension:drugtierdefinition",
         "path": "List.extension",
         "definition": "A description of the drug tiers used by the formulary and how those tiers implement copay and coinsurance amounts. Drug tiers do not have any inherent meaning that is consistent across all formularies. Rather, each tier is defined using this element.",
         "min": 1,
@@ -1316,7 +1319,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:network",
+        "id": "List.extension:network",
         "path": "List.extension",
         "definition": "Array of Networks within a plan.",
         "min": 1,
@@ -1340,7 +1343,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:summaryurl",
+        "id": "List.extension:summaryurl",
         "path": "List.extension",
         "definition": "The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.",
         "min": 1,
@@ -1364,7 +1367,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:formularyurl",
+        "id": "List.extension:formularyurl",
         "path": "List.extension",
         "definition": "The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.",
         "min": 0,
@@ -1388,7 +1391,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:emailplancontact",
+        "id": "List.extension:emailplancontact",
         "path": "List.extension",
         "definition": "An email address for developers/public to report mistakes in the network and formulary data",
         "min": 0,
@@ -1412,7 +1415,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:marketingurl",
+        "id": "List.extension:marketingurl",
         "path": "List.extension",
         "definition": "The URL that goes directly to the plan brochure for the specific standard plan or plan variation",
         "min": 0,
@@ -1436,7 +1439,7 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.extension:planidtype",
+        "id": "List.extension:planidtype",
         "path": "List.extension",
         "definition": "Type of Plan ID. For all Marketplace plans this should be: HIOS-PLAN-ID",
         "min": 1,
@@ -1460,34 +1463,44 @@
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.identifier",
+        "id": "List.identifier",
         "path": "List.identifier",
         "min": 1,
         "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PlanIdentifier"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.status",
+        "id": "List.status",
         "path": "List.status",
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.mode",
+        "id": "List.mode",
         "path": "List.mode",
         "mustSupport": true
       },
       {
-        "id": "List:usdf-CoveragePlan.title",
+        "id": "List.title",
         "path": "List.title",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "List:usdf-CoveragePlan.entry",
-        "path": "List.entry"
+        "id": "List.entry",
+        "path": "List.entry",
+        "min": 1,
+        "max": "*"
       },
       {
-        "id": "List:usdf-CoveragePlan.entry.item",
+        "id": "List.entry.item",
         "path": "List.entry.item",
         "type": [
           {
@@ -1500,11 +1513,5 @@
       }
     ]
   },
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/Davinci-drug-formulary",
-      "value": "usdf.CoveragePlan"
-    }
-  ],
   "title": "usdf-CoveragePlan"
 }

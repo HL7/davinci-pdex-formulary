@@ -27,7 +27,7 @@
             "coding": [
               {
                 "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
-                "code": "GENERIC",
+                "code": "generic",
                 "display": "Generic"
               }
             ]
@@ -46,7 +46,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
-                    "code": "1-MONTH-IN-RETAIL",
+                    "code": "1-month-in-retail",
                     "display": "1 Month Supply via in-network retail pharmacy"
                   }
                 ]
@@ -64,7 +64,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
-                    "code": "BEFORE-DEDUCTIBLE",
+                    "code": "before-deductible",
                     "display": "Before Deductible"
                   }
                 ]
@@ -80,7 +80,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
-                    "code": "AFTER-DEDUCTIBLE",
+                    "code": "after-deductible",
                     "display": "After Deductible"
                   }
                 ]
@@ -97,7 +97,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
-                    "code": "1-MONTH-OUT-RETAIL",
+                    "code": "1-month-out-retail",
                     "display": "1 Month Supply via out-of-network retail pharmacy"
                   }
                 ]
@@ -115,7 +115,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
-                    "code": "NO-CHARGE",
+                    "code": "no-charge",
                     "display": "No Charge"
                   }
                 ]
@@ -131,7 +131,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
-                    "code": "AFTER-DEDUCTIBLE",
+                    "code": "after-deductible",
                     "display": "After Deductible"
                   }
                 ]
@@ -148,7 +148,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
-                    "code": "3-MONTH-IN-RETAIL",
+                    "code": "3-month-in-retail",
                     "display": "3 Month Supply via in-network retail pharmacy"
                   }
                 ]
@@ -166,7 +166,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
-                    "code": "NO-CHARGE",
+                    "code": "no-charge",
                     "display": "No Charge"
                   }
                 ]
@@ -182,7 +182,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
-                    "code": "AFTER-DEDUCTIBLE",
+                    "code": "after-deductible",
                     "display": "After Deductible"
                   }
                 ]
@@ -199,7 +199,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
-                    "code": "3-MONTH-OUT-RETAIL",
+                    "code": "3-month-out-retail",
                     "display": "3 Month Supply via out-of-network retail pharmacy"
                   }
                 ]
@@ -217,7 +217,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
-                    "code": "NO-CHARGE",
+                    "code": "no-charge",
                     "display": "No Charge"
                   }
                 ]
@@ -233,7 +233,7 @@
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
-                    "code": "AFTER-DEDUCTIBLE",
+                    "code": "after-deductible",
                     "display": "After Deductible"
                   }
                 ]

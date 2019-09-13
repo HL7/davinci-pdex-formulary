@@ -1,8 +1,8 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
     <id value="hl7.fhir.us.Davinci-drug-formulary-0.1.0" />
     <url value="http://hl7.org/fhir/us/Davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.Davinci-drug-formulary-0.1.0" />
-    <name value="US_Drug_Formulary" />
-    <title value="US Drug Formulary" />
+    <name value="DaVinci_Payer_Data_Exchange_PDex_US_Drug_Formulary" />
+    <title value="DaVinci Payer Data Exchange (PDex) US Drug Formulary" />
     <status value="draft" />
     <publisher value="HL7 Pharmacy WG"/>
     <contact>
@@ -36,6 +36,20 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
+            <reference value="StructureDefinition/shr-core-Money" />
+          </reference>
+          <name value="shr-core-Money" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdf-PlanIdentifier" />
+          </reference>
+          <name value="usdf-PlanIdentifier" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
             <reference value="StructureDefinition/usdf-CoInsuranceRate-extension" />
           </reference>
           <name value="usdf-CoInsuranceRate" />
@@ -46,6 +60,13 @@
             <reference value="StructureDefinition/usdf-CoinsuranceOption-extension" />
           </reference>
           <name value="usdf-CoinsuranceOption" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Comparator-extension" />
+          </reference>
+          <name value="shr-core-Comparator" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -127,6 +148,13 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
+            <reference value="StructureDefinition/shr-core-Number-extension" />
+          </reference>
+          <name value="shr-core-Number" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
             <reference value="StructureDefinition/usdf-PharmacyType-extension" />
           </reference>
           <name value="usdf-PharmacyType" />
@@ -172,6 +200,13 @@
             <reference value="StructureDefinition/usdf-SummaryURL-extension" />
           </reference>
           <name value="usdf-SummaryURL" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Units-extension" />
+          </reference>
+          <name value="shr-core-Units" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -295,7 +330,7 @@
       
         <page>
             <nameUrl value="index.html" />
-            <title value="US Drug Formulary" />
+            <title value="DaVinci Payer Data Exchange (PDex) US Drug Formulary" />
             <generation value="html" />
         </page>
     </definition>

@@ -6,16 +6,10 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DrugTierID Extension</b></p>\n  <p>A code that describes the coverage status of a drug in a health plan (e.g., preferred generic, specialty, etc.)</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/Davinci-drug-formulary",
-      "value": "usdf.DrugTierID"
-    }
-  ],
   "name": "DrugTierID",
   "title": "usdf-DrugTierID",
   "status": "draft",
-  "date": "2019-06-21",
+  "date": "2019-09-13",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
@@ -43,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:drugtierid",
+        "id": "Extension",
         "path": "Extension",
         "short": "DrugTierID",
         "definition": "A code that describes the coverage status of a drug in a health plan (e.g., preferred generic, specialty, etc.)",
@@ -87,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:drugtierid.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -116,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:drugtierid.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -157,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:drugtierid.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -188,7 +182,7 @@
         "fixedUri": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension"
       },
       {
-        "id": "Extension:drugtierid.valueCodeableConcept",
+        "id": "Extension.valueCodeableConcept",
         "path": "Extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -222,7 +216,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:drugtierid",
+        "id": "Extension",
         "path": "Extension",
         "short": "DrugTierID",
         "definition": "A code that describes the coverage status of a drug in a health plan (e.g., preferred generic, specialty, etc.)",
@@ -230,13 +224,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:drugtierid.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:drugtierid.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -246,7 +240,7 @@
         "fixedUri": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension"
       },
       {
-        "id": "Extension:drugtierid.valueCodeableConcept",
+        "id": "Extension.valueCodeableConcept",
         "path": "Extension.valueCodeableConcept",
         "min": 1,
         "type": [

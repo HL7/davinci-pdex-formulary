@@ -21,25 +21,37 @@
 
 <!-- ============CONTENT CONTENT=============== -->
 
-
-  <h1 id="drug-formulary">US Drug Formulary</h1>
-  <p>This project defines a FHIR interface to a health insurer's drug formulary information for patients/consumers. 
-    A drug formulary is a list of brand-name and generic prescription drugs a health insurer 
+<h1 id="drug-formulary">DaVinci Payer Data Exchange US Drug Formulary</h1>
+<p>This project defines a FHIR interface to a health insurer's drug formulary information for patients/consumers. 
+A drug formulary is a list of brand-name and generic prescription drugs a health insurer 
     agrees to pay for, at least partially, as part of health insurance coverage.
     Drug formularies are developed based on the efficacy, safety and cost of drugs. 
-   The primary <a href="#use-cases">use cases</a> for this FHIR interface enable consumers/patients to 
+   The primary <a href="#use-cases">use cases</a> for this FHIR interface enable consumers/members/patients to 
    understand the costs and alternatives for drugs that have been prescribed, and to compare their drug
   costs across different insurance plans.</p>
-  
-  <h2 id="formulary-readme">Contents of This Implementation Guide</h2>
-  <p>This implementation guide (IG) consists of 2 FHIR profiles, along with associated extensions, value sets.</p>
+<p>
+A key architectural issue that is beyond the scope of this implementation guide is how a user finds the FHIR endpoint for a particular formulary.    This implementation guide assumes that the FHIR endpoint is known to the user. </p>
+  <h2 id="table-of-contents">Table Of Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#disclaimers-assumptions">Disclaimers and Assumptions</a></li>
+<li><a href="#formulary-structure">Formulary Structure</a></li>
+<li><a href="#expected-users">Expected Users</a></li>
+<li><a href="#use-cases">Use Cases</a></li>
+<li><a href="#privacy-considerations">Privacy Considerations</a></li>
+<li><a href="#anticipated-client-queries">Anticipated Client Queries</a></li>
+<li><a href="#open-issues">Additional Background and Open Issues</a></li>
+</ul>
+
+  <h2 id="introduction">Introduction</h2>
+  <p>This implementation guide (IG) introduces  2 FHIR profiles, along with associated extensions, search parameters, and value sets.</p>
 
   <ul>
       <li><b><a href="StructureDefinition-usdf-CoveragePlan.html">CoveragePlan</a></b>: The CoveragePlan profile of the FHIR R4 <a href="http://hl7.org/fhir/R4/list.html">List</a> resource provides 
         links to information about the plan and formulary, contact information, a description of the drugTiers and associated cost sharing models of the plan, and a list of FormularyDrugs. </li>    
       <li><b><a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a></b>: The FormularyDrug profile of the FHIR R4 <a href="http://hl7.org/fhir/medicationknowledge.html">MedicationKnowledge</a> resource provides plan-specific
       information about a prescribable drug identified by an RxNORM identifier.  Cost sharing for the drug are described by reference to a drug tier defined as part of the coverage plan.  Extensions to the MedicationKnowledge resource support
-    important search use cases.
+    important search use cases. Due to the immaturity of the MedicationKnowledge resource, it is expected that it will undergo changes, and those changes may require evolution of the FormularyDrug profile.
   </li>
   </ul>
   Two searchParameters have also been defined to facilitate the anticipated use cases.  See the <a href="#Anticipated-Client-Queries">Anticipated Client Queries</a> section for a description of how to query the CoveragePlan and FormularyDrug profiles
@@ -49,16 +61,26 @@
       <li><b><a href="SearchParameter-DrugTier.html">DrugTier</a></b>: Makes the DrugTier identifier of each FormularyDrug accessible for query    </li>
     </ul>
   
-
+  <h2 id="disclaimers-assumptions">Disclaimers and Assumptions</h2>
+<p>
+    <ul>
+     <li><b>The MedicationKnowledge Resource is immature</b>:  When designing this IG, we initially planned to profile Medication.  Based on a strong recommendation from the PharmaWG we shifted to profiling Medicationknowledge.   The PharmaWG felt that MedicationKnowledge was a better choice, even with its low maturity, since it is more suitable as an artifact and already included some of fields that would be required as extensions to medication (e.g., classification). MedicationKnowledge and FormularyDrug will co-evolve moving forward.
+    </li>
+      <li><b>The formulary endpoint is known to the client</b>:
+    This IG assumes that the formulary endpoint is known to the client.  There is an overarching system architecture issue that is critical to resolve -- how does the client discover the FHIR endpoint of interest.   For the purposes of this IG, we consider that problem out of scope.
+      </li>
+        </ul>
+</p>
   <h2 id="formulary-structure">Formulary Structure</h2>
-  <p>Formularies in the United States are normally published by health insurers on an annual basis, with minor updates during the year. 
-  <p>Insurers regularly administer multiple health plans and each of those plans may have its own formulary.</p>
-  <p>Each formulary contains a list of drugs.
+  <p>Formularies in the United States are normally published by health insurers on an annual basis, with minor updates during the year. It is critical that health insurers update their published Formularies following these minor updates. <b>(Is there a requirement by rule to publish updates within a certain amount of time?)</b>
+  <p>Insurers regularly administer multiple health insurance and drug coverage plans and each of those plans may have its own formulary.</p>
+  <p>
+Each formulary contains a list of drugs.
   Drugs are placed into <strong>tiers</strong> that largely determine the cost to the consumer/patient. 
   The number and purpose of drug tiers varies across payers.  
   Each tier has an associated cost-sharing model that includes deductibles and/or coinsurance components for drugs in the tier
   when purchased through various pharmacy types.</p>
-  <p>In addition to the drug tier, drugs may also list requirements on the patient (e.g., or gender) or limitations on 
+  <p>In addition to the drug tier, drugs may also list requirements on the patient (e.g., age or gender) or limitations on 
       prescription (e.g., prior authorization). </p>
   <p>
   This Implementation Guide closely follows the formulary information model of the 
@@ -72,43 +94,58 @@
   The following object model shows the relationships between the resources in the current IG.
   
     <img src="formularyQHP.jpg" />
-  
-  A FormularyDrug is represents the availability of a drug with a specific RxNorm code within the tier structure and prescribing constraints of a specific coverageplan.   
-  If a FHIR endpoint provides data on multiple CoveragePlans, querying for FormularyDrugs by their RxNorm could would return multiple entries.   Each of these FormularyDrugs
-  could associate the drug to a distinct tier in the associated plan, with plan-specific prescribing constraints.   
-  The CoveragePlan identifier field and the FormularyDrug planID extension field associate a FormularyDrug with a CoveragePlan.
-  
+  <p>
+  A FormularyDrug represents the availability of a drug with a specific RxNorm code within the tier structure and prescribing constraints of a specific CoveragePlan.   
+  If a FHIR endpoint provides data on multiple CoveragePlans, querying for FormularyDrugs by their RxNorm code would return multiple entries.   Each of these FormularyDrugs
+  could associate the drug to a distinct DrugTier in the associated CoveragePlan, with plan-specific prescribing constraints.   
+  The CoveragePlan PlanID field and the FormularyDrug PlanID extension field associate a FormularyDrug with a CoveragePlan.
+  </p>
   <h2 id="expected-users">Expected Users</h2>
   <p>
   This Implementation Guide is intended for insurers within the United States. 
-  Currently, many insurers make their formularies available to patients using PDFs or drug search forms on their websites. 
+  Currently, many insurers make their formularies available to patients using PDFs or drug search forms through their websites. 
   Providing formularies using FHIR may allow patients to more easily comparison-shop between plans and could help insurers educate 
   consumers about the differences between various drug tiers/classes.</p>
   <p>&nbsp;</p>
   
 <h2 id="use-cases">Use Cases</h2>
+<h3 id="actors">Actors</h3>
+<b>IN PROGRESS (issue 23098)</b>
+<ul>
+<li>Patient</li> - (definition)
+<li>Member</li> - (definition)
+<li>Consumer</li> - (definition)
+</ul>
 <h3>Med Copays under Health Plan</h3>
 <p>
-This use case allows a patient to determine the out-of-pocket cost of each of their medications under their current health plan.  
-The mobile application queries the electronic health record system to retrieve the list of medications for the patient (note that this is outside of the scope of this Implementation Guide)  
-The mobile application queries the formulary service for cost information about the drugs that the patient takes and provides 
-the out-of-pocket cost for each medication under the patient's current health plan
+This use case allows a member to determine the plan level estimated costs of each of their medications under the drug coverage of their current health plan.  
+The mobile application retrieves the member's medication list from an electronic health record system where the member's patient data is stored. This security and privacy of a patient's access to their health information is beyond the scope of this Implementation Guide.  The member could also independently maintain their medication list in the mobile application or elsewhere.
+The mobile application queries the formulary service for cost information about the drugs that the member takes and provides 
+the the plan level estimated cost for each medication under the member's current health plan.
+</p>
+<p>
+Note that for this use case the coverage plan could provide authenticated or open access to the plan formulary, and the privacy of the member's data is protected by *some other rule*.
 </p>
 <h3>Shopping for Health Plans</h3>
 <p>
-This use case allows a patient to compare several different health plans and determine which plan has the lowest out-of-pocket cost, 
-personalized to the patient's set of medications.  The mobile application queries the electronic health record system to 
-retrieve the list of medications for the patient (note that this is outside of the scope of this Implementation Guide) and gets a list of payers and their FHIR endpoints from a payer endpoint directory service.  
-For each payer, the mobile application queries the payer's formulary service to retrieve the list of health plans provided by that payer and the 
-medication costs for each plan, specific to the patient's set of medications.  Finally, the mobile application displays a 
-comparison for the out-of-pocket costs for each prospective health plan, personalized for particular medication needs of the patient.
-</p>
+This use case allows a consumer to compare the drug coverage of several different health plans and determine which plan has the lowest plan level estimated cost, 
+personalized to the consumers's set of medications.  
+The mobile application retrieves the consumer's medication list from an electronic health record system where the consumer's patient data is stored. This security and privacy of a patient's access to their health information is beyond the scope of this Implementation Guide.  The consumer could also independently maintain their medication list in the mobile application or elsewhere.
+For each payer, the mobile application queries the payer's formulary service to retrieve the list of health plans provided by that payer. Then, for each plan,the mobile application queries the formulary service to retrieve the plan-level estimated costs specific to the consumer's medication list. 
+
 <img src="Slide1.jpg" />
 <p>&nbsp;</p>
 <img src="Slide2.jpg" />
 <p>&nbsp;</p>
-
-<h2 id="Anticipated-Client-Queries">Anticipated Client Queries</h2>
+<h2 id="privacy-considerations">Privacy Considerations</h2>
+<p><b>In Progress to address issues 23095, 23096 and 23099</b></p>
+<p>
+Access to the formulary service should not require authentication, and the server should not maintain any records that could associate the consumer with the medication list that was queried.</p>
+<p>
+A conformant payer formulary service SHALL NOT require a formulary mobile application to send consumer identifying information in order to query for the list of health plans provided by that payer and the medication costs for each plan, specific to the consumer's set of medications.</p>
+<p>
+A formulary mobile application SHALL NOT send consumer identifiable information when querying a formulary service. </p>
+<h2 id="anticipated-client-queries">Anticipated Client Queries</h2>
 <h3 id="Find-all-CoveragePlans"> Find All CoveragePlans </h3> 
 <pre><code>
     GET [base]/List?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
@@ -141,13 +178,20 @@ Alternatively, these FormularyDrugs are also in the array of entries that is par
 To find all FormularyDrugs in the GENERIC tier of plan myPlanID:
 </p>
 <pre><code>
-    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=planID&amp;DrugTier=GENERIC
+    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID&amp;DrugTier=GENERIC
 </code></pre>
 <h3 id="Find-a-FormularyDrugs-by-code-in-a-CoveragePlan">Find A FormularyDrug by code in a CoveragePlan</h3>
+<p>
+To find a FormularyDrug by its RxNorm code within a CoveragePlan:
+</p>
 <pre><code>
-    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=planID&amp;code=myCode
+    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID&amp;code=myCode
 </code></pre>
 <h3 id="Find-a-FormularyDrugs-by-code-across-all-coverage-plans">Find A FormularyDrug by code across all CoveragePlans</h3>
+<p>
+To find a FormularyDrug by its RxNorm code within all CoveragePlans:
+</p>
+
 <pre><code>
     GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;code=myCode
 </code></pre>
@@ -165,9 +209,9 @@ To find all FormularyDrugs in the GENERIC tier of plan myPlanID:
   </p>
   <h2 id="representing-drug-classifications">Representing Drug Classifications</h2>
   <p>
- Within a consumer-facing drug formulary the primary use of drug classification is enable hierarchical browsing of the formulary contents from a
+ Within a consumer-facing drug formulary the primary use of drug classification is to enable hierarchical browsing of the formulary contents from a
  therapeutic disease area (e.g., hypertension) or pharmacologic action (e.g., beta blocker) perspective.  An empirical review of web/PDF-based drug formularies found
- variety of different hierarchies being used to present the formulary to consumers. The current IG suggests the utility of using the MedicationKnowledge medicineClassification field
+ variety of different hierarchies being used to present the formulary to consumers. The current IG suggests the utility of using the FormularyDrug.medicineClassification field
  to provide drug classification information, but does not specify a particular vocabulary.   This might be a fruitful area for subsequent standardization.
   </p>
   <h2 id="representing-pharmacy-types">Representing Pharmacy Types</h2>
@@ -179,9 +223,10 @@ To find all FormularyDrugs in the GENERIC tier of plan myPlanID:
   <h2 id="provision-of-formulary-ids">Provision of Formulary IDs and Availability of Directory</h2>
   <p>There is no single, authoritative indentifier that can be associated with a formulary (e.g., like NPI numbers identify providers in the United States). 
     How can unique formulary IDs be provisioned such that they can be implemented consistently by all payers and referenced by other entities (e.g., health plans)?
-    The NCPDP Formulary and Benefits eRx implementation guide requires an identifier for each formulary.  Perhaps that can be leveraged.   Similarly, how can a client application find the 
-    endpoint for a particular formulary? Is a directory of formularies needed?</p>
-  </p>
+    The NCPDP Formulary and Benefits eRx implementation guide requires an identifier for each formulary.  Perhaps that can be leveraged.   
+   </p>
+
+
     
   <h1 id="authors">Authors</h1>
   <table>

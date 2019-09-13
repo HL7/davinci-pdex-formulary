@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug",
   "name": "FormularyDrug",
   "status": "draft",
-  "date": "2019-06-21",
+  "date": "2019-09-13",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
@@ -52,7 +52,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug",
+        "id": "MedicationKnowledge",
         "path": "MedicationKnowledge",
         "short": "usdf-FormularyDrug",
         "definition": "Drug information which is part of a formulary.",
@@ -129,7 +129,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.id",
+        "id": "MedicationKnowledge.id",
         "path": "MedicationKnowledge.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -150,7 +150,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.meta",
+        "id": "MedicationKnowledge.meta",
         "path": "MedicationKnowledge.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -170,7 +170,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.implicitRules",
+        "id": "MedicationKnowledge.implicitRules",
         "path": "MedicationKnowledge.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -192,7 +192,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.language",
+        "id": "MedicationKnowledge.language",
         "path": "MedicationKnowledge.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -232,7 +232,7 @@
         }
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.text",
+        "id": "MedicationKnowledge.text",
         "path": "MedicationKnowledge.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -265,7 +265,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.contained",
+        "id": "MedicationKnowledge.contained",
         "path": "MedicationKnowledge.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -297,7 +297,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension",
+        "id": "MedicationKnowledge.extension",
         "path": "MedicationKnowledge.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -339,7 +339,7 @@
         }
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:drugalternatives",
+        "id": "MedicationKnowledge.extension:drugalternatives",
         "path": "MedicationKnowledge.extension",
         "definition": "Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
         "min": 0,
@@ -362,7 +362,7 @@
         "sliceName": "drugalternatives"
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:priorauthorization",
+        "id": "MedicationKnowledge.extension:priorauthorization",
         "path": "MedicationKnowledge.extension",
         "definition": "A Boolean indication of whether the coverage plan imposes a prior authorization requirement on this drug.",
         "min": 0,
@@ -386,7 +386,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:steptherapylimit",
+        "id": "MedicationKnowledge.extension:steptherapylimit",
         "path": "MedicationKnowledge.extension",
         "definition": "A Boolean indication of whether the coverage plan imposes a step therapy limit on this drug.",
         "min": 0,
@@ -410,7 +410,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:quantitylimit",
+        "id": "MedicationKnowledge.extension:quantitylimit",
         "path": "MedicationKnowledge.extension",
         "definition": "A Boolean indication of whether the coverage plan imposes a quantity limit on this drug.",
         "min": 0,
@@ -434,7 +434,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:planid",
+        "id": "MedicationKnowledge.extension:planid",
         "path": "MedicationKnowledge.extension",
         "definition": "Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)",
         "min": 1,
@@ -458,7 +458,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:drugtierid",
+        "id": "MedicationKnowledge.extension:drugtierid",
         "path": "MedicationKnowledge.extension",
         "definition": "A code that describes the coverage status of a drug in a health plan (e.g., preferred generic, specialty, etc.)",
         "min": 1,
@@ -482,7 +482,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.modifierExtension",
+        "id": "MedicationKnowledge.modifierExtension",
         "path": "MedicationKnowledge.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -515,7 +515,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.code",
+        "id": "MedicationKnowledge.code",
         "path": "MedicationKnowledge.code",
         "short": "Code that identifies this medication",
         "definition": "A code that specifies this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.",
@@ -558,7 +558,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.status",
+        "id": "MedicationKnowledge.status",
         "path": "MedicationKnowledge.status",
         "short": "active | inactive | entered-in-error",
         "definition": "A code to indicate if the medication is in active use.  The status refers to the validity about the information of the medication and not to its medicinal properties.",
@@ -597,7 +597,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.manufacturer",
+        "id": "MedicationKnowledge.manufacturer",
         "path": "MedicationKnowledge.manufacturer",
         "short": "Manufacturer of the item",
         "definition": "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.",
@@ -638,7 +638,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.doseForm",
+        "id": "MedicationKnowledge.doseForm",
         "path": "MedicationKnowledge.doseForm",
         "short": "powder | tablets | capsule +",
         "definition": "Describes the form of the item.  Powder; tablets; capsule.",
@@ -684,7 +684,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.amount",
+        "id": "MedicationKnowledge.amount",
         "path": "MedicationKnowledge.amount",
         "short": "Amount of drug in package",
         "definition": "Specific amount of the drug in the packaged product.  For example, when specifying a product that has the same strength (For example, Insulin glargine 100 unit per mL solution for injection), this attribute provides additional clarification of the package amount (For example, 3 mL, 10mL, etc.).",
@@ -714,7 +714,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.synonym",
+        "id": "MedicationKnowledge.synonym",
         "path": "MedicationKnowledge.synonym",
         "short": "Additional names for a medication",
         "definition": "Additional names for a medication, for example, the name(s) given to a medication in different countries.  For example, acetaminophen and paracetamol or salbutamol and albuterol.",
@@ -734,7 +734,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.relatedMedicationKnowledge",
+        "id": "MedicationKnowledge.relatedMedicationKnowledge",
         "path": "MedicationKnowledge.relatedMedicationKnowledge",
         "short": "Associated or related medication information",
         "definition": "Associated or related knowledge about a medication.",
@@ -764,7 +764,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.relatedMedicationKnowledge.id",
+        "id": "MedicationKnowledge.relatedMedicationKnowledge.id",
         "path": "MedicationKnowledge.relatedMedicationKnowledge.id",
         "representation": [
           "xmlAttr"
@@ -793,7 +793,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.relatedMedicationKnowledge.extension",
+        "id": "MedicationKnowledge.relatedMedicationKnowledge.extension",
         "path": "MedicationKnowledge.relatedMedicationKnowledge.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -824,7 +824,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.relatedMedicationKnowledge.modifierExtension",
+        "id": "MedicationKnowledge.relatedMedicationKnowledge.modifierExtension",
         "path": "MedicationKnowledge.relatedMedicationKnowledge.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -858,7 +858,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.relatedMedicationKnowledge.type",
+        "id": "MedicationKnowledge.relatedMedicationKnowledge.type",
         "path": "MedicationKnowledge.relatedMedicationKnowledge.type",
         "short": "Category of medicationKnowledge",
         "definition": "The category of the associated medication knowledge reference.",
@@ -878,7 +878,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.relatedMedicationKnowledge.reference",
+        "id": "MedicationKnowledge.relatedMedicationKnowledge.reference",
         "path": "MedicationKnowledge.relatedMedicationKnowledge.reference",
         "short": "Associated documentation about the associated medication knowledge",
         "definition": "Associated documentation about the associated medication knowledge.",
@@ -901,7 +901,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.associatedMedication",
+        "id": "MedicationKnowledge.associatedMedication",
         "path": "MedicationKnowledge.associatedMedication",
         "short": "A medication resource that is associated with this medication",
         "definition": "Associated or related medications.  For example, if the medication is a branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor).",
@@ -924,7 +924,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.productType",
+        "id": "MedicationKnowledge.productType",
         "path": "MedicationKnowledge.productType",
         "short": "Category of the medication or product",
         "definition": "Category of the medication or product (e.g. branded product, therapeutic moeity, generic product, innovator product, etc.).",
@@ -944,7 +944,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monograph",
+        "id": "MedicationKnowledge.monograph",
         "path": "MedicationKnowledge.monograph",
         "short": "Associated documentation about the medication",
         "definition": "Associated documentation about the medication.",
@@ -974,7 +974,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monograph.id",
+        "id": "MedicationKnowledge.monograph.id",
         "path": "MedicationKnowledge.monograph.id",
         "representation": [
           "xmlAttr"
@@ -1003,7 +1003,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monograph.extension",
+        "id": "MedicationKnowledge.monograph.extension",
         "path": "MedicationKnowledge.monograph.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1034,7 +1034,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monograph.modifierExtension",
+        "id": "MedicationKnowledge.monograph.modifierExtension",
         "path": "MedicationKnowledge.monograph.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1068,7 +1068,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monograph.type",
+        "id": "MedicationKnowledge.monograph.type",
         "path": "MedicationKnowledge.monograph.type",
         "short": "The category of medication document",
         "definition": "The category of documentation about the medication. (e.g. professional monograph, patient education monograph).",
@@ -1088,7 +1088,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monograph.source",
+        "id": "MedicationKnowledge.monograph.source",
         "path": "MedicationKnowledge.monograph.source",
         "short": "Associated documentation about the medication",
         "definition": "Associated documentation about the medication.",
@@ -1112,7 +1112,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.ingredient",
+        "id": "MedicationKnowledge.ingredient",
         "path": "MedicationKnowledge.ingredient",
         "short": "Active or inactive ingredient",
         "definition": "Identifies a particular constituent of interest in the product.",
@@ -1142,7 +1142,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.ingredient.id",
+        "id": "MedicationKnowledge.ingredient.id",
         "path": "MedicationKnowledge.ingredient.id",
         "representation": [
           "xmlAttr"
@@ -1171,7 +1171,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.ingredient.extension",
+        "id": "MedicationKnowledge.ingredient.extension",
         "path": "MedicationKnowledge.ingredient.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1202,7 +1202,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.ingredient.modifierExtension",
+        "id": "MedicationKnowledge.ingredient.modifierExtension",
         "path": "MedicationKnowledge.ingredient.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1236,7 +1236,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.ingredient.item[x]",
+        "id": "MedicationKnowledge.ingredient.item[x]",
         "path": "MedicationKnowledge.ingredient.item[x]",
         "short": "Medication(s) or substance(s) contained in the medication",
         "definition": "The actual ingredient - either a substance (simple ingredient) or another medication.",
@@ -1276,7 +1276,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.ingredient.isActive",
+        "id": "MedicationKnowledge.ingredient.isActive",
         "path": "MedicationKnowledge.ingredient.isActive",
         "short": "Active ingredient indicator",
         "definition": "Indication of whether this ingredient affects the therapeutic action of the drug.",
@@ -1303,7 +1303,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.ingredient.strength",
+        "id": "MedicationKnowledge.ingredient.strength",
         "path": "MedicationKnowledge.ingredient.strength",
         "short": "Quantity of ingredient present",
         "definition": "Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet.",
@@ -1337,7 +1337,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.preparationInstruction",
+        "id": "MedicationKnowledge.preparationInstruction",
         "path": "MedicationKnowledge.preparationInstruction",
         "short": "The instructions for preparing the medication",
         "definition": "The instructions for preparing the medication.",
@@ -1357,7 +1357,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.intendedRoute",
+        "id": "MedicationKnowledge.intendedRoute",
         "path": "MedicationKnowledge.intendedRoute",
         "short": "The intended or approved route of administration",
         "definition": "The intended or approved route of administration.",
@@ -1388,7 +1388,7 @@
         }
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.cost",
+        "id": "MedicationKnowledge.cost",
         "path": "MedicationKnowledge.cost",
         "short": "The pricing of the medication",
         "definition": "The price of the medication.",
@@ -1418,7 +1418,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.cost.id",
+        "id": "MedicationKnowledge.cost.id",
         "path": "MedicationKnowledge.cost.id",
         "representation": [
           "xmlAttr"
@@ -1447,7 +1447,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.cost.extension",
+        "id": "MedicationKnowledge.cost.extension",
         "path": "MedicationKnowledge.cost.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1478,7 +1478,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.cost.modifierExtension",
+        "id": "MedicationKnowledge.cost.modifierExtension",
         "path": "MedicationKnowledge.cost.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1512,7 +1512,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.cost.type",
+        "id": "MedicationKnowledge.cost.type",
         "path": "MedicationKnowledge.cost.type",
         "short": "The category of the cost information",
         "definition": "The category of the cost information.  For example, manufacturers' cost, patient cost, claim reimbursement cost, actual acquisition cost.",
@@ -1532,7 +1532,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.cost.source",
+        "id": "MedicationKnowledge.cost.source",
         "path": "MedicationKnowledge.cost.source",
         "short": "The source or owner for the price information",
         "definition": "The source or owner that assigns the price to the medication.",
@@ -1552,7 +1552,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.cost.cost",
+        "id": "MedicationKnowledge.cost.cost",
         "path": "MedicationKnowledge.cost.cost",
         "short": "The price of the medication",
         "definition": "The price of the medication.",
@@ -1572,7 +1572,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monitoringProgram",
+        "id": "MedicationKnowledge.monitoringProgram",
         "path": "MedicationKnowledge.monitoringProgram",
         "short": "Program under which a medication is reviewed",
         "definition": "The program under which the medication is reviewed.",
@@ -1602,7 +1602,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monitoringProgram.id",
+        "id": "MedicationKnowledge.monitoringProgram.id",
         "path": "MedicationKnowledge.monitoringProgram.id",
         "representation": [
           "xmlAttr"
@@ -1631,7 +1631,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monitoringProgram.extension",
+        "id": "MedicationKnowledge.monitoringProgram.extension",
         "path": "MedicationKnowledge.monitoringProgram.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1662,7 +1662,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monitoringProgram.modifierExtension",
+        "id": "MedicationKnowledge.monitoringProgram.modifierExtension",
         "path": "MedicationKnowledge.monitoringProgram.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1696,7 +1696,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monitoringProgram.type",
+        "id": "MedicationKnowledge.monitoringProgram.type",
         "path": "MedicationKnowledge.monitoringProgram.type",
         "short": "Type of program under which the medication is monitored",
         "definition": "Type of program under which the medication is monitored.",
@@ -1716,7 +1716,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.monitoringProgram.name",
+        "id": "MedicationKnowledge.monitoringProgram.name",
         "path": "MedicationKnowledge.monitoringProgram.name",
         "short": "Name of the reviewing program",
         "definition": "Name of the reviewing program.",
@@ -1736,7 +1736,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines",
+        "id": "MedicationKnowledge.administrationGuidelines",
         "path": "MedicationKnowledge.administrationGuidelines",
         "short": "Guidelines for administration of the medication",
         "definition": "Guidelines for the administration of the medication.",
@@ -1766,7 +1766,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.id",
+        "id": "MedicationKnowledge.administrationGuidelines.id",
         "path": "MedicationKnowledge.administrationGuidelines.id",
         "representation": [
           "xmlAttr"
@@ -1795,7 +1795,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.extension",
+        "id": "MedicationKnowledge.administrationGuidelines.extension",
         "path": "MedicationKnowledge.administrationGuidelines.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1826,7 +1826,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.modifierExtension",
+        "id": "MedicationKnowledge.administrationGuidelines.modifierExtension",
         "path": "MedicationKnowledge.administrationGuidelines.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1860,7 +1860,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.dosage",
+        "id": "MedicationKnowledge.administrationGuidelines.dosage",
         "path": "MedicationKnowledge.administrationGuidelines.dosage",
         "short": "Dosage for the medication for the specific guidelines",
         "definition": "Dosage for the medication for the specific guidelines.",
@@ -1890,7 +1890,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.dosage.id",
+        "id": "MedicationKnowledge.administrationGuidelines.dosage.id",
         "path": "MedicationKnowledge.administrationGuidelines.dosage.id",
         "representation": [
           "xmlAttr"
@@ -1919,7 +1919,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.dosage.extension",
+        "id": "MedicationKnowledge.administrationGuidelines.dosage.extension",
         "path": "MedicationKnowledge.administrationGuidelines.dosage.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1950,7 +1950,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.dosage.modifierExtension",
+        "id": "MedicationKnowledge.administrationGuidelines.dosage.modifierExtension",
         "path": "MedicationKnowledge.administrationGuidelines.dosage.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1984,7 +1984,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.dosage.type",
+        "id": "MedicationKnowledge.administrationGuidelines.dosage.type",
         "path": "MedicationKnowledge.administrationGuidelines.dosage.type",
         "short": "Type of dosage",
         "definition": "The type of dosage (for example, prophylaxis, maintenance, therapeutic, etc.).",
@@ -2004,7 +2004,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.dosage.dosage",
+        "id": "MedicationKnowledge.administrationGuidelines.dosage.dosage",
         "path": "MedicationKnowledge.administrationGuidelines.dosage.dosage",
         "short": "Dosage for the medication for the specific guidelines",
         "definition": "Dosage for the medication for the specific guidelines.",
@@ -2024,7 +2024,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.indication[x]",
+        "id": "MedicationKnowledge.administrationGuidelines.indication[x]",
         "path": "MedicationKnowledge.administrationGuidelines.indication[x]",
         "short": "Indication for use that apply to the specific administration guidelines",
         "definition": "Indication for use that apply to the specific administration guidelines.",
@@ -2050,7 +2050,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.patientCharacteristics",
+        "id": "MedicationKnowledge.administrationGuidelines.patientCharacteristics",
         "path": "MedicationKnowledge.administrationGuidelines.patientCharacteristics",
         "short": "Characteristics of the patient that are relevant to the administration guidelines",
         "definition": "Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).",
@@ -2080,7 +2080,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.patientCharacteristics.id",
+        "id": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.id",
         "path": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.id",
         "representation": [
           "xmlAttr"
@@ -2109,7 +2109,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.patientCharacteristics.extension",
+        "id": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.extension",
         "path": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2140,7 +2140,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.patientCharacteristics.modifierExtension",
+        "id": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.modifierExtension",
         "path": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2174,7 +2174,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.patientCharacteristics.characteristic[x]",
+        "id": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.characteristic[x]",
         "path": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.characteristic[x]",
         "short": "Specific characteristic that is relevant to the administration guideline",
         "definition": "Specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).",
@@ -2200,7 +2200,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.administrationGuidelines.patientCharacteristics.value",
+        "id": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.value",
         "path": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.value",
         "short": "The specific characteristic",
         "definition": "The specific characteristic (e.g. height, weight, gender, etc.).",
@@ -2220,7 +2220,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.medicineClassification",
+        "id": "MedicationKnowledge.medicineClassification",
         "path": "MedicationKnowledge.medicineClassification",
         "short": "Categorization of the medication within a formulary or classification system",
         "definition": "Categorization of the medication within a formulary or classification system.",
@@ -2250,7 +2250,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.medicineClassification.id",
+        "id": "MedicationKnowledge.medicineClassification.id",
         "path": "MedicationKnowledge.medicineClassification.id",
         "representation": [
           "xmlAttr"
@@ -2279,7 +2279,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.medicineClassification.extension",
+        "id": "MedicationKnowledge.medicineClassification.extension",
         "path": "MedicationKnowledge.medicineClassification.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2310,7 +2310,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.medicineClassification.modifierExtension",
+        "id": "MedicationKnowledge.medicineClassification.modifierExtension",
         "path": "MedicationKnowledge.medicineClassification.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2344,7 +2344,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.medicineClassification.type",
+        "id": "MedicationKnowledge.medicineClassification.type",
         "path": "MedicationKnowledge.medicineClassification.type",
         "short": "The type of category for the medication (for example, therapeutic classification, therapeutic sub-classification)",
         "definition": "The type of category for the medication (for example, therapeutic classification, therapeutic sub-classification).",
@@ -2364,7 +2364,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.medicineClassification.classification",
+        "id": "MedicationKnowledge.medicineClassification.classification",
         "path": "MedicationKnowledge.medicineClassification.classification",
         "short": "Specific category assigned to the medication",
         "definition": "Specific category assigned to the medication (e.g. anti-infective, anti-hypertensive, antibiotic, etc.).",
@@ -2384,7 +2384,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.packaging",
+        "id": "MedicationKnowledge.packaging",
         "path": "MedicationKnowledge.packaging",
         "short": "Details about packaged medications",
         "definition": "Information that only applies to packages (not products).",
@@ -2414,7 +2414,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.packaging.id",
+        "id": "MedicationKnowledge.packaging.id",
         "path": "MedicationKnowledge.packaging.id",
         "representation": [
           "xmlAttr"
@@ -2443,7 +2443,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.packaging.extension",
+        "id": "MedicationKnowledge.packaging.extension",
         "path": "MedicationKnowledge.packaging.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2474,7 +2474,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.packaging.modifierExtension",
+        "id": "MedicationKnowledge.packaging.modifierExtension",
         "path": "MedicationKnowledge.packaging.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2508,7 +2508,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.packaging.type",
+        "id": "MedicationKnowledge.packaging.type",
         "path": "MedicationKnowledge.packaging.type",
         "short": "A code that defines the specific type of packaging that the medication can be found in",
         "definition": "A code that defines the specific type of packaging that the medication can be found in (e.g. blister sleeve, tube, bottle).",
@@ -2539,7 +2539,7 @@
         }
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.packaging.quantity",
+        "id": "MedicationKnowledge.packaging.quantity",
         "path": "MedicationKnowledge.packaging.quantity",
         "short": "The number of product units the package would contain if fully loaded",
         "definition": "The number of product units the package would contain if fully loaded.",
@@ -2562,7 +2562,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.drugCharacteristic",
+        "id": "MedicationKnowledge.drugCharacteristic",
         "path": "MedicationKnowledge.drugCharacteristic",
         "short": "Specifies descriptive properties of the medicine",
         "definition": "Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.",
@@ -2592,7 +2592,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.drugCharacteristic.id",
+        "id": "MedicationKnowledge.drugCharacteristic.id",
         "path": "MedicationKnowledge.drugCharacteristic.id",
         "representation": [
           "xmlAttr"
@@ -2621,7 +2621,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.drugCharacteristic.extension",
+        "id": "MedicationKnowledge.drugCharacteristic.extension",
         "path": "MedicationKnowledge.drugCharacteristic.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2652,7 +2652,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.drugCharacteristic.modifierExtension",
+        "id": "MedicationKnowledge.drugCharacteristic.modifierExtension",
         "path": "MedicationKnowledge.drugCharacteristic.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2686,7 +2686,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.drugCharacteristic.type",
+        "id": "MedicationKnowledge.drugCharacteristic.type",
         "path": "MedicationKnowledge.drugCharacteristic.type",
         "short": "Code specifying the type of characteristic of medication",
         "definition": "A code specifying which characteristic of the medicine is being described (for example, colour, shape, imprint).",
@@ -2717,7 +2717,7 @@
         }
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.drugCharacteristic.value[x]",
+        "id": "MedicationKnowledge.drugCharacteristic.value[x]",
         "path": "MedicationKnowledge.drugCharacteristic.value[x]",
         "short": "Description of the characteristic",
         "definition": "Description of the characteristic.",
@@ -2750,7 +2750,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.contraindication",
+        "id": "MedicationKnowledge.contraindication",
         "path": "MedicationKnowledge.contraindication",
         "short": "Potential clinical issue with or between medication(s)",
         "definition": "Potential clinical issue with or between medication(s) (for example, drug-drug interaction, drug-disease contraindication, drug-allergy interaction, etc.).",
@@ -2773,7 +2773,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory",
+        "id": "MedicationKnowledge.regulatory",
         "path": "MedicationKnowledge.regulatory",
         "short": "Regulatory information about a medication",
         "definition": "Regulatory information about a medication.",
@@ -2803,7 +2803,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.id",
+        "id": "MedicationKnowledge.regulatory.id",
         "path": "MedicationKnowledge.regulatory.id",
         "representation": [
           "xmlAttr"
@@ -2832,7 +2832,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.extension",
+        "id": "MedicationKnowledge.regulatory.extension",
         "path": "MedicationKnowledge.regulatory.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2863,7 +2863,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.modifierExtension",
+        "id": "MedicationKnowledge.regulatory.modifierExtension",
         "path": "MedicationKnowledge.regulatory.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2897,7 +2897,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.regulatoryAuthority",
+        "id": "MedicationKnowledge.regulatory.regulatoryAuthority",
         "path": "MedicationKnowledge.regulatory.regulatoryAuthority",
         "short": "Specifies the authority of the regulation",
         "definition": "The authority that is specifying the regulations.",
@@ -2920,7 +2920,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.substitution",
+        "id": "MedicationKnowledge.regulatory.substitution",
         "path": "MedicationKnowledge.regulatory.substitution",
         "short": "Specifies if changes are allowed when dispensing a medication from a regulatory perspective",
         "definition": "Specifies if changes are allowed when dispensing a medication from a regulatory perspective.",
@@ -2950,7 +2950,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.substitution.id",
+        "id": "MedicationKnowledge.regulatory.substitution.id",
         "path": "MedicationKnowledge.regulatory.substitution.id",
         "representation": [
           "xmlAttr"
@@ -2979,7 +2979,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.substitution.extension",
+        "id": "MedicationKnowledge.regulatory.substitution.extension",
         "path": "MedicationKnowledge.regulatory.substitution.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -3010,7 +3010,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.substitution.modifierExtension",
+        "id": "MedicationKnowledge.regulatory.substitution.modifierExtension",
         "path": "MedicationKnowledge.regulatory.substitution.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -3044,7 +3044,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.substitution.type",
+        "id": "MedicationKnowledge.regulatory.substitution.type",
         "path": "MedicationKnowledge.regulatory.substitution.type",
         "short": "Specifies the type of substitution allowed",
         "definition": "Specifies the type of substitution allowed.",
@@ -3064,7 +3064,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.substitution.allowed",
+        "id": "MedicationKnowledge.regulatory.substitution.allowed",
         "path": "MedicationKnowledge.regulatory.substitution.allowed",
         "short": "Specifies if regulation allows for changes in the medication when dispensing",
         "definition": "Specifies if regulation allows for changes in the medication when dispensing.",
@@ -3084,7 +3084,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.schedule",
+        "id": "MedicationKnowledge.regulatory.schedule",
         "path": "MedicationKnowledge.regulatory.schedule",
         "short": "Specifies the schedule of a medication in jurisdiction",
         "definition": "Specifies the schedule of a medication in jurisdiction.",
@@ -3114,7 +3114,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.schedule.id",
+        "id": "MedicationKnowledge.regulatory.schedule.id",
         "path": "MedicationKnowledge.regulatory.schedule.id",
         "representation": [
           "xmlAttr"
@@ -3143,7 +3143,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.schedule.extension",
+        "id": "MedicationKnowledge.regulatory.schedule.extension",
         "path": "MedicationKnowledge.regulatory.schedule.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -3174,7 +3174,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.schedule.modifierExtension",
+        "id": "MedicationKnowledge.regulatory.schedule.modifierExtension",
         "path": "MedicationKnowledge.regulatory.schedule.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -3208,7 +3208,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.schedule.schedule",
+        "id": "MedicationKnowledge.regulatory.schedule.schedule",
         "path": "MedicationKnowledge.regulatory.schedule.schedule",
         "short": "Specifies the specific drug schedule",
         "definition": "Specifies the specific drug schedule.",
@@ -3228,7 +3228,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.maxDispense",
+        "id": "MedicationKnowledge.regulatory.maxDispense",
         "path": "MedicationKnowledge.regulatory.maxDispense",
         "short": "The maximum number of units of the medication that can be dispensed in a period",
         "definition": "The maximum number of units of the medication that can be dispensed in a period.",
@@ -3258,7 +3258,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.maxDispense.id",
+        "id": "MedicationKnowledge.regulatory.maxDispense.id",
         "path": "MedicationKnowledge.regulatory.maxDispense.id",
         "representation": [
           "xmlAttr"
@@ -3287,7 +3287,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.maxDispense.extension",
+        "id": "MedicationKnowledge.regulatory.maxDispense.extension",
         "path": "MedicationKnowledge.regulatory.maxDispense.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -3318,7 +3318,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.maxDispense.modifierExtension",
+        "id": "MedicationKnowledge.regulatory.maxDispense.modifierExtension",
         "path": "MedicationKnowledge.regulatory.maxDispense.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -3352,7 +3352,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.maxDispense.quantity",
+        "id": "MedicationKnowledge.regulatory.maxDispense.quantity",
         "path": "MedicationKnowledge.regulatory.maxDispense.quantity",
         "short": "The maximum number of units of the medication that can be dispensed",
         "definition": "The maximum number of units of the medication that can be dispensed.",
@@ -3375,7 +3375,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.regulatory.maxDispense.period",
+        "id": "MedicationKnowledge.regulatory.maxDispense.period",
         "path": "MedicationKnowledge.regulatory.maxDispense.period",
         "short": "The period that applies to the maximum number of units",
         "definition": "The period that applies to the maximum number of units.",
@@ -3395,7 +3395,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.kinetics",
+        "id": "MedicationKnowledge.kinetics",
         "path": "MedicationKnowledge.kinetics",
         "short": "The time course of drug absorption, distribution, metabolism and excretion of a medication from the body",
         "definition": "The time course of drug absorption, distribution, metabolism and excretion of a medication from the body.",
@@ -3425,7 +3425,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.kinetics.id",
+        "id": "MedicationKnowledge.kinetics.id",
         "path": "MedicationKnowledge.kinetics.id",
         "representation": [
           "xmlAttr"
@@ -3454,7 +3454,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.kinetics.extension",
+        "id": "MedicationKnowledge.kinetics.extension",
         "path": "MedicationKnowledge.kinetics.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -3485,7 +3485,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.kinetics.modifierExtension",
+        "id": "MedicationKnowledge.kinetics.modifierExtension",
         "path": "MedicationKnowledge.kinetics.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -3519,7 +3519,7 @@
         ]
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.kinetics.areaUnderCurve",
+        "id": "MedicationKnowledge.kinetics.areaUnderCurve",
         "path": "MedicationKnowledge.kinetics.areaUnderCurve",
         "short": "The drug concentration measured at certain discrete points in time",
         "definition": "The drug concentration measured at certain discrete points in time.",
@@ -3542,7 +3542,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.kinetics.lethalDose50",
+        "id": "MedicationKnowledge.kinetics.lethalDose50",
         "path": "MedicationKnowledge.kinetics.lethalDose50",
         "short": "The median lethal dose of a drug",
         "definition": "The median lethal dose of a drug.",
@@ -3565,7 +3565,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.kinetics.halfLifePeriod",
+        "id": "MedicationKnowledge.kinetics.halfLifePeriod",
         "path": "MedicationKnowledge.kinetics.halfLifePeriod",
         "short": "Time required for concentration in the body to decrease by half",
         "definition": "The time required for any specified property (e.g., the concentration of a substance in the body) to decrease by half.",
@@ -3589,7 +3589,7 @@
   "differential": {
     "element": [
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug",
+        "id": "MedicationKnowledge",
         "path": "MedicationKnowledge",
         "short": "usdf-FormularyDrug",
         "definition": "Drug information which is part of a formulary.",
@@ -3597,7 +3597,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension",
+        "id": "MedicationKnowledge.extension",
         "path": "MedicationKnowledge.extension",
         "slicing": {
           "id": "1",
@@ -3614,7 +3614,7 @@
         "max": "*"
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:drugalternatives",
+        "id": "MedicationKnowledge.extension:drugalternatives",
         "path": "MedicationKnowledge.extension",
         "definition": "Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
         "min": 0,
@@ -3637,7 +3637,7 @@
         "sliceName": "drugalternatives"
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:priorauthorization",
+        "id": "MedicationKnowledge.extension:priorauthorization",
         "path": "MedicationKnowledge.extension",
         "definition": "A Boolean indication of whether the coverage plan imposes a prior authorization requirement on this drug.",
         "min": 0,
@@ -3661,7 +3661,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:steptherapylimit",
+        "id": "MedicationKnowledge.extension:steptherapylimit",
         "path": "MedicationKnowledge.extension",
         "definition": "A Boolean indication of whether the coverage plan imposes a step therapy limit on this drug.",
         "min": 0,
@@ -3685,7 +3685,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:quantitylimit",
+        "id": "MedicationKnowledge.extension:quantitylimit",
         "path": "MedicationKnowledge.extension",
         "definition": "A Boolean indication of whether the coverage plan imposes a quantity limit on this drug.",
         "min": 0,
@@ -3709,7 +3709,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:planid",
+        "id": "MedicationKnowledge.extension:planid",
         "path": "MedicationKnowledge.extension",
         "definition": "Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)",
         "min": 1,
@@ -3733,7 +3733,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.extension:drugtierid",
+        "id": "MedicationKnowledge.extension:drugtierid",
         "path": "MedicationKnowledge.extension",
         "definition": "A code that describes the coverage status of a drug in a health plan (e.g., preferred generic, specialty, etc.)",
         "min": 1,
@@ -3757,7 +3757,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationKnowledge:usdf-FormularyDrug.code",
+        "id": "MedicationKnowledge.code",
         "path": "MedicationKnowledge.code",
         "min": 1,
         "max": "1",
@@ -3768,11 +3768,5 @@
       }
     ]
   },
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/Davinci-drug-formulary",
-      "value": "usdf.FormularyDrug"
-    }
-  ],
   "title": "usdf-FormularyDrug"
 }

@@ -14,9 +14,9 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "GENERIC",
+            "code": "generic",
             "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
-            "display": "GENERIC"
+            "display": "Generic"
           }
         ]
       }
