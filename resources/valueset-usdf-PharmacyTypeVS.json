@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>PharmacyTypeVS ValueSet</b></p>\n<p>Types of Pharmacies. Each payer will have its own controlled vocabulary.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/ValueSet/usdf-PharmacyTypeVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/Davinci-drug-formulary",
-      "value": "usdf.PharmacyTypeVS"
-    }
-  ],
   "name": "PharmacyTypeVS",
   "title": "PharmacyTypeVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-06-21",
+  "date": "2019-09-13",
   "description": "Types of Pharmacies. Each payer will have its own controlled vocabulary.",
   "compose": {
     "include": [
@@ -34,35 +28,35 @@
         "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
         "concept": [
           {
-            "code": "1-MONTH-IN-RETAIL",
+            "code": "1-month-in-retail",
             "display": "1 Month Supply via in-network retail pharmacy"
           },
           {
-            "code": "1-MONTH-OUT-RETAIL",
+            "code": "1-month-out-retail",
             "display": "1 Month Supply via out-of-network retail pharmacy"
           },
           {
-            "code": "1-MONTH-IN-MAIL",
+            "code": "1-month-in-mail",
             "display": "1 Month Supply via in-network mail order pharmacy"
           },
           {
-            "code": "1-MONTH-OUT-MAIL",
+            "code": "1-month-out-mail",
             "display": "1 Month Supply via out-of-network mail order pharmacy"
           },
           {
-            "code": "3-MONTH-IN-RETAIL",
+            "code": "3-month-in-retail",
             "display": "3 Month Supply via in-network retail pharmacy"
           },
           {
-            "code": "3-MONTH-OUT-RETAIL",
+            "code": "3-month-out-retail",
             "display": "3 Month Supply via out-of-network retail pharmacy"
           },
           {
-            "code": "3-MONTH-IN-MAIL",
+            "code": "3-month-in-mail",
             "display": "3 Month Supply via in-network mail order pharmacy"
           },
           {
-            "code": "3-MONTH-OUT-MAIL",
+            "code": "3-month-out-mail",
             "display": "3 Month Supply via out-of-network mail order pharmacy"
           }
         ]

@@ -8,7 +8,7 @@ usdf.CoveragePlan maps to List:
   CoveragePlanMode maps to mode
   CoveragePlanStatus maps to status
   MarketingName maps to title
-  FormularyDrugEntry maps to entry.item
+  FormularyDrug maps to entry.item
   DrugTierDefinition maps to extension
   Network maps to extension
   SummaryURL maps to extension
@@ -16,5 +16,7 @@ usdf.CoveragePlan maps to List:
   EmailPlanContact maps to extension
   MarketingURL maps to extension
   LastUpdatedOn maps to date
+  constrain entry to 1..*
+  constrain identifier to 1..*
 
 </pre>

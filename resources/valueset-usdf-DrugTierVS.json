@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>DrugTierVS ValueSet</b></p>\n<p>The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own controlled vocabulary.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/ValueSet/usdf-DrugTierVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/Davinci-drug-formulary",
-      "value": "usdf.DrugTierVS"
-    }
-  ],
   "name": "DrugTierVS",
   "title": "DrugTierVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-06-21",
+  "date": "2019-09-13",
   "description": "The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own controlled vocabulary.",
   "compose": {
     "include": [
@@ -34,39 +28,39 @@
         "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
         "concept": [
           {
-            "code": "GENERIC",
+            "code": "generic",
             "display": "Generic"
           },
           {
-            "code": "PREFERRED-GENERIC",
+            "code": "preferred-generic",
             "display": "Preferred generic"
           },
           {
-            "code": "NON-PREFERRED-GENERIC",
+            "code": "non-preferred-generic",
             "display": "Non-preferred generic"
           },
           {
-            "code": "SPECIALTY",
+            "code": "specialty",
             "display": "Specialty"
           },
           {
-            "code": "BRAND",
+            "code": "brand",
             "display": "Brand"
           },
           {
-            "code": "PREFERRED-BRAND",
+            "code": "preferred-brand",
             "display": "Preferred brand"
           },
           {
-            "code": "NON-PREFERRED-BRAND",
+            "code": "non-preferred-brand",
             "display": "Non-preferred brand"
           },
           {
-            "code": "ZERO-COST-SHARE-PREVENTIVE",
+            "code": "zero-cost-share-preventative",
             "display": "Zero-cost share preventative"
           },
           {
-            "code": "MEDICAL-SERVICE",
+            "code": "medical-service",
             "display": "Medical service"
           }
         ]

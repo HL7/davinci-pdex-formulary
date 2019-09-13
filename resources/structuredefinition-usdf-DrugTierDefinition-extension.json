@@ -6,16 +6,10 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DrugTierDefinition Extension</b></p>\n  <p>A description of the drug tiers used by the formulary and how those tiers implement copay and coinsurance amounts. Drug tiers do not have any inherent meaning that is consistent across all formularies. Rather, each tier is defined using this element.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierDefinition-extension",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/Davinci-drug-formulary",
-      "value": "usdf.DrugTierDefinition"
-    }
-  ],
   "name": "DrugTierDefinition",
   "title": "usdf-DrugTierDefinition",
   "status": "draft",
-  "date": "2019-06-21",
+  "date": "2019-09-13",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
@@ -43,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:drugtierdefinition",
+        "id": "Extension",
         "path": "Extension",
         "short": "DrugTierDefinition",
         "definition": "A description of the drug tiers used by the formulary and how those tiers implement copay and coinsurance amounts. Drug tiers do not have any inherent meaning that is consistent across all formularies. Rather, each tier is defined using this element.",
@@ -87,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:drugtierdefinition.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -116,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:drugtierdefinition.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -157,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:drugtierdefinition.extension:drugtierid",
+        "id": "Extension.extension:drugtierid",
         "path": "Extension.extension",
         "definition": "A code that describes the coverage status of a drug in a health plan (e.g., preferred generic, specialty, etc.)",
         "min": 1,
@@ -186,7 +180,7 @@
         "sliceName": "drugtierid"
       },
       {
-        "id": "Extension:drugtierdefinition.extension:mailorder",
+        "id": "Extension.extension:mailorder",
         "path": "Extension.extension",
         "definition": "A Boolean indication of whether this drug tier supports a mail order pharmacy option",
         "min": 1,
@@ -215,7 +209,7 @@
         "sliceName": "mailorder"
       },
       {
-        "id": "Extension:drugtierdefinition.extension:costsharing",
+        "id": "Extension.extension:costsharing",
         "path": "Extension.extension",
         "definition": "Definition of the patients responsibility for a portion of the cost not covered by insurance for a particular pharmacy type within a drug tier",
         "min": 0,
@@ -244,7 +238,7 @@
         "sliceName": "costsharing"
       },
       {
-        "id": "Extension:drugtierdefinition.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -275,7 +269,7 @@
         "fixedUri": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierDefinition-extension"
       },
       {
-        "id": "Extension:drugtierdefinition.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -449,7 +443,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:drugtierdefinition",
+        "id": "Extension",
         "path": "Extension",
         "short": "DrugTierDefinition",
         "definition": "A description of the drug tiers used by the formulary and how those tiers implement copay and coinsurance amounts. Drug tiers do not have any inherent meaning that is consistent across all formularies. Rather, each tier is defined using this element.",
@@ -457,13 +451,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:drugtierdefinition.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 2,
         "max": "*"
       },
       {
-        "id": "Extension:drugtierdefinition.extension:drugtierid",
+        "id": "Extension.extension:drugtierid",
         "path": "Extension.extension",
         "definition": "A code that describes the coverage status of a drug in a health plan (e.g., preferred generic, specialty, etc.)",
         "min": 1,
@@ -492,7 +486,7 @@
         "sliceName": "drugtierid"
       },
       {
-        "id": "Extension:drugtierdefinition.extension:mailorder",
+        "id": "Extension.extension:mailorder",
         "path": "Extension.extension",
         "definition": "A Boolean indication of whether this drug tier supports a mail order pharmacy option",
         "min": 1,
@@ -521,7 +515,7 @@
         "sliceName": "mailorder"
       },
       {
-        "id": "Extension:drugtierdefinition.extension:costsharing",
+        "id": "Extension.extension:costsharing",
         "path": "Extension.extension",
         "definition": "Definition of the patients responsibility for a portion of the cost not covered by insurance for a particular pharmacy type within a drug tier",
         "min": 0,
@@ -550,7 +544,7 @@
         "sliceName": "costsharing"
       },
       {
-        "id": "Extension:drugtierdefinition.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -560,7 +554,7 @@
         "fixedUri": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierDefinition-extension"
       },
       {
-        "id": "Extension:drugtierdefinition.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

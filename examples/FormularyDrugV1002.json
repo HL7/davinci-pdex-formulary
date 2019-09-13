@@ -17,7 +17,7 @@
         "coding": [
           {
             "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
-            "code": "BRAND",
+            "code": "brand",
             "display": "Brand"
           }
         ]
