@@ -64,6 +64,8 @@ A key architectural issue that is beyond the scope of this implementation guide 
   <h2 id="disclaimers-assumptions">Disclaimers and Assumptions</h2>
 <p>
     <ul>
+ <li><b>Drug Formulary includes Plan-Level Data Only</b>:  The intent of this implementation guide is to make the plan-level information regarding formulary content and cost-sharing available through a standard interface for third party applications.  Most users will access this data through a third party application.   That application should clearly communicate to the user that the cost-sharing information in the formulary may not tell them precisely what they will pay at the pharmacy, and might not reflect their drug benefit.   There is an ongoing effort by Carin/NCPDP to develop a Real Time Pharmacy Benefit Check (RTPBC) implementation guide.   Future ballots of this implementation guide and the RTPBC implementation guide should be harmonized.
+    </li>
      <li><b>The MedicationKnowledge Resource is immature</b>:  When designing this IG, we initially planned to profile Medication.  Based on a strong recommendation from the PharmaWG we shifted to profiling Medicationknowledge.   The PharmaWG felt that MedicationKnowledge was a better choice, even with its low maturity, since it is more suitable as an artifact and already included some of fields that would be required as extensions to medication (e.g., classification). MedicationKnowledge and FormularyDrug will co-evolve moving forward.
     </li>
       <li><b>The formulary endpoint is known to the client</b>:
