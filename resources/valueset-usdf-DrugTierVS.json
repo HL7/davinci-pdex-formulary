@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-09-13",
+  "date": "2019-09-19",
   "description": "The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own controlled vocabulary.",
   "compose": {
     "include": [
@@ -29,39 +29,39 @@
         "concept": [
           {
             "code": "generic",
-            "display": "Generic"
+            "display": "Generic: Commonly prescribed generic drugs that cost more than drugs in the ‘preferred generic’ tier."
           },
           {
             "code": "preferred-generic",
-            "display": "Preferred generic"
+            "display": "Preferred Generic: Commonly prescribed generic drugs."
           },
           {
             "code": "non-preferred-generic",
-            "display": "Non-preferred generic"
+            "display": "Non-preferred Generic: Generic drugs that cost more than drugs in ‘generic’ tier."
           },
           {
             "code": "specialty",
-            "display": "Specialty"
+            "display": "Specialty: Drugs used to treat complex conditions like cancer and multiple sclerosis. They can be generic or brand name, and are typically the most expensive drugs on the formulary."
           },
           {
             "code": "brand",
-            "display": "Brand"
+            "display": "Brand: Brand name drugs that cost more than ‘preferred brand’ drugs."
           },
           {
             "code": "preferred-brand",
-            "display": "Preferred brand"
+            "display": "Preferred Brand: Brand name drugs"
           },
           {
             "code": "non-preferred-brand",
-            "display": "Non-preferred brand"
+            "display": "Non-preferred Brand: Brand name drugs that cost more than ‘brand’ drugs."
           },
           {
             "code": "zero-cost-share-preventative",
-            "display": "Zero-cost share preventative"
+            "display": "Zero cost-share preventative: Preventive medications and products available at no cost."
           },
           {
             "code": "medical-service",
-            "display": "Medical service"
+            "display": "Medical Service: Drugs that must be administered by a clinician or in a facility and may be covered under a medical benefit."
           }
         ]
       }
