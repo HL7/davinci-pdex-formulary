@@ -1,14 +1,14 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "usdf-PlanIdentifier",
+  "id": "shr-core-Identifier",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PlanIdentifier Profile</b></p>\n  <p>Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>usdf.PlanIdentifier maps to Identifier:\n  IdentifierString maps to value\n  Purpose maps to use\n  Type maps to type\n  CodeSystem maps to system\n  EffectiveTimePeriod maps to period\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Identifier Profile</b></p>\n  <p>Business identifier or external id for this resource.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>shr.core.Identifier maps to Identifier:\n  IdentifierString maps to value\n  Purpose maps to use\n  Type maps to type\n  CodeSystem maps to system\n</pre></p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PlanIdentifier",
-  "name": "PlanIdentifier",
+  "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/shr-core-Identifier",
+  "name": "Identifier",
   "status": "active",
-  "date": "2019-09-19",
+  "date": "2019-06-28",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "description": "Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)",
+  "description": "Business identifier or external id for this resource.",
   "purpose": "Need to be able to identify things with confidence and be sure that the identification is not subject to misinterpretation.",
   "fhirVersion": "4.0.0",
   "mapping": [
@@ -48,7 +48,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Identifier",
+        "id": "Identifier:shr-core-Identifier",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -60,8 +60,8 @@
           }
         ],
         "path": "Identifier",
-        "short": "usdf-PlanIdentifier",
-        "definition": "Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)",
+        "short": "shr-core-Identifier",
+        "definition": "Business identifier or external id for this resource.",
         "min": 0,
         "max": "*",
         "base": {
@@ -103,7 +103,7 @@
         ]
       },
       {
-        "id": "Identifier.id",
+        "id": "Identifier:shr-core-Identifier.id",
         "path": "Identifier.id",
         "representation": [
           "xmlAttr"
@@ -132,7 +132,7 @@
         ]
       },
       {
-        "id": "Identifier.extension",
+        "id": "Identifier:shr-core-Identifier.extension",
         "path": "Identifier.extension",
         "slicing": {
           "discriminator": [
@@ -173,14 +173,37 @@
         ]
       },
       {
-        "id": "Identifier.use",
+        "id": "Identifier:shr-core-Identifier.extension:effectivetimeperiod",
+        "path": "Identifier.extension",
+        "definition": "The date and time span for which something is active, valid, or in force.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/shr-core-EffectiveTimePeriod-extension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "sliceName": "effectivetimeperiod"
+      },
+      {
+        "id": "Identifier:shr-core-Identifier.use",
         "path": "Identifier.use",
         "short": "usual | official | temp | secondary | old (If known)",
         "definition": "The purpose of this identifier.",
         "comment": "Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.",
         "requirements": "Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Identifier.use",
           "min": 0,
@@ -217,14 +240,14 @@
         ]
       },
       {
-        "id": "Identifier.type",
+        "id": "Identifier:shr-core-Identifier.type",
         "path": "Identifier.type",
         "short": "Description of identifier",
         "definition": "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
         "comment": "This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.",
         "requirements": "Allows users to make use of identifiers when the identifier system is not known.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Identifier.type",
           "min": 0,
@@ -264,14 +287,14 @@
         ]
       },
       {
-        "id": "Identifier.system",
+        "id": "Identifier:shr-core-Identifier.system",
         "path": "Identifier.system",
         "short": "The namespace for the identifier value",
         "definition": "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
         "comment": "Identifier.system is always case sensitive.",
         "requirements": "There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Identifier.system",
           "min": 0,
@@ -300,12 +323,12 @@
         ]
       },
       {
-        "id": "Identifier.value",
+        "id": "Identifier:shr-core-Identifier.value",
         "path": "Identifier.value",
         "short": "The value that is unique",
         "definition": "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
         "comment": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Identifier.value",
@@ -335,7 +358,7 @@
         ]
       },
       {
-        "id": "Identifier.period",
+        "id": "Identifier:shr-core-Identifier.period",
         "path": "Identifier.period",
         "short": "Time period when id is/was valid for use",
         "definition": "Time period during which identifier is/was valid for use.",
@@ -369,7 +392,7 @@
         ]
       },
       {
-        "id": "Identifier.assigner",
+        "id": "Identifier:shr-core-Identifier.assigner",
         "path": "Identifier.assigner",
         "short": "Organization that issued id (may be just text)",
         "definition": "Organization that issued/manages the identifier.",
@@ -411,37 +434,42 @@
   "differential": {
     "element": [
       {
-        "id": "Identifier",
+        "id": "Identifier:shr-core-Identifier",
         "path": "Identifier",
-        "short": "usdf-PlanIdentifier",
-        "definition": "Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)",
+        "short": "shr-core-Identifier",
+        "definition": "Business identifier or external id for this resource.",
         "isModifier": false
       },
       {
-        "id": "Identifier.use",
-        "path": "Identifier.use",
+        "id": "Identifier:shr-core-Identifier.extension:effectivetimeperiod",
+        "path": "Identifier.extension",
+        "definition": "The date and time span for which something is active, valid, or in force.",
         "min": 0,
-        "max": "0"
-      },
-      {
-        "id": "Identifier.type",
-        "path": "Identifier.type",
-        "min": 0,
-        "max": "0"
-      },
-      {
-        "id": "Identifier.system",
-        "path": "Identifier.system",
-        "min": 0,
-        "max": "0"
-      },
-      {
-        "id": "Identifier.value",
-        "path": "Identifier.value",
-        "min": 1,
-        "max": "1"
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/shr-core-EffectiveTimePeriod-extension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "sliceName": "effectivetimeperiod"
       }
     ]
   },
-  "title": "usdf-PlanIdentifier"
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/Davinci-drug-formulary",
+      "value": "shr.core.Identifier"
+    }
+  ],
+  "title": "shr-core-Identifier"
 }

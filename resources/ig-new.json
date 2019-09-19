@@ -3,15 +3,15 @@
   "id" : "hl7.fhir.us.Davinci-drug-formulary-0.1.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/skravitz/cimpl/usdf-post-ballot-out/fhir/guide/resources"
+    "valueString" : "/Users/skravitz/cimpl/devr4_4_out/fhir/guide/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/skravitz/cimpl/usdf-post-ballot-out/fhir/guide/examples"
+    "valueString" : "/Users/skravitz/cimpl/devr4_4_out/fhir/guide/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/skravitz/cimpl/usdf-post-ballot-out/fhir/guide/pages"
+    "valueString" : "/Users/skravitz/cimpl/devr4_4_out/fhir/guide/pages"
   }],
   "url" : "http://hl7.org/fhir/us/Davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.Davinci-drug-formulary-0.1.0",
   "version" : "0.1.0",
