@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-09-19",
+  "date": "2019-09-20",
   "description": "Qualifier of copay amount",
   "caseSensitive": true,
   "content": "complete",
@@ -28,22 +28,22 @@
   "concept": [
     {
       "code": "after-deductible",
-      "definition": "After Deductible",
+      "definition": "The consumer first pays the deductible, and after the deductible is met, the consumer is responsible only for the copay (this indicates that this benefit is subject to the deductible).",
       "display": "After Deductible"
     },
     {
       "code": "before-deductible",
-      "definition": "Before Deductible",
+      "definition": "The consumer first pays the copay, and any net remaining allowed charges accrue to the deductible (this indicates that this benefit is subject to the deductible).",
       "display": "Before Deductible"
     },
     {
       "code": "no-charge",
-      "definition": "No Charge",
+      "definition": "No cost sharing is charged (this indicates that this benefit is not subject tothe deductible).",
       "display": "No Charge"
     },
     {
       "code": "no-charge-after-deductible",
-      "definition": "No Charge After Deductible",
+      "definition": "The consumer first pays the deductible, and after the deductible is met, no copayment is charged (this indicates that this benefit is subject to the deductible).",
       "display": "No Charge After Deductible"
     }
   ]

@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug",
   "name": "FormularyDrug",
   "status": "draft",
-  "date": "2019-09-19",
+  "date": "2019-09-20",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {

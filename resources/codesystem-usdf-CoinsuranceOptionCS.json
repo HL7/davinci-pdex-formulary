@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-09-19",
+  "date": "2019-09-20",
   "description": "Qualifier for coinsurance rate",
   "caseSensitive": true,
   "content": "complete",
@@ -28,17 +28,17 @@
   "concept": [
     {
       "code": "after-deductible",
-      "definition": "After Deductible",
+      "definition": "The consumer first pays the deductible, and afterthe deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible).",
       "display": "After Deductible"
     },
     {
       "code": "no-charge",
-      "definition": "No Charge",
+      "definition": "No cost sharing is charged (this indicates that this benefit is not subject to the deductible).",
       "display": "No Charge"
     },
     {
       "code": "no-charge-after-deductible",
-      "definition": "No Charge After Deductible",
+      "definition": "The consumer first pays the deductible, and after thedeductible is met, no coinsurance is charged (this indicates that this benefit is subject to the deductible)",
       "display": "No Charge After Deductible"
     }
   ]

@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-09-19",
+  "date": "2019-09-20",
   "description": "Types of Pharmacies. Each payer will have its own controlled vocabulary.",
   "caseSensitive": true,
   "content": "complete",
@@ -28,43 +28,43 @@
   "concept": [
     {
       "code": "1-month-in-retail",
-      "definition": "1 Month Supply via in-network retail pharmacy",
-      "display": "1 Month Supply via in-network retail pharmacy"
+      "definition": "1 Month Supply via in-network retail pharmacy.",
+      "display": "1-month-in-retail "
     },
     {
       "code": "1-month-out-retail",
-      "definition": "1 Month Supply via out-of-network retail pharmacy",
-      "display": "1 Month Supply via out-of-network retail pharmacy"
+      "definition": "1 Month Supply via out-of-network retail pharmacy.",
+      "display": "1-month-out-retail"
     },
     {
       "code": "1-month-in-mail",
-      "definition": "1 Month Supply via in-network mail order pharmacy",
-      "display": "1 Month Supply via in-network mail order pharmacy"
+      "definition": "1 Month Supply via in-network mail order pharmacy.",
+      "display": "1-month-in-mail"
     },
     {
       "code": "1-month-out-mail",
-      "definition": "1 Month Supply via out-of-network mail order pharmacy",
-      "display": "1 Month Supply via out-of-network mail order pharmacy"
+      "definition": "1 Month Supply via out-of-network mail order pharmacy.",
+      "display": "1-month-out-mail"
     },
     {
       "code": "3-month-in-retail",
-      "definition": "3 Month Supply via in-network retail pharmacy",
-      "display": "3 Month Supply via in-network retail pharmacy"
+      "definition": "3 Month Supply via in-network retail pharmacy.",
+      "display": "3-month-in-retail"
     },
     {
       "code": "3-month-out-retail",
-      "definition": "3 Month Supply via out-of-network retail pharmacy",
-      "display": "3 Month Supply via out-of-network retail pharmacy"
+      "definition": "3 Month Supply via out-of-network retail pharmacy.",
+      "display": "3-month-out-retail"
     },
     {
       "code": "3-month-in-mail",
-      "definition": "3 Month Supply via in-network mail order pharmacy",
-      "display": "3 Month Supply via in-network mail order pharmacy"
+      "definition": "3 Month Supply via in-network mail order pharmacy.",
+      "display": "3-month-in-mail"
     },
     {
       "code": "3-month-out-mail",
-      "definition": "3 Month Supply via out-of-network mail order pharmacy",
-      "display": "3 Month Supply via out-of-network mail order pharmacy"
+      "definition": "3 Month Supply via out-of-network mail order pharmacy.",
+      "display": "3-month-out-mail"
     }
   ]
 }
