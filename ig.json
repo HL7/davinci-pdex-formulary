@@ -188,6 +188,9 @@
     "CodeSystem/usdf-PharmacyTypeCS": {
       "base": "CodeSystem-usdf-PharmacyTypeCS.html"
     },
+    "SearchParameter/DrugName": {
+      "base": "SearchParameter-DrugName.html"
+    },
     "SearchParameter/DrugPlan": {
       "base": "SearchParameter-DrugPlan.html"
     },

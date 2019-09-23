@@ -1,0 +1,24 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "DrugName",
+  "status": "active",
+  "code": "DrugName",
+  "name": "DrugName",
+  "description": "Accesses the Descriptive Name of a FormularyDrug",
+  "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/SearchParameter/DrugName",
+  "base": [
+    "MedicationKnowledge"
+  ],
+  "type": "string",
+  "expression": "MedicationKnowledge.code.coding.display",
+  "comparator": [
+    "eq"
+  ],
+  "multipleOr": true,
+  "multipleAnd": true,
+  "modifier": [
+    "missing",
+    "exact",
+    "contains"
+  ]
+}

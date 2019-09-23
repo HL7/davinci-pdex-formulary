@@ -287,6 +287,13 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/DrugName"
+      },
+      "name" : "DrugName",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "SearchParameter/DrugPlan"
       },
       "name" : "DrugPlan",
