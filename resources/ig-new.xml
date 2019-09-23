@@ -284,6 +284,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/DrugName"/>
+      </reference>
+      <name value="DrugName"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="SearchParameter/DrugPlan"/>
       </reference>
       <name value="DrugPlan"/>
