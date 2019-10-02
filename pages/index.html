@@ -54,7 +54,7 @@ A key architectural issue that is beyond the scope of this implementation guide 
     important search use cases. Due to the immaturity of the MedicationKnowledge resource, it is expected that it will undergo changes, and those changes may require evolution of the FormularyDrug profile.
   </li>
   </ul>
-  Two searchParameters have also been defined to facilitate the anticipated use cases.  See the <a href="#Anticipated-Client-Queries">Anticipated Client Queries</a> section for a description of how to query the CoveragePlan and FormularyDrug profiles
+  Two searchParameters have also been defined to facilitate the anticipated use cases.  See the <a href="#anticipated-client-queries">Anticipated Client Queries</a> section for a description of how to query the CoveragePlan and FormularyDrug profiles
   in support of the anticipated use cases.
   <ul>
       <li><b><a href="SearchParameter-DrugPlan.html">DrugPlan</a></b>:  Makes the DrugPlan identifier of each FormularyDrug accessible for query   </li>
@@ -71,7 +71,7 @@ A key architectural issue that is beyond the scope of this implementation guide 
 </li>
 </ul>
 <h2 id="formulary-structure">Formulary Structure</h2>
-  <p>Formularies in the United States are normally published by health insurers on an annual basis, with minor updates during the year. It is critical that health insurers update their published Formularies following these minor updates. <b>(Is there a requirement by rule to publish updates within a certain amount of time?)</b>
+  <p>Formularies in the United States are normally published by health insurers on an annual basis, with minor updates during the year. It is critical that health insurers update their published Formularies following these minor updates. 
   <p>Insurers regularly administer multiple health insurance and drug coverage plans and each of those plans may have its own formulary.</p>
   <p>
 Each formulary contains a list of drugs.
@@ -125,6 +125,9 @@ the the plan level estimated cost for each medication under the member's current
 <p>
 Note that for this use case the coverage plan could provide authenticated or open access to the plan formulary, and the privacy of the member's data is protected.
 </p>
+<p>
+<img src="Slide1.jpg" />
+<p>&nbsp;</p>
 <h3>Shopping for Health Plans</h3>
 <p>
 This use case allows a consumer to compare the drug coverage of several different health plans and determine which plan has the lowest plan level estimated cost, 
@@ -133,8 +136,6 @@ The mobile application retrieves the consumer's medication list from an electron
 For each payer, the mobile application queries the payer's formulary service to retrieve the list of health plans provided by that payer. Then, for each plan,the mobile application queries the formulary service to retrieve the plan-level estimated costs specific to the consumer's medication list. 
 <p>
 Access to the formulary service should not require authentication, and the server should not maintain any records that could associate the consumer with the medication list that was queried.</p>
-<p>
-<img src="Slide1.jpg" />
 <p>&nbsp;</p>
 <img src="Slide2.jpg" />
 <p>&nbsp;</p>
