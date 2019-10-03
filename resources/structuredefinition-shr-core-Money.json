@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/shr-core-Money",
   "name": "Money",
   "status": "active",
-  "date": "2019-10-02",
+  "date": "2019-10-03",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
