@@ -21,6 +21,7 @@
 
 <!-- ============CONTENT CONTENT=============== -->
 
+
 <h1 id="drug-formulary">DaVinci Payer Data Exchange US Drug Formulary</h1>
 <p>This project defines a FHIR interface to a health insurer's drug formulary information for patients/consumers. 
 A drug formulary is a list of brand-name and generic prescription drugs a health insurer 
@@ -93,7 +94,7 @@ Each formulary contains a list of drugs.
  <p>
 </p>
 
-    <img src="formularyQHP.jpg" />
+    <img max-width=100% height=auto src="formularyQHP.jpg" />
   <p>
   A FormularyDrug represents the availability of a drug with a specific RxNorm code within the tier structure and prescribing constraints of a specific CoveragePlan.   
   If a FHIR endpoint provides data on multiple CoveragePlans, querying for FormularyDrugs by their RxNorm code would return multiple entries.   Each of these FormularyDrugs
@@ -126,7 +127,7 @@ the the plan level estimated cost for each medication under the member's current
 Note that for this use case the coverage plan could provide authenticated or open access to the plan formulary, and the privacy of the member's data is protected.
 </p>
 <p>
-<img src="Slide1.jpg" />
+<img max-width=100% height=auto src="Slide1.jpg" />
 <p>&nbsp;</p>
 <h3>Shopping for Health Plans</h3>
 <p>
@@ -137,7 +138,13 @@ For each payer, the mobile application queries the payer's formulary service to 
 <p>
 Access to the formulary service should not require authentication, and the server should not maintain any records that could associate the consumer with the medication list that was queried.</p>
 <p>&nbsp;</p>
-<img src="Slide2.jpg" />
+<style>
+img {
+  width: 100%;
+  height: auto;
+}
+</style>
+<img max-width=100% height=auto src="Slide2.jpg" />
 <p>&nbsp;</p>
 <h2 id="privacy-considerations">Privacy Considerations</h2>
 <p>
