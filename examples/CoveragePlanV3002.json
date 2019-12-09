@@ -147,7 +147,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-in-retail",
-                    "display": "3-month-in-retail : 3 Month Supply via in-network retail pharmacy"
+                    "display": "3 month in network retail"
                   }
                 ]
               }
@@ -199,7 +199,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-out-retail",
-                    "display": "3-month-out-retail : 3 Month Supply via out-of-network retail pharmacy"
+                    "display": "3 month out of network retail"
                   }
                 ]
               }
