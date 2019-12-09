@@ -2,7 +2,7 @@
   "resourceType": "MedicationKnowledge",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
+    "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
     ]
   },
   "id": "formularydrugV1002",
@@ -11,19 +11,19 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>*** Formulary Drug Example #1 (MedicationKnowledge) ***</b></p><p><b>id</b>: formularydrugV2001</p><p><b>Drug Product</b>: Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet [Percocet]</p><p><b>Drug Class</b>: Anilides (ATC code: N02BE); Barbiturates and derivatives (N02AA) </p><p><b>Drug Tier ID</b>: Brand </p><p><b>Prior Authorization</b>: false </p><p><b>Step Therapy Limit</b>: false</p><p><b>Quantity Limit</b>: false</p></div>"
   },
   "extension": [
-    {
-      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
-            "code": "brand",
-            "display": "Brand"
-          }
-        ]
-      }
-    },
-    {
+      {
+        "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
+              "code": "brand",
+              "display": "Brand"
+            }
+          ]
+        }
+      },
+     {
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PriorAuthorization-extension",
       "valueBoolean": false
     },
@@ -45,7 +45,7 @@
       {
         "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
         "code": "1049640",
-        "display": "Percocet 5 MG / 325 MG Oral Tablet"
+        "display": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet [Percocet]"
       }
     ]
   }

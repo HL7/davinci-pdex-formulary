@@ -1,11 +1,9 @@
 {
   "resourceType": "List",
   "id": "CoveragePlanV3002",
-  "identifier": [
-    {
+  "identifier": [{
       "value": "test1"
-    }
-  ],
+  }],
   "meta": {
     "versionId": "1",
     "lastUpdated": "2019-05-22T18:36:03.000+00:00",
@@ -47,7 +45,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-in-retail",
-                    "display": "1 Month Supply via in-network retail pharmacy"
+                    "display": "1-month-in-retail : 1 Month Supply via in-network retail pharmacy"
                   }
                 ]
               }
@@ -55,7 +53,7 @@
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
               "valueMoney": {
-                "value": 10
+                "value": 10.0
               }
             },
             {
@@ -72,7 +70,7 @@
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
-              "valueDecimal": 1
+              "valueDecimal": 1.0
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
@@ -98,7 +96,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-out-retail",
-                    "display": "1 Month Supply via out-of-network retail pharmacy"
+                    "display": "1-month-out-retail : 1 Month Supply via out-of-network retail pharmacy"
                   }
                 ]
               }
@@ -106,7 +104,7 @@
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
               "valueMoney": {
-                "value": 0
+                "value": 0.0
               }
             },
             {
@@ -123,7 +121,7 @@
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
-              "valueDecimal": 0
+              "valueDecimal": 0.0
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
@@ -149,7 +147,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-in-retail",
-                    "display": "3 Month Supply via in-network retail pharmacy"
+                    "display": "3-month-in-retail : 3 Month Supply via in-network retail pharmacy"
                   }
                 ]
               }
@@ -157,7 +155,7 @@
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
               "valueMoney": {
-                "value": 0
+                "value": 0.0
               }
             },
             {
@@ -174,7 +172,7 @@
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
-              "valueDecimal": 0
+              "valueDecimal": 0.0
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
@@ -188,6 +186,7 @@
                 ]
               }
             }
+
           ]
         },
         {
@@ -200,7 +199,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-out-retail",
-                    "display": "3 Month Supply via out-of-network retail pharmacy"
+                    "display": "3-month-out-retail : 3 Month Supply via out-of-network retail pharmacy"
                   }
                 ]
               }
@@ -208,7 +207,7 @@
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
               "valueMoney": {
-                "value": 0
+                "value": 0.0
               }
             },
             {
@@ -225,7 +224,7 @@
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
-              "valueDecimal": 0
+              "valueDecimal": 0.0
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
@@ -238,7 +237,7 @@
                   }
                 ]
               }
-            }
+            }         
           ]
         }
       ]
@@ -255,7 +254,7 @@
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-SummaryURL-extension",
       "valueString": "http://url/to/formulary/information"
     },
-    {
+{
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-EmailPlanContact-extension",
       "valueString": "Patrick.Breen@carefirst.com"
     },
@@ -279,4 +278,4 @@
       }
     }
   ]
-}
+    }

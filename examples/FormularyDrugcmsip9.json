@@ -1,52 +1,52 @@
 {
-  "code": {
-    "coding": [
+    "code": {
+      "coding": [
+        {
+          "code": "1000091",
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "display": "Doxepin Hydrochloride 50 MG/ML Topical Cream"
+        }
+      ]
+    },
+    "extension": [
       {
-        "code": "1000091",
-        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-        "display": "Doxepin Hydrochloride 50 MG/ML Topical Cream"
+        "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "generic",
+              "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
+              "display": "Generic"
+            }
+          ]
+        }
+      },
+      {
+        "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PriorAuthorization-extension",
+        "valueBoolean": false
+      },
+      {
+        "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-StepTherapyLimit-extension",
+        "valueBoolean": true
+      },
+      {
+        "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-QuantityLimit-extension",
+        "valueBoolean": true
+      },
+      {
+        "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PlanID-extension",
+        "valueString": "40308VA0240008"
       }
-    ]
-  },
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "generic",
-            "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
-            "display": "Generic"
-          }
-        ]
-      }
+    ],
+    "resourceType": "MedicationKnowledge",
+    "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
     },
-    {
-      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PriorAuthorization-extension",
-      "valueBoolean": false
+    "meta": {
+      "profile": [
+        "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
+      ]
     },
-    {
-      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-StepTherapyLimit-extension",
-      "valueBoolean": true
-    },
-    {
-      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-QuantityLimit-extension",
-      "valueBoolean": true
-    },
-    {
-      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PlanID-extension",
-      "valueString": "40308VA0240008"
-    }
-  ],
-  "resourceType": "MedicationKnowledge",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
-  },
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
-    ]
-  },
-  "id": "cmsip9"
-}
+    "id": "cmsip9"
+  }
