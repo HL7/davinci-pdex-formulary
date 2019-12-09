@@ -29,35 +29,35 @@
         "concept": [
           {
             "code": "1-month-in-retail",
-            "display": "1 month in retail"
+            "display": "1 month in network retail"
           },
           {
             "code": "1-month-out-retail",
-            "display": "1-month-out-retail"
+            "display": "1 month out of network retail"
           },
           {
             "code": "1-month-in-mail",
-            "display": "1-month-in-mail"
+            "display": "1 month in network mail order"
           },
           {
             "code": "1-month-out-mail",
-            "display": "1-month-out-mail"
+            "display": "1 month out of network mail order"
           },
           {
             "code": "3-month-in-retail",
-            "display": "3-month-in-retail"
+            "display": "3 month in network retail"
           },
           {
             "code": "3-month-out-retail",
-            "display": "3-month-out-retail"
+            "display": "3 month out of network retail"
           },
           {
             "code": "3-month-in-mail",
-            "display": "3-month-in-mail"
+            "display": "3 month in network mail order"
           },
           {
             "code": "3-month-out-mail",
-            "display": "3-month-out-mail"
+            "display": "3 month out of network mail order"
           }
         ]
       }

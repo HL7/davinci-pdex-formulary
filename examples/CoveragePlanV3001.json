@@ -45,7 +45,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-in-retail",
-                    "display": "1-month-in-retail"
+                    "display": "1 month in retail"
                   }
                 ]
               }
@@ -96,7 +96,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-out-retail",
-                    "display": "1-month-out-retail"
+                    "display": "1 month out retail"
                   }
                 ]
               }
@@ -147,7 +147,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-in-retail",
-                    "display": "3-month-in-retail"
+                    "display": "3 month in retail"
                   }
                 ]
               }
@@ -199,7 +199,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-out-retail",
-                    "display": "3-month-out-retail"
+                    "display": "3 month out retail"
                   }
                 ]
               }
