@@ -7,10 +7,10 @@
   },
   "id": "covplanV1002",
   "identifier": [
-    {
+      {
       "value": "HIOS-PLAN-ID"
-    }
-  ],
+      }
+    ],
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>*** CoveragePlan Example #1 (Reference to MedicationKnowledge) ***</b></p><p><b>id</b>: covplanV2001</p><p><b>Plan Name</b>: Sample Gold Health Plan</p><p><b>Drug Product</b>: <i>(Generated Detail from id - formularydrugV1001):</i> Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet [Percocet]</p><p><b>Status</b>: current </p><p><b>Drug Tier ID</b>: Brand </p><p><b>Mail order</b>: false </p><p><b>Pharmacy type</b>: 1-MONTH-IN-RETAIL</p><p><b>Copay Amount</b>: 20.0</p><p><b>Copay option</b>: AFTER-DEDUCTIBLE</p><p><b>Coinsurance rate</b>: 0.20</p><p><b>Coinsurance option</b>: AFTER-DEDUCTIBLE</p></div>"
@@ -35,9 +35,9 @@
           "valueCodeableConcept": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
-                "code": "brand",
-                "display": "Brand"
+              "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
+              "code": "brand",
+              "display": "Brand"
               }
             ]
           }
@@ -54,22 +54,22 @@
               "valueCodeableConcept": {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
-                    "code": "1-month-in-retail",
-                    "display": "1 Month Supply via in-network retail pharmacy"
+                  "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
+                  "code": "1-month-in-retail",
+                  "display": "1 Month Supply via in-network retail pharmacy"
                   }
                 ]
               }
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
-              "valueMoney": {
-                "value": 20
-              }
+                "valueMoney": {
+                  "value": 20.0
+                }
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
-              "valueDecimal": 0.2
+                "valueDecimal": 0.20
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
@@ -117,7 +117,7 @@
     },
     {
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-Network-extension",
-      "valueString": "PREFERRED"
+        "valueString": "PREFERRED"
     },
     {
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PlanIDType-extension",

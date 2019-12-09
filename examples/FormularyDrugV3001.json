@@ -2,7 +2,7 @@
   "resourceType": "MedicationKnowledge",
   "id": "FormularyDrugV3001",
   "meta": {
-    "profile": [
+      "profile": [
       "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
     ]
   },
@@ -45,7 +45,7 @@
       {
         "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
         "code": "1049640",
-        "display": "Percocet 5 MG / 325 MG Oral Tablet"
+        "display": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet [Percocet]"
       }
     ]
   }
