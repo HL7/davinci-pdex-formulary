@@ -56,7 +56,7 @@
                   {
                   "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                   "code": "1-month-in-retail",
-                  "display": "1-month-in-retail : 1 Month Supply via in-network retail pharmacy"
+                  "display": "1-month-in-retail"
                   }
                 ]
               }
