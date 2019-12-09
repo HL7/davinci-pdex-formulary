@@ -824,7 +824,7 @@
                     {
                       "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                       "code": "3-month-in-retail",
-                      "display": "3-month in network retail"
+                      "display": "3 month in network retail"
                     }
                   ]
                 }
