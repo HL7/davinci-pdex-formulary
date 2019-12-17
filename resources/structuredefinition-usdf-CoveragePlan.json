@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan",
   "name": "CoveragePlan",
   "status": "draft",
-  "date": "2019-10-03",
+  "date": "2019-12-17",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {

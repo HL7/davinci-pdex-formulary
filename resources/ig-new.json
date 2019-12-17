@@ -1,6 +1,6 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "hl7.fhir.us.Davinci-drug-formulary-0.1.0",
+  "id" : "hl7.fhir.us.Davinci-drug-formulary-0.2.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
     "valueString" : "/Users/skravitz/cimpl/devr4_4_out/fhir/guide/resources"
@@ -13,8 +13,8 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "/Users/skravitz/cimpl/devr4_4_out/fhir/guide/pages"
   }],
-  "url" : "http://hl7.org/fhir/us/Davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.Davinci-drug-formulary-0.1.0",
-  "version" : "0.1.0",
+  "url" : "http://hl7.org/fhir/us/Davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.Davinci-drug-formulary-0.2.0",
+  "version" : "0.2.0",
   "name" : "DaVinci_Payer_Data_Exchange_PDex_US_Drug_Formulary",
   "title" : "DaVinci Payer Data Exchange (PDex) US Drug Formulary",
   "status" : "draft",

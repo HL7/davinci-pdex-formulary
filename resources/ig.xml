@@ -1,6 +1,6 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-    <id value="hl7.fhir.us.Davinci-drug-formulary-0.1.0" />
-    <url value="http://hl7.org/fhir/us/Davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.Davinci-drug-formulary-0.1.0" />
+    <id value="hl7.fhir.us.Davinci-drug-formulary-0.2.0" />
+    <url value="http://hl7.org/fhir/us/Davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.Davinci-drug-formulary-0.2.0" />
     <name value="DaVinci_Payer_Data_Exchange_PDex_US_Drug_Formulary" />
     <title value="DaVinci Payer Data Exchange (PDex) US Drug Formulary" />
     <status value="draft" />

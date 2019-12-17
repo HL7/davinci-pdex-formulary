@@ -1,9 +1,11 @@
 {
   "resourceType": "List",
   "id": "CoveragePlanV3002",
-  "identifier": [{
+  "identifier": [
+    {
       "value": "test1"
-  }],
+    }
+  ],
   "meta": {
     "versionId": "1",
     "lastUpdated": "2019-05-22T18:36:03.000+00:00",
@@ -53,7 +55,7 @@
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
               "valueMoney": {
-                "value": 10.0
+                "value": 10
               }
             },
             {
@@ -70,7 +72,7 @@
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
-              "valueDecimal": 1.0
+              "valueDecimal": 1
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
@@ -104,7 +106,7 @@
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
               "valueMoney": {
-                "value": 0.0
+                "value": 0
               }
             },
             {
@@ -121,7 +123,7 @@
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
-              "valueDecimal": 0.0
+              "valueDecimal": 0
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
@@ -155,7 +157,7 @@
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
               "valueMoney": {
-                "value": 0.0
+                "value": 0
               }
             },
             {
@@ -172,7 +174,7 @@
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
-              "valueDecimal": 0.0
+              "valueDecimal": 0
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
@@ -186,7 +188,6 @@
                 ]
               }
             }
-
           ]
         },
         {
@@ -207,7 +208,7 @@
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
               "valueMoney": {
-                "value": 0.0
+                "value": 0
               }
             },
             {
@@ -224,7 +225,7 @@
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
-              "valueDecimal": 0.0
+              "valueDecimal": 0
             },
             {
               "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
@@ -237,7 +238,7 @@
                   }
                 ]
               }
-            }         
+            }
           ]
         }
       ]
@@ -254,7 +255,7 @@
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-SummaryURL-extension",
       "valueString": "http://url/to/formulary/information"
     },
-{
+    {
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-EmailPlanContact-extension",
       "valueString": "Patrick.Breen@carefirst.com"
     },
@@ -278,4 +279,4 @@
       }
     }
   ]
-    }
+}
