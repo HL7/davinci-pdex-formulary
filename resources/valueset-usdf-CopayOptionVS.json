@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/ValueSet/usdf-CopayOptionVS",
   "name": "CopayOptionVS",
-  "title": "CopayOptionVS",
+  "title": "Copay Option VS",
   "status": "draft",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-12-17",
+  "date": "2019-12-30",
   "description": "Qualifier of copay amount",
   "compose": {
     "include": [
