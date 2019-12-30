@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-QuantityLimit-extension",
   "name": "QuantityLimit",
-  "title": "usdf-QuantityLimit",
+  "title": "Quantity Limit",
   "status": "draft",
-  "date": "2019-12-17",
+  "date": "2019-12-30",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {

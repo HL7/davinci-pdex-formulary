@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
   "name": "DrugTierCS",
-  "title": "DrugTierCS",
+  "title": "Drug Tier CS",
   "status": "draft",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-12-17",
+  "date": "2019-12-30",
   "description": "The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own controlled vocabulary.",
   "caseSensitive": true,
   "content": "complete",

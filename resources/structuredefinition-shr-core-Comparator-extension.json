@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/shr-core-Comparator-extension",
   "name": "Comparator",
-  "title": "shr-core-Comparator",
+  "title": "Comparator",
   "status": "draft",
-  "date": "2019-12-17",
+  "date": "2019-12-30",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {

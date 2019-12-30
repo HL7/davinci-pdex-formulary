@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-EmailPlanContact-extension",
   "name": "EmailPlanContact",
-  "title": "usdf-EmailPlanContact",
+  "title": "Email Plan Contact",
   "status": "draft",
-  "date": "2019-12-17",
+  "date": "2019-12-30",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {

@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-SummaryURL-extension",
   "name": "SummaryURL",
-  "title": "usdf-SummaryURL",
+  "title": "Summary URL",
   "status": "draft",
-  "date": "2019-12-17",
+  "date": "2019-12-30",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
