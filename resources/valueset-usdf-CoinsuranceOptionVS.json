@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/ValueSet/usdf-CoinsuranceOptionVS",
   "name": "CoinsuranceOptionVS",
-  "title": "Coinsurance Option VS",
+  "title": "CoinsuranceOptionVS",
   "status": "draft",
   "publisher": "HL7 Pharmacy WG",
   "contact": [

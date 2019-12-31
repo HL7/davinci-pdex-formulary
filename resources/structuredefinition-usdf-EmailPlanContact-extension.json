@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-EmailPlanContact-extension",
   "name": "EmailPlanContact",
-  "title": "Email Plan Contact",
+  "title": "usdf-EmailPlanContact",
   "status": "draft",
   "date": "2019-12-30",
   "publisher": "HL7 Pharmacy WG",
@@ -22,7 +22,7 @@
     }
   ],
   "description": "An email address for developers/public to report mistakes in the network and formulary data",
-  "fhirVersion": "4.0.0",
+  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

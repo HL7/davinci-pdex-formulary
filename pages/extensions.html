@@ -36,27 +36,51 @@
   </thead>
   <tbody>
     <tr>
-          <td><a href="StructureDefinition-usdf-DrugAlternatives-extension.html">Drug Alternatives</a></td>
+          <td><a href="StructureDefinition-usdf-CoInsuranceRate-extension.html">CoInsuranceRate</a></td>
+          <td>{% capture md_text %}A fee charged for each prescription of a drug, expressed as a percentage of that drug's overall cost{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-usdf-CoinsuranceOption-extension.html">CoinsuranceOption</a></td>
+          <td>{% capture md_text %}A code that qualifies the coinsurance rate{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-usdf-CopayAmount-extension.html">CopayAmount</a></td>
+          <td>{% capture md_text %}A standard, nominal fee charged for each prescription of a drug{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-usdf-CopayOption-extension.html">CopayOption</a></td>
+          <td>{% capture md_text %}A code that qualifies the copay amount{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-usdf-CostSharing-extension.html">CostSharing</a></td>
+          <td>{% capture md_text %}Definition of the patients responsibility for a portion of the cost not covered by insurance for a particular pharmacy type within a drug tier{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-usdf-DrugAlternatives-extension.html">DrugAlternatives</a></td>
           <td>{% capture md_text %}Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-usdf-DrugTierDefinition-extension.html">Drug Tier Definition</a></td>
+          <td><a href="StructureDefinition-usdf-DrugTierDefinition-extension.html">DrugTierDefinition</a></td>
           <td>{% capture md_text %}A description of the drug tiers used by the formulary and how those tiers implement copay and coinsurance amounts. Drug tiers do not have any inherent meaning that is consistent across all formularies. Rather, each tier is defined using this element.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-usdf-DrugTierID-extension.html">Drug Tier ID</a></td>
+          <td><a href="StructureDefinition-usdf-DrugTierID-extension.html">DrugTierID</a></td>
           <td>{% capture md_text %}A code that describes the coverage status of a drug in a health plan (e.g., preferred generic, specialty, etc.){% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-usdf-EmailPlanContact-extension.html">Email Plan Contact</a></td>
+          <td><a href="StructureDefinition-usdf-EmailPlanContact-extension.html">EmailPlanContact</a></td>
           <td>{% capture md_text %}An email address for developers/public to report mistakes in the network and formulary data{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-usdf-FormularyURL-extension.html">Formulary URL</a></td>
+          <td><a href="StructureDefinition-usdf-FormularyURL-extension.html">FormularyURL</a></td>
           <td>{% capture md_text %}The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-usdf-MarketingURL-extension.html">Marketing URL</a></td>
+          <td><a href="StructureDefinition-usdf-MailOrder-extension.html">MailOrder</a></td>
+          <td>{% capture md_text %}A Boolean indication of whether this drug tier supports a mail order pharmacy option{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-usdf-MarketingURL-extension.html">MarketingURL</a></td>
           <td>{% capture md_text %}The URL that goes directly to the plan brochure for the specific standard plan or plan variation{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
@@ -64,27 +88,31 @@
           <td>{% capture md_text %}Array of Networks within a plan.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-usdf-PlanID-extension.html">Plan ID</a></td>
+          <td><a href="StructureDefinition-usdf-PharmacyType-extension.html">PharmacyType</a></td>
+          <td>{% capture md_text %}A code that describes the network (in/out) status of a pharmacy, the duration of supply, and whether this is a mail order pharmacy.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-usdf-PlanID-extension.html">PlanID</a></td>
           <td>{% capture md_text %}Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.){% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-usdf-PlanIDType-extension.html">Plan ID Type</a></td>
+          <td><a href="StructureDefinition-usdf-PlanIDType-extension.html">PlanIDType</a></td>
           <td>{% capture md_text %}Type of Plan ID. For all Marketplace plans this should be: HIOS-PLAN-ID{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-usdf-PriorAuthorization-extension.html">Prior Authorization</a></td>
+          <td><a href="StructureDefinition-usdf-PriorAuthorization-extension.html">PriorAuthorization</a></td>
           <td>{% capture md_text %}A Boolean indication of whether the coverage plan imposes a prior authorization requirement on this drug.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-usdf-QuantityLimit-extension.html">Quantity Limit</a></td>
+          <td><a href="StructureDefinition-usdf-QuantityLimit-extension.html">QuantityLimit</a></td>
           <td>{% capture md_text %}A Boolean indication of whether the coverage plan imposes a quantity limit on this drug.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-usdf-StepTherapyLimit-extension.html">Step Therapy Limit</a></td>
+          <td><a href="StructureDefinition-usdf-StepTherapyLimit-extension.html">StepTherapyLimit</a></td>
           <td>{% capture md_text %}A Boolean indication of whether the coverage plan imposes a step therapy limit on this drug.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-usdf-SummaryURL-extension.html">Summary URL</a></td>
+          <td><a href="StructureDefinition-usdf-SummaryURL-extension.html">SummaryURL</a></td>
           <td>{% capture md_text %}The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         

@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugAlternatives-extension",
   "name": "DrugAlternatives",
-  "title": "Drug Alternatives",
+  "title": "usdf-DrugAlternatives",
   "status": "draft",
   "date": "2019-12-30",
   "publisher": "HL7 Pharmacy WG",
@@ -22,7 +22,7 @@
     }
   ],
   "description": "Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
-  "fhirVersion": "4.0.0",
+  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

@@ -60,6 +60,9 @@
     "examples"
   ],
   "resources": {
+"CapabilityStatement/usdf-server": {
+"base": "CapabilityStatement-usdf-server.html"
+},
     "StructureDefinition/usdf-CoveragePlan": {
       "base": "StructureDefinition-usdf-CoveragePlan.html"
     },
@@ -72,8 +75,28 @@
     "StructureDefinition/usdf-PlanIdentifier": {
       "base": "StructureDefinition-usdf-PlanIdentifier.html"
     },
+    "StructureDefinition/usdf-CoInsuranceRate-extension": {
+      "base": "StructureDefinition-usdf-CoInsuranceRate-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/usdf-CoinsuranceOption-extension": {
+      "base": "StructureDefinition-usdf-CoinsuranceOption-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/shr-core-Comparator-extension": {
       "base": "StructureDefinition-shr-core-Comparator-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/usdf-CopayAmount-extension": {
+      "base": "StructureDefinition-usdf-CopayAmount-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/usdf-CopayOption-extension": {
+      "base": "StructureDefinition-usdf-CopayOption-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/usdf-CostSharing-extension": {
+      "base": "StructureDefinition-usdf-CostSharing-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/usdf-DrugAlternatives-extension": {
@@ -96,6 +119,10 @@
       "base": "StructureDefinition-usdf-FormularyURL-extension.html",
       "template-base": "sd-extension.html"
     },
+    "StructureDefinition/usdf-MailOrder-extension": {
+      "base": "StructureDefinition-usdf-MailOrder-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/usdf-MarketingURL-extension": {
       "base": "StructureDefinition-usdf-MarketingURL-extension.html",
       "template-base": "sd-extension.html"
@@ -106,6 +133,10 @@
     },
     "StructureDefinition/shr-core-Number-extension": {
       "base": "StructureDefinition-shr-core-Number-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/usdf-PharmacyType-extension": {
+      "base": "StructureDefinition-usdf-PharmacyType-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/usdf-PlanID-extension": {
@@ -159,9 +190,6 @@
     },
     "CodeSystem/usdf-PharmacyTypeCS": {
       "base": "CodeSystem-usdf-PharmacyTypeCS.html"
-    },
-    "CapabilityStatement/usdf-server": {
-      "base": "CapabilityStatement-usdf-server.html"
     },
     "SearchParameter/DrugName": {
       "base": "SearchParameter-DrugName.html"

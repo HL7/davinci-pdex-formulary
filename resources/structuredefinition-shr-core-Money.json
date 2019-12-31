@@ -54,7 +54,7 @@
           }
         ],
         "path": "Money",
-        "short": "Money",
+        "short": "shr-core-Money",
         "definition": "Representation of an amount of currency or monetary value.",
         "min": 0,
         "max": "*",
@@ -73,7 +73,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+            "source": "Element"
           }
         ],
         "isModifier": false,
@@ -105,13 +105,7 @@
         },
         "type": [
           {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
-              }
-            ],
-            "code": "http://hl7.org/fhirpath/System.String"
+            "code": "string"
           }
         ],
         "isModifier": false,
@@ -155,24 +149,6 @@
             "code": "Extension"
           }
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -201,24 +177,6 @@
             ]
           }
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "number"
@@ -240,24 +198,6 @@
             "profile": [
               "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/shr-core-Comparator-extension"
             ]
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -283,24 +223,6 @@
             ]
           }
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "units"
@@ -322,16 +244,6 @@
         "type": [
           {
             "code": "decimal"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -361,16 +273,6 @@
             "code": "code"
           }
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -386,7 +288,7 @@
           ],
           "strength": "required",
           "description": "A code indicating the currency, taken from ISO 4217.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/currencies|4.0.1"
+          "valueSet": "http://hl7.org/fhir/ValueSet/currencies|4.0.0"
         },
         "mapping": [
           {
@@ -402,7 +304,7 @@
       {
         "id": "Money",
         "path": "Money",
-        "short": "Money",
+        "short": "shr-core-Money",
         "definition": "Representation of an amount of currency or monetary value.",
         "isModifier": false
       },
@@ -423,24 +325,6 @@
             "profile": [
               "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/shr-core-Number-extension"
             ]
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -466,24 +350,6 @@
             ]
           }
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "comparator"
@@ -507,29 +373,11 @@
             ]
           }
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "units"
       }
     ]
   },
-  "title": "Money"
+  "title": "shr-core-Money"
 }

@@ -22,7 +22,7 @@
     }
   ],
   "description": "A Boolean indication of whether this drug tier supports a mail order pharmacy option",
-  "fhirVersion": "4.0.0",
+  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

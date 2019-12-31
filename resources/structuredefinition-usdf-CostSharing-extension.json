@@ -22,7 +22,7 @@
     }
   ],
   "description": "Definition of the patients responsibility for a portion of the cost not covered by insurance for a particular pharmacy type within a drug tier",
-  "fhirVersion": "4.0.0",
+  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

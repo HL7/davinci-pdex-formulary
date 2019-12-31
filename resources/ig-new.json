@@ -42,206 +42,255 @@
     }],
     "resource" : [{
       "reference" : {
+        "reference" : "CapabilityStatement/usdf-server"
+      },
+      "name" : "US Drug Formulary  Server CapabilityStatement",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/usdf-CoveragePlan"
       },
-      "name" : "Coverage Plan",
+      "name" : "usdf-CoveragePlan",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-FormularyDrug"
       },
-      "name" : "Formulary Drug",
+      "name" : "usdf-FormularyDrug",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/shr-core-Money"
       },
-      "name" : "Money",
+      "name" : "shr-core-Money",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-PlanIdentifier"
       },
-      "name" : "Plan Identifier",
+      "name" : "usdf-PlanIdentifier",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/usdf-CoInsuranceRate-extension"
+      },
+      "name" : "usdf-CoInsuranceRate",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/usdf-CoinsuranceOption-extension"
+      },
+      "name" : "usdf-CoinsuranceOption",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/shr-core-Comparator-extension"
       },
-      "name" : "Comparator",
+      "name" : "shr-core-Comparator",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/usdf-CopayAmount-extension"
+      },
+      "name" : "usdf-CopayAmount",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/usdf-CopayOption-extension"
+      },
+      "name" : "usdf-CopayOption",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/usdf-CostSharing-extension"
+      },
+      "name" : "usdf-CostSharing",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-DrugAlternatives-extension"
       },
-      "name" : "Drug Alternatives",
+      "name" : "usdf-DrugAlternatives",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-DrugTierDefinition-extension"
       },
-      "name" : "Drug Tier Definition",
+      "name" : "usdf-DrugTierDefinition",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-DrugTierID-extension"
       },
-      "name" : "Drug Tier ID",
+      "name" : "usdf-DrugTierID",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-EmailPlanContact-extension"
       },
-      "name" : "Email Plan Contact",
+      "name" : "usdf-EmailPlanContact",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-FormularyURL-extension"
       },
-      "name" : "Formulary URL",
+      "name" : "usdf-FormularyURL",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/usdf-MailOrder-extension"
+      },
+      "name" : "usdf-MailOrder",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-MarketingURL-extension"
       },
-      "name" : "Marketing URL",
+      "name" : "usdf-MarketingURL",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-Network-extension"
       },
-      "name" : "Network",
+      "name" : "usdf-Network",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/shr-core-Number-extension"
       },
-      "name" : "Number",
+      "name" : "shr-core-Number",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/usdf-PharmacyType-extension"
+      },
+      "name" : "usdf-PharmacyType",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-PlanID-extension"
       },
-      "name" : "Plan ID",
+      "name" : "usdf-PlanID",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-PlanIDType-extension"
       },
-      "name" : "Plan ID Type",
+      "name" : "usdf-PlanIDType",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-PriorAuthorization-extension"
       },
-      "name" : "Prior Authorization",
+      "name" : "usdf-PriorAuthorization",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-QuantityLimit-extension"
       },
-      "name" : "Quantity Limit",
+      "name" : "usdf-QuantityLimit",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-StepTherapyLimit-extension"
       },
-      "name" : "Step Therapy Limit",
+      "name" : "usdf-StepTherapyLimit",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-SummaryURL-extension"
       },
-      "name" : "Summary URL",
+      "name" : "usdf-SummaryURL",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/shr-core-Units-extension"
       },
-      "name" : "Units",
+      "name" : "shr-core-Units",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "ValueSet/usdf-CoinsuranceOptionVS"
       },
-      "name" : "Coinsurance Option VS",
+      "name" : "CoinsuranceOptionVS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "ValueSet/usdf-CopayOptionVS"
       },
-      "name" : "Copay Option VS",
+      "name" : "CopayOptionVS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "ValueSet/usdf-DrugTierVS"
       },
-      "name" : "Drug Tier VS",
+      "name" : "DrugTierVS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "ValueSet/usdf-PharmacyTypeVS"
       },
-      "name" : "Pharmacy Type VS",
+      "name" : "PharmacyTypeVS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/usdf-CoinsuranceOptionCS"
       },
-      "name" : "Coinsurance Option CS",
+      "name" : "CoinsuranceOptionCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/usdf-CopayOptionCS"
       },
-      "name" : "Copay Option CS",
+      "name" : "CopayOptionCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/usdf-DrugTierCS"
       },
-      "name" : "Drug Tier CS",
+      "name" : "DrugTierCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/usdf-PharmacyTypeCS"
       },
-      "name" : "Pharmacy Type CS",
+      "name" : "PharmacyTypeCS",
       "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CapabilityStatement/usdf-server"
-      },
-      "name" : "US Drug Formulary  Server CapabilityStatement",
-      "exampleBoolean" : true
     },
     {
       "reference" : {

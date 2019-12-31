@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
   "name": "DrugTierCS",
-  "title": "Drug Tier CS",
+  "title": "DrugTierCS",
   "status": "draft",
   "publisher": "HL7 Pharmacy WG",
   "contact": [

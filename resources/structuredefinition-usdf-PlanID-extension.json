@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PlanID-extension",
   "name": "PlanID",
-  "title": "Plan ID",
+  "title": "usdf-PlanID",
   "status": "draft",
   "date": "2019-12-30",
   "publisher": "HL7 Pharmacy WG",
@@ -22,7 +22,7 @@
     }
   ],
   "description": "Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)",
-  "fhirVersion": "4.0.0",
+  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

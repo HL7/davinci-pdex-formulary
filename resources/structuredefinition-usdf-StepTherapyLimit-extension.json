@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-StepTherapyLimit-extension",
   "name": "StepTherapyLimit",
-  "title": "Step Therapy Limit",
+  "title": "usdf-StepTherapyLimit",
   "status": "draft",
   "date": "2019-12-30",
   "publisher": "HL7 Pharmacy WG",
@@ -22,7 +22,7 @@
     }
   ],
   "description": "A Boolean indication of whether the coverage plan imposes a step therapy limit on this drug.",
-  "fhirVersion": "4.0.0",
+  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

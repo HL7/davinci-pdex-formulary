@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
   "name": "PharmacyTypeCS",
-  "title": "Pharmacy Type CS",
+  "title": "PharmacyTypeCS",
   "status": "draft",
   "publisher": "HL7 Pharmacy WG",
   "contact": [

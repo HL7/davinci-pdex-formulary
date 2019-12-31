@@ -22,7 +22,7 @@
     }
   ],
   "description": "A code that describes the network (in/out) status of a pharmacy, the duration of supply, and whether this is a mail order pharmacy.",
-  "fhirVersion": "4.0.0",
+  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [
