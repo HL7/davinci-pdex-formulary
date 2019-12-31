@@ -19,208 +19,257 @@
             <name value="Profiles in this Implementation Guide"/>
             <description value="Profiles in this Implementation Guide"/>
         </grouping>
+       <resource>
+          <exampleBoolean value="true" />
+           <reference>
+             <reference value="CapabilityStatement/usdf-server" />
+           </reference>
+           <name value="US Drug Formulary  Server CapabilityStatement" />
+       </resource>
         <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-CoveragePlan" />
           </reference>
-          <name value="Coverage Plan" />
+          <name value="usdf-CoveragePlan" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-FormularyDrug" />
           </reference>
-          <name value="Formulary Drug" />
+          <name value="usdf-FormularyDrug" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/shr-core-Money" />
           </reference>
-          <name value="Money" />
+          <name value="shr-core-Money" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-PlanIdentifier" />
           </reference>
-          <name value="Plan Identifier" />
+          <name value="usdf-PlanIdentifier" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdf-CoInsuranceRate-extension" />
+          </reference>
+          <name value="usdf-CoInsuranceRate" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdf-CoinsuranceOption-extension" />
+          </reference>
+          <name value="usdf-CoinsuranceOption" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/shr-core-Comparator-extension" />
           </reference>
-          <name value="Comparator" />
+          <name value="shr-core-Comparator" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdf-CopayAmount-extension" />
+          </reference>
+          <name value="usdf-CopayAmount" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdf-CopayOption-extension" />
+          </reference>
+          <name value="usdf-CopayOption" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdf-CostSharing-extension" />
+          </reference>
+          <name value="usdf-CostSharing" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-DrugAlternatives-extension" />
           </reference>
-          <name value="Drug Alternatives" />
+          <name value="usdf-DrugAlternatives" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-DrugTierDefinition-extension" />
           </reference>
-          <name value="Drug Tier Definition" />
+          <name value="usdf-DrugTierDefinition" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-DrugTierID-extension" />
           </reference>
-          <name value="Drug Tier ID" />
+          <name value="usdf-DrugTierID" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-EmailPlanContact-extension" />
           </reference>
-          <name value="Email Plan Contact" />
+          <name value="usdf-EmailPlanContact" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-FormularyURL-extension" />
           </reference>
-          <name value="Formulary URL" />
+          <name value="usdf-FormularyURL" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdf-MailOrder-extension" />
+          </reference>
+          <name value="usdf-MailOrder" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-MarketingURL-extension" />
           </reference>
-          <name value="Marketing URL" />
+          <name value="usdf-MarketingURL" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-Network-extension" />
           </reference>
-          <name value="Network" />
+          <name value="usdf-Network" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/shr-core-Number-extension" />
           </reference>
-          <name value="Number" />
+          <name value="shr-core-Number" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/usdf-PharmacyType-extension" />
+          </reference>
+          <name value="usdf-PharmacyType" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-PlanID-extension" />
           </reference>
-          <name value="Plan ID" />
+          <name value="usdf-PlanID" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-PlanIDType-extension" />
           </reference>
-          <name value="Plan ID Type" />
+          <name value="usdf-PlanIDType" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-PriorAuthorization-extension" />
           </reference>
-          <name value="Prior Authorization" />
+          <name value="usdf-PriorAuthorization" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-QuantityLimit-extension" />
           </reference>
-          <name value="Quantity Limit" />
+          <name value="usdf-QuantityLimit" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-StepTherapyLimit-extension" />
           </reference>
-          <name value="Step Therapy Limit" />
+          <name value="usdf-StepTherapyLimit" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/usdf-SummaryURL-extension" />
           </reference>
-          <name value="Summary URL" />
+          <name value="usdf-SummaryURL" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/shr-core-Units-extension" />
           </reference>
-          <name value="Units" />
+          <name value="shr-core-Units" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/usdf-CoinsuranceOptionVS" />
           </reference>
-          <name value="Coinsurance Option VS" />
+          <name value="CoinsuranceOptionVS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/usdf-CopayOptionVS" />
           </reference>
-          <name value="Copay Option VS" />
+          <name value="CopayOptionVS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/usdf-DrugTierVS" />
           </reference>
-          <name value="Drug Tier VS" />
+          <name value="DrugTierVS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/usdf-PharmacyTypeVS" />
           </reference>
-          <name value="Pharmacy Type VS" />
+          <name value="PharmacyTypeVS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="CodeSystem/usdf-CoinsuranceOptionCS" />
           </reference>
-          <name value="Coinsurance Option CS" />
+          <name value="CoinsuranceOptionCS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="CodeSystem/usdf-CopayOptionCS" />
           </reference>
-          <name value="Copay Option CS" />
+          <name value="CopayOptionCS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="CodeSystem/usdf-DrugTierCS" />
           </reference>
-          <name value="Drug Tier CS" />
+          <name value="DrugTierCS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="CodeSystem/usdf-PharmacyTypeCS" />
           </reference>
-          <name value="Pharmacy Type CS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="true" />
-          <reference>
-            <reference value="CapabilityStatement/usdf-server" />
-          </reference>
-          <name value="US Drug Formulary  Server CapabilityStatement" />
+          <name value="PharmacyTypeCS" />
       </resource>
       <resource>
           <exampleBoolean value="true" />

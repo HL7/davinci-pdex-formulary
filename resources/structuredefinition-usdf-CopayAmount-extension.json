@@ -22,7 +22,7 @@
     }
   ],
   "description": "A standard, nominal fee charged for each prescription of a drug",
-  "fhirVersion": "4.0.0",
+  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

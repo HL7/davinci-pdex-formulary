@@ -22,7 +22,7 @@
     }
   ],
   "description": "A fee charged for each prescription of a drug, expressed as a percentage of that drug's overall cost",
-  "fhirVersion": "4.0.0",
+  "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [

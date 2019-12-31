@@ -12,12 +12,12 @@
     },
     {
       "version": "0.2.0",
-      "date": "2019-06-18",
+      "date": "2019-12-31",
       "desc": "US Drug Formulary - STU Ballot",
       "path": "http://hl7.org/fhir/us/Davinci-drug-formulary/Jun2019",
       "status": "draft",
       "sequence": "STU 1",
-      "fhir-version": "4.0.1",
+      "fhirversion": "4.0.1",
       "current": true
     }
   ]

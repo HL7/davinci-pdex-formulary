@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/ValueSet/usdf-DrugTierVS",
   "name": "DrugTierVS",
-  "title": "Drug Tier VS",
+  "title": "DrugTierVS",
   "status": "draft",
   "publisher": "HL7 Pharmacy WG",
   "contact": [

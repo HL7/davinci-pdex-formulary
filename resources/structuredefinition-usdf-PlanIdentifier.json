@@ -60,7 +60,7 @@
           }
         ],
         "path": "Identifier",
-        "short": "Plan Identifier",
+        "short": "usdf-PlanIdentifier",
         "definition": "Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)",
         "min": 0,
         "max": "*",
@@ -79,7 +79,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+            "source": "Element"
           }
         ],
         "isModifier": false,
@@ -119,13 +119,7 @@
         },
         "type": [
           {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
-              }
-            ],
-            "code": "http://hl7.org/fhirpath/System.String"
+            "code": "string"
           }
         ],
         "isModifier": false,
@@ -169,24 +163,6 @@
             "code": "Extension"
           }
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -215,16 +191,6 @@
             "code": "code"
           }
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
         "isModifier": true,
         "isModifierReason": "This is labeled as \"Is Modifier\" because applications should not mistake a temporary id for a permanent one.",
         "isSummary": true,
@@ -237,7 +203,7 @@
           ],
           "strength": "required",
           "description": "Identifies the purpose for this identifier, if known .",
-          "valueSet": "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"
+          "valueSet": "http://hl7.org/fhir/ValueSet/identifier-use|4.0.0"
         },
         "mapping": [
           {
@@ -267,16 +233,6 @@
         "type": [
           {
             "code": "CodeableConcept"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -326,16 +282,6 @@
             "code": "uri"
           }
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -371,16 +317,6 @@
             "code": "string"
           }
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -413,16 +349,6 @@
         "type": [
           {
             "code": "Period"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -463,16 +389,6 @@
             ]
           }
         ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -497,7 +413,7 @@
       {
         "id": "Identifier",
         "path": "Identifier",
-        "short": "Plan Identifier",
+        "short": "usdf-PlanIdentifier",
         "definition": "Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)",
         "isModifier": false
       },
@@ -527,5 +443,5 @@
       }
     ]
   },
-  "title": "Plan Identifier"
+  "title": "usdf-PlanIdentifier"
 }

@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/ValueSet/usdf-PharmacyTypeVS",
   "name": "PharmacyTypeVS",
-  "title": "Pharmacy Type VS",
+  "title": "PharmacyTypeVS",
   "status": "draft",
   "publisher": "HL7 Pharmacy WG",
   "contact": [

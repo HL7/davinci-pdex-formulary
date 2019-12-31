@@ -21,11 +21,14 @@
 
 <!-- ============CONTENT CONTENT=============== -->
 
-<h2>Code systems used in this Implementation Guide</h2>
+<h2>Primary code systems used in this Implementation Guide</h2>
 
-<p>The code systems listed below are used by the
-    local value sets, logical models, and profiles shown on their respective pages in this IG.</p>
-    <p>This list is not inclusive of code systems associated with external value sets used in the IG.</p>
+<p>The code systems listed below include:</p>
+  <ol>
+    <li>code systems used in the definition of value sets in this IG; and</li>
+    <li>code systems for individual codes used directly in the logical models and profiles.</li>
+  </ol>
+  <p>This list is not inclusive of code systems associated with external value sets used in the IG.</p>
 
 <table class="codes">
   <thead>
@@ -40,19 +43,19 @@
   </thead>
   <tbody>
     <tr>
-          <td><a href="CodeSystem-usdf-CoinsuranceOptionCS.html">Coinsurance Option CS</a></td>
+          <td><a href="CodeSystem-usdf-CoinsuranceOptionCS.html">CoinsuranceOptionCS</a></td>
           <td>{% capture md_text %}Qualifier for coinsurance rate{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="CodeSystem-usdf-CopayOptionCS.html">Copay Option CS</a></td>
+          <td><a href="CodeSystem-usdf-CopayOptionCS.html">CopayOptionCS</a></td>
           <td>{% capture md_text %}Qualifier of copay amount{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="CodeSystem-usdf-DrugTierCS.html">Drug Tier CS</a></td>
+          <td><a href="CodeSystem-usdf-DrugTierCS.html">DrugTierCS</a></td>
           <td>{% capture md_text %}The drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own controlled vocabulary.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="CodeSystem-usdf-PharmacyTypeCS.html">Pharmacy Type CS</a></td>
+          <td><a href="CodeSystem-usdf-PharmacyTypeCS.html">PharmacyTypeCS</a></td>
           <td>{% capture md_text %}Types of Pharmacies. Each payer will have its own controlled vocabulary.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         

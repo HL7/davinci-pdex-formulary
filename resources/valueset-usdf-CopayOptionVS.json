@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/ValueSet/usdf-CopayOptionVS",
   "name": "CopayOptionVS",
-  "title": "Copay Option VS",
+  "title": "CopayOptionVS",
   "status": "draft",
   "publisher": "HL7 Pharmacy WG",
   "contact": [

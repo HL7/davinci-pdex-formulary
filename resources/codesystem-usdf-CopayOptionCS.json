@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
   "name": "CopayOptionCS",
-  "title": "Copay Option CS",
+  "title": "CopayOptionCS",
   "status": "draft",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
