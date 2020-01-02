@@ -60,9 +60,6 @@
     "examples"
   ],
   "resources": {
-"CapabilityStatement/usdf-server": {
-"base": "CapabilityStatement-usdf-server.html"
-},
     "StructureDefinition/usdf-CoveragePlan": {
       "base": "StructureDefinition-usdf-CoveragePlan.html"
     },
@@ -190,6 +187,9 @@
     },
     "CodeSystem/usdf-PharmacyTypeCS": {
       "base": "CodeSystem-usdf-PharmacyTypeCS.html"
+    },
+    "CapabilityStatement/usdf-server": {
+      "base": "CapabilityStatement-usdf-server.html"
     },
     "SearchParameter/DrugName": {
       "base": "SearchParameter-DrugName.html"

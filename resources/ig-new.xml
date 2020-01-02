@@ -39,13 +39,6 @@
     </grouping>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/usdf-server"/>
-      </reference>
-      <name value="US Drug Formulary  Server CapabilityStatement"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/usdf-CoveragePlan"/>
       </reference>
       <name value="usdf-CoveragePlan"/>
@@ -288,6 +281,13 @@
       </reference>
       <name value="PharmacyTypeCS"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/usdf-server"/>
+      </reference>
+      <name value="US Drug Formulary Server Capability Statement"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
