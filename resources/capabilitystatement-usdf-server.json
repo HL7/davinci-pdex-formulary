@@ -52,7 +52,6 @@
       },
       "resource": [
         {
-          
           "type": "List",
           "supportedProfile": [
             "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan"
@@ -63,7 +62,7 @@
               "valueCode": "SHALL"
             }
           ],
-           "interaction": [
+          "interaction": [
             {
               "extension": [
                 {

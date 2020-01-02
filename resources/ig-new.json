@@ -42,13 +42,6 @@
     }],
     "resource" : [{
       "reference" : {
-        "reference" : "CapabilityStatement/usdf-server"
-      },
-      "name" : "US Drug Formulary  Server CapabilityStatement",
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/usdf-CoveragePlan"
       },
       "name" : "usdf-CoveragePlan",
@@ -291,6 +284,13 @@
       },
       "name" : "PharmacyTypeCS",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/usdf-server"
+      },
+      "name" : "US Drug Formulary Server Capability Statement",
+      "exampleBoolean" : true
     },
     {
       "reference" : {

@@ -19,13 +19,6 @@
             <name value="Profiles in this Implementation Guide"/>
             <description value="Profiles in this Implementation Guide"/>
         </grouping>
-       <resource>
-          <exampleBoolean value="true" />
-           <reference>
-             <reference value="CapabilityStatement/usdf-server" />
-           </reference>
-           <name value="US Drug Formulary  Server CapabilityStatement" />
-       </resource>
         <resource>
           <exampleBoolean value="false" />
           <reference>
@@ -270,6 +263,13 @@
             <reference value="CodeSystem/usdf-PharmacyTypeCS" />
           </reference>
           <name value="PharmacyTypeCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="CapabilityStatement/usdf-server" />
+          </reference>
+          <name value="US Drug Formulary Server Capability Statement" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
