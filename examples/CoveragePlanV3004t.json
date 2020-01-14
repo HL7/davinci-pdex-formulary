@@ -248,8 +248,8 @@
             "coding": [
               {
                 "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
-                "code": "zero-cost-share-preventative",
-                "display": "Zero cost-share preventative"
+                "code": "zero-cost-share-preventive",
+                "display": "Zero cost-share preventive"
               }
             ]
           }
