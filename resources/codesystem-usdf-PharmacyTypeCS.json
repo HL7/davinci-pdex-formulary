@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
   "name": "PharmacyTypeCS",
-  "title": "PharmacyTypeCS",
+  "title": "Pharmacy Type CS",
   "status": "draft",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2020-01-02",
+  "date": "2020-01-14",
   "description": "Types of Pharmacies. Each payer will have its own controlled vocabulary.",
   "caseSensitive": true,
   "content": "complete",

@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
   "name": "CopayOptionCS",
-  "title": "CopayOptionCS",
+  "title": "Copay Option CS",
   "status": "draft",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2020-01-02",
+  "date": "2020-01-14",
   "description": "Qualifier of copay amount",
   "caseSensitive": true,
   "content": "complete",

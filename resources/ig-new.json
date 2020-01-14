@@ -1,6 +1,6 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "hl7.fhir.us.Davinci-drug-formulary-0.2.0",
+  "id" : "hl7.fhir.us.Davinci-drug-formulary-1.0.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
     "valueString" : "/Users/skravitz/cimpl/devr4_4_out/fhir/guide/resources"
@@ -13,8 +13,8 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "/Users/skravitz/cimpl/devr4_4_out/fhir/guide/pages"
   }],
-  "url" : "http://hl7.org/fhir/us/Davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.Davinci-drug-formulary-0.2.0",
-  "version" : "0.2.0",
+  "url" : "http://hl7.org/fhir/us/Davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.Davinci-drug-formulary-1.0.0",
+  "version" : "1.0.0",
   "name" : "DaVinci_Payer_Data_Exchange_PDex_US_Drug_Formulary",
   "title" : "DaVinci Payer Data Exchange (PDex) US Drug Formulary",
   "status" : "draft",
@@ -44,245 +44,161 @@
       "reference" : {
         "reference" : "StructureDefinition/usdf-CoveragePlan"
       },
-      "name" : "usdf-CoveragePlan",
+      "name" : "Coverage Plan",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-FormularyDrug"
       },
-      "name" : "usdf-FormularyDrug",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/shr-core-Money"
-      },
-      "name" : "shr-core-Money",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/usdf-PlanIdentifier"
-      },
-      "name" : "usdf-PlanIdentifier",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/usdf-CoInsuranceRate-extension"
-      },
-      "name" : "usdf-CoInsuranceRate",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/usdf-CoinsuranceOption-extension"
-      },
-      "name" : "usdf-CoinsuranceOption",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/shr-core-Comparator-extension"
-      },
-      "name" : "shr-core-Comparator",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/usdf-CopayAmount-extension"
-      },
-      "name" : "usdf-CopayAmount",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/usdf-CopayOption-extension"
-      },
-      "name" : "usdf-CopayOption",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/usdf-CostSharing-extension"
-      },
-      "name" : "usdf-CostSharing",
+      "name" : "Formulary Drug",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-DrugAlternatives-extension"
       },
-      "name" : "usdf-DrugAlternatives",
+      "name" : "Drug Alternatives",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-DrugTierDefinition-extension"
       },
-      "name" : "usdf-DrugTierDefinition",
+      "name" : "Drug Tier Definition",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-DrugTierID-extension"
       },
-      "name" : "usdf-DrugTierID",
+      "name" : "Drug Tier ID",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-EmailPlanContact-extension"
       },
-      "name" : "usdf-EmailPlanContact",
+      "name" : "Email Plan Contact",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-FormularyURL-extension"
       },
-      "name" : "usdf-FormularyURL",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/usdf-MailOrder-extension"
-      },
-      "name" : "usdf-MailOrder",
+      "name" : "Formulary URL",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-MarketingURL-extension"
       },
-      "name" : "usdf-MarketingURL",
+      "name" : "Marketing URL",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-Network-extension"
       },
-      "name" : "usdf-Network",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/shr-core-Number-extension"
-      },
-      "name" : "shr-core-Number",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/usdf-PharmacyType-extension"
-      },
-      "name" : "usdf-PharmacyType",
+      "name" : "Network",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-PlanID-extension"
       },
-      "name" : "usdf-PlanID",
+      "name" : "Plan ID",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-PlanIDType-extension"
       },
-      "name" : "usdf-PlanIDType",
+      "name" : "Plan ID Type",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-PriorAuthorization-extension"
       },
-      "name" : "usdf-PriorAuthorization",
+      "name" : "Prior Authorization",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-QuantityLimit-extension"
       },
-      "name" : "usdf-QuantityLimit",
+      "name" : "Quantity Limit",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-StepTherapyLimit-extension"
       },
-      "name" : "usdf-StepTherapyLimit",
+      "name" : "Step Therapy Limit",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/usdf-SummaryURL-extension"
       },
-      "name" : "usdf-SummaryURL",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/shr-core-Units-extension"
-      },
-      "name" : "shr-core-Units",
+      "name" : "Summary URL",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "ValueSet/usdf-CoinsuranceOptionVS"
       },
-      "name" : "CoinsuranceOptionVS",
+      "name" : "Coinsurance Option VS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "ValueSet/usdf-CopayOptionVS"
       },
-      "name" : "CopayOptionVS",
+      "name" : "Copay Option VS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "ValueSet/usdf-DrugTierVS"
       },
-      "name" : "DrugTierVS",
+      "name" : "Drug Tier VS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "ValueSet/usdf-PharmacyTypeVS"
       },
-      "name" : "PharmacyTypeVS",
+      "name" : "Pharmacy Type VS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/usdf-CoinsuranceOptionCS"
       },
-      "name" : "CoinsuranceOptionCS",
+      "name" : "Coinsurance Option CS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/usdf-CopayOptionCS"
       },
-      "name" : "CopayOptionCS",
+      "name" : "Copay Option CS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/usdf-DrugTierCS"
       },
-      "name" : "DrugTierCS",
+      "name" : "Drug Tier CS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/usdf-PharmacyTypeCS"
       },
-      "name" : "PharmacyTypeCS",
+      "name" : "Pharmacy Type CS",
       "exampleBoolean" : false
     },
     {
