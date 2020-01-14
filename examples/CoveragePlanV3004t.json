@@ -13,16 +13,12 @@
       "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan"
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>*** CoveragePlan Example #1 (Reference to MedicationKnowledge) ***</b></p><p><b>id</b>: covplanV2001</p><p><b>Plan Name</b>: Sample Gold Health Plan</p><p><b>Drug Product</b>: <i>(Generated Detail from id - formularydrugV1001):</i> Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet [Percocet]</p><p><b>Status</b>: current </p><p><b>Drug Tier ID</b>: Brand </p><p><b>Mail order</b>: false </p><p><b>Pharmacy type</b>: 1-MONTH-IN-RETAIL</p><p><b>Copay Amount</b>: 20.0</p><p><b>Copay option</b>: AFTER-DEDUCTIBLE</p><p><b>Coinsurance rate</b>: 0.20</p><p><b>Coinsurance option</b>: AFTER-DEDUCTIBLE</p></div>"
-  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierDefinition-extension",
       "extension": [
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
+          "url": "drugTierID",
           "valueCodeableConcept": {
             "coding": [
               {
@@ -34,14 +30,14 @@
           }
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-MailOrder-extension",
+          "url": "mailOrder",
           "valueBoolean": true
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -53,13 +49,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 10
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -71,11 +67,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -89,10 +85,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -104,13 +100,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 10
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -122,11 +118,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -140,10 +136,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -155,13 +151,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 20
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -173,11 +169,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -191,10 +187,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -206,13 +202,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 20
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -224,11 +220,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -247,7 +243,7 @@
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierDefinition-extension",
       "extension": [
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
+          "url": "drugTierID",
           "valueCodeableConcept": {
             "coding": [
               {
@@ -259,14 +255,14 @@
           }
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-MailOrder-extension",
+          "url": "mailOrder",
           "valueBoolean": true
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -278,13 +274,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 0
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -296,11 +292,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -314,10 +310,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -329,13 +325,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 0
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -347,11 +343,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -365,10 +361,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -380,13 +376,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 0
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -398,11 +394,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -416,10 +412,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -431,13 +427,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 0
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -449,11 +445,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -472,7 +468,7 @@
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierDefinition-extension",
       "extension": [
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
+          "url": "drugTierID",
           "valueCodeableConcept": {
             "coding": [
               {
@@ -484,14 +480,14 @@
           }
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-MailOrder-extension",
+          "url": "mailOrder",
           "valueBoolean": true
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -503,13 +499,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 50
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -521,11 +517,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -539,10 +535,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -554,13 +550,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 50
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -572,11 +568,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -590,10 +586,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -605,13 +601,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 100
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -623,11 +619,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -641,10 +637,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -656,13 +652,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 100
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -674,11 +670,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -697,7 +693,7 @@
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierDefinition-extension",
       "extension": [
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
+          "url": "drugTierID",
           "valueCodeableConcept": {
             "coding": [
               {
@@ -709,14 +705,14 @@
           }
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-MailOrder-extension",
+          "url": "mailOrder",
           "valueBoolean": true
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -728,13 +724,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 70
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -746,11 +742,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -764,10 +760,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -779,13 +775,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 70
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -797,11 +793,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -815,10 +811,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -830,13 +826,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 140
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -848,11 +844,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -866,10 +862,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -881,13 +877,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 140
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -899,11 +895,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -922,7 +918,7 @@
       "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierDefinition-extension",
       "extension": [
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
+          "url": "drugTierID",
           "valueCodeableConcept": {
             "coding": [
               {
@@ -934,14 +930,14 @@
           }
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-MailOrder-extension",
+          "url": "mailOrder",
           "valueBoolean": true
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -953,13 +949,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 100
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -971,11 +967,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -989,10 +985,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -1004,13 +1000,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 100
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -1022,11 +1018,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -1040,10 +1036,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -1055,13 +1051,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 200
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -1073,11 +1069,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -1091,10 +1087,10 @@
           ]
         },
         {
-          "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CostSharing-extension",
+          "url": "costSharing",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension",
+              "url": "pharmacyType",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -1106,13 +1102,13 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayAmount-extension",
+              "url": "copayAmount",
               "valueMoney": {
                 "value": 200
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CopayOption-extension",
+              "url": "copayOption",
               "valueCodeableConcept": {
                 "coding": [
                   {
@@ -1124,11 +1120,11 @@
               }
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoInsuranceRate-extension",
+              "url": "coInsuranceRate",
               "valueDecimal": 0
             },
             {
-              "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoinsuranceOption-extension",
+              "url": "coinsuranceOption",
               "valueCodeableConcept": {
                 "coding": [
                   {

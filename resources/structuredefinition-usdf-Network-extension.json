@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-Network-extension",
   "name": "Network",
-  "title": "usdf-Network",
+  "title": "Network",
   "status": "draft",
-  "date": "2020-01-02",
+  "date": "2020-01-14",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
@@ -22,7 +22,7 @@
     }
   ],
   "description": "Array of Networks within a plan.",
-  "fhirVersion": "4.0.1",
+  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

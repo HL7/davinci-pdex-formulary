@@ -2,12 +2,12 @@
   "resourceType": "CapabilityStatement",
   "id": "usdf-server",
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/CapabilityStatement/usdf-server",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "name": "USDFServerCapabilityStatement",
   "title": "US Drug Formulary Server Capability Statement",
   "status": "active",
   "experimental": false,
-  "date": "2019-12-31T00:00:00+10:00",
+  "date": "2020-01-08T00:00:00+10:00",
   "publisher": "HL7 International - US Realm Steering Committee",
   "contact": [
     {
