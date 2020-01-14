@@ -67,7 +67,7 @@
               }
             },
             {
-              "url": "coInsuranceRate",
+              "url": "coinsuranceRate",
               "valueDecimal": 1
             },
             {
@@ -118,7 +118,7 @@
               }
             },
             {
-              "url": "coInsuranceRate",
+              "url": "coinsuranceRate",
               "valueDecimal": 0
             },
             {
@@ -169,7 +169,7 @@
               }
             },
             {
-              "url": "coInsuranceRate",
+              "url": "coinsuranceRate",
               "valueDecimal": 0
             },
             {
@@ -220,7 +220,7 @@
               }
             },
             {
-              "url": "coInsuranceRate",
+              "url": "coinsuranceRate",
               "valueDecimal": 0
             },
             {

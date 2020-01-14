@@ -1024,7 +1024,7 @@
         }
       },
       {
-        "id": "Extension.extension:costSharing.extension:coInsuranceRate",
+        "id": "Extension.extension:costSharing.extension:coinsuranceRate",
         "path": "Extension.extension.extension",
         "definition": "A fee charged for each prescription of a drug, expressed as a percentage of that drug's overall cost",
         "min": 1,
@@ -1047,10 +1047,10 @@
             "map": "n/a"
           }
         ],
-        "sliceName": "coInsuranceRate"
+        "sliceName": "coinsuranceRate"
       },
       {
-        "id": "Extension.extension:costSharing.extension:coInsuranceRate.id",
+        "id": "Extension.extension:costSharing.extension:coinsuranceRate.id",
         "path": "Extension.extension.extension.id",
         "representation": [
           "xmlAttr"
@@ -1079,7 +1079,7 @@
         ]
       },
       {
-        "id": "Extension.extension:costSharing.extension:coInsuranceRate.extension",
+        "id": "Extension.extension:costSharing.extension:coinsuranceRate.extension",
         "path": "Extension.extension.extension.extension",
         "slicing": {
           "discriminator": [
@@ -1120,7 +1120,7 @@
         ]
       },
       {
-        "id": "Extension.extension:costSharing.extension:coInsuranceRate.url",
+        "id": "Extension.extension:costSharing.extension:coinsuranceRate.url",
         "path": "Extension.extension.extension.url",
         "representation": [
           "xmlAttr"
@@ -1148,10 +1148,10 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "coInsuranceRate"
+        "fixedUri": "coinsuranceRate"
       },
       {
-        "id": "Extension.extension:costSharing.extension:coInsuranceRate.valueDecimal",
+        "id": "Extension.extension:costSharing.extension:coinsuranceRate.valueDecimal",
         "path": "Extension.extension.extension.valueDecimal",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -2058,7 +2058,7 @@
         }
       },
       {
-        "id": "Extension.extension:costSharing.extension:coInsuranceRate",
+        "id": "Extension.extension:costSharing.extension:coinsuranceRate",
         "path": "Extension.extension.extension",
         "definition": "A fee charged for each prescription of a drug, expressed as a percentage of that drug's overall cost",
         "min": 1,
@@ -2081,26 +2081,26 @@
             "map": "n/a"
           }
         ],
-        "sliceName": "coInsuranceRate"
+        "sliceName": "coinsuranceRate"
       },
       {
-        "id": "Extension.extension:costSharing.extension:coInsuranceRate.extension",
+        "id": "Extension.extension:costSharing.extension:coinsuranceRate.extension",
         "path": "Extension.extension.extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension.extension:costSharing.extension:coInsuranceRate.url",
+        "id": "Extension.extension:costSharing.extension:coinsuranceRate.url",
         "path": "Extension.extension.extension.url",
         "type": [
           {
             "code": "uri"
           }
         ],
-        "fixedUri": "coInsuranceRate"
+        "fixedUri": "coinsuranceRate"
       },
       {
-        "id": "Extension.extension:costSharing.extension:coInsuranceRate.valueDecimal",
+        "id": "Extension.extension:costSharing.extension:coinsuranceRate.valueDecimal",
         "path": "Extension.extension.extension.valueDecimal",
         "min": 1,
         "type": [
