@@ -62,9 +62,9 @@
       "display": "Non-preferred Brand"
     },
     {
-      "code": "zero-cost-share-preventative",
+      "code": "zero-cost-share-preventive",
       "definition": "Preventive medications and products available at no cost.",
-      "display": "Zero cost-share preventative"
+      "display": "Zero cost-share preventive"
     },
     {
       "code": "medical-service",
