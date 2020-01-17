@@ -52,6 +52,7 @@
       },
       "resource": [
         {
+          
           "type": "List",
           "supportedProfile": [
             "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan"
@@ -62,7 +63,7 @@
               "valueCode": "SHALL"
             }
           ],
-          "interaction": [
+           "interaction": [
             {
               "extension": [
                 {
@@ -298,7 +299,7 @@
               ],
               "name": "DrugPlan",
               "definition": "http://hl7.org/fhir/us/Davinci-drug-formulary/SearchParameter/DrugPlan",
-              "type": "date"
+              "type": "string"
             },
             {
               "extension": [
@@ -315,5 +316,9 @@
         }
       ]
     }
-  ]
+  ],
+  "text": {
+  "status": "additional",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">USDFServerCapabilityStatement</h2> <p>This Section describes the expected capabilities of the US Drug Formulary Server actor which is responsible for providing responses to the queries submitted by the US Drug Formulary Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Drug Formulary Server are defined. </p> <table> <tr> <td>Mode:</td> <td>SERVER</td> </tr> <tr> <td>Description:</td> <td>The US Drug Formulary Server **SHALL**: <ol> <li>Support the US Drug Formulary CoveragePlan (List) and FormularyDrug (MedicationKnowledge) resource profile.</li> <li>Implement the RESTful behavior according to the FHIR specification.</li> <li>Return the following response classes: <ul> <li>(Status 400): invalid parameter</li> <li>(Status 401/4xx): unauthorized request</li> <li>(Status 403): insufficient scope</li> <li>Status 404): unknown resource</li> <li>(Status 410): deleted resource</li> </ul> </li>      <li>Support json source formats for all US Drug Formulary interactions.</li> </ol> </td>     </tr>     <tr>     <td>    </td>     <td> The US Drug Formulary  Server **SHOULD**: <ol> <li>Support xml source formats for all US Drug Formulary interactions.</li> </ol> </td></tr> <tr>     <td>    </td>     <td>The US Drug Formulary Server supports the following transactions:     <ul>         <li>CoveragePlan (List) Resource             <ul>                 <li>**SHALL**: search-type, read,   </li>                 <li>**SHOULD** : vread, history-instance</li>                  <li>**MAY** : create, update, patch, delete, history-type</li>             </ul>         </li>         <li>FormularyDrug (MedicationKnowledge) Resource             <ul>                 <li>**SHALL**: search-type, read,   </li>                 <li>**SHOULD** : vread, history-instance</li>                 <li>**MAY** : create, update, patch, delete, history-type</li>             </ul>         </li>         </ul>   </td> </tr> <tr>     <td>    </td>     <td>The US Drug Formulary Server **SHALL** support the following searchParameters individually and in combination:     <ul>          <li>FormularyDrug (MedicationKnowledge) Resource             <ul>                 <li>DrugName </li>                 <li>DrugPlan </li>                 <li>DrugTier </li>                 <li>code</li>             </ul>         </li>     </ul>     </td> </tr> </table> </div>"
+  }
 }
