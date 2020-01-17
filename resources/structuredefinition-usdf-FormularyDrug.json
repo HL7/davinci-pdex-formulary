@@ -3,12 +3,12 @@
   "id": "usdf-FormularyDrug",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>FormularyDrug Profile</b></p>\n  <p>Drug information which is part of a formulary.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>usdf.FormularyDrug maps to MedicationKnowledge:\n  DrugCode maps to code\n  DrugClass maps to medicineClassification.classification\n  DrugAlternatives maps to extension\n  PriorAuthorization maps to extension\n  StepTherapyLimit maps to extension\n  QuantityLimit maps to extension\n  PlanID maps to extension\n  DrugTierID maps to extension\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>FormularyDrug Profile</b></p>\n  <p>The FormularyDrug resource represents a drug that is part of a drug formulary.  A drug formulary is a list of brand-name and generic prescription drugs a health insurer\nagrees to pay for, at least partially, as part of health insurance coverage.In addition to identifying the drug by its RxNorm code, and the PlanID of the formulary, the FormularyDrug entry provides information on prescribing limitations, and optionally drug classification and alternatives.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>usdf.FormularyDrug maps to MedicationKnowledge:\n  DrugCode maps to code\n  DrugClass maps to medicineClassification.classification\n  DrugAlternatives maps to extension\n  PriorAuthorization maps to extension\n  StepTherapyLimit maps to extension\n  QuantityLimit maps to extension\n  PlanID maps to extension\n  DrugTierID maps to extension\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug",
   "name": "FormularyDrug",
   "status": "draft",
-  "date": "2020-01-14",
+  "date": "2020-01-17",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "description": "Drug information which is part of a formulary.",
+  "description": "The FormularyDrug resource represents a drug that is part of a drug formulary.  A drug formulary is a list of brand-name and generic prescription drugs a health insurer\nagrees to pay for, at least partially, as part of health insurance coverage.In addition to identifying the drug by its RxNorm code, and the PlanID of the formulary, the FormularyDrug entry provides information on prescribing limitations, and optionally drug classification and alternatives.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -55,7 +55,7 @@
         "id": "MedicationKnowledge",
         "path": "MedicationKnowledge",
         "short": "Formulary Drug",
-        "definition": "Drug information which is part of a formulary.",
+        "definition": "The FormularyDrug resource represents a drug that is part of a drug formulary.  A drug formulary is a list of brand-name and generic prescription drugs a health insurer\nagrees to pay for, at least partially, as part of health insurance coverage.In addition to identifying the drug by its RxNorm code, and the PlanID of the formulary, the FormularyDrug entry provides information on prescribing limitations, and optionally drug classification and alternatives.",
         "min": 0,
         "max": "*",
         "base": {
@@ -405,7 +405,7 @@
       {
         "id": "MedicationKnowledge.extension:drugalternatives",
         "path": "MedicationKnowledge.extension",
-        "definition": "Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
+        "definition": "DrugAlternatives are Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
         "min": 0,
         "max": "*",
         "base": {
@@ -4884,7 +4884,7 @@
         "id": "MedicationKnowledge",
         "path": "MedicationKnowledge",
         "short": "Formulary Drug",
-        "definition": "Drug information which is part of a formulary.",
+        "definition": "The FormularyDrug resource represents a drug that is part of a drug formulary.  A drug formulary is a list of brand-name and generic prescription drugs a health insurer\nagrees to pay for, at least partially, as part of health insurance coverage.In addition to identifying the drug by its RxNorm code, and the PlanID of the formulary, the FormularyDrug entry provides information on prescribing limitations, and optionally drug classification and alternatives.",
         "isModifier": false,
         "isSummary": false
       },
@@ -4908,7 +4908,7 @@
       {
         "id": "MedicationKnowledge.extension:drugalternatives",
         "path": "MedicationKnowledge.extension",
-        "definition": "Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
+        "definition": "DrugAlternatives are Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
         "min": 0,
         "max": "*",
         "base": {

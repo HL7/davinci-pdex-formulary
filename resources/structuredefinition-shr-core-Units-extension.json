@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/shr-core-Units-extension",
   "name": "Units",
-  "title": "shr-core-Units",
+  "title": "Units",
   "status": "draft",
-  "date": "2020-01-02",
+  "date": "2020-01-17",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
@@ -22,7 +22,7 @@
     }
   ],
   "description": "The unit of measure of the quantity.",
-  "fhirVersion": "4.0.1",
+  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

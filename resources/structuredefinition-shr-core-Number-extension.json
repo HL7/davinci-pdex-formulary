@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/shr-core-Number-extension",
   "name": "Number",
-  "title": "shr-core-Number",
+  "title": "Number",
   "status": "draft",
-  "date": "2020-01-02",
+  "date": "2020-01-17",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
@@ -22,7 +22,7 @@
     }
   ],
   "description": "A decimal value.",
-  "fhirVersion": "4.0.1",
+  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [

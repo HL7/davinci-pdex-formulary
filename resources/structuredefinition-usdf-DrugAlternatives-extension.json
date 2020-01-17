@@ -3,13 +3,13 @@
   "id": "usdf-DrugAlternatives-extension",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DrugAlternatives Extension</b></p>\n  <p>Generic or Branded Drugs included within the CoveragePlan&#039;s formulary that could be prescribed as alternatives to the current FormularyDrug.</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DrugAlternatives Extension</b></p>\n  <p>DrugAlternatives are Generic or Branded Drugs included within the CoveragePlan&#039;s formulary that could be prescribed as alternatives to the current FormularyDrug.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugAlternatives-extension",
   "name": "DrugAlternatives",
   "title": "Drug Alternatives",
   "status": "draft",
-  "date": "2020-01-14",
+  "date": "2020-01-17",
   "publisher": "HL7 Pharmacy WG",
   "contact": [
     {
@@ -21,7 +21,7 @@
       ]
     }
   ],
-  "description": "Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
+  "description": "DrugAlternatives are Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
@@ -40,7 +40,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "DrugAlternatives",
-        "definition": "Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
+        "definition": "DrugAlternatives are Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
         "min": 0,
         "max": "*",
         "base": {
@@ -218,7 +218,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "DrugAlternatives",
-        "definition": "Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
+        "definition": "DrugAlternatives are Generic or Branded Drugs included within the CoveragePlan's formulary that could be prescribed as alternatives to the current FormularyDrug.",
         "min": 0,
         "max": "*"
       },
