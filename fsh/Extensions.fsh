@@ -13,6 +13,30 @@ Description: "A description of the drug tiers used by the formulary and how thos
 * extension[mailOrder] ^short = "Mail Order"
 * extension[mailOrder].value[x] only boolean
 * extension[mailOrder].value[x] 1..1
+* extension[costSharing].extension contains
+	pharmacyType 1..1 and
+	copayAmount 1..1 and
+	copayOption 1..1 and
+	coinsuranceRate 1..1 and
+	coinsuranceOption 1..1
+* extension[costSharing].extension[pharmacyType] ^short = "Pharmacy Type"
+* extension[costSharing].extension[pharmacyType].value[x] only CodeableConcept
+* extension[costSharing].extension[pharmacyType].value[x] 1..1
+* extension[costSharing].extension[pharmacyType].value[x] from PharmacyTypeVS (extensible)
+* extension[costSharing].extension[copayAmount] ^short = "Copay Amount"
+* extension[costSharing].extension[copayAmount].value[x] only Money
+* extension[costSharing].extension[copayAmount].value[x] 1..1
+* extension[costSharing].extension[copayOption] ^short = "Copay Options"
+* extension[costSharing].extension[copayOption].value[x] only CodeableConcept
+* extension[costSharing].extension[copayOption].value[x] 1..1
+* extension[costSharing].extension[copayOption].value[x] from CopayOptionVS (required)
+* extension[costSharing].extension[coinsuranceRate] ^short = "Co-Insurance Rate"
+* extension[costSharing].extension[coinsuranceRate].value[x] only decimal
+* extension[costSharing].extension[coinsuranceRate].value[x] 1..1
+* extension[costSharing].extension[coinsuranceOption] ^short = "Co-Insurance Option"
+* extension[costSharing].extension[coinsuranceOption].value[x] only CodeableConcept
+* extension[costSharing].extension[coinsuranceOption].value[x] 1..1
+* extension[costSharing].extension[coinsuranceOption].value[x] from CoinsuranceOptionVS (required)
 
 Extension: Network
 Id: usdf-Network-extension
@@ -98,33 +122,4 @@ Description: "A code that describes the coverage status of a drug in a health pl
 * value[x] 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept from DrugTierVS (extensible)
-
-Extension: CostSharing
-Id: usdf-CostSharing-extension
-Title: "Cost Sharing"
-Description: "Describes cost-sharing for a formulary drug tier"
-* extension contains
-	pharmacyType 1..1 and
-	copayAmount 1..1 and
-	copayOption 1..1 and
-	coInsuranceRate 1..1 and
-	coInsuranceOption 1..1
-* extension[pharmacyType] ^short = "Pharmacy Type"
-* extension[pharmacyType].value[x] only CodeableConcept
-* extension[pharmacyType].value[x] 1..1
-* extension[pharmacyType].value[x] from PharmacyTypeVS (extensible)
-* extension[copayAmount] ^short = "Copay Amount"
-* extension[copayAmount].value[x] only Money
-* extension[copayAmount].value[x] 1..1
-* extension[copayOption] ^short = "Copay Options"
-* extension[copayOption].value[x] only CodeableConcept
-* extension[copayOption].value[x] 1..1
-* extension[copayOption].value[x] from CopayOptionVS (required)
-* extension[coInsuranceRate] ^short = "Co-Insurance Rate"
-* extension[coInsuranceRate].value[x] only decimal
-* extension[coInsuranceRate].value[x] 1..1
-* extension[coInsuranceOption] ^short = "Co-Insurance Option"
-* extension[coInsuranceOption].value[x] only CodeableConcept
-* extension[coInsuranceOption].value[x] 1..1
-* extension[coInsuranceOption].value[x] from CoinsuranceOptionVS (required)
 
