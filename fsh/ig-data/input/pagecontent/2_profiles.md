@@ -16,7 +16,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a href="StructureDefinition-usdf-CoveragePlan">CoveragePlan</a></td>
+        <td><a href="StructureDefinition-usdf-CoveragePlan.html">CoveragePlan</a></td>
         <td><a href="http://hl7.org/fhir/R4/list.html">List (R4)</a></td>
         <td>
           {% capture md_text %}The CoveragePlan resource represents a health plan and contains 

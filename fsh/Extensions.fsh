@@ -102,7 +102,7 @@ Description: "A code that describes the coverage status of a drug in a health pl
 Extension: CostSharing
 Id: usdf-CostSharing-extension
 Title: "Cost Sharing"
-Description: ""
+Description: "Describes cost-sharing for a formulary drug tier"
 * extension contains
 	pharmacyType 1..1 and
 	copayAmount 1..1 and

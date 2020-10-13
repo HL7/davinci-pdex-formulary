@@ -1,5 +1,5 @@
 {
-  "resourceType": "List",
+    "resourceType": "List",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan"
@@ -33,7 +33,7 @@
               {
                 "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
                 "code": "brand",
-                "display": "Brand"
+                "display": "Brand: Brand name drugs that cost more than ‘preferred brand’ drugs."
               }
             ]
           }
@@ -52,7 +52,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-in-retail",
-                    "display": "1 month in network retail"
+                    "display": "1 month in network retail: 1 Month Supply via in-network retail pharmacy"
                   }
                 ]
               }
@@ -74,7 +74,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer is responsible only for the copay (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -86,7 +86,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer is responsible only for the copay (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }

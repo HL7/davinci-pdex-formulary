@@ -24,7 +24,7 @@
               {
                 "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
                 "code": "generic",
-                "display": "Generic"
+                "display": "Generic: Commonly prescribed generic drugs that cost more than drugs in the ‘preferred generic’ tier."
               }
             ]
           }
@@ -43,7 +43,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-in-retail",
-                    "display": "1 month in network retail"
+                    "display": "1 month in network retail: 1 Month Supply via in-network retail pharmacy."
                   }
                 ]
               }
@@ -61,7 +61,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -77,7 +77,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -94,7 +94,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-out-retail",
-                    "display": "1 month out of network retail"
+                    "display": "1 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -112,7 +112,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -128,7 +128,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -145,7 +145,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-in-retail",
-                    "display": "3 month in network retail"
+                    "display": "3 month in network retail: 3 Month Supply via in-network retail pharmacy."
                   }
                 ]
               }
@@ -163,7 +163,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -179,7 +179,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -196,7 +196,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-out-retail",
-                    "display": "3 month out of network retail"
+                    "display": "3 month out of network retail: 3 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -214,7 +214,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -230,7 +230,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -248,8 +248,8 @@
             "coding": [
               {
                 "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
-                "code": "zero-cost-share-preventive",
-                "display": "Zero cost-share preventive"
+                "code": "zero-cost-share-preventative",
+                "display": "Zero cost-share preventative: Preventive medications and products available at no cost."
               }
             ]
           }
@@ -268,7 +268,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-in-retail",
-                    "display": "1 month in network retail"
+                    "display": "1 month in network retail: 1 Month Supply via in-network retail pharmacy."
                   }
                 ]
               }
@@ -286,7 +286,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -302,7 +302,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -319,7 +319,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-out-retail",
-                    "display": "1 month out of network retail"
+                    "display": "1 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -337,7 +337,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -353,7 +353,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -370,7 +370,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-in-retail",
-                    "display": "3 month in network retail"
+                    "display": "3 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -388,7 +388,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -404,7 +404,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -421,7 +421,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-out-retail",
-                    "display": "3 month out of network retail"
+                    "display": "3 month out of network retail: 3 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -439,7 +439,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -455,7 +455,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -474,7 +474,7 @@
               {
                 "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
                 "code": "preferred-brand",
-                "display": "Preferred Brand"
+                "display": "Preferred Brand: Brand name drugs"
               }
             ]
           }
@@ -493,7 +493,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-in-retail",
-                    "display": "1 month in network retail"
+                    "display": "1 month in network retail: 1 Month Supply via in-network retail pharmacy."
                   }
                 ]
               }
@@ -511,7 +511,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -527,7 +527,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -544,7 +544,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-out-retail",
-                    "display": "1 month out of network retail"
+                    "display": "1 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -562,7 +562,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -578,7 +578,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -595,7 +595,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-in-retail",
-                    "display": "3 month in network retail"
+                    "display": "3 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -613,7 +613,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -629,7 +629,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -646,7 +646,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-out-retail",
-                    "display": "3 month out of network retail"
+                    "display": "3 month out of network retail: 3 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -664,7 +664,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -680,7 +680,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -699,7 +699,7 @@
               {
                 "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
                 "code": "non-preferred-brand",
-                "display": "Non-Preferred Brand"
+                "display": "Non-preferred Brand: Brand name drugs that cost more than ‘brand’ drugs."
               }
             ]
           }
@@ -718,7 +718,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-in-retail",
-                    "display": "1 month in network retail"
+                    "display": "1 month in network retail: 1 Month Supply via in-network retail pharmacy."
                   }
                 ]
               }
@@ -736,7 +736,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -752,7 +752,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -769,7 +769,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-out-retail",
-                    "display": "1 month out of network retail"
+                    "display": "1 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -787,7 +787,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -803,7 +803,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -820,7 +820,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-in-retail",
-                    "display": "3 month in network retail"
+                    "display": "3 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -838,7 +838,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -854,7 +854,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -871,7 +871,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-out-retail",
-                    "display": "3 month out of network retail"
+                    "display": "3 month out of network retail: 3 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -889,7 +889,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -905,7 +905,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -924,7 +924,7 @@
               {
                 "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
                 "code": "specialty",
-                "display": "Specialty"
+                "display": "Specialty: Drugs used to treat complex conditions like cancer and multiple sclerosis. They can be generic or brand name, and are typically the most expensive drugs on the formulary."
               }
             ]
           }
@@ -943,7 +943,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-in-retail",
-                    "display": "1 month in network retail"
+                    "display": "1 month in network retail: 1 Month Supply via in-network retail pharmacy."
                   }
                 ]
               }
@@ -961,7 +961,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -977,7 +977,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -994,7 +994,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-out-retail",
-                    "display": "1 month out of network retail"
+                    "display": "1 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -1012,7 +1012,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -1028,7 +1028,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -1045,7 +1045,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-in-retail",
-                    "display": "3 month in network retail"
+                    "display": "3 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -1063,7 +1063,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -1079,7 +1079,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }
@@ -1096,7 +1096,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "3-month-out-retail",
-                    "display": "3 month out of network retail"
+                    "display": "3 month out of network retail: 3 Month Supply via out-of-network retail pharmacy."
                   }
                 ]
               }
@@ -1114,7 +1114,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge"
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -1130,7 +1130,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible"
+                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
                   }
                 ]
               }

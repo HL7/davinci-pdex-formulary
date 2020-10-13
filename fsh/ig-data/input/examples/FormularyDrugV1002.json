@@ -1,5 +1,5 @@
 {
-  "resourceType": "MedicationKnowledge",
+   "resourceType": "MedicationKnowledge",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
