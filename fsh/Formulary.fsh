@@ -1,11 +1,11 @@
 Profile:        CoveragePlan
 Parent:         List
-Id:             formulary-CoveragePlan
+Id:             usdf-CoveragePlan
 Title:          "Formulary Coverage Plan"
 Description:    "A health plan which contains links to administrative information,  a list of formulary drugs covered under that plan, and a definition of drug tiers and their associated cost-sharing models."
 * extension contains
     DrugTierDefinition named usdf-DrugTierDefinition-extension 1..* MS and
-    Network named usdf-Network-extension 1..* MS and
+    Network  named usdf-Network-extension  1..* MS and
     SummaryURL named usdf-SummaryURL-extension 1..1 MS and
     FormularyURL named usdf-FormularyURL-extension 0..1 MS and
     EmailPlanContact named usdf-EmailPlanContact-extension 0..1 MS and
@@ -14,7 +14,7 @@ Description:    "A health plan which contains links to administrative informatio
 
 Profile:        FormularyDrug
 Parent:         MedicationKnowledge
-Id:             formulary-MedicationKnowledge
+Id:             usdf-FormularyDrug
 Title:          "Formulary Drug"
 Description:    "Drug information which is part of a formulary."
 * extension contains
