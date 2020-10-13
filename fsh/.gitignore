@@ -1,6 +1,6 @@
 build/*.*
 build/input/**
-build/input-cache/org.hl7.fhir.publisher.jar
+build/input-cache/publisher.jar
 build/output/**
 build/temp/**
 build/template/**

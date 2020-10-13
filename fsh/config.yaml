@@ -49,7 +49,7 @@ history:
   introduction: This project defines a FHIR interface to a health insurer's drug formulary information for patients/consumers."
   current:
     version: current
-    desc: DaVinci PDEX Formulary IG STU1
+    desc: DaVinci PDEX Formulary CI Build
     path: http://build.fhir.org/ig/HL7/davinci-pdex-formulary
     status: ci-build
     current: true
