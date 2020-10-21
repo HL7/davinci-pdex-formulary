@@ -14,7 +14,7 @@
           {
             "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
             "code": "brand",
-            "display": "'Brand: Brand name drugs that cost more than ‘preferred brand’ drugs."
+            "display": "Brand: Brand name drugs that cost more than ‘preferred brand’ drugs."
           }
         ]
       }
