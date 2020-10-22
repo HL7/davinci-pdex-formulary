@@ -112,7 +112,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject tothe deductible)."
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -163,7 +163,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject tothe deductible)."
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
@@ -214,7 +214,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "no-charge",
-                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject tothe deductible)."
+                    "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
                   }
                 ]
               }
