@@ -4,7 +4,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.Davinci-drug-formulary
 canonical: http://hl7.org/fhir/us/Davinci-drug-formulary
-name: formulary
+name: Formulary
 status: draft
 version: 1.0.1
 fhirVersion: 4.0.1
@@ -53,6 +53,8 @@ history:
     path: http://build.fhir.org/ig/HL7/davinci-pdex-formulary
     status: ci-build
     current: true
+    date: 2020-10-21
+    fhirversion: 4.0.1
   1.0.0:
     desc: DaVinci PDEX Formulary IG STU1
     date: 2020-01-21
@@ -71,3 +73,33 @@ history:
     fhirversion: 4.0.1
     current: false
     version: 0.1.0
+
+resources:
+    List/covplanV1002:
+      name: Coverage Plan V1002
+      description: Coverage Plan V1002
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+    List/CoveragePlanV3001:
+      name: Coverage Plan V3001
+      description: Coverage Plan V3001
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+    List/CoveragePlanV3002:
+      name: Coverage Plan V3002
+      description: Coverage Plan V3002
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+    List/CoveragePlanV3004t:
+      name: Coverage Plan V3004t
+      description: Coverage Plan V3004t
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+    MedicationKnowledge/cmsip9:
+      name: Formulary Drug cmsip9
+      description: Formulary Drug cmsip9
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+    MedicationKnowledge/formularydrugV1002:
+      name: Formulary Drug V1002
+      description: Formulary Drug cmsip9
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+    MedicationKnowledge/FormularyDrugV3001:
+      name: Formulary Drug V3001
+      description: Formulary Drug cmsip9
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug

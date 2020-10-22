@@ -29,7 +29,7 @@ CodeSystem: CopayOptionCS
 Id:             usdf-CopayOptionCS
 Title: "Codes for qualifier of copay amount"
 Description: "Codes for qualifier of copay amount"
-* #after-deductible               "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer is responsible only for the copay (this indicates that this benefit is subject to the deductible). "
+* #after-deductible               "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer is responsible only for the copay (this indicates that this benefit is subject to the deductible)."
 * #before-deductible              "Before Deductible: The consumer first pays the copay, and any net remaining allowed charges accrue to the deductible (this indicates that this benefit is subject to the deductible)."
 * #no-charge                      "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
 * #no-charge-after-deductible     "No Charge After Deductible: The consumer first pays the deductible, and after the deductible is met, no copayment is charged (this indicates that this benefit is subject to the deductible)."
