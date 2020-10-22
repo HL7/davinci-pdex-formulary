@@ -9,7 +9,7 @@
   "base": [
     "MedicationKnowledge"
   ],
-  "type": "token",
+  "type": "string",
   "expression": "MedicationKnowledge.extension.where(url='http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PlanID-extension').value",
   "comparator": [
     "eq"
