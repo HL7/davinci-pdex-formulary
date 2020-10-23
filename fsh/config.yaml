@@ -1,0 +1,105 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.us.Davinci-drug-formulary
+canonical: http://hl7.org/fhir/us/Davinci-drug-formulary
+name: Formulary
+status: draft
+version: 1.0.1
+fhirVersion: 4.0.1
+copyrightYear: 2020+
+releaseLabel: ci-build
+publisher:
+  name: HL7 Pharmacy Working Group
+  url: http://www.hl7.org/Special/committees/medication/
+  email: pharmacy@lists.HL7.org
+description: DaVinci Payer Data Exchange (PDex) US Drug Formulary STU 1
+license: CC0-1.0
+#dependencies:
+#  hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
+parameters:
+  show-inherited-invariants: false
+  apply-jurisdiction: true
+  apply-publisher: true
+jurisdiction: urn:iso:std:iso:3166#US
+
+# ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
+# │  To use a provided ig-data/ig.ini file, delete the "template" property below.                  │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+template: hl7.davinci.template#current
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  FHIR Artifacts:
+    Profiles            : artifacts.html#3
+    Extensions          : artifacts.html#6
+    Search Parameters   : artifacts.html#2
+    Terminology         : artifacts.html#5
+    Capability Statement: CapabilityStatement-usdf-server.html
+  Examples      : artifacts.html#7
+  Downloads     : downloads.html
+  History       : http://www.hl7.org/fhir/us/davinci-pdex-plan-net/history.cfml
+
+history:
+  title: DaVinci PDEX Formulary IG
+  introduction: This project defines a FHIR interface to a health insurer's drug formulary information for patients/consumers."
+  current:
+    version: current
+    desc: DaVinci PDEX Formulary CI Build
+    path: http://build.fhir.org/ig/HL7/davinci-pdex-formulary
+    status: ci-build
+    current: true
+    date: 2020-10-21
+    fhirversion: 4.0.1
+  1.0.0:
+    desc: DaVinci PDEX Formulary IG STU1
+    date: 2020-01-21
+    sequence: STU1
+    path: http://hl7.org/fhir/us/davinci-drug-formulary/STU1/
+    status: ballot
+    fhirversion: 4.0.1
+    current: false
+    version: 1.0.0
+  0.1.0:
+    desc: DaVinci PDEX Formulary IG STU1 Ballot
+    date: 2019-06-18
+    sequence: STU1
+    path: http://hl7.org/fhir/us/davinci-drug-formulary/Jun2019/
+    status: ballot
+    fhirversion: 4.0.1
+    current: false
+    version: 0.1.0
+
+resources:
+    List/covplanV1002:
+      name: Coverage Plan V1002
+      description: Coverage Plan V1002
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+    List/CoveragePlanV3001:
+      name: Coverage Plan V3001
+      description: Coverage Plan V3001
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+    List/CoveragePlanV3002:
+      name: Coverage Plan V3002
+      description: Coverage Plan V3002
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+    List/CoveragePlanV3004t:
+      name: Coverage Plan V3004t
+      description: Coverage Plan V3004t
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+    MedicationKnowledge/cmsip9:
+      name: Formulary Drug cmsip9
+      description: Formulary Drug cmsip9
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+    MedicationKnowledge/formularydrugV1002:
+      name: Formulary Drug V1002
+      description: Formulary Drug cmsip9
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+    MedicationKnowledge/FormularyDrugV3001:
+      name: Formulary Drug V3001
+      description: Formulary Drug cmsip9
+      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug

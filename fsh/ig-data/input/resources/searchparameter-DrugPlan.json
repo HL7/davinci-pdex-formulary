@@ -1,0 +1,17 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "DrugPlan",
+  "name": "DrugPlan",
+  "status": "active",
+  "code": "DrugPlan",
+  "description": "Accesses the DrugPlan ID of a FormularyDrug",
+  "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/SearchParameter/DrugPlan",
+  "base": [
+    "MedicationKnowledge"
+  ],
+  "type": "string",
+  "expression": "MedicationKnowledge.extension.where(url='http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PlanID-extension').value",
+  "comparator": [
+    "eq"
+  ]
+}
