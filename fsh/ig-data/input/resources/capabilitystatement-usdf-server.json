@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "usdf-server",
-  "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/CapabilityStatement/usdf-server",
+  "url": "http://hl7.org/fhir/us/davinci-drug-formulary/CapabilityStatement/usdf-server",
   "version": "1.0.0",
   "name": "USDFServerCapabilityStatement",
   "title": "US Drug Formulary Server Capability Statement",
@@ -19,7 +19,7 @@
       ]
     }
   ],
-  "description": "This Section describes the expected capabilities of the US Drug Formulary Server actor which is responsible for providing responses to the queries submitted by the US Drug Formulary Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Drug Formulary Server are defined. ",
+  "description": "This Section describes the expected capabilities of the US Drug Formulary Server actor which is responsible for providing responses to the queries submitted by the US Drug Formulary Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Drug Formulary Server are defined.",
   "jurisdiction": [
     {
       "coding": [
@@ -41,7 +41,7 @@
     "application/json-patch+json"
   ],
   "implementationGuide": [
-    "http://hl7.org/fhir/us/Davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.Davinci-drug-formulary"
+    "http://hl7.org/fhir/us/davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.davinci-drug-formulary"
   ],
   "rest": [
     {
@@ -54,7 +54,7 @@
         {
           "type": "List",
           "supportedProfile": [
-            "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan"
+            "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan"
           ],
           "extension": [
             {
@@ -155,7 +155,7 @@
         {
           "type": "MedicationKnowledge",
           "supportedProfile": [
-            "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
+            "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
           ],
           "extension": [
             {
@@ -286,7 +286,7 @@
                 }
               ],
               "name": "DrugName",
-              "definition": "http://hl7.org/fhir/us/Davinci-drug-formulary/SearchParameter/DrugName",
+              "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/DrugName",
               "type": "string"
             },
             {
@@ -297,7 +297,7 @@
                 }
               ],
               "name": "DrugPlan",
-              "definition": "http://hl7.org/fhir/us/Davinci-drug-formulary/SearchParameter/DrugPlan",
+              "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/DrugPlan",
               "type": "string"
             },
             {
@@ -308,7 +308,7 @@
                 }
               ],
               "name": "DrugTier",
-              "definition": "http://hl7.org/fhir/us/Davinci-drug-formulary/SearchParameter/DrugTier",
+              "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/DrugTier",
               "type": "token"
             }
           ]

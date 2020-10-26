@@ -2,9 +2,9 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.us.Davinci-drug-formulary
-canonical: http://hl7.org/fhir/us/Davinci-drug-formulary
-name: formulary
+id: hl7.fhir.us.davinci-drug-formulary
+canonical: http://hl7.org/fhir/us/davinci-drug-formulary
+name: Formulary
 status: draft
 version: 1.0.1
 fhirVersion: 4.0.1
@@ -14,7 +14,7 @@ publisher:
   name: HL7 Pharmacy Working Group
   url: http://www.hl7.org/Special/committees/medication/
   email: pharmacy@lists.HL7.org
-description: DaVinci Payer Data Exchange (PDex) US Drug Formulary STU 1
+description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary STU 1
 license: CC0-1.0
 #dependencies:
 #  hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
@@ -42,7 +42,7 @@ menu:
     Capability Statement: CapabilityStatement-usdf-server.html
   Examples      : artifacts.html#7
   Downloads     : downloads.html
-  History       : http://www.hl7.org/fhir/us/davinci-pdex-plan-net/history.cfml
+  History       : http://hl7.org/fhir/us/davinci-drug-formulary/history.html
 
 history:
   title: DaVinci PDEX Formulary IG
@@ -71,3 +71,19 @@ history:
     fhirversion: 4.0.1
     current: false
     version: 0.1.0
+
+resources:
+  List/covplanV1002:
+    description: Sample Gold Health Plan
+  List/CoveragePlanV3001:
+    description: Sample Gold Health Plan
+  List/CoveragePlanV3002:
+    description: Sample Gold Health Plan
+  List/CoveragePlanV3004t:
+    description: BluePreferred PPO HSA Silver $3,000
+  MedicationKnowledge/cmsip9:
+    description: Doxepin HCl 5 % Topical Cream
+  MedicationKnowledge/formularydrugV1002:
+    description: Percocet 5 MG / 325 MG Oral Tablet
+  MedicationKnowledge/FormularyDrugV3001:
+    description: Percocet 5 MG / 325 MG Oral Tablet

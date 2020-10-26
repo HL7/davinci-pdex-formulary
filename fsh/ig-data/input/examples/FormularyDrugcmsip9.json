@@ -1,5 +1,4 @@
 {
-
   "code": {
     "coding": [
       {
@@ -11,38 +10,38 @@
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
+      "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-DrugTierID-extension",
       "valueCodeableConcept": {
         "coding": [
           {
             "code": "generic",
-            "system": "http://hl7.org/fhir/us/Davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
+            "system": "http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
             "display": "Generic: Commonly prescribed generic drugs that cost more than drugs in the ‘preferred generic’ tier."
           }
         ]
       }
     },
     {
-      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PriorAuthorization-extension",
+      "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-PriorAuthorization-extension",
       "valueBoolean": false
     },
     {
-      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-StepTherapyLimit-extension",
+      "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-StepTherapyLimit-extension",
       "valueBoolean": true
     },
     {
-      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-QuantityLimit-extension",
+      "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-QuantityLimit-extension",
       "valueBoolean": true
     },
     {
-      "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-PlanID-extension",
+      "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-PlanID-extension",
       "valueString": "40308VA0240008"
     }
   ],
   "resourceType": "MedicationKnowledge",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
+      "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug"
     ]
   },
   "id": "cmsip9"

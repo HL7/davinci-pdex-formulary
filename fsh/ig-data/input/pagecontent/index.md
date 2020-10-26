@@ -251,7 +251,7 @@
 <h3 id="Find-all-CoveragePlans"> Find All CoveragePlans </h3> 
 <pre>
   <code>
-    GET [base]/List?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+    GET [base]/List?_profile=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
   </code>
 </pre>
 <p>
@@ -266,7 +266,7 @@
 </p>
 <pre>
   <code>
-    GET [base]/List?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan&amp;identifer=myPlanID 
+    GET [base]/List?_profile=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan&amp;identifier=myPlanID 
   </code>
 </pre>
 
@@ -276,7 +276,7 @@
 </p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID 
+    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID 
   </code>
 </pre>
 <p>
@@ -291,7 +291,7 @@
 </p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID&amp;DrugTier=GENERIC
+    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID&amp;DrugTier=GENERIC
   </code>
 </pre>
 
@@ -303,7 +303,7 @@
 </p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID&amp;code=myCode
+    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID&amp;code=myCode
   </code>
 </pre>
 
@@ -315,7 +315,7 @@
 </p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;code=myCode
+    GET [base]/MedicationKnowledge?_profile=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;code=myCode
   </code>
 </pre>
 

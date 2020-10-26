@@ -5,7 +5,7 @@
   "code": "DrugName",
   "name": "DrugName",
   "description": "Accesses the Descriptive Name of a FormularyDrug",
-  "url": "http://hl7.org/fhir/us/Davinci-drug-formulary/SearchParameter/DrugName",
+  "url": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/DrugName",
   "base": [
     "MedicationKnowledge"
   ],
