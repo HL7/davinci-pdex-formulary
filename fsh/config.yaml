@@ -87,3 +87,5 @@ resources:
     description: Percocet 5 MG / 325 MG Oral Tablet
   MedicationKnowledge/FormularyDrugV3001:
     description: Percocet 5 MG / 325 MG Oral Tablet
+  MedicationKnowledge/FormularyDrugV3002:
+    description: Tylenol Extra Strength 500 MG Oral Tablet
