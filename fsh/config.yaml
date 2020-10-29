@@ -2,8 +2,8 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.us.Davinci-drug-formulary
-canonical: http://hl7.org/fhir/us/Davinci-drug-formulary
+id: hl7.fhir.us.davinci-drug-formulary
+canonical: http://hl7.org/fhir/us/davinci-drug-formulary
 name: Formulary
 status: draft
 version: 1.0.1
@@ -14,7 +14,7 @@ publisher:
   name: HL7 Pharmacy Working Group
   url: http://www.hl7.org/Special/committees/medication/
   email: pharmacy@lists.HL7.org
-description: DaVinci Payer Data Exchange (PDex) US Drug Formulary STU 1
+description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary STU 1
 license: CC0-1.0
 #dependencies:
 #  hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
@@ -42,7 +42,7 @@ menu:
     Capability Statement: CapabilityStatement-usdf-server.html
   Examples      : artifacts.html#7
   Downloads     : downloads.html
-  History       : http://www.hl7.org/fhir/us/davinci-pdex-plan-net/history.cfml
+  History       : http://hl7.org/fhir/us/davinci-drug-formulary/history.html
 
 history:
   title: DaVinci PDEX Formulary IG
@@ -75,31 +75,36 @@ history:
     version: 0.1.0
 
 resources:
-    List/covplanV1002:
-      name: Coverage Plan V1002
-      description: Coverage Plan V1002
-      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-    List/CoveragePlanV3001:
-      name: Coverage Plan V3001
-      description: Coverage Plan V3001
-      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-    List/CoveragePlanV3002:
-      name: Coverage Plan V3002
-      description: Coverage Plan V3002
-      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-    List/CoveragePlanV3004t:
-      name: Coverage Plan V3004t
-      description: Coverage Plan V3004t
-      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-    MedicationKnowledge/cmsip9:
-      name: Formulary Drug cmsip9
-      description: Formulary Drug cmsip9
-      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
-    MedicationKnowledge/formularydrugV1002:
-      name: Formulary Drug V1002
-      description: Formulary Drug cmsip9
-      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
-    MedicationKnowledge/FormularyDrugV3001:
-      name: Formulary Drug V3001
-      description: Formulary Drug cmsip9
-      exampleCanonical: http://hl7.org/fhir/us/Davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+  List/covplanV1002:
+    name: Coverage Plan V1002
+    description: Sample Gold Health Plan
+    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+  List/CoveragePlanV3001:
+    name: Coverage Plan V3001
+    description: Sample Gold Health Plan
+    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+  List/CoveragePlanV3002:
+    name: Coverage Plan V3002
+    description: Sample Gold Health Plan
+    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+  List/CoveragePlanV3004t:
+    name: Coverage Plan V3004t
+    description: BluePreferred PPO HSA Silver $3,000
+    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+  MedicationKnowledge/cmsip9:
+    name: Formulary Drug cmsip9
+    description: Doxepin HCl 5 % Topical Cream
+    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+  MedicationKnowledge/formularydrugV1002:
+    name: Formulary Drug V1002
+    description: Percocet 5 MG / 325 MG Oral Tablet
+    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+  MedicationKnowledge/FormularyDrugV3001:
+    name: Formulary Drug V3001
+    description: Percocet 5 MG / 325 MG Oral Tablet
+    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+  MedicationKnowledge/FormularyDrugV3002:
+    name: Formulary Drug V3002
+    description: Tylenol Extra Strength 500 MG Oral Tablet
+    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+
