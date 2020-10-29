@@ -22,6 +22,7 @@ parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
+  jira-code: us-davinci-df
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
