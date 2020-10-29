@@ -8,6 +8,7 @@ name: Formulary
 status: draft
 version: 1.0.1
 fhirVersion: 4.0.1
+category: Financial
 copyrightYear: 2020+
 releaseLabel: ci-build
 publisher:
@@ -48,6 +49,7 @@ menu:
 history:
   title: DaVinci PDEX Formulary IG
   introduction: This project defines a FHIR interface to a health insurer's drug formulary information for patients/consumers."
+  category: Medications / Immunizations
   current:
     version: current
     desc: DaVinci PDEX Formulary CI Build
