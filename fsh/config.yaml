@@ -24,6 +24,9 @@ parameters:
   apply-publisher: true
   jira-code: davinci-df
 jurisdiction: urn:iso:std:iso:3166#US
+# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
+# │  To use a provided ig-data/package-list.json file, delete the "history" property below.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 # ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
 # │  To use a provided ig-data/ig.ini file, delete the "template" property below.                  │
@@ -45,36 +48,6 @@ menu:
   Downloads     : downloads.html
   History       : http://hl7.org/fhir/us/davinci-drug-formulary/history.html
 
-history:
-  title: DaVinci PDEX Formulary IG
-  introduction: This project defines a FHIR interface to a health insurer's drug formulary information for patients/consumers.
-  category: Medications / Immunizations
-  current:
-    version: current
-    desc: DaVinci PDEX Formulary CI Build
-    path: http://build.fhir.org/ig/HL7/davinci-pdex-formulary
-    status: ci-build
-    current: true
-    date: 2020-10-21
-    fhirversion: 4.0.1
-  1.0.0:
-    desc: DaVinci PDEX Formulary IG STU1
-    date: 2020-01-21
-    sequence: STU1
-    path: http://hl7.org/fhir/us/davinci-drug-formulary/STU1/
-    status: ballot
-    fhirversion: 4.0.1
-    current: false
-    version: 1.0.0
-  0.1.0:
-    desc: DaVinci PDEX Formulary IG STU1 Ballot
-    date: 2019-06-18
-    sequence: STU1
-    path: http://hl7.org/fhir/us/davinci-drug-formulary/Jun2019/
-    status: ballot
-    fhirversion: 4.0.1
-    current: false
-    version: 0.1.0
 
 resources:
   List/covplanV1002:
