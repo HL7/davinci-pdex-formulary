@@ -370,10 +370,7 @@
 
 <h2 id="credits">Credits</h2>
 <p>
-  This IG was developed by the MITRE Corporation using the free, open source,  
-  <a href="https://confluence.hl7.org/display/FHIRI/FHIR+Shorthand">FHIR Shorthand (FSH)</a> 
-  tool chain. The FSH inputs used to generate this IG can be found 
-  <a href="https://github.com/HL7-DaVinci/pdex-formulary/tree/STU1Release">here</a>.
+This IG was developed using <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand syntax</a> and the <a href="https://github.com/FHIR/sushi">SUSHI</a> tookit, a free, open source toolchain from the MITRE Corporation.
 </p>
 
 <h2 id="authors">Authors</h2>
