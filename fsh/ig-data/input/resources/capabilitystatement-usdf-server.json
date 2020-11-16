@@ -158,7 +158,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/SearchParameter/Resource-identifier",
+                            "definition": "http://hl7.org/fhir/list.html#search",
                             "name": "identifier",
                             "type": "token"
                         },
@@ -169,7 +169,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/SearchParameter/Resource-item",
+                            "definition": "http://hl7.org/fhir/list.html#search",
                             "name": "item",
                             "type": "token"
                         },
@@ -180,7 +180,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/SearchParameter/Resource-status",
+                            "definition": "http://hl7.org/fhir/list.html#search",
                             "name": "status",
                             "type": "token"
                         }
@@ -297,7 +297,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-drug-formularySearchParameter/medicationknowledge-DrugName",
+                            "definition": "http://hl7.org/fhir/us/davinci-drug-formularyDrugName#search",
                             "name": "DrugName",
                             "type": "string"
                         },
@@ -308,7 +308,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-drug-formularySearchParameter/medicationknowledge-DrugTier",
+                            "definition": "http://hl7.org/fhir/us/davinci-drug-formularyDrugTier#search",
                             "name": "DrugTier",
                             "type": "token"
                         },
@@ -319,7 +319,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-drug-formularySearchParameter/medicationknowledge-DrugPlan",
+                            "definition": "http://hl7.org/fhir/us/davinci-drug-formularyDrug-Plan#search",
                             "name": "DrugPlan",
                             "type": "string"
                         },
@@ -330,7 +330,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/SearchParameter/Resource-code",
+                            "definition": "http://hl7.org/fhir/medicationknowledge.html#search",
                             "name": "code",
                             "type": "token"
                         },
