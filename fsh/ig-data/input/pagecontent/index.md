@@ -1,4 +1,4 @@
-<h1 id="drug-formulary">DaVinci Payer Data Exchange US Drug Formulary</h1>
+<h3 id="drug-formulary">DaVinci Payer Data Exchange US Drug Formulary</h3>
 <p>
   This implementation guide defines a FHIR interface to a health insurer's drug formulary 
   information for patients/consumers. A drug formulary is a list of brand-name and generic 
@@ -14,7 +14,7 @@
   that the FHIR endpoint is known to the user. 
 </p>
 
-<h2 id="table-of-contents">Table Of Contents</h2>
+<h4 id="table-of-contents">Table Of Contents</h4>
 <ul>
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#disclaimers-assumptions">Disclaimers and Assumptions</a></li>
@@ -28,7 +28,7 @@
   <li><a href="#authors">Authors</a></li>
 </ul>
 
-<h2 id="introduction">Introduction</h2>
+<h4 id="introduction">Introduction</h4>
 <p>
   This implementation guide (IG) introduces two FHIR profiles, along with associated extensions, 
   search parameters, and value sets.
@@ -73,7 +73,7 @@
   </li>
 </ul>
   
-<h2 id="disclaimers-assumptions">Disclaimers and Assumptions</h2>
+<h4 id="disclaimers-assumptions">Disclaimers and Assumptions</h4>
 <ul>
   <li>
     <b>Drug Formulary includes Plan-Level Data Only</b>:  
@@ -104,7 +104,7 @@
   </li>
 </ul>
 
-<h2 id="formulary-structure">Formulary Structure</h2>
+<h4 id="formulary-structure">Formulary Structure</h4>
 <p>
   Formularies in the United States are normally published by health insurers on an annual 
   basis, with minor updates during the year. It is critical that health insurers update 
@@ -154,7 +154,7 @@
   associate a FormularyDrug with a CoveragePlan.
 </p>
 
-<h2 id="expected-users">Expected Users</h2>
+<h4 id="expected-users">Expected Users</h4>
 <p>
   This Implementation Guide is intended for insurers within the United States. Currently, 
   many insurers make their formularies available to patients using PDFs or drug search forms 
@@ -164,8 +164,8 @@
 </p>
 <p>&nbsp;</p>
 
-<h2 id="use-cases">Use Cases</h2>
-<h3 id="actors">Actors</h3>
+<h4 id="use-cases">Use Cases</h4>
+<h5 id="actors">Actors</h5>
 <dl>
   <dt>Member</dt> 
   <dd>
@@ -187,7 +187,7 @@
   </dd>
 </dl>
 
-<h3>Med Copays under Health Plan</h3>
+<h5>Med Copays under Health Plan</h5>
 <p>
   This use case allows a member to determine the plan level estimated costs of each of 
   their medications under the drug coverage of their current health plan. The mobile 
@@ -204,7 +204,7 @@
 </p>
 <p>&nbsp;</p>
 
-<h3>Shopping for Health Plans</h3>
+<h5>Shopping for Health Plans</h5>
 <p>
   This use case allows a consumer to compare the drug coverage of several different 
   health plans and determine which plan has the lowest plan level estimated cost, 
@@ -230,7 +230,7 @@
 <img style="width:100%;height:auto;" src="Slide2.jpg" />
 <p>&nbsp;</p>
 
-<h2 id="privacy-considerations">Privacy Considerations</h2>
+<h4 id="privacy-considerations">Privacy Considerations</h4>
 <p>
   Access to the formulary service should not require authentication, and the server should 
   not maintain any records that could associate the consumer with the medication list that 
@@ -247,8 +247,8 @@
   querying a formulary service. 
 </p>
 
-<h2 id="anticipated-client-queries">Anticipated Client Queries</h2>
-<h3 id="Find-all-CoveragePlans"> Find All CoveragePlans </h3> 
+<h4 id="anticipated-client-queries">Anticipated Client Queries</h4>
+<h5 id="Find-all-CoveragePlans"> Find All CoveragePlans </h5> 
 <pre>
   <code>
     GET [base]/List?_profile=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
@@ -260,7 +260,7 @@
   part of a specific plan.
 </p>
 
-<h3 id="Find-a-CoveragePlan-by-planid">Find CoveragePlan by its PlanID</h3> 
+<h5 id="Find-a-CoveragePlan-by-planid">Find CoveragePlan by its PlanID</h5> 
 <p>
   To find the CoveragePlan for a plan with id 'myPlanID':
 </p>
@@ -270,7 +270,7 @@
   </code>
 </pre>
 
-<h3 id="Find-all-FormularyDrugs-in-a-CoveragePlan">Find All FormularyDrugs in a CoveragePlan</h3>
+<h5 id="Find-all-FormularyDrugs-in-a-CoveragePlan">Find All FormularyDrugs in a CoveragePlan</h5>
 <p>
   To find all FormularyDrugs in a CoveragePlan for a plan with id 'myPlanID':
 </p>
@@ -283,9 +283,9 @@
   Alternatively, these FormularyDrugs are also in the array of entries that is part of the List.
 </p>
 
-<h3 id="Find-all-FormularyDrugs-in-a-CoveragePlan-DrugTier">
+<h5 id="Find-all-FormularyDrugs-in-a-CoveragePlan-DrugTier">
   Find All FormularyDrugs in a Specific Tier of CoveragePlan
-</h3>
+</h5>
 <p>
   To find all FormularyDrugs in the GENERIC tier of plan myPlanID:
 </p>
@@ -295,9 +295,9 @@
   </code>
 </pre>
 
-<h3 id="Find-a-FormularyDrugs-by-code-in-a-CoveragePlan">
+<h5 id="Find-a-FormularyDrugs-by-code-in-a-CoveragePlan">
   Find A FormularyDrug by code in a CoveragePlan
-</h3>
+</h5>
 <p>
   To find a FormularyDrug by its RxNorm code within a CoveragePlan:
 </p>
@@ -307,9 +307,9 @@
   </code>
 </pre>
 
-<h3 id="Find-a-FormularyDrugs-by-code-across-all-coverage-plans">
+<h5 id="Find-a-FormularyDrugs-by-code-across-all-coverage-plans">
   Find A FormularyDrug by code across all CoveragePlans
-</h3>
+</h5>
 <p>
   To find a FormularyDrug by its RxNorm code within all CoveragePlans:
 </p>
@@ -319,8 +319,8 @@
   </code>
 </pre>
 
-<h2 id="open-issues">Additional Background and Open Issues</h2>
-<h3 id="presenting-alternative-medications">Presenting Drug Alternatives</h3>
+<h4 id="open-issues">Additional Background and Open Issues</h4>
+<h5 id="presenting-alternative-medications">Presenting Drug Alternatives</h5>
 <p>
   There may be brand or generic alternatives to a particular drug in the formulary.  The 
   QHP formulary information model, does not include drug alternatives. The current 
@@ -329,7 +329,7 @@
   represent equivalence classes among FormularyDrugs using the DrugClass.
 </p>
 
-<h3 id="representing-drug-tiers">Representing Drug Tiers</h3>
+<h5 id="representing-drug-tiers">Representing Drug Tiers</h5>
 <p>
   Drug tiers are not standardized.   The current Implementation Guide provides a defined, 
   but extensible value set for tier identifiers based on the example list in the QHP 
@@ -337,7 +337,7 @@
   for clients of the interface.
 </p>
 
-<h3 id="representing-drug-classifications">Representing Drug Classifications</h3>
+<h5 id="representing-drug-classifications">Representing Drug Classifications</h5>
 <p>
   Within a consumer-facing drug formulary the primary use of drug classification is to 
   enable hierarchical browsing of the formulary contents from a therapeutic disease area 
@@ -349,7 +349,7 @@
   for subsequent standardization.
 </p>
 
-<h3 id="representing-pharmacy-types">Representing Pharmacy Types</h3>
+<h5 id="representing-pharmacy-types">Representing Pharmacy Types</h5>
 <p>
   Pharmacy types are not standardized.   The current Implementation Guide provides a 
   defined value set for tier identifiers based on the example list in the QHP formulary
@@ -358,7 +358,7 @@
   for clients of the interface.
 </p>
 
-<h3 id="provision-of-formulary-ids">Provision of Formulary IDs and Availability of Directory</h3>
+<h5 id="provision-of-formulary-ids">Provision of Formulary IDs and Availability of Directory</h5>
 <p>
   There is no single, authoritative indentifier that can be associated with a formulary 
   (e.g., like NPI numbers identify providers in the United States). How can unique formulary 
@@ -368,12 +368,12 @@
   leveraged.   
 </p>
 
-<h2 id="credits">Credits</h2>
+<h4 id="credits">Credits</h4>
 <p>
 This IG was developed using <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand syntax</a> and the <a href="https://github.com/FHIR/sushi">SUSHI</a> tookit, a free, open source toolchain from the MITRE Corporation.
 </p>
 
-<h2 id="authors">Authors</h2>
+<h4 id="authors">Authors</h4>
 <table>
   <thead>
     <tr>
