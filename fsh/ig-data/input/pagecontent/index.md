@@ -65,9 +65,6 @@
 <p><img style="width: 100%; height: auto;" src="Slide2.jpg" /></p>
 <p>&nbsp;</p>
 <h4 id="privacy-considerations">Privacy Considerations</h4>
-<p>Access to the formulary service should not require authentication, and the server should not maintain any records that could associate the consumer with the medication list that was queried.</p>
-<p>A conformant payer formulary service SHALL NOT require a formulary mobile application to send consumer identifying information in order to query for the list of health plans provided by that payer and the medication costs for each plan, specific to the consumer's set of medications.</p>
-<p>A formulary mobile application SHALL NOT send consumer identifiable information when querying a formulary service.</p>
 <p>The formulary service can potentially be accessed two different ways:</p>
 <ol>
 <li><em data-stringify-type="italic">Authenticated API</em>: Access to the formulary service when integrated with protected&nbsp;health&nbsp;information (PHI) or personally identifiable information (PII) as part of the Patient Access API SHALL be protected through an authorized, authenticated transaction as described in the Da Vinci Health Record Exchange (HRex) FHIR Implementation Guide for the&nbsp;<a class="c-link" href="http://hl7.org/fhir/us/davinci-hrex/2020Sep/security.html" target="_blank" rel="noopener noreferrer" data-stringify-link="http://hl7.org/fhir/us/davinci-hrex/2020Sep/security.html" data-sk="tooltip_parent">September 2020 Ballot</a>.</li>
