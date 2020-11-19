@@ -14,7 +14,7 @@
         "version": "1.0.1",
         "date": "2020-11-11",
         "desc": "Payer Data Exchange (PDex) Drug Formulary, Release 1.0.1 - US Realm STU",
-        "path": "http://hl7.org/fhir/us/davinci-drug-formulary/STU1",
+        "path": "http://hl7.org/fhir/us/davinci-drug-formulary/STU1.0.1",
         "status": "trial-use",
         "sequence": "STU 1",
         "fhirversion": "4.0.1",
