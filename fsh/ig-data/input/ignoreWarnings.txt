@@ -1,4 +1,9 @@
 == Suppressed Messages ==
+# Warnings due to validators inability to validate RxNorm codes from us-core-medication-codes.   These have been manually validated.
+WARNING: MedicationKnowledge/FormularyDrugV3001: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
+WARNING: MedicationKnowledge/FormularyDrugV3002: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
+WARNING: MedicationKnowledge/cmsip9: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
+WARNING: MedicationKnowledge/formularydrugV1002: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
 # All IG-defined examples are validated against correct profile
 INFORMATION: List/CoveragePlanV3001: List: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
 INFORMATION: List/CoveragePlanV3002: List: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
