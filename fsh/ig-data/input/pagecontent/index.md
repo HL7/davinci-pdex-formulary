@@ -116,7 +116,7 @@
 <h5 id="provision-of-formulary-ids">Provision of Formulary IDs and Availability of Directory</h5>
 <p>There is no single, authoritative indentifier that can be associated with a formulary (e.g., like NPI numbers identify providers in the United States). How can unique formulary IDs be provisioned such that they can be implemented consistently by all payers and referenced by other entities (e.g., health plans)? The NCPDP Formulary and Benefits eRx implementation guide requires an identifier for each formulary. Perhaps that can be leveraged.</p>
 <h4 id="credits">Credits</h4>
-<p>This IG was developed using <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand syntax</a> and the <a href="https://github.com/FHIR/sushi">SUSHI</a> tookit, a free, open source toolchain from the MITRE Corporation.</p>
+<p>This IG was developed using <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand syntax</a> and the <a href="https://github.com/FHIR/sushi">SUSHI</a> tookit, a free, open source toolchain from the MITRE Corporation. The capability statements were developed with tools and valuable guidance from Eric Haas.</p>
 <h4 id="authors">Authors</h4>
 <table>
 <thead>
