@@ -158,7 +158,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/StructureDefinition/List",
+                            "definition": "http://hl7.org/fhir/SearchParameter/clinical-identifier",
                             "name": "identifier",
                             "type": "token"
                         },
@@ -350,7 +350,7 @@
     ],
     "status": "active",
     "title": "usdf-server CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/davinci-drug-formularyCapabilityStatement/usdf-server",
+    "url": "http://hl7.org/fhir/us/davinci-drug-formulary/CapabilityStatement/usdf-server",
     "version": "1.0.1",
     "resourceType": "CapabilityStatement"
 }
