@@ -1,4 +1,7 @@
-fsh/build/**
-**/.DS_Store
-**/thumbs.db
-
+ .DS_Store
+Thumbs.db
+/fsh-generated
+/input-cache
+/output
+/template
+/temp

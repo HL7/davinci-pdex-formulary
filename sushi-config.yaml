@@ -6,7 +6,7 @@ id: hl7.fhir.us.davinci-drug-formulary
 canonical: http://hl7.org/fhir/us/davinci-drug-formulary
 name: Formulary
 status: draft
-version: 1.0.1
+version: 1.0.2
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: ci-build
@@ -28,10 +28,7 @@ jurisdiction: urn:iso:std:iso:3166#US
 # │  To use a provided ig-data/package-list.json file, delete the "history" property below.        │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-# ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
-# │  To use a provided ig-data/ig.ini file, delete the "template" property below.                  │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-template: hl7.davinci.template#current
+
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
@@ -83,3 +80,8 @@ resources:
     description: Tylenol Extra Strength 500 MG Oral Tablet
     exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
 
+pages:
+  index.md:
+    title: Home
+  downloads.md:
+    title: Downloads
