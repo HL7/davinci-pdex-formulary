@@ -9,7 +9,7 @@ status: draft
 version: 1.0.1
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: ci-build
+releaseLabel: STU1.0.1
 publisher:
   name: HL7 Pharmacy Working Group
   url: http://www.hl7.org/Special/committees/medication/
