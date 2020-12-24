@@ -1,6 +1,11 @@
 <h3 id="drug-formulary">DaVinci Payer Data Exchange US Drug Formulary</h3>
 <p>This implementation guide defines a FHIR interface to a health insurer's drug formulary information for patients/consumers. A drug formulary is a list of brand-name and generic prescription drugs a health insurer agrees to pay for, at least partially, as part of health insurance coverage. Drug formularies are developed based on the efficacy, safety and cost of drugs. The primary <a href="#use-cases">use cases</a> for this FHIR interface enable consumers/members/patients to understand the costs and alternatives for drugs that have been prescribed, and to compare their drug costs across different insurance plans.</p>
 <p>A key architectural issue that is beyond the scope of this implementation guide is how a user finds the FHIR endpoint for a particular formulary. This implementation guide assumes that the FHIR endpoint is known to the user.</p>
+<h4 id="change-log">Changes since v1.0.1</h4>
+<ul>
+<li>Transition to Sushi 1.0.0 with associated changes to directory structure.</li>
+<li>Caridinality of FormularyDrug.extension.PlanID changed from 1..1 to 1..*.   This reduces the number of formulary drug instances that must be created/maintained. The profile and the drawing have been updated.</li>
+</ul>
 <h4 id="table-of-contents">Table Of Contents</h4>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
