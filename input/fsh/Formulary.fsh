@@ -18,11 +18,7 @@ Id:             usdf-FormularyDrug
 Title:          "Formulary Drug"
 Description:    "Drug information which is part of a formulary."
 * extension contains
-    DrugAlternatives named usdf-DrugAlternatives-extension 0..* and 
-    PriorAuthorization named usdf-PriorAuthorization-extension 0..1 MS and
-    StepTherapyLimit named usdf-StepTherapyLimit-extension 0..1 MS and
-    QuantityLimit named usdf-QuantityLimit-extension 0..1 MS and
-    PlanID named usdf-PlanID-extension 1..* MS and
-    DrugTierID named usdf-DrugTierID-extension 1..1 MS
+    FormularySpecificInfo named usdf-FormularySpecificInfo-extension 1..* and 
+    DrugAlternatives named usdf-DrugAlternatives-extension 0..* 
 * code 1..1 
 * code from  http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (required)

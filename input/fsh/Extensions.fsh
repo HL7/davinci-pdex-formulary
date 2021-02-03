@@ -123,3 +123,13 @@ Description: "A code that describes the coverage status of a drug in a health pl
 * value[x] only CodeableConcept
 * valueCodeableConcept from DrugTierVS (extensible)
 
+Extension: FormularySpecificInfo
+Id: usdf-FormularySpecificInfo-extension
+Title: "Formulary Specific Info"
+Description: "Formulary Specific Information relating to a Formulary Drug"
+* extension contains
+    PriorAuthorization named usdf-PriorAuthorization-extension 0..1 MS and
+    StepTherapyLimit named usdf-StepTherapyLimit-extension 0..1 MS and
+    QuantityLimit named usdf-QuantityLimit-extension 0..1 MS and
+    PlanID named usdf-PlanID-extension 1..* MS and
+    DrugTierID named usdf-DrugTierID-extension 1..1 MS
