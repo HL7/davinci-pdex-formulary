@@ -1,0 +1,46 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "PharmacyTypeCS",
+  "id": "usdf-PharmacyTypeCS",
+  "title": "Codes for types of pharmacies",
+  "description": "Codes for types of Pharmacies. Each payer will have its own controlled vocabulary.",
+  "version": "1.0.1",
+  "url": "http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
+  "concept": [
+    {
+      "code": "1-month-in-retail",
+      "display": "1 month in network retail: 1 Month Supply via in-network retail pharmacy."
+    },
+    {
+      "code": "1-month-out-retail",
+      "display": "1 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
+    },
+    {
+      "code": "1-month-in-mail",
+      "display": "1 month in network mail order: 1 Month Supply via in-network mail order pharmacy."
+    },
+    {
+      "code": "1-month-out-mail",
+      "display": "1 month out of network mail order: 1 Month Supply via out-of-network mail order pharmacy."
+    },
+    {
+      "code": "3-month-in-retail",
+      "display": "3 month in network retail: 3 Month Supply via in-network retail pharmacy."
+    },
+    {
+      "code": "3-month-out-retail",
+      "display": "3 month out of network retail: 3 Month Supply via out-of-network retail pharmacy."
+    },
+    {
+      "code": "3-month-in-mail",
+      "display": "3 month in network mail order: 3 Month Supply via in-network mail order pharmacy."
+    },
+    {
+      "code": "3-month-out-mail",
+      "display": "3 month out of network mail order: 3 Month Supply via out-of-network mail order pharmacy."
+    }
+  ],
+  "count": 8
+}

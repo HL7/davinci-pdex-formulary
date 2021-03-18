@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CopayOptionCS",
+  "id": "usdf-CopayOptionCS",
+  "title": "Codes for qualifier of copay amount",
+  "description": "Codes for qualifier of copay amount",
+  "version": "1.0.1",
+  "url": "http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
+  "concept": [
+    {
+      "code": "after-deductible",
+      "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer is responsible only for the copay (this indicates that this benefit is subject to the deductible)."
+    },
+    {
+      "code": "before-deductible",
+      "display": "Before Deductible: The consumer first pays the copay, and any net remaining allowed charges accrue to the deductible (this indicates that this benefit is subject to the deductible)."
+    },
+    {
+      "code": "no-charge",
+      "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
+    },
+    {
+      "code": "no-charge-after-deductible",
+      "display": "No Charge After Deductible: The consumer first pays the deductible, and after the deductible is met, no copayment is charged (this indicates that this benefit is subject to the deductible)."
+    }
+  ],
+  "count": 4
+}

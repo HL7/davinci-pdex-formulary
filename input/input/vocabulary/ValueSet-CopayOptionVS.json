@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CopayOptionVS",
+  "id": "CopayOptionVS",
+  "title": "Qualifier of copay amount",
+  "description": "Qualifier of copay amount",
+  "version": "1.0.1",
+  "url": "http://hl7.org/fhir/us/davinci-drug-formulary/ValueSet/CopayOptionVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS"
+      }
+    ]
+  }
+}

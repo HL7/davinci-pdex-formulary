@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DrugTierVS",
+  "id": "DrugTierVS",
+  "title": "Drug tier of medication in health plan",
+  "description": "The drug tier of a particular medication in a health plan. The base set are examples. Each plan may have its own controlled vocabulary.",
+  "version": "1.0.1",
+  "url": "http://hl7.org/fhir/us/davinci-drug-formulary/ValueSet/DrugTierVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-DrugTierCS"
+      }
+    ]
+  }
+}

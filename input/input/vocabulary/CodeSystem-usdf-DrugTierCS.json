@@ -1,0 +1,50 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DrugTierCS",
+  "id": "usdf-DrugTierCS",
+  "title": "Codes for medication drug tiers in health plans",
+  "description": "Codes to represent the drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own controlled vocabulary.",
+  "version": "1.0.1",
+  "url": "http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
+  "concept": [
+    {
+      "code": "generic",
+      "display": "Generic: Commonly prescribed generic drugs that cost more than drugs in the ‘preferred generic’ tier."
+    },
+    {
+      "code": "preferred-generic",
+      "display": "Preferred Generic: Commonly prescribed generic drugs."
+    },
+    {
+      "code": "non-preferred-generic",
+      "display": "Non-preferred Generic: Generic drugs that cost more than drugs in ‘generic’ tier."
+    },
+    {
+      "code": "specialty",
+      "display": "Specialty: Drugs used to treat complex conditions like cancer and multiple sclerosis. They can be generic or brand name, and are typically the most expensive drugs on the formulary."
+    },
+    {
+      "code": "brand",
+      "display": "Brand: Brand name drugs that cost more than ‘preferred brand’ drugs."
+    },
+    {
+      "code": "preferred-brand",
+      "display": "Preferred Brand: Brand name drugs"
+    },
+    {
+      "code": "non-preferred-brand",
+      "display": "Non-preferred Brand: Brand name drugs that cost more than ‘brand’ drugs."
+    },
+    {
+      "code": "zero-cost-share-preventative",
+      "display": "Zero cost-share preventative: Preventive medications and products available at no cost."
+    },
+    {
+      "code": "medical-service",
+      "display": "Medical Service: Drugs that must be administered by a clinician or in a facility and may be covered under a medical benefit."
+    }
+  ],
+  "count": 9
+}

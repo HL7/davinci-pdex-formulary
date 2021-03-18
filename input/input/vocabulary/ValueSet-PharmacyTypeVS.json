@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "PharmacyTypeVS",
+  "id": "PharmacyTypeVS",
+  "title": "Type of pharmacies",
+  "description": "Types of pharmacies. Each payer will have its own controlled vocabulary.",
+  "version": "1.0.1",
+  "url": "http://hl7.org/fhir/us/davinci-drug-formulary/ValueSet/PharmacyTypeVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS"
+      }
+    ]
+  }
+}
