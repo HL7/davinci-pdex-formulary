@@ -24,7 +24,11 @@
     {
       "code": "no-charge-after-deductible",
       "display": "No Charge After Deductible: The consumer first pays the deductible, and after the deductible is met, no copayment is charged (this indicates that this benefit is subject to the deductible)."
+    },
+    {
+      "code": "not-applicable",
+      "display": "Deductible is not applicable: Zero-deductible cost sharing to be represented by a co-pay value of 'Not applicable' and co-insurance value of 'No charge'."
     }
   ],
-  "count": 4
+  "count": 5
 }

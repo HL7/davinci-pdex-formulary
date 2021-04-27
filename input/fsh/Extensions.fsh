@@ -41,36 +41,36 @@ Description: "A description of the drug tiers used by the formulary and how thos
 Extension: Network
 Id: usdf-Network-extension
 Title: "Network"
-Description: "Array of Networks within a plan."
+Description: "Array of Networks within a plan.  If a network is not applicable for a plan, enter 'Not applicable' in the value string."
 * value[x] only string
 * value[x] 1..1
 
 Extension: SummaryURL
 Id: usdf-SummaryURL-extension
 Title: "Summary URL"
-Description: "The URL that goes directly to the formulary brochure for the specific standard plan or plan variation."
-* value[x] only string
+Description: "The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.  If the formulary brochure is available in multiple languages, this can also point to a page listing the links for the various different language versions of the document supported by the payer."
+* value[x] only url
 * value[x] 1..1
 
 Extension: FormularyURL
 Id: usdf-FormularyURL-extension
 Title: "Formulary URL"
-Description: "The URL that goes directly to the formulary brochure for the specific standard plan or plan variation."
-* value[x] only string
+Description: "The URL that goes directly to the formulary brochure for the specific standard plan or plan variation.  If the formulary brochure is available in multiple languages, this can also point to a page listing the links for the various different language versions of the document supported by the payer."
+* value[x] only url
 * value[x] 1..1
 
 Extension: EmailPlanContact
 Id: usdf-EmailPlanContact-extension
 Title: "Email Plan Contact"
 Description: "An email address for developers/public to report mistakes in the network and formulary data."
-* value[x] only string
+* value[x] only url
 * value[x] 1..1
 
 Extension: MarketingURL
 Id: usdf-MarketingURL-extension
 Title: "Marketing URL"
-Description: "The URL that goes directly to the plan brochure for the specific standard plan or plan variation."
-* value[x] only string
+Description: "The URL that goes directly to the plan brochure for the specific standard plan or plan variation.  If the plan brochure is available in multiple languages, this can also point to a page listing the links for the various different language versions of the document supported by the payer."
+* value[x] only url
 * value[x] 1..1
 
 Extension: PlanIDType
@@ -105,6 +105,13 @@ Extension: QuantityLimit
 Id: usdf-QuantityLimit-extension
 Title: "Quantity Limit"
 Description: "A Boolean indication of whether the coverage plan imposes a quantity limit on this drug."
+* value[x] 1..1
+* value[x] only boolean
+
+Extension: MailOrder
+Id: usdf-MailOrder-extension
+Title: "Mail Order"
+Description: "A Boolean indication of whether the formulary drug is available by mail order through the associated plan.  The MailOrder value in FormularyDrug overrides the MailOrder value in DrugTierDefinition within the CoveragePlan."
 * value[x] 1..1
 * value[x] only boolean
 

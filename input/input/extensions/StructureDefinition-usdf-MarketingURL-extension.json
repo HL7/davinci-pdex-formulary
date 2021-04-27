@@ -6,7 +6,7 @@
   "name": "MarketingURL",
   "title": "Marketing URL",
   "status": "active",
-  "description": "The URL that goes directly to the plan brochure for the specific standard plan or plan variation.",
+  "description": "The URL that goes directly to the plan brochure for the specific standard plan or plan variation.  If the plan brochure is available in multiple languages, this can also point to a page listing the links for the various different language versions of the document supported by the payer.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -32,7 +32,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Marketing URL",
-        "definition": "The URL that goes directly to the plan brochure for the specific standard plan or plan variation."
+        "definition": "The URL that goes directly to the plan brochure for the specific standard plan or plan variation.  If the plan brochure is available in multiple languages, this can also point to a page listing the links for the various different language versions of the document supported by the payer."
       },
       {
         "id": "Extension.extension",
@@ -50,7 +50,7 @@
         "min": 1,
         "type": [
           {
-            "code": "string"
+            "code": "url"
           }
         ]
       }

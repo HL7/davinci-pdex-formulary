@@ -7,10 +7,10 @@ canonical: http://hl7.org/fhir/us/davinci-drug-formulary
 name: Formulary
 title: DaVinci Payer Data Exchange (PDex) US Drug Formulary
 status: draft
-version: 1.0.1
+version: 1.0.5
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: STU 1.0.1
+releaseLabel: STU Update 1.1.0
 publisher:
   name: HL7 Pharmacy Working Group
   url: http://www.hl7.org/Special/committees/medication/

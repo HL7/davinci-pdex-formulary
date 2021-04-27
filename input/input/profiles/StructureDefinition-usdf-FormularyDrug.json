@@ -126,6 +126,21 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationKnowledge.extension:usdf-MailOrder-extension",
+        "path": "MedicationKnowledge.extension",
+        "sliceName": "usdf-MailOrder-extension",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-MailOrder-extension"
+            ]
+          }
+        ]
+      },
+      {
         "id": "MedicationKnowledge.extension:usdf-PlanID-extension",
         "path": "MedicationKnowledge.extension",
         "sliceName": "usdf-PlanID-extension",

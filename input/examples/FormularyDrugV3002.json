@@ -32,6 +32,10 @@
       "valueBoolean": false
     },
     {
+      "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-MailOrder-extension",
+      "valueBoolean": true
+    },
+    {
       "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-PlanID-extension",
       "valueString": "40308VA0240008"
     }

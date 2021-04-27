@@ -241,19 +241,19 @@
     },
     {
       "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-MarketingURL-extension",
-      "valueString": "https://content.carefirst.com/sbc/D,$0/ D,$0/ D,$0/ D,$0/ D,$0B+"
+      "valueUrl": "https://content.carefirst.com/sbc/D,$0/%20D,$0/%20D,$0/%20D,$0/%20D,$0B+"
     },
     {
       "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyURL-extension",
-      "valueString": "http://url/to/formulary/information"
+      "valueUrl": "http://url/to/formulary/information"
     },
     {
       "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-SummaryURL-extension",
-      "valueString": "http://url/to/formulary/information"
+      "valueUrl": "http://url/to/formulary/information"
     },
     {
       "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-EmailPlanContact-extension",
-      "valueString": "Patrick.Breen@carefirst.com"
+      "valueUrl": "mailto:Patrick.Breen@carefirst.com"
     },
     {
       "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-Network-extension",
