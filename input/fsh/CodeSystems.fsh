@@ -33,7 +33,7 @@ Description: "Codes for qualifier of copay amount"
 * #before-deductible              "Before Deductible: The consumer first pays the copay, and any net remaining allowed charges accrue to the deductible (this indicates that this benefit is subject to the deductible)."
 * #no-charge                      "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
 * #no-charge-after-deductible     "No Charge After Deductible: The consumer first pays the deductible, and after the deductible is met, no copayment is charged (this indicates that this benefit is subject to the deductible)."
-* #not-applicable									"Deductible is not applicable: Zero-deductible cost sharing to be represented by a co-pay value of 'Not applicable' and co-insurance value of 'No charge'."
+* #not-applicable									"Deductible is not applicable: Zero-deductible cost sharing represented by a co-pay value of 'Not applicable' and co-insurance value of 'No charge'."
 
 CodeSystem: CoInsuranceOptionCS
 Id:             usdf-CoinsuranceOptionCS

@@ -7,10 +7,10 @@ canonical: http://hl7.org/fhir/us/davinci-drug-formulary
 name: Formulary
 title: DaVinci Payer Data Exchange (PDex) US Drug Formulary
 status: draft
-version: 1.0.5
+version: 1.0.1
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: STU Update 1.1.0
+releaseLabel: CI Build
 publisher:
   name: HL7 Pharmacy Working Group
   url: http://www.hl7.org/Special/committees/medication/
@@ -33,7 +33,6 @@ jurisdiction: urn:iso:std:iso:3166#US
 # │  To use a provided ig-data/ig.ini file, delete the "template" property below.                  │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 # comment out in sushi v1.3.1
-#template: hl7.davinci.template#current
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
@@ -43,7 +42,7 @@ menu:
   FHIR Artifacts:
     Profiles            : artifacts.html#3
     Extensions          : artifacts.html#6
-    Search Parameters   : artifacts.html#2
+    Search Parameters   : 5_search_parameters.html
     Terminology         : artifacts.html#5
     Capability Statement: CapabilityStatement-usdf-server.html
   Examples      : artifacts.html#7
