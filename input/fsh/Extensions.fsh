@@ -118,7 +118,7 @@ Description: "A Boolean indication of whether the formulary drug is available by
 Extension: PlanID
 Id: usdf-PlanID-extension
 Title: "Plan ID"
-Description: "Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)"
+Description: "Unique, generated Plan ID number, such as HIOS ID for QHPs or Contract Number for Medicare Advantage Plans.  Plan IDs must be unique within each organization that manages their formulary data."
 * value[x] 1..1
 * value[x] only string
 

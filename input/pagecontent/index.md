@@ -35,7 +35,14 @@
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-29965">FHIR-28293</a>:
       <p>
-        TBD
+        Changed the <a href="http://build.fhir.org/ig/HL7/davinci-pdex-formulary/StructureDefinition-usdf-PlanID-extension.html">PlanID extension</a> description to from:
+      </p>
+      <p>
+        <i>“Unique, 14-character, HIOS-generated Plan ID number (Plan IDs must be unique, even across different markets.)”</i>
+      </p>
+      <p>to:</p>
+      <p>
+        <i>“Unique, generated Plan ID number, such as HIOS ID for QHPs or Contract Number for Medicare Advantage Plans.  Plan IDs must be unique within each organization that manages their formulary data.”</i>
       </p>
     </li>
     <li>
@@ -84,6 +91,12 @@
       <a href="https://jira.hl7.org/browse/FHIR-31672">FHIR-31765</a>:
       <p>
         Updated <a href="http://build.fhir.org/ig/HL7/davinci-pdex-formulary/search-parameters">search parameter</a> descriptions to include all of the search parameters in the <a href="http://build.fhir.org/ig/HL7/davinci-pdex-formulary/CapabilityStatement-usdf-server.html">CapabilityStatement</a>.
+      </p>
+    </li>
+    <li>
+      <a href="https://jira.hl7.org/browse/FHIR-32178">FHIR-32178</a>:
+      <p>
+        TBD
       </p>
     </li>
   </ul>

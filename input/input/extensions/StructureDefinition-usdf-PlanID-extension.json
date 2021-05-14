@@ -6,7 +6,7 @@
   "name": "PlanID",
   "title": "Plan ID",
   "status": "active",
-  "description": "Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)",
+  "description": "Unique, generated Plan ID number, such as HIOS ID for QHPs or Contract Number for Medicare Advantage Plans.  Plan IDs must be unique within each organization that manages their formulary data.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -32,7 +32,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Plan ID",
-        "definition": "Unique, 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)"
+        "definition": "Unique, generated Plan ID number, such as HIOS ID for QHPs or Contract Number for Medicare Advantage Plans.  Plan IDs must be unique within each organization that manages their formulary data."
       },
       {
         "id": "Extension.extension",
