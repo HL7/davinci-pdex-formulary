@@ -96,7 +96,7 @@
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-32178">FHIR-32178</a>:
       <p>
-        TBD
+        Added "Charge" to the <a href="http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS">usdf-CopayOptionCS</a> and the <a href="http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS">usdf-CoinsuranceOptionCS</a>code systems to handle drugs that consist of a charge, but are not subject to a deductible.
       </p>
     </li>
   </ul>
