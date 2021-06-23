@@ -1167,12 +1167,5 @@
   "status": "current",
   "mode": "snapshot",
   "title": "BluePreferred PPO HSA Silver $3,000",
-  "date": "2015-06-12",
-  "entry": [
-    {
-      "item": {
-        "reference": "MedicationKnowledge/cmsip9"
-      }
-    }
-  ]
+  "date": "2015-06-12"
 }

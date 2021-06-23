@@ -267,12 +267,5 @@
   "status": "current",
   "mode": "snapshot",
   "title": "Sample Gold Health Plan",
-  "date": "2015-06-12",
-  "entry": [
-    {
-      "item": {
-        "reference": "MedicationKnowledge/FormularyDrugV3001"
-      }
-    }
-  ]
+  "date": "2015-06-12"
 }

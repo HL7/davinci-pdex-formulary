@@ -15,13 +15,7 @@
   "mode": "snapshot",
   "title": "Sample Gold Health Plan",
   "date": "2015-06-12",
-  "entry": [
-    {
-      "item": {
-        "reference": "MedicationKnowledge/formularydrugV1002"
-      }
-    }
-  ],
+  
   "extension": [
     {
       "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-DrugTierDefinition-extension",

@@ -21,7 +21,7 @@
         <td>
           {% capture md_text %}The CoveragePlan resource represents a health plan and contains 
           links to administrative information, a list of formulary drugs covered under that 
-          plan, and a definition of drug tiers and their associated cost-sharing models.
+          plan, and a definition of drug tiers and their associated cost-sharing models. We are considering basing the CoveragePlan profile off of the InsurancePlan resource in a future release instead of the List resource.  This will also resolve the double-reference issue.  The change is under consideration for STU2 ballot, which will happen some time in 2022, so it is not an imminent change.
           {% endcapture %}{{ md_text | markdownify }}
         </td>
       </tr>
