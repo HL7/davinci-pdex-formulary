@@ -1,9 +1,13 @@
-<h4 id="credits">Credits</h4>
+<a name="credits"></a>
+### Credits 
+
 <p>
   This IG was developed using <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand syntax</a> and the <a href="https://github.com/FHIR/sushi">SUSHI</a> tookit, a free, open source toolchain from the MITRE Corporation. The capability statements were developed with tools and valuable guidance from Eric Haas.
 </p>
 
-<h4 id="authors">Authors</h4>
+<a name="authors"></a>
+### Authors
+
 <table>
   <thead>
     <tr>

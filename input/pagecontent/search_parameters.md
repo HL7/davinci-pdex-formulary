@@ -1,5 +1,5 @@
-<h3>Search Parameters Required By This Implementation Guide</h3>
-
+<a name="Search Parameters Required By This Implementation Guide"></a>
+### Search Parameters Required by This Implementation Guide
 <table class="grid">
 	<thead>
 		<tr>
