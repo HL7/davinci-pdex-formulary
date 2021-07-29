@@ -1,6 +1,5 @@
-
-
-<h3>Downloads</h3>
+<a name="Downloads"></a>
+### Downloads 
 <ul>
   <li><a href="full-ig.zip">Full Specification [ZIP]</a></li>
   <li><a href="definitions.json.zip">JSON Definitions [ZIP]</a></li>

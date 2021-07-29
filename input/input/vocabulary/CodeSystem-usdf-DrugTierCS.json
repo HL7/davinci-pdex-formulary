@@ -27,7 +27,7 @@
     },
     {
       "code": "brand",
-      "display": "Brand: Brand name drugs that cost more than ‘preferred brand’ drugs."
+      "display": "Brand"
     },
     {
       "code": "preferred-brand",

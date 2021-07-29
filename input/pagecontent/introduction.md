@@ -1,4 +1,3 @@
-<h4 id="introduction">Introduction</h4>
 <p>
   This implementation guide (IG) introduces two FHIR profiles, along with associated extensions, search parameters, and value sets.
 </p>
@@ -11,7 +10,7 @@
   </li>
 </ul>
 <p>
-  Two searchParameters have also been defined to facilitate the anticipated use cases. See the <a href="#anticipated-client-queries">Anticipated Client Queries</a> section for a description of how to query the CoveragePlan and FormularyDrug profiles in support of the anticipated use cases.
+  Two searchParameters have also been defined to facilitate the anticipated use cases. See the <a href="queries.html">Anticipated Client Queries</a> section for a description of how to query the CoveragePlan and FormularyDrug profiles in support of the anticipated use cases.
 </p>
 <ul>
   <li>
