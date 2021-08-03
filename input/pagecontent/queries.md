@@ -24,7 +24,7 @@
 <p>To find all FormularyDrugs in a CoveragePlan for a plan with id 'myPlanID':</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID 
+    GET [base]/MedicationKnowledge?DrugPlan=myPlanID 
   </code>
 </pre>
 <p>Alternatively, these FormularyDrugs are also in the array of entries that is part of the List.</p>
@@ -33,7 +33,7 @@
 <p>To find all FormularyDrugs in the GENERIC tier of plan myPlanID:</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID&amp;DrugTier=GENERIC
+    GET [base]/MedicationKnowledge?DrugPlan=myPlanID&DrugTier=GENERIC
   </code>
 </pre>
 <a name="Find-a-FormularyDrugs-by-code-in-a-CoveragePlan"></a>
@@ -41,7 +41,7 @@
 <p>To find a FormularyDrug by its RxNorm code within a CoveragePlan:</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID&amp;code=myCode
+    GET [base]/MedicationKnowledge?DrugPlan=myPlanID&code=myCode
   </code>
 </pre>
 <a name="Find-a-FormularyDrugs-by-code-across-all-coverage-plans"></a>
@@ -49,7 +49,7 @@
 <p>To find a FormularyDrug by its RxNorm code within all CoveragePlans:</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;code=myCode
+    GET [base]/MedicationKnowledge?code=myCode
   </code>
 </pre>
 
@@ -67,7 +67,7 @@
 <p>To find all FormularyDrugs in a CoveragePlan for a plan with id 'myPlanID':</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID 
+    GET [base]/MedicationKnowledge?DrugPlan=myPlanID 
   </code>
 </pre>
 <p>Alternatively, these FormularyDrugs are also in the array of entries that is part of the List.</p>
@@ -76,7 +76,7 @@
 <p>To find all FormularyDrugs in the GENERIC tier of plan myPlanID:</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID&amp;DrugTier=GENERIC
+    GET [base]/MedicationKnowledge?DrugPlan=myPlanID&DrugTier=GENERIC
   </code>
 </pre>
 <a name="Find-a-FormularyDrugs-by-code-in-a-CoveragePlan"></a>
@@ -84,7 +84,7 @@
 <p>To find a FormularyDrug by its RxNorm code within a CoveragePlan:</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;DrugPlan=myPlanID&amp;code=myCode
+    GET [base]/MedicationKnowledge?DrugPlan=myPlanID&code=myCode
   </code>
 </pre>
 <a name="Find-a-FormularyDrugs-by-code-across-all-coverage-plans"></a>
@@ -92,6 +92,6 @@
 <p>To find a FormularyDrug by its RxNorm code within all CoveragePlans:</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?=http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug&amp;code=myCode
+    GET [base]/MedicationKnowledge?code=myCode
   </code>
 </pre>
