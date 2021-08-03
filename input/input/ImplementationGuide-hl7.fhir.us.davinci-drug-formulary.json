@@ -90,9 +90,9 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/usdf-SupportContact-extension"
+          "reference": "StructureDefinition/usdf-EmailPlanContact-extension"
         },
-        "name": "Support Contact",
+        "name": "Email Plan Contact",
         "description": "An email address for developers/public to report mistakes in the network and formulary data.",
         "exampleBoolean": false
       },
