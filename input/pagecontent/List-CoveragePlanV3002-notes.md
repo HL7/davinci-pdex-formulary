@@ -259,7 +259,7 @@ test1
 "http://url/to/formulary/information"
 </td></tr>
 <tr><td>extension[4].url</td><td>
-"http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-EmailPlanContact-extension"
+"http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-SupportContact-extension"
 </td></tr>
 <tr><td>extension[4].valueString</td><td>
 "Patrick.Breen@carefirst.com"

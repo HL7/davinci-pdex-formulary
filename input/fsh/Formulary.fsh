@@ -8,9 +8,11 @@ Description:    "A health plan which contains links to administrative informatio
     Network  named usdf-Network-extension  1..* MS and
     SummaryURL named usdf-SummaryURL-extension 1..1 MS and
     FormularyURL named usdf-FormularyURL-extension 0..1 MS and
-    EmailPlanContact named usdf-EmailPlanContact-extension 0..1 MS and
+    SupportContact named usdf-SupportContact-extension 0..1 MS and
     MarketingURL named usdf-MarketingURL-extension 0..1 MS and
     PlanIDType named usdf-PlanIDType-extension 1..1 MS
+
+* code = http://terminology.hl7.org/CodeSystem/v3-ActCode#DRUGPOL
 
 Profile:        FormularyDrug
 Parent:         MedicationKnowledge

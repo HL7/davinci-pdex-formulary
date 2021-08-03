@@ -117,16 +117,16 @@
         "mustSupport": true
       },
       {
-        "id": "List.extension:usdf-EmailPlanContact-extension",
+        "id": "List.extension:usdf-SupportContact-extension",
         "path": "List.extension",
-        "sliceName": "usdf-EmailPlanContact-extension",
+        "sliceName": "usdf-SupportContact-extension",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-EmailPlanContact-extension"
+              "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-SupportContact-extension"
             ]
           }
         ],

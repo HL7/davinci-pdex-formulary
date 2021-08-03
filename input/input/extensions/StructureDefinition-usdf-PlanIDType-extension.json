@@ -6,7 +6,7 @@
   "name": "PlanIDType",
   "title": "Plan ID Type",
   "status": "active",
-  "description": "Type of Plan ID. For all Marketplace plans this should be: HIOS-PLAN-ID",
+  "description": "Type of Plan ID. For all Marketplace plans this should be: HIOS-PLAN-ID. For all other plans this should be: OTHER-PLAN-ID",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

@@ -59,9 +59,9 @@ Description: "The URL that goes directly to the formulary brochure for the speci
 * value[x] only url
 * value[x] 1..1
 
-Extension: EmailPlanContact
-Id: usdf-EmailPlanContact-extension
-Title: "Email Plan Contact"
+Extension: SupportContact
+Id: usdf-SupportContact-extension
+Title: "Support Contact"
 Description: "An email address for developers/public to report mistakes in the network and formulary data."
 * value[x] only url
 * value[x] 1..1
@@ -76,7 +76,7 @@ Description: "The URL that goes directly to the plan brochure for the specific s
 Extension: PlanIDType
 Id: usdf-PlanIDType-extension
 Title: "Plan ID Type"
-Description: "Type of Plan ID. For all Marketplace plans this should be: HIOS-PLAN-ID"
+Description: "Type of Plan ID. For all Marketplace plans this should be: HIOS-PLAN-ID. For all other plans this should be: OTHER-PLAN-ID."
 * value[x] only string
 * value[x] 1..1
 
