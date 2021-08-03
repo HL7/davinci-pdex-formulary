@@ -102,7 +102,7 @@
       "valueUrl": "http://url/to/formulary/information"
     },
     {
-      "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-SupportContact-extension",
+      "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-EmailPlanContact-extension",
       "valueUrl": "mailto:email@address.com"
     },
     {
