@@ -1,4 +1,5 @@
-<h4 id="privacy-considerations">Privacy Considerations</h4>
+<a name="privacy-considerations"></a>
+### Privacy Consideration
 <p>The formulary service can potentially be accessed two different ways:</p>
 <ol>
   <li>
@@ -8,7 +9,8 @@
     <em data-stringify-type="italic">Unauthenticated API</em>: When exchanging formulary data exclusively, which is public information without any PHI or PII, the formulary service MAY also be accessed through an API that does not require authentication or authorization.&nbsp;The formulary server SHALL NOT maintain any records through the unauthenticated API that could associate the consumer with the medication list that was queried.
   </li>
 </ol>
-<h5 id="authenticated">Authenticated</h5>
+<a name="authenticated"></a>
+#### Authenticated 
 <p>
   When accessing data through an authenticated API, the response depends on whether the member is currently enrolled in a plan and whether they are a member of a group.  The following table indicates how the Formulary API should respond to requests when a plan ID is specified and when it is not.
 </p>
@@ -46,7 +48,8 @@
     </tr>
   </tbody>
 </table>
-<h5 id="unauthenticated">Unauthenticated</h5>
+<a name="unauthenticated"></a>
+#### Unauthenticated
 <p>
   When accessing data through an unauthenticated API, the conformant payer formulary service SHALL NOT require a formulary mobile application to send consumer identifying information in order to query for the list of health plans provided by that payer and the medication costs for each plan, specific to the consumer&rsquo;s set of medications.
 </p>

@@ -42,3 +42,4 @@ INFORMATION: ValueSet/CoinsuranceOptionVS: ValueSet: Validate resource against p
 INFORMATION: ValueSet/CopayOptionVS: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/DrugTierVS: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/PharmacyTypeVS: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: StructureDefinition/usdf-MailOrder-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition

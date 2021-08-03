@@ -1,4 +1,5 @@
-<h4 id="disclaimers-assumptions">Disclaimers and Assumptions</h4>
+<a name="disclaimers-assumptions"></a>
+### Disclaimers and Assumptions 
 <ul>
   <li>
     <strong>Drug Formulary includes Plan-Level Data Only</strong>: The intent of this implementation guide is to make the plan-level information regarding formulary content and cost-sharing available through a standard interface for third party applications. Most users will access this data through a third party application. That application should clearly communicate to the user that the cost-sharing information in the formulary may not tell them precisely what they will pay at the pharmacy, and might not reflect their drug benefit. There is an ongoing effort by Carin/NCPDP to develop a Real Time Pharmacy Benefit Check (RTPBC) implementation guide. Future ballots of this implementation guide and the RTPBC implementation guide should be harmonized.

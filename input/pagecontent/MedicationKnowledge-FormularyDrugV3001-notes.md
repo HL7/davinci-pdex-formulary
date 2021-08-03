@@ -29,7 +29,7 @@
 	</tr>
 	<tr>
 		<td>extension[0].valueCodeableConcept.coding[0].display</td>
-		<td>"Brand: Brand name drugs that cost more than ‘preferred brand’ drugs."</td>
+		<td>"Brand"</td>
 	</tr>
 	<tr>
 		<td>extension[1].url</td>

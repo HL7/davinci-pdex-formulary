@@ -1,4 +1,5 @@
-<h4 id="formulary-structure">Formulary Structure</h4>
+<a name="formulary-structure"></a>
+### Formulary Structure
 <p>
   Formularies in the United States are normally published by health insurers on an annual basis, with minor updates during the year. It is critical that health insurers update their published Formularies following these minor updates.
 </p>
@@ -19,7 +20,8 @@
 <p>
   A FormularyDrug represents the availability of a drug with a specific RxNorm code within the tier structure and prescribing constraints of a specific CoveragePlan. If a FHIR endpoint provides data on multiple CoveragePlans, querying for FormularyDrugs by their RxNorm code would return multiple entries. Each of these FormularyDrugs could associate the drug to a distinct DrugTier in the associated CoveragePlan, with plan-specific prescribing constraints. The CoveragePlan PlanID field and the FormularyDrug PlanID extension field associate a FormularyDrug with a CoveragePlan.
 </p>
-<h4 id="expected-users">Expected Users</h4>
+<a name="expected-users"></a>
+### Expected Users 
 <p>
   This Implementation Guide is intended for insurers within the United States. Currently, many insurers make their formularies available to patients using PDFs or drug search forms through their websites. Providing formularies using FHIR may allow patients to more easily comparison-shop between plans and could help insurers educate consumers about the differences between various drug tiers/classes.
 </p>

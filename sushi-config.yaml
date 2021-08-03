@@ -39,28 +39,28 @@ jurisdiction: urn:iso:std:iso:3166#US
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Table of Contents: toc.html
+  Home: index.html
   Specification:
-    Home Page                 : index.html
     Introduction              : introduction.html
     Formulary Structure       : formulary-structure.html
     Expected Users            : users.html
     Use Cases                 : use_cases.html
     Privacy Considerations    : privacy.html
     Anticipated Client Queries: queries.html
-    Open issues               : open_issues.html
-    Examples                  : artifacts.html#7
-    Downloads                 : downloads.html
+    Additional Background and Open Issues: open_issues.html
     Credits                   : credits.html
   FHIR Artifacts:
     Profiles            : artifacts.html#3
     Extensions          : artifacts.html#6
-    Search Parameters   : 5_search_parameters.html
+    Examples            : artifacts.html#7
+    Search Parameters   : search_parameters.html
     Terminology         : artifacts.html#5
     Capability Statement: CapabilityStatement-usdf-server.html
+  Downloads: downloads.html
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
     US Core: new-tab {{site.data.fhir.ver.hl7_fhir_us_core}}
-  History       : http://hl7.org/fhir/us/davinci-drug-formulary/history.html
+  
 
 resources:
   List/covplanV1002:
