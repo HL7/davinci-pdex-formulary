@@ -58,6 +58,24 @@ menu:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
   
 
+
+pages:
+  index.md:
+    title: Home
+  credits.md: 
+    title: Credits
+  use_cases_and_overview.md:
+    title: Use Cases and Overview
+  search_parameters.md:
+    title: Search Parameters
+  queries.md:
+    title: Queries
+  artifacts.html:
+    title: Artifacts Summary
+  downloads.md:
+    title: Downloads
+
+
 resources:
   List/covplanV1002:
     name: Coverage Plan V1002
