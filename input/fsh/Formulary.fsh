@@ -16,7 +16,7 @@ Profile:        FormularyDrug
 Parent:         MedicationKnowledge
 Id:             usdf-FormularyDrug
 Title:          "Formulary Drug"
-Description:    "Drug information which is part of a formulary."
+Description:    "Drug information which is part of a formulary including its RxNorm code, the PlanID of the formulary, information on prescribing limitations, and optionally drug classification and alternatives."
 * extension contains
     DrugAlternatives named usdf-DrugAlternatives-extension 0..* and 
     PriorAuthorization named usdf-PriorAuthorization-extension 0..1 MS and

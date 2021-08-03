@@ -15,7 +15,7 @@ publisher:
   name: HL7 Pharmacy Working Group
   url: http://www.hl7.org/Special/committees/medication/
   email: pharmacy@lists.HL7.org
-description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary STU 1.0.1
+description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary STU 1.0.1 (Pre-1.1.0)
 license: CC0-1.0
 dependencies:
   hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
@@ -38,28 +38,24 @@ jurisdiction: urn:iso:std:iso:3166#US
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Table of Contents: toc.html
   Home: index.html
+  Table of Contents: toc.html
   Specification:
-    Introduction              : introduction.html
-    Formulary Structure       : formulary-structure.html
-    Expected Users            : users.html
-    Use Cases                 : use_cases.html
-    Privacy Considerations    : privacy.html
+    Use Cases                    : use_cases_and_overview.html
+    Formulary Structure          : use_cases_and_overview.html#formulary-structure
+    Access Methods               : use_cases_and_overview.html#access-methods
+    Additional Guidance          : use_cases_and_overview.html#additional-guidance
     Anticipated Client Queries: queries.html
-    Additional Background and Open Issues: open_issues.html
-    Credits                   : credits.html
   FHIR Artifacts:
     Profiles            : artifacts.html#3
     Extensions          : artifacts.html#6
-    Examples            : artifacts.html#7
     Search Parameters   : search_parameters.html
     Terminology         : artifacts.html#5
     Capability Statement: CapabilityStatement-usdf-server.html
+    Examples            : artifacts.html#7
   Downloads: downloads.html
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
-    US Core: new-tab {{site.data.fhir.ver.hl7_fhir_us_core}}
   
 
 resources:
