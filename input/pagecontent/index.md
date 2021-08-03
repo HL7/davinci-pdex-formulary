@@ -73,7 +73,7 @@
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-30933">FHIR-30933</a>:
       <p>
-        Changed the type of <a href="StructureDefinition-usdf-EmailPlanContact-extension.html">EmailPlanContact</a> extension from String to URL.
+        Changed the type of <a href="StructureDefinition-usdf-SupportContact-extension.html">SupportContact</a> extension from String to URL.
       </p>
     </li>
     <li>

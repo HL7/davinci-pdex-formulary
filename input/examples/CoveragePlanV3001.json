@@ -252,7 +252,7 @@
       "valueUrl": "http://url/to/health/plan/information"
     },
     {
-      "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-EmailPlanContact-extension",
+      "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-SupportContact-extension",
       "valueUrl": "mailto:Patrick.Breen@carefirst.com"
     },
     {

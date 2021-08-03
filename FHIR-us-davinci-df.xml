@@ -23,7 +23,7 @@
 <artifact id="SearchParameter/DrugName" key="SearchParameter-DrugName" name="DrugName"/>
 <artifact id="SearchParameter/DrugPlan" key="SearchParameter-DrugPlan" name="DrugPlan"/>
 <artifact id="SearchParameter/DrugTier" key="SearchParameter-DrugTier" name="DrugTier"/>
-<artifact id="StructureDefinition/usdf-EmailPlanContact-extension" key="StructureDefinition-usdf-EmailPlanContact-extension" name="Email Plan Contact"/>
+<artifact deprecated="true" id="StructureDefinition/usdf-EmailPlanContact-extension" key="StructureDefinition-usdf-EmailPlanContact-extension" name="Email Plan Contact"/>
 <artifact id="StructureDefinition/usdf-CoveragePlan" key="StructureDefinition-usdf-CoveragePlan" name="Formulary Coverage Plan"/>
 <artifact id="StructureDefinition/usdf-FormularyDrug" key="StructureDefinition-usdf-FormularyDrug" name="Formulary Drug"/>
 <artifact id="MedicationKnowledge/formularydrugV1002" key="MedicationKnowledge-formularydrugV1002" name="Formulary Drug V1002"/>
@@ -42,6 +42,7 @@
 <artifact id="StructureDefinition/usdf-QuantityLimit-extension" key="StructureDefinition-usdf-QuantityLimit-extension" name="Quantity Limit"/>
 <artifact id="StructureDefinition/usdf-StepTherapyLimit-extension" key="StructureDefinition-usdf-StepTherapyLimit-extension" name="Step Therapy Limit"/>
 <artifact id="StructureDefinition/usdf-SummaryURL-extension" key="StructureDefinition-usdf-SummaryURL-extension" name="Summary URL"/>
+<artifact id="StructureDefinition/usdf-SupportContact-extension" key="StructureDefinition-usdf-SupportContact-extension" name="Support Contact"/>
 <artifact id="ValueSet/PharmacyTypeVS" key="ValueSet-PharmacyTypeVS" name="Type of pharmacies"/>
 <artifact id="CapabilityStatement/usdf-server" key="CapabilityStatement-usdf-server" name="usdf-server CapabilityStatement"/>
 <page key="NA" name="(NA)"/>
