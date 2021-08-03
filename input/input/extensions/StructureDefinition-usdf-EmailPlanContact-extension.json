@@ -32,7 +32,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Email Plan Contact",
-        "definition": "An email address for developers/public to report mistakes in the network and formulary data."
+        "definition": "An email address for developers/public to report mistakes in the network and formulary data. "
       },
       {
         "id": "Extension.extension",
@@ -46,7 +46,7 @@
       },
       {
         "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
+        "path": "Extension.value[x]", 
         "min": 1,
         "type": [
           {
