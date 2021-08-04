@@ -48,7 +48,7 @@ menu:
     Anticipated Client Queries: queries.html
   FHIR Artifacts:
     Profiles            : artifacts.html#3
-    Extensions          : artifacts.html#6
+    Extensions          : artifacts.html#4
     Search Parameters   : search_parameters.html
     Terminology         : artifacts.html#5
     Capability Statement: CapabilityStatement-usdf-server.html
