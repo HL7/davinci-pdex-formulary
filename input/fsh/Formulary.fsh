@@ -11,7 +11,7 @@ Description:    "A health plan which contains links to administrative informatio
     EmailPlanContact named usdf-EmailPlanContact-extension 0..1 MS and
     MarketingURL named usdf-MarketingURL-extension 0..1 MS and
     PlanIDType named usdf-PlanIDType-extension 1..1 MS
-
+* code 1..1 
 * code = http://terminology.hl7.org/CodeSystem/v3-ActCode#DRUGPOL
 
 Profile:        FormularyDrug
