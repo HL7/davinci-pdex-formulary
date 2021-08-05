@@ -16,7 +16,7 @@
   "name": "CoveragePlan",
   "title": "Formulary Coverage Plan",
   "status": "active",
-  "description": "A health plan which contains links to administrative information, a list of formulary drugs covered under that plan, and a definition of drug tiers and their associated cost-sharing models.",
+  "description": "A health plan which contains links to administrative information, a list of formulary drugs covered under that plan, and a definition of drug tiers and their associated cost-sharing models. We are considering basing the CoveragePlan profile off of the InsurancePlan resource in a future release instead of the List resource.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

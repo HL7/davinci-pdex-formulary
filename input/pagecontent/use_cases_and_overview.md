@@ -153,5 +153,5 @@
 <a name="searching-formulary-drugs"></a>
 #### Searching for Formulary Drugs
 <p>
-  As part of the Patient Access API, the client will have the PlanId and can query the MedicationKnowledge with the extension that includes PlanID.When shopping for a health plan, a client system could query for available CoveragePlan resources, then query for FormularyDrugs using the appropriate PlanIDs. Alternatively, a client could search for FormularyDrug resources without a specific PlanID using the parameter MedicationKnowledge?PlanID:missing=false (if the server supports the “:missing” modifier for that search parameter
+  As part of the Patient Access API, the client will have the PlanId and can query the MedicationKnowledge with the extension that includes PlanID.When shopping for a health plan, a client system could query for available CoveragePlan resources, then query for FormularyDrugs using the appropriate PlanIDs. Alternatively, a client could search for FormularyDrug resources without a specific PlanID using the parameter MedicationKnowledge?PlanID:missing=false (if the server supports the “:missing” modifier for that search parameter.
 </p>
