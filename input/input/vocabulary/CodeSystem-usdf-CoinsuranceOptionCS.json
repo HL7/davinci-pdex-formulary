@@ -11,11 +11,11 @@
   "concept": [
     {
       "code": "after-deductible",
-      "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
+      "display": "After Deductible"
     },
     {
       "code": "no-charge",
-      "display": "No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
+      "display": "No Charge"
     },
     {
       "code": "no-charge-after-deductible",

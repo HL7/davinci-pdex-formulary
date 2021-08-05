@@ -16,7 +16,7 @@
           {
             "code": "generic",
             "system": "http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-DrugTierCS",
-            "display": "Generic: Commonly prescribed generic drugs that cost more than drugs in the ‘preferred generic’ tier."
+            "display": "Generic"
           }
         ]
       }

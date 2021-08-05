@@ -28,7 +28,7 @@ test1
 #generic
 </td></tr>
 <tr><td>extension[0].extension[0].valueCodeableConcept.coding[0].display</td><td>
-"Generic: Commonly prescribed generic drugs that cost more than drugs in the ‘preferred generic’ tier."
+"Generic"
 </td></tr>
 <tr><td>extension[0].extension[1].url</td><td>
 "mailOrder"
@@ -49,7 +49,7 @@ test1
 #1-month-in-retail
 </td></tr>
 <tr><td>extension[0].extension[2].extension[0].valueCodeableConcept.coding[0].display</td><td>
-"1 month in network retail: 1 Month Supply via in-network retail pharmacy."
+"1 month in network retail"
 </td></tr>
 <tr><td>extension[0].extension[2].extension[1].url</td><td>
 "copayAmount"
@@ -67,7 +67,7 @@ test1
 #before-deductible
 </td></tr>
 <tr><td>extension[0].extension[2].extension[2].valueCodeableConcept.coding[0].display</td><td>
-"Before Deductible: The consumer first pays the copay, and any net remaining allowed charges accrue to the deductible (this indicates that this benefit is subject to the deductible)."
+"Before Deductible"
 </td></tr>
 <tr><td>extension[0].extension[2].extension[3].url</td><td>
 "coinsuranceRate"
@@ -85,7 +85,7 @@ test1
 #after-deductible
 </td></tr>
 <tr><td>extension[0].extension[2].extension[4].valueCodeableConcept.coding[0].display</td><td>
-"After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
+"After Deductible"
 </td></tr>
 <tr><td>extension[0].extension[3].url</td><td>
 "costSharing"
@@ -100,7 +100,7 @@ test1
 #1-month-out-retail
 </td></tr>
 <tr><td>extension[0].extension[3].extension[0].valueCodeableConcept.coding[0].display</td><td>
-"1 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
+"1 month out of network retail"
 </td></tr>
 <tr><td>extension[0].extension[3].extension[1].url</td><td>
 "copayAmount"
@@ -118,7 +118,7 @@ test1
 #no-charge
 </td></tr>
 <tr><td>extension[0].extension[3].extension[2].valueCodeableConcept.coding[0].display</td><td>
-"No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
+"No Charge"
 </td></tr>
 <tr><td>extension[0].extension[3].extension[3].url</td><td>
 "coinsuranceRate"
@@ -136,7 +136,7 @@ test1
 #after-deductible
 </td></tr>
 <tr><td>extension[0].extension[3].extension[4].valueCodeableConcept.coding[0].display</td><td>
-"After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
+"After Deductible"
 </td></tr>
 <tr><td>extension[0].extension[4].url</td><td>
 "costSharing"
@@ -151,7 +151,7 @@ test1
 #3-month-in-retail
 </td></tr>
 <tr><td>extension[0].extension[4].extension[0].valueCodeableConcept.coding[0].display</td><td>
-"3 month in network retail: 3 Month Supply via in-network retail pharmacy."
+"3 month in network retail"
 </td></tr>
 <tr><td>extension[0].extension[4].extension[1].url</td><td>
 "copayAmount"
@@ -169,7 +169,7 @@ test1
 #no-charge
 </td></tr>
 <tr><td>extension[0].extension[4].extension[2].valueCodeableConcept.coding[0].display</td><td>
-"No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
+"No Charge"
 </td></tr>
 <tr><td>extension[0].extension[4].extension[3].url</td><td>
 "coinsuranceRate"
@@ -187,7 +187,7 @@ test1
 #after-deductible
 </td></tr>
 <tr><td>extension[0].extension[4].extension[4].valueCodeableConcept.coding[0].display</td><td>
-"After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
+"After Deductible"
 </td></tr>
 <tr><td>extension[0].extension[5].url</td><td>
 "costSharing"
@@ -202,7 +202,7 @@ test1
 #3-month-out-retail
 </td></tr>
 <tr><td>extension[0].extension[5].extension[0].valueCodeableConcept.coding[0].display</td><td>
-"3 month out of network retail: 3 Month Supply via out-of-network retail pharmacy."
+"3 month out of network retail"
 </td></tr>
 <tr><td>extension[0].extension[5].extension[1].url</td><td>
 "copayAmount"
@@ -220,7 +220,7 @@ test1
 #no-charge
 </td></tr>
 <tr><td>extension[0].extension[5].extension[2].valueCodeableConcept.coding[0].display</td><td>
-"No Charge: No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
+"No Charge"
 </td></tr>
 <tr><td>extension[0].extension[5].extension[3].url</td><td>
 "coinsuranceRate"
@@ -238,7 +238,7 @@ test1
 #after-deductible
 </td></tr>
 <tr><td>extension[0].extension[5].extension[4].valueCodeableConcept.coding[0].display</td><td>
-"After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
+"After Deductible"
 </td></tr>
 <tr><td>extension[1].url</td><td>
 "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-MarketingURL-extension"

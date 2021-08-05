@@ -62,7 +62,7 @@ Description: "The URL that goes directly to the formulary brochure for the speci
 Extension: EmailPlanContact
 Id: usdf-EmailPlanContact-extension
 Title: "Email Plan Contact"
-Description: "An email address for developers/public to report mistakes in the network and formulary data. FHIR URL type can be a web-url or an e-mail address. "
+Description: "An email address for developers/public to report mistakes in the network and formulary data. FHIR URL type can be a web-url or an e-mail address."
 * value[x] only url
 * value[x] 1..1
 

@@ -29,7 +29,7 @@
 	</tr>
 	<tr>
 		<td>extension[0].valueCodeableConcept.coding[0].display</td>
-		<td>"Generic: Commonly prescribed generic drugs that cost more than drugs in the ‘preferred generic’ tier."</td>
+		<td>"Generic"</td>
 	</tr>
 	<tr>
 		<td>extension[1].url</td>

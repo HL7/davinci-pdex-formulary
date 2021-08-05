@@ -85,7 +85,7 @@
 	</tr>
 	<tr>
 		<td>extension[0].extension[2].extension[0].valueCodeableConcept.coding[0].display</td>
-		<td>"1 month in network retail: 1 Month Supply via in-network retail pharmacy."</td>
+		<td>"1 month in network retail"</td>
 	</tr>
 	<tr>
 		<td>extension[0].extension[2].extension[1].url</td>
@@ -117,7 +117,7 @@
 	</tr>
 	<tr>
 		<td>extension[0].extension[2].extension[3].valueCodeableConcept.coding[0].display</td>
-		<td>"After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer is responsible only for the copay (this indicates that this benefit is subject to the deductible)."</td>
+		<td>"After Deductible"</td>
 	</tr>
 	<tr>
 		<td>extension[0].extension[2].extension[4].url</td>
@@ -133,7 +133,7 @@
 	</tr>
 	<tr>
 		<td>extension[0].extension[2].extension[4].valueCodeableConcept.coding[0].display</td>
-		<td>"After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."</td>
+		<td>"After Deductible"</td>
 	</tr>
 	<tr>
 		<td>extension[1].url</td>

@@ -6,15 +6,6 @@
     ]
   },
   "id": "covplanV1002",
-  "identifier": [
-    {
-      "value": "HIOS-PLAN-ID"
-    }
-  ],
-  "status": "current",
-  "mode": "snapshot",
-  "title": "Sample Gold Health Plan",
-  "date": "2015-06-12",
   
   "extension": [
     {
@@ -46,7 +37,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS",
                     "code": "1-month-in-retail",
-                    "display": "1 month in network retail: 1 Month Supply via in-network retail pharmacy."
+                    "display": "1 month in network retail"
                   }
                 ]
               }
@@ -68,7 +59,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-CopayOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer is responsible only for the copay (this indicates that this benefit is subject to the deductible)."
+                    "display": "After Deductible"
                   }
                 ]
               }
@@ -80,7 +71,7 @@
                   {
                     "system": "http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-CoinsuranceOptionCS",
                     "code": "after-deductible",
-                    "display": "After Deductible: The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
+                    "display": "After Deductible"
                   }
                 ]
               }
@@ -113,5 +104,23 @@
       "url": "http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-PlanIDType-extension",
       "valueString": "HIOS-PLAN-ID"
     }
-  ]
+  ],
+  "identifier": [
+    {
+      "value": "HIOS-PLAN-ID"
+    }
+  ],
+  "status": "current",
+  "mode": "snapshot",
+  "title": "Sample Gold Health Plan",
+  "code": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "DRUGPOL",
+        "display": "drug policy"
+      }
+    ]
+  },
+  "date": "2015-06-12"
 }

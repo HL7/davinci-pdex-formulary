@@ -11,11 +11,11 @@
   "concept": [
     {
       "code": "1-month-in-retail",
-      "display": "1 month in network retail: 1 Month Supply via in-network retail pharmacy."
+      "display": "1 month in network retail"
     },
     {
       "code": "1-month-out-retail",
-      "display": "1 month out of network retail: 1 Month Supply via out-of-network retail pharmacy."
+      "display": "1 month out of network retail"
     },
     {
       "code": "1-month-in-mail",
@@ -27,11 +27,11 @@
     },
     {
       "code": "3-month-in-retail",
-      "display": "3 month in network retail: 3 Month Supply via in-network retail pharmacy."
+      "display": "3 month in network retail"
     },
     {
       "code": "3-month-out-retail",
-      "display": "3 month out of network retail: 3 Month Supply via out-of-network retail pharmacy."
+      "display": "3 month out of network retail"
     },
     {
       "code": "3-month-in-mail",
