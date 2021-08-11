@@ -8,7 +8,7 @@
 </p>
 <pre>
   <code>
-    GET [base]/List?code=http://terminology.hl7.org/CodeSystem/v3-ActCode#DRUGPOL
+    GET [base]/List?code=http://terminology.hl7.org/CodeSystem/v3-ActCode|DRUGPOL
   </code>
 </pre>
 <a name="Find-a-CoveragePlan-by-planid"></a>
@@ -16,7 +16,7 @@
 <p>To find the CoveragePlan for a plan with id 'myPlanID':</p>
 <pre>
   <code>
-    GET [base]/List?code=http://terminology.hl7.org/CodeSystemv3-ActCode#DRUGPOL
+    GET [base]/List?code=http://terminology.hl7.org/CodeSystemv3-ActCode|DRUGPOL
   </code>
 </pre>
 <a name="Find-all-FormularyDrugs-in-a-CoveragePlan"></a>
