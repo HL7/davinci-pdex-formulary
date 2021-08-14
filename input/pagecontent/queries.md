@@ -16,7 +16,7 @@
 <p>To find the CoveragePlan for a plan with id 'myPlanID':</p>
 <pre>
   <code>
-    GET [base]/List?code=http://terminology.hl7.org/CodeSystemv3-ActCode|DRUGPOL
+    GET [base]/List?code=http://terminology.hl7.org/CodeSystemv3-ActCode|DRUGPOL&identifier=myPlanID
   </code>
 </pre>
 <a name="Find-all-FormularyDrugs-in-a-CoveragePlan"></a>
@@ -30,10 +30,10 @@
 <p>Alternatively, these FormularyDrugs are also in the array of entries that is part of the List.</p>
 <a name="Find-all-FormularyDrugs-in-a-CoveragePlan-DrugTier"></a>
 #### Find all FormularyDrugs in a Specific Tier of CoveragePlan
-<p>To find all FormularyDrugs in the GENERIC tier of plan myPlanID:</p>
+<p>To find all FormularyDrugs in the generic tier of plan myPlanID:</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?DrugPlan=myPlanID&DrugTier=GENERIC
+    GET [base]/MedicationKnowledge?DrugPlan=myPlanID&DrugTier=generic
   </code>
 </pre>
 <a name="Find-a-FormularyDrugs-by-code-in-a-CoveragePlan"></a>

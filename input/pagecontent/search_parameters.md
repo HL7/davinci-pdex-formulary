@@ -72,7 +72,7 @@
     Search parameters for a particular resource can be used in any combination.
   </li>
   <li>
-    DrugName, DrugPlan, and DrugTier will be changed to lower-case 'drug-name', 'drug-plan', and 'drug-tier' in a future release.  This issue will be addressed more comprehensively for a future release under a separate ticket. We will need provide guidance that this will change in a future release such that only the lower-case parameters will be allowed.  This will probably be an STU2 ballot change, which will happen some time in 2022.
+    Search parameters, such as DrugName, DrugPlan, and DrugTier, will be changed in a future version of this Implementation Guide to be compliant with FHIR best practices of lower-case parameter names, like 'drug-name', 'drug-plan', and 'drug-tier'.
   </li>
 </ul>	
 </p>

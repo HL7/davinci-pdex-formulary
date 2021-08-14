@@ -2,7 +2,7 @@ Profile:        CoveragePlan
 Parent:         List
 Id:             usdf-CoveragePlan
 Title:          "Formulary Coverage Plan"
-Description:    "A health plan which contains links to administrative information, a list of formulary drugs covered under that plan, and a definition of drug tiers and their associated cost-sharing models. We are considering basing the CoveragePlan profile off of the InsurancePlan resource in a future release instead of the List resource."
+Description:    "A health plan which contains links to administrative information, a list of formulary drugs covered under that plan, and a definition of drug tiers and their associated cost-sharing models."
 * extension contains
     DrugTierDefinition named usdf-DrugTierDefinition-extension 1..* MS and
     Network  named usdf-Network-extension  1..* MS and
@@ -13,6 +13,8 @@ Description:    "A health plan which contains links to administrative informatio
     PlanIDType named usdf-PlanIDType-extension 1..1 MS
 * code 1..1 
 * code = http://terminology.hl7.org/CodeSystem/v3-ActCode#DRUGPOL
+
+
 
 Profile:        FormularyDrug
 Parent:         MedicationKnowledge

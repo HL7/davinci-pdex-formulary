@@ -40,7 +40,7 @@
       </p>
     </li>
     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-29965">FHIR-28293</a>:
+      <a href="https://jira.hl7.org/browse/FHIR-28293">FHIR-28293</a>:
       <p>
         Changed the <a href="StructureDefinition-usdf-PlanID-extension.html">PlanID extension</a> description to from:
       </p>
@@ -121,7 +121,7 @@
      <li>
       <a href="https://jira.hl7.org/browse/FHIR-31684">FHIR-31684</a>:
       <p>
-        Guidance was added to <a href="use_cases_and_overview.html#searching-for-formulary-drugs">Additional Guidance</a> to state "As part of the Patient Access API, the client will have the PlanId and can query the MedicationKnowledge with the extension that includes PlanID.When shopping for a health plan, a client system could query for available CoveragePlan resources, then query for FormularyDrugs using the appropriate PlanIDs. Alternatively, a client could search for FormularyDrug resources without a specific PlanID using the parameter MedicationKnowledge?PlanID:missing=false (if the server supports the “:missing” modifier for that search parameter."
+        Guidance was added to <a href="use_cases_and_overview.html#searching-for-formulary-drugs">Additional Guidance</a> regarding searching for FormularyDrugs with know PlanIDs and without.
       </p>
     </li>
     <li>
@@ -133,7 +133,7 @@
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-32178">FHIR-32178</a>:
       <p>
-        Added "Charge" to the <a href="CodeSystem-usdf-CopayOptionCS.html">usdf-CopayOptionCS</a> and the <a href="CodeSystem-usdf-CoinsuranceOptionCS.html">usdf-CoinsuranceOptionCS</a>code systems to handle drugs that consist of a charge, but are not subject to a deductible.
+        Added "charge" to the <a href="CodeSystem-usdf-CopayOptionCS.html">usdf-CopayOptionCS</a> and the <a href="CodeSystem-usdf-CoinsuranceOptionCS.html">usdf-CoinsuranceOptionCS</a>code systems to handle drugs that consist of a charge, but are not subject to a deductible.
       </p>
     </li>
     <li>
@@ -145,7 +145,7 @@
      <li>
       <a href="https://jira.hl7.org/browse/FHIR-32625">FHIR-32625</a>:
       <p>
-        Chanegs were implemented to improve the navigation by updating the <a href="toc.html">Table of Contents</a> and the specification menu.
+        Chanegs were implemented to improve the navigation by updating the <a href="toc.html">Table of Contents</a>, the specification menu, and page design.
       </p>
     </li>
      <li>
