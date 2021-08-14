@@ -33,6 +33,12 @@
     <b>The following issues are addressed in this release:</b>
   </p>
   <ul>
+     <li>
+      <a href="https://jira.hl7.org/browse/FHIR-23127">FHIR-23127</a>:
+      <p>
+        The official FHIR IG template- PDex Formulary #47 has been implemented. 
+      </p>
+    </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-29965">FHIR-28293</a>:
       <p>
@@ -73,13 +79,31 @@
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-30933">FHIR-30933</a>:
       <p>
-        Changed the type of <a href="StructureDefinition-usdf-EmailPlanContact-extension.html">EmailPlanContact</a> extension from String to URL.
+        Changed the type of <a href="StructureDefinition-usdf-EmailPlanContact-extension.html">EmailPlanContact</a> extension from String to URL. We also added narrative to <a href="StructureDefinition-usdf-EmailPlanContact-extension.html">EmailPlanContact</a> that a FHIR URL type can be a web-url or an email address. 
+      </p>
+    </li>
+     <li>
+      <a href="https://jira.hl7.org/browse/FHIR-31031">FHIR-31031</a>:
+      <p>
+        Since _profile search parameter is not required for <a href="queries.html#anticipated-client-queries">anticipated client queries</a>, we removed the "_profile" search paramteter for the Medication Knowledge and List resouce examples.
+      </p>
+    </li>
+    <li>
+      <a href="https://jira.hl7.org/browse/FHIR-31037">FHIR-31037</a>:
+      <p>
+        The CoveragePlan PlanIDType extension was not defined for non-HIOS plans so we included narrative in <a href="StructureDefinition-usdf-PlanIDType-extension.html">Plan ID Type</a>, to include "For all other plans this should be: OTHER-PLAN-ID as part of the definition. 
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-31073">FHIR-31073</a>:
       <p>
         Added guidance for behavior for <a href="use_cases_and_overview.html#authenticated">authenticated member access</a>, when the member has already selected a plan or not, when they belong to a plan group or not.
+      </p>
+    </li>
+     <li>
+      <a href="https://jira.hl7.org/browse/FHIR-31591">FHIR-31591</a>:
+      <p>
+        Changed the code display in <a href="MedicationKnowledge-cmsip9.html">Formulary Drug cmspi9</a>, to "doxepin hydrochloride 50 MG/ML Topical Cream" to match the given code of #1000091.
       </p>
     </li>
     <li>
@@ -89,7 +113,19 @@
       </p>
     </li>
     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-31672">FHIR-31765</a>:
+      <a href="https://jira.hl7.org/browse/FHIR-31683">FHIR-31683</a>:
+      <p>
+        We changed List.code to be set to the code DRUGPOL and changed the cardinality to 1..1 in the <a href="StructureDefinition-usdf-CoveragePlan.html#profile">Formulary Coverage Plan</a>. Additionally, in <a href="queries.html#find-coverageplan-by-its-planid">Anticipated Client Queries</a> the queries that reference list now reference the DRUGPOL code.
+      </p>
+    </li>
+     <li>
+      <a href="https://jira.hl7.org/browse/FHIR-31684">FHIR-31684</a>:
+      <p>
+        Guidance was added to <a href="use_cases_and_overview.html#searching-for-formulary-drugs">Additional Guidance</a> to state "As part of the Patient Access API, the client will have the PlanId and can query the MedicationKnowledge with the extension that includes PlanID.When shopping for a health plan, a client system could query for available CoveragePlan resources, then query for FormularyDrugs using the appropriate PlanIDs. Alternatively, a client could search for FormularyDrug resources without a specific PlanID using the parameter MedicationKnowledge?PlanID:missing=false (if the server supports the “:missing” modifier for that search parameter."
+      </p>
+    </li>
+    <li>
+      <a href="https://jira.hl7.org/browse/FHIR-31672">FHIR-31762</a>:
       <p>
         Updated <a href="search_parameters.html">search parameter</a> descriptions to include all of the search parameters in the <a href="CapabilityStatement-usdf-server.html">CapabilityStatement</a>.
       </p>
@@ -98,6 +134,30 @@
       <a href="https://jira.hl7.org/browse/FHIR-32178">FHIR-32178</a>:
       <p>
         Added "Charge" to the <a href="CodeSystem-usdf-CopayOptionCS.html">usdf-CopayOptionCS</a> and the <a href="CodeSystem-usdf-CoinsuranceOptionCS.html">usdf-CoinsuranceOptionCS</a>code systems to handle drugs that consist of a charge, but are not subject to a deductible.
+      </p>
+    </li>
+    <li>
+      <a href="https://jira.hl7.org/browse/FHIR-32622">FHIR-32622</a>:
+      <p>
+        Guidance was added to  <a href="StructureDefinition-usdf-CoveragePlan.html">Formulary Coverage Plan</a> indicating that we are considering basing the CoveragePlan profile off of the InsurancePlan resouce in a future release instead of the List resource.
+      </p>
+    </li>
+     <li>
+      <a href="https://jira.hl7.org/browse/FHIR-32625">FHIR-32625</a>:
+      <p>
+        Chanegs were implemented to improve the navigation by updating the <a href="toc.html">Table of Contents</a> and the specification menu.
+      </p>
+    </li>
+     <li>
+      <a href="https://jira.hl7.org/browse/FHIR-32627">FHIR-32627</a>:
+      <p>
+        Guidance was added to  <a href="search_parameters.html">Search Parameters</a> indicaitng that the search parameters DrugName, DrugPlan, and DrugTier will be changed to lower-case 'drug-name', 'drug-plan', and 'drug-tier' in a future release. 
+      </p>
+    </li>
+     <li>
+      <a href="https://jira.hl7.org/browse/FHIR-32723">FHIR-32723</a>:
+      <p>
+        Several value sets found in <a href="artifacts.html#terminology-code-systems">Terminology: Code Systems</a> were not properly displaying the value and description correctly for "code for qualifier for coinsurance rate", "codes for qualifier of copay amount" and "codes for medicatioin drug tiers in health plans". This has been corrected. The definition column has been updated to no longer be blank and contain the proper information. 
       </p>
     </li>
   </ul>

@@ -13,7 +13,7 @@
 	</tr>
 	<tr>
 		<td>code.coding[0].display</td>
-		<td>"doxepin HCl 5 % Topical Cream"</td>
+		<td>"doxepin hydrochloride 50 MG/ML Topical Cream"</td>
 	</tr>
 	<tr>
 		<td>extension[0].url</td>
