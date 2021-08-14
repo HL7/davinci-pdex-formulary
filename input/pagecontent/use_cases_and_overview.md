@@ -155,8 +155,8 @@
 <p>
   Given the format for the above RxNorm Term Types (SCD, SBD, GPCK, and BPCK), searches on drugs with more than the one component specified in a single DrugName search parameter instance, such as a search with Name + Form, may not yield the desired results. For example, a search for “acetaminophen Tablet”, will not return any results for the above RxNorm Term Types identified above since the format of those types has a strength in between the ingredient and the dose form (e.g. “acetaminophen 500 MG Oral Tablet”).
 </p>
-<p class="stu-note">
-  Note: RxNorm does define Term Types that include only the ingredient and dose form or dose form group, such as SCDF (Semantic Clinical Drug Form), which does have the format of Ingredient + Dose Form (e.g. “acetaminophen Oral Tablet”). These term types, however, are not specific enough to represent a prescribable medication, as they do not incorporate a strength, and therefore are not likely to appear in a formulary.
+<p>
+  <b>Note:</b> RxNorm does define Term Types that include only the ingredient and dose form or dose form group, such as SCDF (Semantic Clinical Drug Form), which does have the format of Ingredient + Dose Form (e.g. “acetaminophen Oral Tablet”). These term types, however, are not specific enough to represent a prescribable medication, as they do not incorporate a strength, and therefore are not likely to appear in a formulary.
 </p>
 
   The [DrugName SearchParameter](SearchParameter-DrugName.html) includes the `multipleAnd` capability, which allows for multiple `DrugName` search parameters within a single query. With this capability it is possible to search by drug name and form. This capability should be used sparingly, as each additional partial string search parameter increases the load on the server. 

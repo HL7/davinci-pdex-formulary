@@ -43,7 +43,7 @@
 <artifact id="StructureDefinition/usdf-StepTherapyLimit-extension" key="StructureDefinition-usdf-StepTherapyLimit-extension" name="Step Therapy Limit"/>
 <artifact id="StructureDefinition/usdf-SummaryURL-extension" key="StructureDefinition-usdf-SummaryURL-extension" name="Summary URL"/>
 <artifact id="ValueSet/PharmacyTypeVS" key="ValueSet-PharmacyTypeVS" name="Type of pharmacies"/>
-<artifact id="CapabilityStatement/usdf-server" key="CapabilityStatement-usdf-server" name="usdf-server CapabilityStatement"/>
+<artifact id="CapabilityStatement/usdf-server" key="CapabilityStatement-usdf-server" name="US Drug Formulary Server Capability Statement"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
