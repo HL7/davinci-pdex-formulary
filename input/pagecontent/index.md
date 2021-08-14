@@ -151,13 +151,25 @@
      <li>
       <a href="https://jira.hl7.org/browse/FHIR-32627">FHIR-32627</a>:
       <p>
-        Guidance was added to  <a href="search_parameters.html">Search Parameters</a> indicaitng that the search parameters DrugName, DrugPlan, and DrugTier will be changed to lower-case 'drug-name', 'drug-plan', and 'drug-tier' in a future release. 
+        Guidance was added to  <a href="search_parameters.html">Search Parameters</a> indicaitng that the search parameters DrugName, DrugPlan, and DrugTier will be changed to more compliant names like: lower-case 'drug-name', 'drug-plan', and 'drug-tier' in a future release. 
       </p>
     </li>
-     <li>
+    <li>
       <a href="https://jira.hl7.org/browse/FHIR-32723">FHIR-32723</a>:
       <p>
         Several value sets found in <a href="artifacts.html#terminology-code-systems">Terminology: Code Systems</a> were not properly displaying the value and description correctly for "code for qualifier for coinsurance rate", "codes for qualifier of copay amount" and "codes for medicatioin drug tiers in health plans". This has been corrected. The definition column has been updated to no longer be blank and contain the proper information. 
+      </p>
+    </li>
+    <li>
+      <a href="https://jira.hl7.org/browse/FHIR-32958">FHIR-32958</a>:
+      <p>
+        Added guidance for searching by <a href="use_cases_and_overview.html#searching-by-drug-names">drug name</a> strings.
+      </p>
+    </li>
+    <li>
+      <a href="https://jira.hl7.org/browse/FHIR-32958">FHIR-32958</a>:
+      <p>
+        Added guidance on <a href="use_cases_and_overview.html#searching-by-drug-names">drug name searching</a> with description of RxNorm term types, formats, and drug names that might appear on a formulary.
       </p>
     </li>
   </ul>
