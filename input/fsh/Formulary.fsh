@@ -59,7 +59,7 @@ This InsurancePlan to support Formulary describes a health insurance offering co
 Profile:        InsuranceDrugPlan
 Parent:         InsurancePlan
 Id:             usdf-InsuranceDrugPlan
-Title:          "Drug Insurance Plan"
+Title:          "Insurance Drug Plan"
 Description:    "The Drug InsurancePlan describes a prescription drug insurance offering comprised of drug benefits including a definition of drug tiers and their associated cost-sharing models and additional information about the plan, such as networks, a coverage area, contact information, etc."
 
 

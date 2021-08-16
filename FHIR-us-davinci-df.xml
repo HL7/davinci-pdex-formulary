@@ -15,7 +15,6 @@
 <artifact id="CodeSystem/usdf-CopayOptionCS" key="CodeSystem-usdf-CopayOptionCS" name="Codes for qualifier of copay amount"/>
 <artifact id="CodeSystem/usdf-PharmacyTypeCS" key="CodeSystem-usdf-PharmacyTypeCS" name="Codes for types of pharmacies"/>
 <artifact id="StructureDefinition/usdf-DrugAlternatives-extension" key="StructureDefinition-usdf-DrugAlternatives-extension" name="Drug Alternatives"/>
-<artifact id="StructureDefinition/usdf-InsuranceDrugPlan" key="StructureDefinition-usdf-InsuranceDrugPlan" name="Drug Insurance Plan"/>
 <artifact id="StructureDefinition/usdf-DrugPlanReference-extension" key="StructureDefinition-usdf-DrugPlanReference-extension" name="Drug Plan Reference"/>
 <artifact id="StructureDefinition/usdf-DrugTierDefinition-extension" key="StructureDefinition-usdf-DrugTierDefinition-extension" name="Drug Tier Definition"/>
 <artifact id="StructureDefinition/usdf-DrugTierID-extension" key="StructureDefinition-usdf-DrugTierID-extension" name="Drug Tier ID"/>
@@ -36,6 +35,7 @@
 <artifact id="Basic/FormularyItem-D1002-1049640" key="Basic-FormularyItem-D1002-1049640" name="FormularyItem-D1002-1049640"/>
 <artifact id="Basic/FormularyItem-D1002-209459" key="Basic-FormularyItem-D1002-209459" name="FormularyItem-D1002-209459"/>
 <artifact id="Basic/FormularyItem-D1002-284520" key="Basic-FormularyItem-D1002-284520" name="FormularyItem-D1002-284520"/>
+<artifact id="StructureDefinition/usdf-InsuranceDrugPlan" key="StructureDefinition-usdf-InsuranceDrugPlan" name="Insurance Drug Plan"/>
 <artifact id="StructureDefinition/usdf-InsurancePlanLocation" key="StructureDefinition-usdf-InsurancePlanLocation" name="Insurance Plan Location"/>
 <artifact id="ValueSet/InsuranceItemTypeVS" key="ValueSet-InsuranceItemTypeVS" name="Insurance item type"/>
 <artifact id="CodeSystem/usdf-InsuranceItemTypeCS" key="CodeSystem-usdf-InsuranceItemTypeCS" name="Insurance item type"/>

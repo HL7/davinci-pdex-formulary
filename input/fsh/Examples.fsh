@@ -88,7 +88,7 @@ Usage: #example
 
 Instance: FormularyItem-D1002-1000091
 InstanceOf: FormlaryItem
-Description: "Formulary Item for Drug Insurance Plan D1002 Drug 1000091"
+Description: "Formulary Item for Insurance Drug Plan D1002 Drug 1000091"
 Usage: #example
 
 * extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
@@ -103,7 +103,7 @@ Usage: #example
 
 Instance: FormularyItem-D1002-1049640
 InstanceOf: FormlaryItem
-Description: "Formulary Item for Drug Insurance Plan D1002 Drug 1049640"
+Description: "Formulary Item for Insurance Drug Plan D1002 Drug 1049640"
 Usage: #example
 
 * extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
@@ -118,7 +118,7 @@ Usage: #example
 
 Instance: FormularyItem-D1002-209459
 InstanceOf: FormlaryItem
-Description: "Formulary Item for Drug Insurance Plan D1002 Drug 209459"
+Description: "Formulary Item for Insurance Drug Plan D1002 Drug 209459"
 Usage: #example
 
 * extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
@@ -132,7 +132,7 @@ Usage: #example
 
 Instance: FormularyItem-D1002-284520
 InstanceOf: FormlaryItem
-Description: "Formulary Item for Drug Insurance Plan D1002 Drug 284520"
+Description: "Formulary Item for Insurance Drug Plan D1002 Drug 284520"
 Usage: #example
 
 * extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
