@@ -6,30 +6,9 @@
 <p>
   A key architectural issue that is beyond the scope of this implementation guide is how a user finds the FHIR endpoint for a particular formulary. This implementation guide assumes that the FHIR endpoint is known to the user.
 </p>
-
+<!--
 <div class="stu-note">
-<!--   <h3>Changes for the STU Update (since v1.0.1 - STU1 Technical Correction)</h3>
-  <p>
-    This proposed STU Update addresses several fixes, technical corrections, errata, and clarifications listed below.  They have been reviewed and voted on by the members of the <a href="https://confluence.hl7.org/display/PHAR">HL7 Pharmacy Work Group</a> which is sponsoring this errata release and reconciliation of comments.
-  </p>
-  <p>
-    <strong>The Peer Review scope for this STU Update only includes the changes listed below.  Interested parties are free to comment on any part of the IG, but those not regarding the issues below will be considered for future versions.  Once peer reviewed and comments are processed, the version will be incremented to an STU Update version 1.1.0.</strong>
-  </p>
-  <p>
-    <strong>To make a comment on the STU Update:</strong>
-    <ol>
-      <li>
-        Create a new Jira tracker (New trackers can be made by clicking on the link in the page footer entitled "Propose a change" and clicking the "Create" button at the top of the Jira page)
-      </li>
-      <li>
-        Select "US Da Vinci PDex Formulary (FHIR)" as the Specification and fill in other relevant information.
-      </li>
-      <li>
-        Include the related Jira issue in the "Related Issues" section on the "Advanced" tab.
-      </li>
-    </ol>
-  </p>
- -->  <p>
+ <p>
     <b>The following issues are addressed in this release:</b>
   </p>
   <ul>
@@ -174,21 +153,28 @@
     </li>
   </ul>
 </div>
-
+-->
 
 <a name="introduction"></a>
 ### Introduction
 <p>
-  This implementation guide (IG) introduces two FHIR profiles, along with associated extensions, search parameters, and value sets.
+  This implementation guide (IG) includes a number of profiles, extensions, search parameters, and value sets.
 </p>
 <ul>
   <li>
-    <strong><a href="StructureDefinition-usdf-CoveragePlan.html">CoveragePlan</a></strong>: The CoveragePlan profile of the FHIR R4 <a href="http://hl7.org/fhir/R4/list.html">List</a> resource provides links to information about the plan and formulary, contact information, a description of the drugTiers and associated cost sharing models of the plan, and a list of FormularyDrugs.
+    <strong><a href="StructureDefinition-usdf-PayerInsurancePlan.html">PayerInsurancePlan</a></strong>: The PayerInsurancePlan profile of the FHIR R4 <a href="http://hl7.org/fhir/R4/insuranceplan.html">InsurancePlan</a> resource defines the top level package of health insurance coverage benefits that a payer offers.
   </li>
   <li>
-    <strong><a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a></strong>: The FormularyDrug profile of the FHIR R4 <a href="http://hl7.org/fhir/medicationknowledge.html">MedicationKnowledge</a> resource provides plan-specific information about a prescribable drug identified by an RxNORM identifier. Cost sharing for the drug are described by reference to a drug tier defined as part of the coverage plan. Extensions to the MedicationKnowledge resource support important search use cases. Due to the immaturity of the MedicationKnowledge resource, it is expected that it will undergo changes, and those changes may require evolution of the FormularyDrug profile.
+    <strong><a href="StructureDefinition-usdf-InsuranceDrugPlan.html">InsuranceDrugPlan</a></strong>: The InsuranceDrugPlan profile of the FHIR R4 <a href="http://hl7.org/fhir/R4/insuranceplan.html">InsurancePlan</a> describes a prescription drug insurance offering comprised of drug benefits including a definition of drug tiers and their associated cost-sharing models and additional information about the plan, such as networks, a coverage area, contact information, etc.
+  </li>
+  <li>
+    <strong><a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a></strong>: The FormularyItem profile of the FHIR R4 <a href="http://hl7.org/fhir/R4/basic.html">Basic</a> describes a drug's relationship to a drug plan, including drug tier, prior authorization requirements, and more. The set of FormuaryItem resrouces associated with a particular drug plan represents the drug plans formulary.
+  </li>
+  <li>
+    <strong><a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a></strong>: The FormularyDrug profile of the FHIR R4 <a href="http://hl7.org/fhir/medicationknowledge.html">MedicationKnowledge</a> resource provides information about a prescribable drug which may be part of a formulary including its RxNorm code, synonyms, and optionally drug classification and alternatives.
   </li>
 </ul>
+<!-- TODO Need nerw search parameters -->
 <p>
   Two searchParameters have also been defined to facilitate the anticipated use cases. See the <a href="queries.html">Anticipated Client Queries</a> section for a description of how to query the CoveragePlan and FormularyDrug profiles in support of the anticipated use cases.
 </p>
@@ -214,7 +200,7 @@
     <strong>Drug Formulary includes Plan-Level Data Only</strong>: The intent of this implementation guide is to make the plan-level information regarding formulary content and cost-sharing available through a standard interface for third party applications. Most users will access this data through a third party application. That application should clearly communicate to the user that the cost-sharing information in the formulary may not tell them precisely what they will pay at the pharmacy, and might not reflect their drug benefit. There is an ongoing effort by Carin/NCPDP to develop a Real Time Pharmacy Benefit Check (RTPBC) implementation guide. Future ballots of this implementation guide and the RTPBC implementation guide should be harmonized.
   </li>
   <li>
-    <strong>The MedicationKnowledge Resource is immature</strong>: When designing this IG, we initially planned to profile Medication.&nbsp; Based on a strong recommendation from the PharmaWG we shifted to profiling Medicationknowledge.&nbsp; &nbsp;The PharmaWG felt that MedicationKnowledge was a better choice, even with its low maturity, since it is more suitable as an artifact and already included some of fields that would be required as extensions to medication (e.g., classification). MedicationKnowledge and FormularyDrug will co-evolve moving forward.
+    <strong>The MedicationKnowledge Resource is immature</strong>: The HL7 Pharmacy WG felt that MedicationKnowledge was the best choice for representing a formulary drug, even with its low maturity, since it is more suitable as an artifact and already included some of fields that would be required as extensions to medication (e.g., classification). MedicationKnowledge and FormularyDrug will co-evolve moving forward.
   </li>
   <li>
     <strong>The formulary endpoint is known to the client</strong>: This IG assumes that the formulary endpoint is known to the client.&nbsp; There is an overarching system architecture issue that is critical to resolve -- how does the client discover the FHIR endpoint of interest.&nbsp;&nbsp;&nbsp;For the purposes of this IG, we consider that problem out of scope.

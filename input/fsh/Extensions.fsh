@@ -1,3 +1,21 @@
+Extension: MemberPlanReference
+Id: usdf-MemberPlan-extension
+Title: "Member Plan Reference"
+Description: "A reference to constituent plans that further define plan benefits."
+
+* value[x] 1..1
+* value[x] only Reference
+* valueReference only Reference(PayerInsurancePlan)
+
+Extension: DrugPlanReference
+Id: usdf-DrugPlanReference-extension
+Title: "Drug Plan Reference"
+Description: "A reference to a drug plan."
+* value[x] only Reference (InsuranceDrugPlan)
+* value[x] 1..1
+
+
+
 Extension: DrugTierDefinition
 Id: usdf-DrugTierDefinition-extension
 Title: "Drug Tier Definition"

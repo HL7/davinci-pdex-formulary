@@ -12,7 +12,7 @@
     <strong>Consumer</strong>: A person who may or may not be a member, who wishes to explore the formulary content and plan-level co-insurance.
   </li>
   <li>
-    <strong>Health Plan</strong>: A provider of drug coverage who publishes their formulary content and plan-level co-insurance information through the Drug Formulary FHIR API.
+    <strong>Health Plan</strong>: A provider of insurance coverage that often includes a drug coverage plan which publishes formulary content and plan-level co-insurance information through the Drug Formulary FHIR API.
   </li>
 </ul>
 
@@ -29,10 +29,10 @@
 <a name="Shopping for Health Plans"></a>
 #### Shopping for Health Plans
 <p>
-  This use case allows a consumer to compare the drug coverage of several different health plans and determine which plan has the lowest plan level estimated cost, personalized to the consumers's set of medications. The mobile application retrieves the consumer's medication list from an electronic health record system where the consumer's patient data is stored. This security and privacy of a patient's access to their health information is beyond the scope of this Implementation Guide. The consumer could also independently maintain their medication list in the mobile application or elsewhere. The mobile application identifies the relevant formulary endpoint through means that are beyond the scope of this implementation guide (see <a href="index.html#disclaimers-and-assumptions">Disclaimers and Assumptions</a>). For each payer, the mobile application queries the payer's formulary service to retrieve the list of health plans provided by that payer. Then, for each plan,the mobile application queries the formulary service to retrieve the plan-level estimated costs specific to the consumer's medication list.
+  This use case allows a consumer to compare the drug coverage of several different health plans and determine which plan has the lowest plan level estimated cost, personalized to the consumers's set of medications. The mobile application retrieves the consumer's medication list from an electronic health record system where the consumer's patient data is stored (outside the scope of this implementation guide). The consumer could also independently maintain their medication list in the mobile application or elsewhere. The mobile application identifies the relevant formulary endpoint through means that are beyond the scope of this implementation guide (see <a href="index.html#disclaimers-and-assumptions">Disclaimers and Assumptions</a>). For each payer, the mobile application queries the payer's formulary service to retrieve the list of health plans provided by that payer. Then, for each plan,the mobile application queries the formulary service to retrieve the plan-level estimated costs specific to the consumer's medication list.
 </p>
 <p>
-  Access to the formulary service should not require authentication, and the server should not maintain any records that could associate the consumer with the medication list that was queried.
+  Non-authenticated access should not maintain any records that could associate a consumer with the medications queried.
 </p>
 <p>&nbsp;</p>
 <p><img style="width: 100%; height: auto;" src="Slide2.jpg" /></p>
@@ -41,7 +41,7 @@
 <a name="formulary-structure"></a>
 ### Formulary Structure
 <p>
-  Formularies in the United States are normally published by health insurers on an annual basis, with minor updates during the year. It is critical that health insurers update their published Formularies following these minor updates.
+  Formularies in the United States are normally published by health insurers on an annual basis, with minor updates during the year. It is critical that health insurers update their published formularies following these minor updates.
 </p>
 <p>
   Insurers regularly administer multiple health insurance and drug coverage plans and each of those plans may have its own formulary.
@@ -53,11 +53,12 @@
   In addition to the drug tier, drugs may also list requirements on the patient (e.g., age or gender) or limitations on prescription (e.g., prior authorization).
 </p>
 <p>
-  This Implementation Guide closely follows the formulary information model of the <a href="https://github.com/CMSgov/QHP-provider-formulary-APIs">formularies for Qualified Health Plans (QHPs) on the federal health insurance marketplace for healthcare.gov</a>. Publishing formularies in the QHP format should be familiar to many payers. Drugs are specified by RxNorm codes of prescribable drugs, as constrained by the <a href="https://build.fhir.org/ig/HL7/US-Core-R4/ValueSet-us-core-medication-codes.html"> US Core Medication Codes value set</a>. The QHP data model mandates specific value sets for some data types (e.g., types of copayments), but leaves value sets for other data types at the discretion of the payer (e.g., drug tier identifiers, pharmacy types). and does not include data that is fairly standard across formularies (drug classifications, alternative drugs). The following object model shows the relationships between the resources in the current IG. The only areas where this Implementation Guide extends beyond the QHP formulary information model is the addition of DrugClass and DrugAlternatives to FormularyDrug, as highlighted in the figure.
+  This Implementation Guide (IG) was signifinicantly influenced by the formulary information model of the <a href="https://github.com/CMSgov/QHP-provider-formulary-APIs">formularies for Qualified Health Plans (QHPs) on the federal health insurance marketplace for healthcare.gov</a>. Publishing formularies in the QHP format should be familiar to many payers. Drugs are specified by RxNorm codes of prescribable drugs, as constrained by the <a href="https://build.fhir.org/ig/HL7/US-Core-R4/ValueSet-us-core-medication-codes.html"> US Core Medication Codes value set</a>. The QHP data model mandates specific value sets for some data types (e.g., types of copayments), but leaves value sets for other data types at the discretion of the payer (e.g., drug tier identifiers, pharmacy types). and does not include data that is fairly standard across formularies (drug classifications, alternative drugs). The following object model shows the relationships between the resources in the current IG. The areas where this Implementation Guide extends beyond the QHP formulary information model is the addition of medicineClassification and relatedMedicationKnowledge alternative.
 </p>
 <p>&nbsp;</p>
-<p><img style="width: 100%; height: auto;" src="formularyQHP.jpg" /></p>
+<p><img style="width: 100%; height: auto;" src="Da Vinci - Formulary STU2 Structure Diagram.png" /></p>
 <p>
+<!-- TODO Needs to bre reworked -->
   A FormularyDrug represents the availability of a drug with a specific RxNorm code within the tier structure and prescribing constraints of a specific CoveragePlan. If a FHIR endpoint provides data on multiple CoveragePlans, querying for FormularyDrugs by their RxNorm code would return multiple entries. Each of these FormularyDrugs could associate the drug to a distinct DrugTier in the associated CoveragePlan, with plan-specific prescribing constraints. The CoveragePlan PlanID field and the FormularyDrug PlanID extension field associate a FormularyDrug with a CoveragePlan.
 </p>
 
