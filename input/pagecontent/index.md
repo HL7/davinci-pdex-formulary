@@ -172,6 +172,12 @@
         Added guidance on <a href="use_cases_and_overview.html#searching-by-drug-names">drug name searching</a> with description of RxNorm term types, formats, and drug names that might appear on a formulary.
       </p>
     </li>
+  <li>
+      <a href="https://jira.hl7.org/browse/FHIR-32959">FHIR-32959</a>:
+      <p>
+        Additional language was added to  <a href="search_parameters.html">Search Parameters</a> to provide additional guidance on what drug name display should be and searching based on drug name.
+      </p>
+    </li>
   </ul>
 </div>
 
