@@ -8,7 +8,7 @@
 </p>
 
 <div class="stu-note">
-<!--   <h3>Changes for the STU Update (since v1.0.1 - STU1 Technical Correction)</h3>
+<h3>Changes for the STU Update (since v1.0.1 - STU1 Technical Correction)</h3>
   <p>
     This proposed STU Update addresses several fixes, technical corrections, errata, and clarifications listed below.  They have been reviewed and voted on by the members of the <a href="https://confluence.hl7.org/display/PHAR">HL7 Pharmacy Work Group</a> which is sponsoring this errata release and reconciliation of comments.
   </p>
@@ -29,16 +29,10 @@
       </li>
     </ol>
   </p>
- -->  <p>
-    <b>The following issues are addressed in this release:</b>
+  <p>
+    <b>The following issues are to be addressed in this release:</b>
   </p>
   <ul>
-     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-23127">FHIR-23127</a>:
-      <p>
-        The official FHIR IG template- PDex Formulary #47 has been implemented. 
-      </p>
-    </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-28293">FHIR-28293</a>:
       <p>
