@@ -6,154 +6,52 @@
 <p>
   A key architectural issue that is beyond the scope of this implementation guide is how a user finds the FHIR endpoint for a particular formulary. This implementation guide assumes that the FHIR endpoint is known to the user.
 </p>
-<!--
+
 <div class="stu-note">
  <p>
     <b>The following issues are addressed in this release:</b>
   </p>
   <ul>
      <li>
-      <a href="https://jira.hl7.org/browse/FHIR-23127">FHIR-23127</a>:
+      <a href="https://jira.hl7.org/browse/FHIR-33181">FHIR-33181</a>:
       <p>
-        The official FHIR IG template- PDex Formulary #47 has been implemented. 
+        Changed CoveragePlan profile from using a List resource to two InsurancePlan profiles; one defining the higher level <a href="StructureDefinition-usdf-PayerInsurancePlan.html">Payer Insurance Plan</a> and the other defining the <a href="StructureDefinition-usdf-InsuranceDrugPlan.html">Insurance Drug Plan</a> which includes a definition of drug tiers and their associated cost-sharing models that are associated with a formulary.
+        This change also addresses:
+        <ul>
+          <li>
+            <a href="https://jira.hl7.org/browse/FHIR-29670">FHIR-29670</a> and <a href="https://jira.hl7.org/browse/FHIR-30923">FHIR-30923</a> - Allowing a Formulary Drug to be referenced by multiple drug plans.
+          </li>
+          <li>
+            <a href="https://jira.hl7.org/browse/FHIR-31038">FHIR-31038</a> - Creating profiles to enable querying plans by plan and type or searching for all drug plans.
+          </li>
+          <li>
+            <a href="https://jira.hl7.org/browse/FHIR-29670">FHIR-29670</a> - Allowing a Formulary Drug to be referenced by multiple drug plans.
+          </li>
+          <li>
+            <a href="https://jira.hl7.org/browse/FHIR-31572">FHIR-31572</a> - Addressing the need to require an element necessary to link resources.
+          </li>
+          <li>
+            <a href="https://jira.hl7.org/browse/FHIR-31673">FHIR-31673</a> - Move the EmailPlanContact extension, which can support an email addess or url to the better fitting element InsurancePlan.contact.
+          </li>
+        </ul>
       </p>
     </li>
     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-28293">FHIR-28293</a>:
+      <a href="https://jira.hl7.org/browse/FHIR-33182">FHIR-33182</a>:
       <p>
-        Changed the <a href="StructureDefinition-usdf-PlanID-extension.html">PlanID extension</a> description to from:
-      </p>
-      <p>
-        <i>“Unique, 14-character, HIOS-generated Plan ID number (Plan IDs must be unique, even across different markets.)”</i>
-      </p>
-      <p>to:</p>
-      <p>
-        <i>“Unique, generated Plan ID number, such as HIOS ID for QHPs or Contract Number for Medicare Advantage Plans.  Plan IDs must be unique within each organization that manages their formulary data.”</i>
+        Created a <a href="StructureDefinition-usdf-FormularyItem.html">Formulary Item profile</a> that links a drug with a drug (formulary) plan and includes the attribues that relate the two. As part of this change, several extensions moved to this profile from the <a href="StructureDefinition-usdf-FormularyDrug.html">Formulary Drug profile</a>.
       </p>
     </li>
     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-29965">FHIR-29965</a>:
+      <a href="https://jira.hl7.org/browse/FHIR-33186">FHIR-33186</a>:
       <p>
-        Added guidance that <a href="StructureDefinition-usdf-MarketingURL-extension.html">CoveragePlan.MarketingURL</a>, <a href="StructureDefinition-usdf-SummaryURL-extension.html">CoveragePlan.SummaryURL</a>, and <a href="StructureDefinition-usdf-FormularyURL-extension.html">CoveragePlan.FormularyURL</a> can point to a page providing links for multiple language options.
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-30412">FHIR-30412</a>:
-      <p>
-        Changed the type of <a href="StructureDefinition-usdf-MarketingURL-extension.html">CoveragePlan.MarketingURL</a>, <a href="StructureDefinition-usdf-SummaryURL-extension.html">CoveragePlan.SummaryURL</a>, and <a href="StructureDefinition-usdf-FormularyURL-extension.html">CoveragePlan.FormularyURL</a> extensions from a String value to a URL value.
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-30924">FHIR-30924</a>:
-      <p>
-        Added "Not applicable" to the <a href="CodeSystem-usdf-CopayOptionCS.html">usdf-CopayOptionCS</a> code system.  Zero-deductible cost sharing is represented by a co-pay value of "Not applicable" and a co-insurance value of "No charge", consistent with updated QHP guidelines.
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-30925">FHIR-30925</a>:
-      <p>
-        Added an optional boolean <a href="StructureDefinition-usdf-MailOrder-extension.html">MailOrder</a> extension to FormularyDrug profile.  The MailOrder value in FormularyDrug overrides the MailOrder value in the <a href="StructureDefinition-usdf-DrugTierDefinition-extension.html">DrugTierDefinition</a> extension for <a href="StructureDefinition-usdf-CoveragePlan.html">CoveragePlan</a>.
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-30933">FHIR-30933</a>:
-      <p>
-        Changed the type of <a href="StructureDefinition-usdf-EmailPlanContact-extension.html">EmailPlanContact</a> extension from String to URL. We also added narrative to <a href="StructureDefinition-usdf-EmailPlanContact-extension.html">EmailPlanContact</a> that a FHIR URL type can be a web-url or an email address. 
-      </p>
-    </li>
-     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-31031">FHIR-31031</a>:
-      <p>
-        Since _profile search parameter is not required for <a href="queries.html#anticipated-client-queries">anticipated client queries</a>, we removed the "_profile" search paramteter for the Medication Knowledge and List resouce examples.
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-31037">FHIR-31037</a>:
-      <p>
-        The CoveragePlan PlanIDType extension was not defined for non-HIOS plans so we included narrative in <a href="StructureDefinition-usdf-PlanIDType-extension.html">Plan ID Type</a>, to include "For all other plans this should be: OTHER-PLAN-ID as part of the definition. 
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-31073">FHIR-31073</a>:
-      <p>
-        Added guidance for behavior for <a href="use_cases_and_overview.html#authenticated">authenticated member access</a>, when the member has already selected a plan or not, when they belong to a plan group or not.
-      </p>
-    </li>
-     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-31591">FHIR-31591</a>:
-      <p>
-        Changed the code display in <a href="MedicationKnowledge-cmsip9.html">Formulary Drug cmspi9</a>, to "doxepin hydrochloride 50 MG/ML Topical Cream" to match the given code of #1000091.
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-31672">FHIR-31672</a>:
-      <p>
-        Added guidance to enter "Not applicable" in the <a href="StructureDefinition-usdf-Network-extension.html">Network</a> extension for a CoveragePlan that has no applicable network associated with it.
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-31683">FHIR-31683</a>:
-      <p>
-        We changed List.code to be set to the code DRUGPOL and changed the cardinality to 1..1 in the <a href="StructureDefinition-usdf-CoveragePlan.html#profile">Formulary Coverage Plan</a>. Additionally, in <a href="queries.html#find-coverageplan-by-its-planid">Anticipated Client Queries</a> the queries that reference list now reference the DRUGPOL code.
-      </p>
-    </li>
-     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-31684">FHIR-31684</a>:
-      <p>
-        Guidance was added to <a href="use_cases_and_overview.html#searching-for-formulary-drugs">Additional Guidance</a> regarding searching for FormularyDrugs with know PlanIDs and without.
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-31672">FHIR-31762</a>:
-      <p>
-        Updated <a href="search_parameters.html">search parameter</a> descriptions to include all of the search parameters in the <a href="CapabilityStatement-usdf-server.html">CapabilityStatement</a>.
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-32178">FHIR-32178</a>:
-      <p>
-        Added "charge" to the <a href="CodeSystem-usdf-CopayOptionCS.html">usdf-CopayOptionCS</a> and the <a href="CodeSystem-usdf-CoinsuranceOptionCS.html">usdf-CoinsuranceOptionCS</a>code systems to handle drugs that consist of a charge, but are not subject to a deductible.
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-32622">FHIR-32622</a>:
-      <p>
-        Guidance was added to  <a href="StructureDefinition-usdf-CoveragePlan.html">Formulary Coverage Plan</a> indicating that we are considering basing the CoveragePlan profile off of the InsurancePlan resouce in a future release instead of the List resource.
-      </p>
-    </li>
-     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-32625">FHIR-32625</a>:
-      <p>
-        Chanegs were implemented to improve the navigation by updating the <a href="toc.html">Table of Contents</a>, the specification menu, and page design.
-      </p>
-    </li>
-     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-32627">FHIR-32627</a>:
-      <p>
-        Guidance was added to  <a href="search_parameters.html">Search Parameters</a> indicaitng that the search parameters DrugName, DrugPlan, and DrugTier will be changed to more compliant names like: lower-case 'drug-name', 'drug-plan', and 'drug-tier' in a future release. 
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-32723">FHIR-32723</a>:
-      <p>
-        Several value sets found in <a href="artifacts.html#terminology-code-systems">Terminology: Code Systems</a> were not properly displaying the value and description correctly for "code for qualifier for coinsurance rate", "codes for qualifier of copay amount" and "codes for medicatioin drug tiers in health plans". This has been corrected. The definition column has been updated to no longer be blank and contain the proper information. 
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-32958">FHIR-32958</a>:
-      <p>
-        Added guidance for searching by <a href="use_cases_and_overview.html#searching-by-drug-names">drug name</a> strings.
-      </p>
-    </li>
-    <li>
-      <a href="https://jira.hl7.org/browse/FHIR-32958">FHIR-32958</a>:
-      <p>
-        Added guidance on <a href="use_cases_and_overview.html#searching-by-drug-names">drug name searching</a> with description of RxNorm term types, formats, and drug names that might appear on a formulary.
+        Created an <a href="StructureDefinition-usdf-InsurancePlanLocation.html">Insurance Plan Location profile</a> for an InsurancePlan to support geolocation.
       </p>
     </li>
   </ul>
+  
 </div>
--->
+
 
 <a name="introduction"></a>
 ### Introduction
@@ -174,7 +72,7 @@
     <strong><a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a></strong>: The FormularyDrug profile of the FHIR R4 <a href="http://hl7.org/fhir/medicationknowledge.html">MedicationKnowledge</a> resource provides information about a prescribable drug which may be part of a formulary including its RxNorm code, synonyms, and optionally drug classification and alternatives.
   </li>
 </ul>
-<!-- TODO Need nerw search parameters -->
+<!-- TODO Need new search parameters 
 <p>
   Two searchParameters have also been defined to facilitate the anticipated use cases. See the <a href="queries.html">Anticipated Client Queries</a> section for a description of how to query the CoveragePlan and FormularyDrug profiles in support of the anticipated use cases.
 </p>
@@ -186,24 +84,26 @@
     <strong><a href="SearchParameter-DrugTier.html">DrugTier</a></strong>: Makes the DrugTier identifier of each FormularyDrug accessible for query
   </li>
 </ul>
-
+-->
 <a name="expected-users"></a>
 ### Expected Users 
 <p>
-  This Implementation Guide is intended for insurers within the United States. Currently, many insurers make their formularies available to patients using PDFs or drug search forms through their websites. Providing formularies using FHIR may allow patients to more easily comparison-shop between plans and could help insurers educate consumers about the differences between various drug tiers/classes.
+  This Implementation Guide is intended for insurers within the United States. Currently, many insurers make their formularies available to patients using PDFs or drug search forms through their websites. Providing formularies using FHIR may allow patients to find alternatives to reduce their medication costs, easily comparison-shop between plans, and could help insurers educate consumers about the differences between various drug tiers/classes.
 </p>
 
 <a name="disclaimers-and-assumptions"></a>
 ### Disclaimers and Assumptions
 <ul>
   <li>
-    <strong>Drug Formulary includes Plan-Level Data Only</strong>: The intent of this implementation guide is to make the plan-level information regarding formulary content and cost-sharing available through a standard interface for third party applications. Most users will access this data through a third party application. That application should clearly communicate to the user that the cost-sharing information in the formulary may not tell them precisely what they will pay at the pharmacy, and might not reflect their drug benefit. There is an ongoing effort by Carin/NCPDP to develop a Real Time Pharmacy Benefit Check (RTPBC) implementation guide. Future ballots of this implementation guide and the RTPBC implementation guide should be harmonized.
+    <strong>Drug Formulary includes Plan-Level Data Only</strong>: The intent of this implementation guide is to make the plan-level information regarding formulary content and cost-sharing available through a standard interface for third party applications. Most users will access this data through a third party application. That application should clearly communicate to the user that the cost-sharing information in the formulary may not tell them precisely what they will pay at the pharmacy, and might not fully reflect their drug benefit.
+    <!-- TODO There is an ongoing effort by Carin/NCPDP to develop a Real Time Pharmacy Benefit Check (RTPBC) implementation guide. Future ballots of this implementation guide and the RTPBC implementation guide should be harmonized.
+    -->
   </li>
   <li>
-    <strong>The MedicationKnowledge Resource is immature</strong>: The HL7 Pharmacy WG felt that MedicationKnowledge was the best choice for representing a formulary drug, even with its low maturity, since it is more suitable as an artifact and already included some of fields that would be required as extensions to medication (e.g., classification). MedicationKnowledge and FormularyDrug will co-evolve moving forward.
+    <strong>The MedicationKnowledge Resource is immature</strong>: The HL7 Pharmacy WG felt that MedicationKnowledge was the best choice for representing a formulary drug, even with its low maturity, since it is more suitable as an artifact and already included some of fields that would be required as extensions to medication (e.g., classification). MedicationKnowledge and FormularyDrug will co-evolve moving forward).
   </li>
   <li>
-    <strong>The formulary endpoint is known to the client</strong>: This IG assumes that the formulary endpoint is known to the client.&nbsp; There is an overarching system architecture issue that is critical to resolve -- how does the client discover the FHIR endpoint of interest.&nbsp;&nbsp;&nbsp;For the purposes of this IG, we consider that problem out of scope.
+    <strong>The formulary endpoint is known to the client</strong>: This IG assumes that the formulary endpoint is known to the client. There is an overarching system architecture issue that is critical to resolve -- how does the client discover the FHIR endpoint of interest. For the purposes of this IG, we consider that problem out of scope.
   </li>
 </ul>
 

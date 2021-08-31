@@ -1,45 +1,45 @@
 == Suppressed Messages ==
 # Warnings due to validators inability to validate RxNorm codes from us-core-medication-codes.   These have been manually validated.
-WARNING: MedicationKnowledge/FormularyDrugV3001: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
-WARNING: MedicationKnowledge/FormularyDrugV3002: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
-WARNING: MedicationKnowledge/cmsip9: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
-WARNING: MedicationKnowledge/formularydrugV1002: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
+#WARNING: MedicationKnowledge/FormularyDrugV3001: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
+#WARNING: MedicationKnowledge/FormularyDrugV3002: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
+#WARNING: MedicationKnowledge/cmsip9: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
+#WARNING: MedicationKnowledge/formularydrugV1002: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
 # All IG-defined examples are validated against correct profile
-INFORMATION: List/CoveragePlanV3001: List: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-INFORMATION: List/CoveragePlanV3002: List: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-INFORMATION: List/CoveragePlanV3004t: List: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-INFORMATION: List/covplanV1002: List: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-INFORMATION: MedicationKnowledge/FormularyDrugV3001: MedicationKnowledge: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
-INFORMATION: MedicationKnowledge/FormularyDrugV3002: MedicationKnowledge: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
-INFORMATION: MedicationKnowledge/cmsip9: MedicationKnowledge: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
-INFORMATION: MedicationKnowledge/formularydrugV1002: MedicationKnowledge: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+#INFORMATION: List/CoveragePlanV3001: List: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+#INFORMATION: List/CoveragePlanV3002: List: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+#INFORMATION: List/CoveragePlanV3004t: List: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+#INFORMATION: List/covplanV1002: List: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
+#INFORMATION: MedicationKnowledge/FormularyDrugV3001: MedicationKnowledge: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+#INFORMATION: MedicationKnowledge/FormularyDrugV3002: MedicationKnowledge: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+#INFORMATION: MedicationKnowledge/cmsip9: MedicationKnowledge: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
+#INFORMATION: MedicationKnowledge/formularydrugV1002: MedicationKnowledge: Validate resource against profile http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
 # All Standard FHIR resources are validated against correct profile 
-INFORMATION: ImplementationGuide/hl7.fhir.us.davinci-drug-formulary: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
-INFORMATION: StructureDefinition/usdf-DrugAlternatives-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-DrugTierDefinition-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-DrugTierID-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-EmailPlanContact-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-FormularyURL-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-MarketingURL-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-Network-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-PlanID-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-PlanIDType-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-PriorAuthorization-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-QuantityLimit-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-StepTherapyLimit-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-SummaryURL-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-CoveragePlan: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/usdf-FormularyDrug: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: CapabilityStatement/usdf-server: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
-INFORMATION: SearchParameter/DrugName: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/DrugPlan: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/DrugTier: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: CodeSystem/usdf-CoinsuranceOptionCS: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/usdf-CopayOptionCS: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/usdf-DrugTierCS: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/usdf-PharmacyTypeCS: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: ValueSet/CoinsuranceOptionVS: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/CopayOptionVS: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/DrugTierVS: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/PharmacyTypeVS: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: StructureDefinition/usdf-MailOrder-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: ImplementationGuide/hl7.fhir.us.davinci-drug-formulary: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+#INFORMATION: StructureDefinition/usdf-DrugAlternatives-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-DrugTierDefinition-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-DrugTierID-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-EmailPlanContact-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-FormularyURL-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-MarketingURL-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-Network-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-PlanID-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-PlanIDType-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-PriorAuthorization-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-QuantityLimit-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-StepTherapyLimit-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-SummaryURL-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-CoveragePlan: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: StructureDefinition/usdf-FormularyDrug: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+#INFORMATION: CapabilityStatement/usdf-server: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+#INFORMATION: SearchParameter/DrugName: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+#INFORMATION: SearchParameter/DrugPlan: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+#INFORMATION: SearchParameter/DrugTier: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+#INFORMATION: CodeSystem/usdf-CoinsuranceOptionCS: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+#INFORMATION: CodeSystem/usdf-CopayOptionCS: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+#INFORMATION: CodeSystem/usdf-DrugTierCS: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+#INFORMATION: CodeSystem/usdf-PharmacyTypeCS: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+#INFORMATION: ValueSet/CoinsuranceOptionVS: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+#INFORMATION: ValueSet/CopayOptionVS: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+#INFORMATION: ValueSet/DrugTierVS: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+#INFORMATION: ValueSet/PharmacyTypeVS: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+#INFORMATION: StructureDefinition/usdf-MailOrder-extension: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition

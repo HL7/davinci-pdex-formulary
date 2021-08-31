@@ -7,7 +7,7 @@
 
 <a name="authors"></a>
 ### Authors
-
+<!-- TODO - Update, include influential parties like Kate Dech and Dan fro Primae Therapeutics? Eric ?-->
 <table>
   <thead>
     <tr>

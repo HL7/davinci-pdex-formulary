@@ -1,0 +1,221 @@
+// --------------------- Insurance Plan 1002 --------------------- 
+
+Instance: PayerInsurancePlanA1002
+InstanceOf: PayerInsurancePlan
+Description: "Payer Insurance Plan A1002"
+Usage: #example
+
+* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+* meta.profile = Canonical(PayerInsurancePlan) 
+
+* extension[DrugPlanReference].valueReference = Reference(InsuranceDrugPlanD1002)
+
+//* contained[0] = PayerInsurancePlanA1002-MarketingURL
+
+* identifier.value = "A1002"
+* status = #active
+
+* type = $PlanNetInsuranceProductTypeCS#mediadv
+
+* name = "Sample Medicare Advantage Plan A1002"
+//* alias MS
+* period.start = "2021-01-01"
+* period.end = "2021-12-31"
+
+* coverageArea = Reference(StateOfCTLocation)
+
+* contact[patient-plan-contact][0].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
+* contact[patient-plan-contact][0].telecom.system = #phone
+* contact[patient-plan-contact][0].telecom.value = "+1 (888) 555-1002"
+
+* contact[patient-plan-contact][1].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
+* contact[patient-plan-contact][1].name.text = "Sample Medicare Advantage Plan Marketing Website"
+* contact[patient-plan-contact][1].telecom.system = #url
+* contact[patient-plan-contact][1].telecom.value = "http://url/to/health/plan/information"
+
+
+Instance: InsuranceDrugPlanD1002
+InstanceOf: InsuranceDrugPlan
+Description: "Insurance Drug Plan D1002"
+Usage: #example
+
+* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+* meta.profile = Canonical(InsuranceDrugPlan) 
+
+* identifier.value = "D1002"
+* status = #active
+
+* type = $HL7v3-ActCode#DRUGPOL
+
+* name = "Sample Medicare Advantage Part D Drug Plan D1002"
+//* alias MS
+* period.start = "2021-01-01"
+* period.end = "2021-12-31"
+
+* coverageArea = Reference(StateOfCTLocation)
+
+* contact[patient-drugplan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
+* contact[patient-drugplan-contact][=].telecom.system = #phone
+* contact[patient-drugplan-contact][=].telecom.value = "+1 (888) 555-1002"
+
+* contact[patient-drugplan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
+* contact[patient-drugplan-contact][=].name.text = "Sample Medicare Advantage Drug Plan Formulary Website"
+* contact[patient-drugplan-contact][=].telecom.system = #url
+* contact[patient-drugplan-contact][=].telecom.value = "http://url/to/health/plan/information"
+
+* contact[patient-drugplan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
+* contact[patient-drugplan-contact][=].name.text = "Sample Medicare Advantage Drug Plan Benefit Website"
+* contact[patient-drugplan-contact][=].telecom.system = #url
+* contact[patient-drugplan-contact][=].telecom.value = "http://url/to/health/plan/information"
+
+* plan[0].type = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
+
+* plan[0].specificCost[0].category = DrugTierCS#brand "Brand"
+
+// TODO need a codeSystem for plan.specificCost.benefit.type to represent prescription fill
+* plan[0].specificCost[0].benefit[0].type = BenefitTypeCS#drug "DRUG"
+
+* plan[0].specificCost[0].benefit[0].cost[copay].type = BenefitCostTypeCS#copay "Copay"
+* plan[0].specificCost[0].benefit[0].cost[copay].value.value = 20
+* plan[0].specificCost[0].benefit[0].cost[copay].value.unit = "$"
+* plan[0].specificCost[0].benefit[0].cost[copay].value.system = "urn:iso:std:iso:4217"
+* plan[0].specificCost[0].benefit[0].cost[copay].value.code = #USD
+* plan[0].specificCost[0].benefit[0].cost[copay].qualifiers = CopayOptionCS#after-deductible "After Deductible"
+
+* plan[0].specificCost[0].benefit[0].cost[coinsurance].type = BenefitCostTypeCS#coinsurance "Coinsurance"
+* plan[0].specificCost[0].benefit[0].cost[coinsurance].value.value = 20
+* plan[0].specificCost[0].benefit[0].cost[coinsurance].value.code = #%
+* plan[0].specificCost[0].benefit[0].cost[coinsurance].value.system = "http://unitsofmeasure.org"
+* plan[0].specificCost[0].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
+
+
+
+
+
+
+// --------------------- FormularyItems --------------------- 
+
+
+
+Instance: FormularyItem-D1002-1000091
+InstanceOf: FormlaryItem
+Description: "Formulary Item for Insurance Drug Plan D1002 Drug 1000091"
+Usage: #example
+
+* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+
+* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
+* extension[usdf-AvailabilityStatus-extension].valueCode = #active
+* extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
+* extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
+* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
+* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#1-month-in-mail "1 month in network mail order"
+* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#3-month-in-retail "3 month in network retail"
+* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#3-month-in-mail "3 month in network mail order"
+* extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#generic "Generic"
+* extension[usdf-PriorAuthorization-extension].valueBoolean = false
+* extension[usdf-StepTherapyLimit-extension].valueBoolean = true
+* extension[usdf-StepTherapyLimitNewStartsOnly-extension].valueBoolean = true
+* extension[usdf-QuantityLimit-extension].valueBoolean = true
+
+* code = InsuranceItemTypeCS#formulary-item "Formulary Item"
+* subject = Reference(FormularyDrug-1000091)
+
+
+Instance: FormularyItem-D1002-1049640
+InstanceOf: FormlaryItem
+Description: "Formulary Item for Insurance Drug Plan D1002 Drug 1049640"
+Usage: #example
+
+* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+
+* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
+* extension[usdf-AvailabilityStatus-extension].valueCode = #active
+* extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
+* extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
+* extension[usdf-PharmacyType-extension].valueCodeableConcept = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#brand "Brand"
+* extension[usdf-PriorAuthorization-extension].valueBoolean = true
+* extension[usdf-PriorAuthorizationNewStartsOnly-extension].valueBoolean = true
+* extension[usdf-StepTherapyLimit-extension].valueBoolean = true
+* extension[usdf-StepTherapyLimitNewStartsOnly-extension].valueBoolean = false
+* extension[usdf-QuantityLimit-extension].valueBoolean = true
+* code = InsuranceItemTypeCS#formulary-item "Formulary Item"
+* subject = Reference(FormularyDrug-1049640)
+
+
+
+
+Instance: FormularyItem-QuantityTimimgTest
+InstanceOf: FormlaryItem
+Description: "Formulary Item for Insurance Drug Plan D1002 Drug QuantityTiming"
+Usage: #example
+
+* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+
+* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
+* extension[usdf-AvailabilityStatus-extension].valueCode = #active
+* extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
+* extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
+* extension[usdf-PharmacyType-extension].valueCodeableConcept = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#brand "Brand"
+* extension[usdf-PriorAuthorization-extension].valueBoolean = true
+* extension[usdf-PriorAuthorizationNewStartsOnly-extension].valueBoolean = true
+* extension[usdf-StepTherapyLimit-extension].valueBoolean = true
+* extension[usdf-StepTherapyLimitNewStartsOnly-extension].valueBoolean = false
+* extension[usdf-QuantityLimit-extension].valueBoolean = true
+* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.count = 480
+* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.period = 30
+* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.periodUnit = #d
+* extension[usdf-QuantityLimitDetail-extension].extension[MaximumDaily].valueQuantity.value = 16
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.value = 365
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.system = "http://unitsofmeasure.org"
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.code = #d
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.count = 2
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.period = 14
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.periodUnit = #d
+
+* code = InsuranceItemTypeCS#formulary-item "Formulary Item"
+* subject = Reference(FormularyDrug-1049640)
+
+
+
+Instance: FormularyItem-D1002-209459
+InstanceOf: FormlaryItem
+Description: "Formulary Item for Insurance Drug Plan D1002 Drug 209459"
+Usage: #example
+
+* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+
+* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
+* extension[usdf-AvailabilityStatus-extension].valueCode = #active
+* extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
+* extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
+* extension[usdf-PharmacyType-extension].valueCodeableConcept = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#brand "Brand"
+* extension[usdf-PriorAuthorization-extension].valueBoolean = true
+* extension[usdf-StepTherapyLimit-extension].valueBoolean = false
+* extension[usdf-QuantityLimit-extension].valueBoolean = false
+* code = InsuranceItemTypeCS#formulary-item "Formulary Item"
+* subject = Reference(FormularyDrug-209459)
+
+Instance: FormularyItem-D1002-284520
+InstanceOf: FormlaryItem
+Description: "Formulary Item for Insurance Drug Plan D1002 Drug 284520"
+Usage: #example
+
+* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+
+* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
+* extension[usdf-AvailabilityStatus-extension].valueCode = #active
+* extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
+* extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
+* extension[usdf-PharmacyType-extension].valueCodeableConcept = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#brand "Brand"
+* extension[usdf-PriorAuthorization-extension].valueBoolean = false
+* extension[usdf-StepTherapyLimit-extension].valueBoolean = false
+* extension[usdf-QuantityLimit-extension].valueBoolean = false
+
+* code = InsuranceItemTypeCS#formulary-item "Formulary Item"
+* subject = Reference(FormularyDrug-209459)
+

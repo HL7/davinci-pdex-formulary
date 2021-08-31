@@ -6,14 +6,13 @@ Description:    "The Payer InsurancePlan that defines the top level package of h
 
 This InsurancePlan to support Formulary describes a health insurance offering comprised of, at a minimum, a single or a set of drug plans and additional information about the offering, such as who it is owned and administered by, a coverage area, contact information, etc."
 
-
+* meta.lastUpdated 1..1
 
 * extension contains
-    MemberPlanReference named usdf-MemberPlan-extension 1..* MS
+    DrugPlanReference named usdf-DrugPlanReference-extension 1..1 MS
 
 * identifier 1..* MS
-* status 1..1
-* status = #active (exactly)
+* status 1..1 MS
 
 * type 1..1 MS 
 * type from $PlanNetInsuranceProductTypeVS (extensible)
@@ -46,6 +45,9 @@ This InsurancePlan to support Formulary describes a health insurance offering co
    patient-plan-contact 0..* MS
 * contact[patient-plan-contact].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
 * contact[patient-plan-contact].telecom 1..* MS
+* contact[patient-plan-contact].telecom.system 1..1
+* contact[patient-plan-contact].telecom ^short = "Patient Info Contact (email/website/phone number)"
+
 /*
 * endpoint ^short = "Endpoint for additional information"
 * endpoint only Reference(InsurancePlanEndpoint)
@@ -62,13 +64,12 @@ Id:             usdf-InsuranceDrugPlan
 Title:          "Insurance Drug Plan"
 Description:    "The Drug InsurancePlan describes a prescription drug insurance offering comprised of drug benefits including a definition of drug tiers and their associated cost-sharing models and additional information about the plan, such as networks, a coverage area, contact information, etc."
 
-
+* meta.lastUpdated 1..1
 // no sub formulary plans
 //* extension contains
 //    MemberPlan named usdf-MemberPlan-extension 1..* MS
 * identifier 1..* MS
-* status 1..1
-* status = #active (exactly)
+* status 1..1 MS
 
 * type 1..1 MS 
 * type = $HL7v3-ActCode#DRUGPOL
@@ -101,6 +102,8 @@ Description:    "The Drug InsurancePlan describes a prescription drug insurance 
    patient-drugplan-contact 0..* MS
 * contact[patient-drugplan-contact].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
 * contact[patient-drugplan-contact].telecom 1..* MS
+* contact[patient-drugplan-contact].telecom.system 1..1
+* contact[patient-drugplan-contact].telecom ^short = "Patient Info Contact (email/website/phone number)"
 /*
 * endpoint ^short = "Endpoint for additional information"
 * endpoint only Reference(InsurancePlanEndpoint)
@@ -156,13 +159,22 @@ Id:             usdf-FormularyItem
 Title:          "Formulary Item"
 Description:    "A resource that describes a drug's relationship to a drug plan, including drug tier, prior authorization requirements, and more. The set of FormuaryItem resrouces associated with a particular drug plan represents the drug plans formulary."
 
+* meta.lastUpdated 1..1
+
 * extension contains
     DrugPlanReference named usdf-DrugPlanReference-extension 1..1 MS and
+    AvailabilityStatus named usdf-AvailabilityStatus-extension 1..1 MS and
+    AvailabilityPeriod named usdf-AvailabilityPeriod-extension 0..1 MS and
+    PharmacyType named usdf-PharmacyType-extension 0..* and
     DrugTierID named usdf-DrugTierID-extension 1..1 MS and
     PriorAuthorization named usdf-PriorAuthorization-extension 0..1 MS and
+    PriorAuthorizationNewStartsOnly named usdf-PriorAuthorizationNewStartsOnly-extension 0..1 MS and
     StepTherapyLimit named usdf-StepTherapyLimit-extension 0..1 MS and
-    QuantityLimit named usdf-QuantityLimit-extension 0..1 MS and
-    MailOrder named usdf-MailOrder-extension 0..1
+    StepTherapyLimitNewStartsOnly named usdf-StepTherapyLimitNewStartsOnly-extension 0..1 MS and
+    QuantityLimit named usdf-QuantityLimit-extension 0..1 MS and 
+    QuantityLimitDetail named usdf-QuantityLimitDetail-extension 0..1 MS
+    
+//* extension[PriorAuthorizationNewStartOnly] ^short =  
 
 * code 1..1
 * code = InsuranceItemTypeCS#formulary-item
@@ -176,6 +188,7 @@ Id:             usdf-FormularyDrug
 Title:          "Formulary Drug"
 Description:    "Drug information which may be part of a formulary including its RxNorm code, synonyms, and optionally drug classification and alternatives."
 
+* meta.lastUpdated 1..1
 * code 1..1 
 * code from $HL7-USCore-MedicationCodes (required)
 * doseForm MS
@@ -195,7 +208,7 @@ Id:             usdf-InsurancePlanLocation
 Title:          "Insurance Plan Location"
 Description:    "A Location describing a geographic region or are where the insurance plan coverage is available."
 
-//* meta.lastUpdated 1..1
+* meta.lastUpdated 1..1
 * extension contains
     $GeoJSONExtension named region 0..1 MS
 * extension[region] ^short = "Associated Region (GeoJSON)"
@@ -258,7 +271,7 @@ Description:    "The technical details of an endpoint that can be used for addit
 
 
 
-
+/*
 
 Profile:        CoveragePlan
 Parent:         List
@@ -293,4 +306,12 @@ Description:    "Drug information which is part of a formulary including its RxN
     DrugTierID named usdf-DrugTierID-extension 1..1 MS
 * code 1..1 
 * code from  http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (required)
+*/
+
+
+/*
+Invariant:  StepTherapyLimit-NewStartsOnly
+Description: "StepTherapyLimitNewStartsOnly exists only if StepTherapyLimit = true"
+Expression: "atient.contact.telecom.where(use = 'official')).exists()"
+Severity:   #error
 */
