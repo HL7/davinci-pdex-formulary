@@ -158,7 +158,7 @@ Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
-* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
+* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD3002)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
