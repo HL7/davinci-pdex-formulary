@@ -191,6 +191,7 @@ Description:    "Drug information which may be part of a formulary including its
 * meta.lastUpdated 1..1
 * code 1..1 
 * code from $HL7-USCore-MedicationCodes (required)
+* status 1..1 MS
 * doseForm MS
 * synonym MS
 * relatedMedicationKnowledge MS
