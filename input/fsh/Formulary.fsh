@@ -46,6 +46,7 @@ This InsurancePlan to support Formulary describes a health insurance offering co
 * contact[patient-plan-contact].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
 * contact[patient-plan-contact].telecom 1..* MS
 * contact[patient-plan-contact].telecom.system 1..1
+* contact[patient-plan-contact].telecom.value 1..1 
 * contact[patient-plan-contact].telecom ^short = "Patient Info Contact (email/website/phone number)"
 
 /*
@@ -103,6 +104,7 @@ Description:    "The Drug InsurancePlan describes a prescription drug insurance 
 * contact[patient-drugplan-contact].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
 * contact[patient-drugplan-contact].telecom 1..* MS
 * contact[patient-drugplan-contact].telecom.system 1..1
+* contact[patient-plan-contact].telecom.value 1..1 
 * contact[patient-drugplan-contact].telecom ^short = "Patient Info Contact (email/website/phone number)"
 /*
 * endpoint ^short = "Endpoint for additional information"
