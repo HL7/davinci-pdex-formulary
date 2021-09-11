@@ -20,15 +20,15 @@
 <artifact deprecated="true" id="List/CoveragePlanV3001" key="List-CoveragePlanV3001" name="Coverage Plan V3001"/>
 <artifact deprecated="true" id="List/CoveragePlanV3002" key="List-CoveragePlanV3002" name="Coverage Plan V3002"/>
 <artifact deprecated="true" id="List/CoveragePlanV3004t" key="List-CoveragePlanV3004t" name="Coverage Plan V3004t"/>
-<artifact id="StructureDefinition/usdf-DrugAlternatives-extension" key="StructureDefinition-usdf-DrugAlternatives-extension" name="Drug Alternatives"/>
+<artifact deprecated="true" id="StructureDefinition/usdf-DrugAlternatives-extension" key="StructureDefinition-usdf-DrugAlternatives-extension" name="Drug Alternatives"/>
 <artifact id="StructureDefinition/usdf-DrugPlanReference-extension" key="StructureDefinition-usdf-DrugPlanReference-extension" name="Drug Plan Reference"/>
-<artifact id="StructureDefinition/usdf-DrugTierDefinition-extension" key="StructureDefinition-usdf-DrugTierDefinition-extension" name="Drug Tier Definition"/>
+<artifact deprecated="true" id="StructureDefinition/usdf-DrugTierDefinition-extension" key="StructureDefinition-usdf-DrugTierDefinition-extension" name="Drug Tier Definition"/>
 <artifact id="StructureDefinition/usdf-DrugTierID-extension" key="StructureDefinition-usdf-DrugTierID-extension" name="Drug Tier ID"/>
 <artifact id="ValueSet/DrugTierVS" key="ValueSet-DrugTierVS" name="Drug tier of medication in health plan"/>
 <artifact deprecated="true" id="SearchParameter/DrugName" key="SearchParameter-DrugName" name="DrugName"/>
 <artifact deprecated="true" id="SearchParameter/DrugPlan" key="SearchParameter-DrugPlan" name="DrugPlan"/>
 <artifact deprecated="true" id="SearchParameter/DrugTier" key="SearchParameter-DrugTier" name="DrugTier"/>
-<artifact id="StructureDefinition/usdf-EmailPlanContact-extension" key="StructureDefinition-usdf-EmailPlanContact-extension" name="Email Plan Contact"/>
+<artifact deprecated="true" id="StructureDefinition/usdf-EmailPlanContact-extension" key="StructureDefinition-usdf-EmailPlanContact-extension" name="Email Plan Contact"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-CoveragePlan" key="StructureDefinition-usdf-CoveragePlan" name="Formulary Coverage Plan"/>
 <artifact id="StructureDefinition/usdf-FormularyDrug" key="StructureDefinition-usdf-FormularyDrug" name="Formulary Drug"/>
 <artifact deprecated="true" id="MedicationKnowledge/formularydrugV1002" key="MedicationKnowledge-formularydrugV1002" name="Formulary Drug V1002"/>
@@ -36,7 +36,7 @@
 <artifact deprecated="true" id="MedicationKnowledge/FormularyDrugV3002" key="MedicationKnowledge-FormularyDrugV3002" name="Formulary Drug V3002"/>
 <artifact deprecated="true" id="MedicationKnowledge/cmsip9" key="MedicationKnowledge-cmsip9" name="Formulary Drug cmsip9"/>
 <artifact id="StructureDefinition/usdf-FormularyItem" key="StructureDefinition-usdf-FormularyItem" name="Formulary Item"/>
-<artifact id="StructureDefinition/usdf-FormularyURL-extension" key="StructureDefinition-usdf-FormularyURL-extension" name="Formulary URL"/>
+<artifact deprecated="true" id="StructureDefinition/usdf-FormularyURL-extension" key="StructureDefinition-usdf-FormularyURL-extension" name="Formulary URL"/>
 <artifact id="MedicationKnowledge/FormularyDrug-1000091" key="MedicationKnowledge-FormularyDrug-1000091" name="FormularyDrug-1000091"/>
 <artifact id="MedicationKnowledge/FormularyDrug-1049640" key="MedicationKnowledge-FormularyDrug-1049640" name="FormularyDrug-1049640"/>
 <artifact id="MedicationKnowledge/FormularyDrug-209459" key="MedicationKnowledge-FormularyDrug-209459" name="FormularyDrug-209459"/>
@@ -57,27 +57,27 @@
 <artifact id="InsurancePlan/InsuranceDrugPlanD3001" key="InsurancePlan-InsuranceDrugPlanD3001" name="InsuranceDrugPlanD3001"/>
 <artifact id="InsurancePlan/InsuranceDrugPlanD3002" key="InsurancePlan-InsuranceDrugPlanD3002" name="InsuranceDrugPlanD3002"/>
 <artifact id="InsurancePlan/InsuranceDrugPlanD3004t" key="InsurancePlan-InsuranceDrugPlanD3004t" name="InsuranceDrugPlanD3004t"/>
-<artifact id="StructureDefinition/usdf-MailOrder-extension" key="StructureDefinition-usdf-MailOrder-extension" name="Mail Order"/>
-<artifact id="StructureDefinition/usdf-MarketingURL-extension" key="StructureDefinition-usdf-MarketingURL-extension" name="Marketing URL"/>
-<artifact id="StructureDefinition/usdf-Network-extension" key="StructureDefinition-usdf-Network-extension" name="Network"/>
+<artifact deprecated="true" id="StructureDefinition/usdf-MailOrder-extension" key="StructureDefinition-usdf-MailOrder-extension" name="Mail Order"/>
+<artifact deprecated="true" id="StructureDefinition/usdf-MarketingURL-extension" key="StructureDefinition-usdf-MarketingURL-extension" name="Marketing URL"/>
+<artifact deprecated="true" id="StructureDefinition/usdf-Network-extension" key="StructureDefinition-usdf-Network-extension" name="Network"/>
 <artifact id="StructureDefinition/usdf-PayerInsurancePlan" key="StructureDefinition-usdf-PayerInsurancePlan" name="Payer Insurance Plan"/>
 <artifact id="InsurancePlan/PayerInsurancePlanA1002" key="InsurancePlan-PayerInsurancePlanA1002" name="PayerInsurancePlanA1002"/>
 <artifact id="InsurancePlan/PayerInsurancePlanA3001" key="InsurancePlan-PayerInsurancePlanA3001" name="PayerInsurancePlanA3001"/>
 <artifact id="InsurancePlan/PayerInsurancePlanA3002" key="InsurancePlan-PayerInsurancePlanA3002" name="PayerInsurancePlanA3002"/>
 <artifact id="InsurancePlan/PayerInsurancePlanA3004t" key="InsurancePlan-PayerInsurancePlanA3004t" name="PayerInsurancePlanA3004t"/>
 <artifact id="StructureDefinition/usdf-PharmacyType-extension" key="StructureDefinition-usdf-PharmacyType-extension" name="Pharmacy Type"/>
-<artifact id="StructureDefinition/usdf-PlanID-extension" key="StructureDefinition-usdf-PlanID-extension" name="Plan ID"/>
-<artifact id="StructureDefinition/usdf-PlanIDType-extension" key="StructureDefinition-usdf-PlanIDType-extension" name="Plan ID Type"/>
+<artifact deprecated="true" id="StructureDefinition/usdf-PlanID-extension" key="StructureDefinition-usdf-PlanID-extension" name="Plan ID"/>
+<artifact deprecated="true" id="StructureDefinition/usdf-PlanIDType-extension" key="StructureDefinition-usdf-PlanIDType-extension" name="Plan ID Type"/>
 <artifact id="StructureDefinition/usdf-PriorAuthorization-extension" key="StructureDefinition-usdf-PriorAuthorization-extension" name="Prior Authorization"/>
 <artifact id="StructureDefinition/usdf-PriorAuthorizationNewStartsOnly-extension" key="StructureDefinition-usdf-PriorAuthorizationNewStartsOnly-extension" name="Prior Authorization New Starts Only"/>
 <artifact id="ValueSet/CoinsuranceOptionVS" key="ValueSet-CoinsuranceOptionVS" name="Qualifier for coinsurance rate"/>
 <artifact id="ValueSet/CopayOptionVS" key="ValueSet-CopayOptionVS" name="Qualifier of copay amount"/>
 <artifact id="StructureDefinition/usdf-QuantityLimit-extension" key="StructureDefinition-usdf-QuantityLimit-extension" name="Quantity Limit"/>
-<artifact id="StructureDefinition/usdf-QuantityLimitDetail-extension" key="StructureDefinition-usdf-QuantityLimit-extension" name="Quantity Limit"/>
+<artifact id="StructureDefinition/usdf-QuantityLimitDetail-extension" key="StructureDefinition-usdf-QuantityLimitDetail-extension" name="Quantity Limit Detail"/>
 <artifact id="Location/StateOfCTLocation" key="Location-StateOfCTLocation" name="StateOfCTLocation"/>
 <artifact id="StructureDefinition/usdf-StepTherapyLimit-extension" key="StructureDefinition-usdf-StepTherapyLimit-extension" name="Step Therapy Limit"/>
 <artifact id="StructureDefinition/usdf-StepTherapyLimitNewStartsOnly-extension" key="StructureDefinition-usdf-StepTherapyLimitNewStartsOnly-extension" name="Step Therapy Limit New Starts Only"/>
-<artifact id="StructureDefinition/usdf-SummaryURL-extension" key="StructureDefinition-usdf-SummaryURL-extension" name="Summary URL"/>
+<artifact deprecated="true" id="StructureDefinition/usdf-SummaryURL-extension" key="StructureDefinition-usdf-SummaryURL-extension" name="Summary URL"/>
 <artifact id="ValueSet/BenefitTypeVS" key="ValueSet-BenefitTypeVS" name="Type of benefit"/>
 <artifact id="CodeSystem/usdf-BenefitTypeCS" key="CodeSystem-usdf-BenefitTypeCS" name="Type of benefit"/>
 <artifact id="ValueSet/PharmacyTypeVS" key="ValueSet-PharmacyTypeVS" name="Type of pharmacies"/>

@@ -92,7 +92,7 @@
 			<td>MedicationKnowledge (FormularyDrug)</td>
 			<td>doseform</td>
 			<td><a href="https://www.hl7.org/fhir/search.html#token">token</a></td>
-			<td><code class="highlighter-rouge">GET [base]/MedicationKnowledge?dosform=[system|code]</code></td>
+			<td><code class="highlighter-rouge">GET [base]/MedicationKnowledge?doseform=[system|code]</code></td>
 		</tr>
 		<tr>
 			<td>MedicationKnowledge (FormularyDrug)</td>
