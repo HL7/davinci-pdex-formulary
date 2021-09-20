@@ -217,6 +217,7 @@ Description:    "A Location describing a geographic region or are where the insu
 * extension[region] ^short = "Associated Region (GeoJSON)"
 * name MS
 * description MS
+* address MS
 
 /*
 Profile:        InsurancePlanEndpoint

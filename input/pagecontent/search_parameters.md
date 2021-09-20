@@ -41,6 +41,24 @@
 			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?name=[string]</code></td>
 		</tr>
 		<tr>
+			<td>Location (InsurancePlanLocation)</td>
+			<td>address</td>
+			<td><a href="https://www.hl7.org/fhir/search.html#string">string</a></td>
+			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?address=[string]</code></td>
+		</tr>
+		<tr>
+			<td>Location (InsurancePlanLocation)</td>
+			<td>address-postalcode</td>
+			<td><a href="https://www.hl7.org/fhir/search.html#string">string</a></td>
+			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?address-postalcode=[string]</code></td>
+		</tr>
+		<tr>
+			<td>Location (InsurancePlanLocation)</td>
+			<td>address-state</td>
+			<td><a href="https://www.hl7.org/fhir/search.html#string">string</a></td>
+			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?address-state=[string]</code></td>
+		</tr>
+		<tr>
 			<td>Basic (FormularyItem)</td>
 			<td><a href="http://hl7.org/fhir/R4/search.html">_id</a></td>
 			<td><a href="https://www.hl7.org/fhir/search.html#token">token</a></td>
@@ -68,7 +86,7 @@
 			<td>Basic (FormularyItem)</td>
 			<td><a href="SearchParameter-pharmacy-type.html">pharmacy-type</a></td>
 			<td><a href="https://www.hl7.org/fhir/search.html#string">token</a></td>
-			<td><code class="highlighter-rouge">GET [base]/pharmacy-type?name=[system]|[code]</code></td>
+			<td><code class="highlighter-rouge">GET [base]/pharmacy-type?=[system]|[code]</code></td>
 		</tr>
 		<tr>
 			<td>MedicationKnowledge (FormularyDrug)</td>

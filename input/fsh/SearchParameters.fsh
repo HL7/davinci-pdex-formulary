@@ -63,7 +63,7 @@ Usage: #definition
 * status = #active
 * code = #drug-name
 * name = "Drug Name"
-* description = "Accesses the Drug Plan of a FormularyItem"
+* description = "Accesses the Drug Name of a FormularyDrug"
 * url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/drug-name"
 * base[0] = #MedicationKnowledge
 

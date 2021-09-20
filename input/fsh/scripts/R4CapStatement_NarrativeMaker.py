@@ -16,16 +16,23 @@ To install all dependencies: pip3 install -r requirements.txt
 to run on windows: python -m pip ...
 
 NOTE: this requires the r4models to be installed in the fhirclient pip site-package, to be installed in [installdir]/lib/python/site-packages/fhirclient
-Email Eric Haas for these models
+Email Eric Haas for these models (the _element extension elements are not supported in that version. Corety Spears can provide a modified set or rfmodels for 
+the capabilitystatement element level extension )
 
-Modified from: https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/R4CapStatement_Maker.ipynb
+Modified from: 
+https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/R4CapStatement_Maker.ipynb
+and jinja template from
+https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/R4capabilitystatement-server.j2
 '''
 import sys
 import os
 import os.path
 from os import path
+import glob
 import validators
 import fhirclient.r4models.capabilitystatement as CS
+import fhirclient.r4models.implementationguide as IG
+import fhirclient.r4models.structuredefinition as SD
 import fhirclient.r4models.codeableconcept as CC
 import fhirclient.r4models.fhirdate as D
 import fhirclient.r4models.extension as X
@@ -38,7 +45,7 @@ import tarfile
 # import fhirclient.r4models.narrative as N
 import json
 from json import dumps, loads
-from requests import post
+from requests import post, get
 from pathlib import Path
 from collections import namedtuple
 from pandas import *
@@ -47,6 +54,7 @@ from stringcase import snakecase, titlecase
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from commonmark import commonmark
 from lxml import etree
+
 
 # GLOBALS
 fhir_base_url = 'http://hl7.org/fhir/'
@@ -69,19 +77,36 @@ none_list = ['', ' ', 'none', 'n/a', 'N/A', 'N', 'False']
 sep_list = (',', ';', ' ', ', ', '; ')
 f_now = D.FHIRDate(str(date.today()))
 
+
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 def markdown(text, *args, **kwargs):
     return commonmark(text, *args, **kwargs)
 
 def main():
     if (len(sys.argv) < 2):
         print(
-            "Error: missing json file - correct usage is:\n\tpython3 R4CapStatement_NarrativeMaker.py [json file]")
+            "Error: missing json file - correct usage is:\n\tpython3 R4CapStatement_NarrativeMaker.py [json file] {[Artifacts Folder]}")
         return
 
     xls = sys.argv[1]
 
     in_json_file = sys.argv[1]
+    artifacts_folder = ""
     
+    if len(sys.argv) > 2:
+        artifacts_folder = sys.argv[2]
+   
     print('....Generating CapabilityStatement Narrative.....')
 
 
@@ -106,31 +131,112 @@ def main():
 
     template = env.get_template(in_file)
 
-    rendered = template.render(cs=capStatement, path_map='',
-                            pname_map='', sp_map='', sp_url_map='')
+    pname_map = {}
+    igname_map = {}
+    csname_map = {}
+    # Load name maps
+    if artifacts_folder != "":
+        print('....Retrieving Artifact Names .....')
+        artifacts_folder = os.path.abspath(artifacts_folder)
+        struct_def_files = glob.glob(artifacts_folder + "/StructureDefinition-*.json")
+        imp_guide_files = glob.glob(artifacts_folder + "/ImplementationGuide-*.json")
+        cap_stmt_files = glob.glob(artifacts_folder + "/CapabilityStatement-*.json")
+        
+        pname_map = get_pname_map(struct_def_files)
+        igname_map = get_igname_map(imp_guide_files)
+        csname_map = get_csname_map(cap_stmt_files)
 
-    # print(HTML(rendered))
+    # Check access to hl7.org/fhir
+    r = get (fhir_base_url)
+    if r.status_code == 200:
+        print('....Retrieving Online Artifact Names .....')
+        # Loop through all references in the CapabilityStatement and attempt to retried the artifacts to load the names into the map
+        
+
+        # Instantiates
+        if capStatement.instantiates:
+            for url in capStatement.instantiates:
+                if url not in csname_map:
+                    csname_map[url] = get_url_title(url, "instantiates CapabilityStatement")
+
+        # Imports
+        if capStatement.imports:
+            for url in capStatement.imports:
+                if url not in csname_map:
+                    csname_map[url] = get_url_title(url, "imports CapabilityStatement")
+
+        # Implementation Guides
+        if capStatement.implementationGuide:
+            for url in capStatement.implementationGuide:
+                if url not in igname_map:
+                    igname_map[url] = get_url_title(url, "ImplementationGuide")
+
+        # Iterate through rest resources
+        if capStatement.rest:
+            for rest in capStatement.rest:
+                if rest.resource:
+                    for resource in rest.resource:
+                        if resource.profile:
+                            url = resource.profile
+                            if url not in pname_map:
+                                pname_map[url] = get_url_title(url, resource.type + " profile")
+                                
+                        if resource.supportedProfile:
+                            for url in resource.supportedProfile:
+                                if url not in pname_map:
+                                    pname_map[url] = get_url_title(url, resource.type + " supported profile")
+
+    else:
+        print("Unable to connect to " + fhir_base_url + ". Will not attempt to load online artifacts to retrieve artifact names.")
+        
+
+
+
+
+
+
+
+    rendered = template.render(cs=capStatement, path_map='', pname_map=pname_map, purl_map='', sp_map='', 
+                            csname_map=csname_map, csurl_map='', sp_url_map='', igname_map=igname_map, igurl_map='')
+    
+    #template.render(cs=cs, path_map=path_map, pname_map=pname_map, purl_map=purl_map, sp_map=sp_map, 
+    #                       csname_map=csname_map, csurl_map=csurl_map, igname_map=igname_map, igurl_map=igurl_map)
+
+    tempPath = Path.cwd() / "test.html"
+    tempPath.write_text(rendered)
+    #print(rendered)
     
 
     parser = etree.XMLParser(remove_blank_text=True)
     root = etree.fromstring(rendered, parser=parser)
 
     div = (etree.tostring(root[1][0], encoding='unicode', method='html'))
+
+    print("\n####################################################\n")
+    #print(etree.tostring(root[1][0], encoding='unicode', method='html'))
+    print("\n####################################################\n")
     narr = N.Narrative()
     narr.status = 'generated'
 
 
     #div = re.sub('https://paciowg.github.io/advance-directives-ig/StructureDefinition-', 'SSSSSSSSSSSSSSSSS', div)
     # replace all of the supported profile urls in link text with just the profile name from inside the cononical url
-    div = re.sub('">\(https?://.*/StructureDefinition-(.*)\.html\)</a>', '">\\1</a>', div)
+    #######div = re.sub('">\(https?://.*/StructureDefinition-(.*)\.html\)</a>', '">\\1</a>', div)
     #div = re.sub('">\(https://paciowg.github.io/advance-directives-ig/StructureDefinition-PADI-(PersonalGoal.html)</a>', '\\1', div)
+    # For some reason <br /> is being replaced with <br></br>, which is wrong. Convert it back.
+    #div = div.replace("<br></br>", "<br />")
+    #print(div)
     narr.div = div
 
     #print(dumps(narr.div, indent=3))    # %% [markdown]
     capStatement.text = narr
     outfile = 'Narrative-' + in_json_file
     path = Path.cwd() / outfile
-    path.write_text(dumps(capStatement.as_json(), indent=4))
+    tempOut = dumps(capStatement.as_json(), indent=4)
+    tempOut = tempOut.replace("<sup>+</sup>", "<sup>&#8224;</sup>")
+    #tempOut = tempOut.replace(“<sup>t</sup>”, “<sup>&#8224;</sup>”)
+    #print(tempOut)
+    path.write_text(tempOut)
 
 
     print('.............validating..............')
@@ -356,9 +462,57 @@ def get_op(r_type, df_op):
 
     return op_list
 
+def get_pname_map(file_names):
+    
+    pname_map = {}
+    for file_name in file_names:
+        with open(file_name, 'r') as file_h:
+            sd = SD.StructureDefinition(json.load(file_h))
+            pname_map[sd.url] = sd.title
+        file_h.close()
+    
+    return pname_map
+
+def get_igname_map(file_names):
+    igname_map = {}
+    for file_name in file_names:
+        with open(file_name, 'r') as file_h:
+            ig = IG.ImplementationGuide(json.load(file_h))
+            igname_map[ig.url] = ig.title
+        file_h.close()
+    
+    return igname_map
+
+def get_csname_map(file_names):
+    csname_map = {}
+    for file_name in file_names:
+        with open(file_name, 'r') as file_h:
+            cap_stmt = CS.CapabilityStatement(json.load(file_h))
+            csname_map[cap_stmt.url] = cap_stmt.title
+        file_h.close()
+    
+    return csname_map
+
+def get_url_title(url, msg_context):
+    print("Retrieving " + msg_context + " at: " + url)
+    r = get(url, headers={"Accept":"application/json"})
+    if r.status_code == 200:
+        try:
+            json_data = json.loads(r.content)
+            #Retrieving this as json data instead of from fhirclient objects in case there is a validation error
+            if(json_data['title']):
+                return json_data['title']
+            else:
+                print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to retrieve title from online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
+        except ValueError:
+            print(bcolors.BOLD + bcolors.FAIL + "Warning: Unable to decode online " + msg_context + " artifact (" + url + ") - Title will not show up in rendered narrative." + bcolors.ENDC)
+    else:
+        print(bcolors.BOLD + bcolors.FAIL + "Warning: unable to retrieve online " + msg_context + " artifact (" + url + "). Failed with status code: " + str(r.status_code) + " - Title will not show up in rendered narrative." + bcolors.ENDC)
+
 
 def markdown(text, *args, **kwargs):
-    return commonmark(text, *args, **kwargs)
+    if text:
+        return commonmark(text, *args, **kwargs)
 
 def get_si(path):
     with tarfile.open(f'{path}/package.tgz', mode='r') as tf:

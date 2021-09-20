@@ -214,12 +214,20 @@ def main():
     template = env.get_template(in_file)
 
     sp_map = {sp.code: sp.type for sp in df_sp.itertuples(index=True)}
-    sp_url_map  = {sp.code: sp.rel_url for sp in df_sp.itertuples(index=True)}
     pname_map = {p.Profile: p.Name for p in df_profiles.itertuples(index=True)}
+    sp_url_map  = {sp.code: sp.rel_url for sp in df_sp.itertuples(index=True)}
+    purl_map = {p.Profile:p.url if p.url not in none_list else p.Profile for p in df_profiles.itertuples(index=True)}
+    # below taken from source code. Not clear what these are, perhaps from an updated spreadsheet source.
+    #igname_map = {ig.canonical:ig.name for ig in df_igs.itertuples(index=True)}
+    #igurl_map = {ig.canonical:ig.url if ig.url not in none_list else ig.canonical for ig in df_igs.itertuples(index=True)}
+    #csname_map = {cs.canonical:cs.name for cs in df_capstatements.itertuples(index=True)}
+    #csurl_map = {cs.canonical:cs.url if cs.url not in none_list else cs.canonical for cs in df_capstatements.itertuples(index=True)
+
+    
     print(pname_map)
 
     rendered = template.render(cs=cs, path_map=path_map,
-                            pname_map=pname_map, sp_map=sp_map, sp_url_map=sp_url_map)
+                            pname_map=pname_map, purl_map=purl_map,sp_map=sp_map, sp_url_map=sp_url_map)
 
     # print(HTML(rendered))
 
