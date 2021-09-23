@@ -14,7 +14,7 @@
             ]
         }
     ],
-    "date": "2020-11-16",
+    "date": "2021-09-23",
     "description": "This Section describes the expected capabilities of the US Drug Formulary Server actor which is responsible for providing responses to the queries submitted by the US Drug Formulary Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Drug Formulary Server are defined.",
     "experimental": false,
     "fhirVersion": "4.0.1",

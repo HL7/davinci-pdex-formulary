@@ -7,15 +7,15 @@ canonical: http://hl7.org/fhir/us/davinci-drug-formulary
 name: Formulary
 title: DaVinci Payer Data Exchange (PDex) US Drug Formulary
 status: draft
-version: 1.0.1
+version: 1.1.0
 fhirVersion: 4.0.1
-copyrightYear: 2020+
-releaseLabel: CI Build
+copyrightYear: 2021+
+releaseLabel: release
 publisher:
   name: HL7 Pharmacy Working Group
-  url: http://www.hl7.org/Special/committees/medication/
+  url: http://www.hl7.org/Special/committees/medication
   email: pharmacy@lists.HL7.org
-description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary STU 1.0.1 (Pre-1.1.0)
+description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary STU 1.1.0
 license: CC0-1.0
 dependencies:
   hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
@@ -56,7 +56,7 @@ menu:
   Downloads: downloads.html
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
-  
+  Change Notes: change_notes.html
 
 
 pages:
@@ -74,7 +74,8 @@ pages:
     title: Artifacts Summary
   downloads.md:
     title: Downloads
-
+  change_notes.md:
+    title: Change Notes
 
 resources:
   List/covplanV1002:
