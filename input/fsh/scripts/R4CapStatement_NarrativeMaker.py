@@ -188,10 +188,6 @@ def main():
 
     else:
         print("Unable to connect to " + fhir_base_url + ". Will not attempt to load online artifacts to retrieve artifact names.")
-        
-
-
-
 
 
 

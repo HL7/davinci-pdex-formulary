@@ -44,7 +44,7 @@
 		<div xmlns="http://www.w3.org/1999/xhtml">
 		<h2 id="title">{{cs.title}}</h2>
 			<ul>
-				<li><b>Official URL:</b> <code>{{cs.url}}</code></li>
+				{% if cs.url %}<li><b>Official URL:</b> <code>{{cs.url}}</code></li>{% endif %}
 				<li><b>Implementation Guide Version:</b> {{cs.version}}</li>
 				<li><b>FHIR Version:</b> {{cs.fhirVersion}}</li>
 				<li><b>Intended Use:</b> {{cs.kind.capitalize()}}</li>
@@ -339,7 +339,13 @@
 									<td>
 										<a href="#{{r.type | lower }}">{{r.type}}</a>
 									</td>
-									<td>Supported Interactions</td>
+									<td>
+										{% if r.interaction %}{% for i in r.interaction %}
+											{{i.code}}
+											{%- if not loop.last %}, {% endif %}
+											{%  endfor %}
+										{% endif %}
+									</td>
 
 									<!-- Supported Profiles -->
 									<td>
@@ -713,9 +719,10 @@
 															<strong>{% if s.extension %}{{ s.extension[0].valueCode }}{% else %}(conformance expectation undefined){% endif %}</strong>
 														</td>
 														<td>
+															{% set name_anchor = s.name.split(':')[0] %}
 															<a href="{% if path_map[s.definition] %}{{path_map[s.definition]}}
 															{% elif sp_url_map[s.name] %}{{sp_url_map[s.name]}}
-															{%- elif s.name.startswith('_') %}http://hl7.org/fhir/R4/search.html#{% if s.name == "_type" %}{{s.name}}{% else %}{{s.name[1:]}}{% endif %}
+															{%- elif s.name.startswith('_') %}http://hl7.org/fhir/R4/search.html#{% if name_anchor == "_type" %}{{s.name}}{% else %}{{name_anchor[1:]}}{% endif %}
 															{%- else %}http://hl7.org/fhir/R4/{{r.type.lower()}}.html#search
 															{%- endif %}">
 															{{s.name}}</a>
@@ -794,10 +801,11 @@
 															<td>
 																{%- for combo in combos.extension if combo.url == 'required' or combo.url == 'optional'-%}
 																	{% set sc = combo.valueString %}
+																	{% set name_anchor = combo.valueString.split(':')[0] %}
 																	{%- for s in r.searchParam if sc == s.name -%}
 																		{% set ns.spr = s.definition %}
 																	{%- endfor %}<a href="{% if ns.spr %}{{ns.spr}}
-																	{%- elif sc.startswith('_') %}http://hl7.org/fhir/R4/search.html#{% if combo.valueString == "_type" %}{{combo.valueString}}{% else %}{{combo.valueString[1:]}}{% endif %}
+																	{%- elif sc.startswith('_') %}http://hl7.org/fhir/R4/search.html#{% if combo.valueString == "_type" %}{{combo.valueString}}{% else %}{{name_anchor[1:]}}{% endif %}
 																	{%- else %}http://hl7.org/fhir/R4/{{sc.lower()}}.html#search
 																	{%- endif %}">{{sc}}</a>{%- if not loop.last %}+{% endif %}
 																{%- endfor %}
@@ -869,8 +877,9 @@
 												<p>Search Parameter Requirements (When Used Alone or in Combination):</p>
 												<ul>
 													{%- for s in r.searchParam if s.documentation -%}
+														{% set name_anchor = s.name.split(':')[0] %}
 														<li><a href="{% if path_map[s.definition] %}{{path_map[s.definition]}}
-														{%- elif s.name.startswith('_') %}http://hl7.org/fhir/R4/search.html#{% if s.name == "_type" %}{{s.name}}{% else %}{{s.name[1:]}}{% endif %}
+														{%- elif s.name.startswith('_') %}http://hl7.org/fhir/R4/search.html#{% if s.name == "_type" %}{{s.name}}{% else %}{{name_anchor[1:]}}{% endif %}
 														{%- else %}http://hl7.org/fhir/R4/{{r.type.lower()}}.html#search
 														{%- endif %}">
 														{{s.name}}</a> ({{s.type}}):{{s.documentation | markdown | safe }}</li>

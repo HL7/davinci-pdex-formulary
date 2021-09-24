@@ -13,7 +13,7 @@ Usage: #example
 * synonym[+] = "doxepin HCl 5 % Topical Cream"
 * relatedMedicationKnowledge[0].type = RelatedMedicationTypeCS#alternative "Drug Alternative"
 * relatedMedicationKnowledge[0].reference = Reference(FormularyDrug-284520)
-* medicineClassification[+].type = #STRUCT "Established Pharmacologic Class"
+* medicineClassification[+].type = #EPC "Established Pharmacologic Class"
 * medicineClassification[=].classification = $MEDRT#N0000175752 "Tricyclic Antidepressant"
 * medicineClassification[+].type = #EPC "Established Pharmacologic Class"
 * medicineClassification[=].classification = $NDFRT#N0000146208 "DOXEPIN HYDROCHLORIDE"

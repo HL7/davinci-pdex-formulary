@@ -147,6 +147,9 @@ Description:    "The Drug InsurancePlan describes a prescription drug insurance 
 * plan.specificCost.benefit.cost[copay].type = BenefitCostTypeCS#copay
 * plan.specificCost.benefit.cost[copay].qualifiers from CopayOptionVS (required)
 * plan.specificCost.benefit.cost[copay].value only MoneyQuantity
+* plan.specificCost.benefit.cost[copay].value.value 1..1 MS
+* plan.specificCost.benefit.cost[copay].value.system = "urn:iso:std:iso:4217"
+* plan.specificCost.benefit.cost[copay].value.code = #USD
 
 * plan.specificCost.benefit.cost[coinsurance].type = BenefitCostTypeCS#coinsurance
 * plan.specificCost.benefit.cost[coinsurance].qualifiers from CoinsuranceOptionVS (required)

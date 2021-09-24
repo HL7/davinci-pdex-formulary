@@ -13,9 +13,9 @@ copyrightYear: 2021+
 releaseLabel: CI Build
 publisher:
   name: HL7 Pharmacy Working Group
-  url: http://www.hl7.org/Special/committees/medication/
+  url: http://www.hl7.org/Special/committees/medication
   email: pharmacy@lists.HL7.org
-description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary STU 1.0.1 (Pre-1.1.0)
+description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary STU 1.1.0
 license: CC0-1.0
 dependencies:
   hl7.fhir.us.core: 4.0.0   # updated from 3.1.1 on 8/30/21
