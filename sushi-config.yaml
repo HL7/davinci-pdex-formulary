@@ -112,4 +112,3 @@ resources:
     exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
   CapabilityStatement/usdf-server:
     name: US Drug Formulary Server Capability Statement
-
