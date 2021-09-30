@@ -4,7 +4,8 @@ Alias: $PlanNetInsuranceProductTypeCS = http://hl7.org/fhir/us/davinci-pdex-plan
 
 Alias: $HL7v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 
-Alias: $HL7-USCore-MedicationCodes = https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4
+Alias: $HL7-USCore-MedicationCodes = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4
+//https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4
 
 Alias: $RxNorm = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: $MEDRT = http://hl7.org/fhir/medrt
