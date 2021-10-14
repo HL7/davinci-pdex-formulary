@@ -47,9 +47,16 @@ Id: usdf-QuantityLimitDetail-extension
 Title: "Quantity Limit Detail"
 Description: "An indication of whether and which quantity limits the coverage plan imposes on this drug. (Only include if QuantityLimit = true)"
 * extension contains
+	Description 0..1 and
 	Rolling 0..1 and
 	MaximumDaily 0..1 and 
 	DaysSupply 0..1 
+
+* extension[Description] ^short = "A human readable description of quantity limits."
+* extension[Description].value[x] 1..1
+* extension[Description].value[x] only string
+
+
 * extension[Rolling] ^short = "Indicator of dispense amount limit per time period."
 * extension[Rolling].value[x] 1..1
 * extension[Rolling].value[x] only Timing

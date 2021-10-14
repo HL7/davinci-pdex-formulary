@@ -78,8 +78,8 @@
 				{%if cs.copyright%}<li><b>Copyright:</b> {{cs.copyright}}</li>{%endif%}
 			</ul>
 
-			<p>{{cs.description | markdown | safe }}</p>
-			{%if cs.purpose %}<p>{{cs.purpose | markdown | safe }}</p>{%endif%}
+			{{cs.description | markdown | safe }}
+			{%if cs.purpose %}{{cs.purpose | markdown | safe }}{%endif%}
 
 		
 		{% if cs._implementationGuide %}

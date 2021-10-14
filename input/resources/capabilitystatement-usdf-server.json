@@ -19,7 +19,7 @@
             ]
         }
     ],
-    "date": "2021-08-30",
+    "date": "2021-12-10",
     "description": "This Section describes the expected capabilities of the US Drug Formulary Server actor which is responsible for providing responses to the queries submitted by the US Drug Formulary Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Drug Formulary Server are defined.",
     "experimental": false,
     "fhirVersion": "4.0.1",
@@ -205,6 +205,24 @@
                         "StructureDefinition-usdf-PayerInsurancePlan",
                         "StructureDefinition-usdf-InsuranceDrugPlan"
                     ],
+                    "_supportedProfile": [
+                        {
+                            "extension" : [
+                                {
+                                  "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                  "valueCode" : "SHOULD"
+                                }
+                            ]
+                        },
+                        {
+                            "extension" : [
+                                {
+                                  "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                  "valueCode" : "SHALL"
+                                }
+                            ]
+                        }
+                    ],
                     "type": "InsurancePlan"
                 },
                 {
@@ -360,6 +378,16 @@
                     "supportedProfile": [
                         "StructureDefinition-usdf-FormularyItem"
                     ],
+                    "_supportedProfile": [
+                        {
+                            "extension" : [
+                                {
+                                  "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                  "valueCode" : "SHALL"
+                                }
+                            ]
+                        }
+                    ],
                     "type": "Basic"
                 },
                 {
@@ -497,7 +525,7 @@
                             "extension": [
                                 {
                                     "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                    "valueCode": "SHALL"
+                                    "valueCode": "SHOULD"
                                 }
                             ],
                             "definition": "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-doseform",
@@ -518,6 +546,16 @@
                     ],
                     "supportedProfile": [
                         "StructureDefinition-usdf-FormularyDrug"
+                    ],
+                    "_supportedProfile": [
+                        {
+                            "extension" : [
+                                {
+                                  "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                  "valueCode" : "SHALL"
+                                }
+                            ]
+                        }
                     ],
                     "type": "MedicationKnowledge"
                 }

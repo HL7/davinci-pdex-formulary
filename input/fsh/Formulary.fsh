@@ -115,7 +115,7 @@ Description:    "The Drug InsurancePlan describes a prescription drug insurance 
 * plan 1..* MS
 * plan.type 1..1 MS
 * plan.type from PharmacyTypeVS (extensible)
-* plan.type ^short = "Phamracy network type"
+* plan.type ^short = "Pharmacy network type"
 * plan.network MS
 
 * plan.specificCost 1..* MS
@@ -183,6 +183,7 @@ Description:    "A resource that describes a drug's relationship to a drug plan,
 
 * code 1..1
 * code = InsuranceItemTypeCS#formulary-item
+* subject 1..1 MS
 * subject only Reference(FormularyDrug)
 
 
