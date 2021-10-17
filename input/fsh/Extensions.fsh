@@ -1,10 +1,28 @@
-Extension: DrugPlanReference
-Id: usdf-DrugPlanReference-extension
-Title: "Drug Plan Reference"
-Description: "A reference to a drug plan."
+Extension: FormularyReference
+Id: usdf-FormularyReference-extension
+Title: "Formulary Reference"
+Description: "A reference to a formulary."
 * value[x] 1..1
 * value[x] only Reference
-* valueReference only Reference(InsuranceDrugPlan)
+* valueReference only Reference(Formulary)
+
+
+Extension: BenefitClause
+Id: usdf-BenefitClause-extension
+Title: "Benefit Clause"
+Description: "Provision describing an aspect of the benefit. These provisions may include additional conditions, type of formulary (open/closed), inclusions, exclusions, or other modifications in addition to those otherwise indicated in the plan or the formulary."
+* extension contains
+	Section 0..1 and
+	Clause 1..*
+
+* extension[Section] ^short = "Clause Section"
+* extension[Section].value[x] 1..1
+* extension[Section].value[x] only string
+
+* extension[Clause] ^short = "Individual clause"
+* extension[Clause].value[x] 1..1
+* extension[Clause].value[x] only markdown
+
 
 Extension: PriorAuthorization
 Id: usdf-PriorAuthorization-extension
@@ -90,7 +108,7 @@ Description: "An indication of whether and which quantity limits the coverage pl
 Extension: PharmacyType
 Id: usdf-PharmacyType-extension
 Title: "Pharmacy Type"
-Description: "A CodeableConcept indicating the pharmacy network type the formulary drug is available through the associated plan.  This pharmacy network type is specific to the FormularyDrug and indicates which of the pharmacy network type from the InsuranceDrugPlan applies to the particular formulary drug."
+Description: "A CodeableConcept indicating the pharmacy network type the formulary drug is available through the associated plan.  This pharmacy network type is specific to the FormularyDrug and indicates which of the pharmacy network type from the plan applies to the particular formulary drug."
 * value[x] 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept from PharmacyTypeVS (extensible)

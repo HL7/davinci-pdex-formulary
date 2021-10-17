@@ -33,7 +33,7 @@ Title: "Type of related medication"
 Description: "Types of relationships between medications"
 * codes from system RelatedMedicationTypeCS
 
-ValueSet: BenefitTypeVS
-Title: "Type of benefit"
-Description: "Types of benefits"
-* codes from system BenefitTypeCS
+ValueSet: PlanTypeVS
+Title: "Type of plan"
+Description: "Types of plans"
+* codes from system PlanTypeCS

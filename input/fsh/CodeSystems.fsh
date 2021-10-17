@@ -65,8 +65,8 @@ Title: "Type of related medication"
 Description: "Types of relationships between medications"
 * #alternative         "Drug Alternative"  "Generic or Branded Drugs that could be prescribed as alternatives to the current FormularyDrug."
 
-CodeSystem: BenefitTypeCS
-Id:             usdf-BenefitTypeCS
-Title: "Type of benefit"
-Description: "Types of benefits"
-* #drug         "Drug"  "Drug benefit"
+CodeSystem: PlanTypeCS
+Id:             usdf-PlanTypeCS
+Title: "Type of plan"
+Description: "Types of plans"
+* #drug         "Drug"  "Drug plan"

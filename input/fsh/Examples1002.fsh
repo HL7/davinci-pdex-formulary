@@ -8,8 +8,6 @@ Usage: #example
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 * meta.profile = Canonical(PayerInsurancePlan) 
 
-* extension[DrugPlanReference].valueReference = Reference(InsuranceDrugPlanD1002)
-
 //* contained[0] = PayerInsurancePlanA1002-MarketingURL
 
 * identifier.value = "A1002"
@@ -34,13 +32,56 @@ Usage: #example
 * contact[patient-plan-contact][1].telecom.value = "http://url/to/health/plan/information"
 
 
-Instance: InsuranceDrugPlanD1002
-InstanceOf: InsuranceDrugPlan
-Description: "Insurance Drug Plan D1002"
+* contact[patient-plan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
+* contact[patient-plan-contact][=].name.text = "Sample Medicare Advantage Drug Plan Formulary Website"
+* contact[patient-plan-contact][=].telecom.system = #url
+* contact[patient-plan-contact][=].telecom.value = "http://url/to/health/plan/information"
+
+* contact[patient-plan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
+* contact[patient-plan-contact][=].name.text = "Sample Medicare Advantage Drug Plan Benefit Website"
+* contact[patient-plan-contact][=].telecom.system = #url
+* contact[patient-plan-contact][=].telecom.value = "http://url/to/health/plan/information"
+
+
+* coverage.benefit.extension[BenefitClause].extension[Section].valueString = "Formulary Drug Coverage"
+* coverage.benefit.extension[BenefitClause].extension[Clause][+].valueMarkdown = "**Closed Formulary:** Only drugs listed on the formulary are covered and may be reimbursed by the payer."
+* coverage.benefit.extension[BenefitClause].extension[Clause][+].valueMarkdown = "No exceptions are allowed for non-formulary drugs. Non-formulary drugs are not reimbursed by the payer."
+
+
+* coverage.extension[FormularyReference].valueReference = Reference(FormularyD1002)
+
+
+
+* plan[drug-plan].type = PlanTypeCS#drug "Drug plan"
+
+* plan[drug-plan].specificCost[0].category = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
+
+
+
+* plan[drug-plan].specificCost[0].benefit[0].type = DrugTierCS#brand "Brand"
+
+
+* plan[drug-plan].specificCost[0].benefit[0].cost[copay].type = BenefitCostTypeCS#copay "Copay"
+* plan[drug-plan].specificCost[0].benefit[0].cost[copay].value.value = 20
+* plan[drug-plan].specificCost[0].benefit[0].cost[copay].value.unit = "$"
+* plan[drug-plan].specificCost[0].benefit[0].cost[copay].value.system = "urn:iso:std:iso:4217"
+* plan[drug-plan].specificCost[0].benefit[0].cost[copay].value.code = #USD
+* plan[drug-plan].specificCost[0].benefit[0].cost[copay].qualifiers = CopayOptionCS#after-deductible "After Deductible"
+
+* plan[drug-plan].specificCost[0].benefit[0].cost[coinsurance].type = BenefitCostTypeCS#coinsurance "Coinsurance"
+* plan[drug-plan].specificCost[0].benefit[0].cost[coinsurance].value.value = 20
+* plan[drug-plan].specificCost[0].benefit[0].cost[coinsurance].value.code = #%
+* plan[drug-plan].specificCost[0].benefit[0].cost[coinsurance].value.system = "http://unitsofmeasure.org"
+* plan[drug-plan].specificCost[0].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
+
+
+Instance: FormularyD1002
+InstanceOf: Formulary
+Description: "Formulary D1002"
 Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
-* meta.profile = Canonical(InsuranceDrugPlan) 
+* meta.profile = Canonical(Formulary) 
 
 * identifier.value = "D1002"
 * status = #active
@@ -52,41 +93,7 @@ Usage: #example
 * period.start = "2021-01-01"
 * period.end = "2021-12-31"
 
-* coverageArea = Reference(StateOfCTLocation)
 
-* contact[patient-drugplan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
-* contact[patient-drugplan-contact][=].telecom.system = #phone
-* contact[patient-drugplan-contact][=].telecom.value = "+1 (888) 555-1002"
-
-* contact[patient-drugplan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
-* contact[patient-drugplan-contact][=].name.text = "Sample Medicare Advantage Drug Plan Formulary Website"
-* contact[patient-drugplan-contact][=].telecom.system = #url
-* contact[patient-drugplan-contact][=].telecom.value = "http://url/to/health/plan/information"
-
-* contact[patient-drugplan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
-* contact[patient-drugplan-contact][=].name.text = "Sample Medicare Advantage Drug Plan Benefit Website"
-* contact[patient-drugplan-contact][=].telecom.system = #url
-* contact[patient-drugplan-contact][=].telecom.value = "http://url/to/health/plan/information"
-
-* plan[0].type = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
-
-* plan[0].specificCost[0].category = DrugTierCS#brand "Brand"
-
-// TODO need a codeSystem for plan.specificCost.benefit.type to represent prescription fill
-* plan[0].specificCost[0].benefit[0].type = BenefitTypeCS#drug "DRUG"
-
-* plan[0].specificCost[0].benefit[0].cost[copay].type = BenefitCostTypeCS#copay "Copay"
-* plan[0].specificCost[0].benefit[0].cost[copay].value.value = 20
-* plan[0].specificCost[0].benefit[0].cost[copay].value.unit = "$"
-* plan[0].specificCost[0].benefit[0].cost[copay].value.system = "urn:iso:std:iso:4217"
-* plan[0].specificCost[0].benefit[0].cost[copay].value.code = #USD
-* plan[0].specificCost[0].benefit[0].cost[copay].qualifiers = CopayOptionCS#after-deductible "After Deductible"
-
-* plan[0].specificCost[0].benefit[0].cost[coinsurance].type = BenefitCostTypeCS#coinsurance "Coinsurance"
-* plan[0].specificCost[0].benefit[0].cost[coinsurance].value.value = 20
-* plan[0].specificCost[0].benefit[0].cost[coinsurance].value.code = #%
-* plan[0].specificCost[0].benefit[0].cost[coinsurance].value.system = "http://unitsofmeasure.org"
-* plan[0].specificCost[0].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
 
 
 
@@ -104,7 +111,7 @@ Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
-* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
+* extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
@@ -129,7 +136,7 @@ Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
-* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
+* extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
@@ -153,7 +160,7 @@ Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
-* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
+* extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
@@ -187,7 +194,7 @@ Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
-* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
+* extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
@@ -206,7 +213,7 @@ Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
-* extension[usdf-DrugPlanReference-extension].valueReference = Reference(InsuranceDrugPlanD1002)
+* extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"

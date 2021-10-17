@@ -15,7 +15,7 @@
      <li>
       <a href="https://jira.hl7.org/browse/FHIR-33181">FHIR-33181</a>:
       <p>
-        Changed CoveragePlan profile from using a List resource to two InsurancePlan profiles; one defining the higher level <a href="StructureDefinition-usdf-PayerInsurancePlan.html">Payer Insurance Plan</a> and the other defining the <a href="StructureDefinition-usdf-InsuranceDrugPlan.html">Insurance Drug Plan</a> which includes a definition of drug tiers and their associated cost-sharing models that are associated with a formulary.
+        Changed CoveragePlan profile from using a List resource to two InsurancePlan profiles; one defining the higher level <a href="StructureDefinition-usdf-PayerInsurancePlan.html">Payer Insurance Plan</a> and the other defining the <a href="StructureDefinition-usdf-Formulary.html">Formulary</a> provides general information about a formulary and acts as an organizing construct to create a formulary list.
         This change also addresses:
         <ul>
           <li>
@@ -60,10 +60,10 @@
 </p>
 <ul>
   <li>
-    <strong><a href="StructureDefinition-usdf-PayerInsurancePlan.html">PayerInsurancePlan</a></strong>: The PayerInsurancePlan profile of the FHIR R4 <a href="http://hl7.org/fhir/R4/insuranceplan.html">InsurancePlan</a> resource defines the top level package of health insurance coverage benefits that a payer offers.
+    <strong><a href="StructureDefinition-usdf-PayerInsurancePlan.html">PayerInsurancePlan</a></strong>: The PayerInsurancePlan profile of the FHIR R4 <a href="http://hl7.org/fhir/R4/insuranceplan.html">InsurancePlan</a> resource defines the health insurance product, which include coverage benefits that are offered, and additional information about the offering, such as a coverage area, contact information, brochure locations, etc. The health insurance product offers one or more types of coverage, each of which may define a plan of covered benefits with the particular cost sharing structure offered to a consumer. Health insurance plans that include drug coverage reference a formulary that provides details about drugs that are covered under the plan including requirements and limitations of the coverage specific to each drug.
   </li>
   <li>
-    <strong><a href="StructureDefinition-usdf-InsuranceDrugPlan.html">InsuranceDrugPlan</a></strong>: The InsuranceDrugPlan profile of the FHIR R4 <a href="http://hl7.org/fhir/R4/insuranceplan.html">InsurancePlan</a> describes a prescription drug insurance offering comprised of drug benefits including a definition of drug tiers and their associated cost-sharing models and additional information about the plan, such as networks, a coverage area, contact information, etc.
+    <strong><a href="StructureDefinition-usdf-Formulary.html">Formulary</a></strong>: The Formulary profile of the FHIR R4 <a href="http://hl7.org/fhir/R4/insuranceplan.html">InsurancePlan</a> provides general information about a formulary and acts as an organizing construct that associated FormularyItem resources point to. The Formulary combined with its associated <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> and <a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a> resources respresent a formulary list that includes the set of drugs covered and the requirements and limitations of the coverage.
   </li>
   <li>
     <strong><a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a></strong>: The FormularyItem profile of the FHIR R4 <a href="http://hl7.org/fhir/R4/basic.html">Basic</a> describes a drug's relationship to a drug plan, including drug tier, prior authorization requirements, and more. The set of FormuaryItem resrouces associated with a particular drug plan represents the drug plans formulary.
@@ -72,19 +72,31 @@
     <strong><a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a></strong>: The FormularyDrug profile of the FHIR R4 <a href="http://hl7.org/fhir/medicationknowledge.html">MedicationKnowledge</a> resource provides information about a prescribable drug which may be part of a formulary including its RxNorm code, synonyms, and optionally drug classification and alternatives.
   </li>
 </ul>
-<!-- TODO Need new search parameters 
+
 <p>
-  Two searchParameters have also been defined to facilitate the anticipated use cases. See the <a href="queries.html">Anticipated Client Queries</a> section for a description of how to query the CoveragePlan and FormularyDrug profiles in support of the anticipated use cases.
+  Several <a href="search_parameters.html">searchParameters</a> have also been defined in this guide to facilitate the anticipated use cases. See the <a href="queries.html">Anticipated Client Queries</a> section for a description of how to query the CoveragePlan and FormularyDrug profiles in support of the anticipated use cases.
 </p>
 <ul>
-  <li>
-    <strong><a href="SearchParameter-DrugPlan.html">DrugPlan</a></strong>: Makes the DrugPlan identifier of each FormularyDrug accessible for query
+<li>
+    <strong><a href="SearchParameter-coverage-type.html">coverage-type</a></strong>: Makes the `coverage.type` codeableConcept of each <a href="StructureDefinition-usdf-PayerInsurancePlan.html">PayerInsurancePlan</a> accessible for query to find InsurancePlan resources that have a specific coverage type, like drug coverage.
   </li>
   <li>
-    <strong><a href="SearchParameter-DrugTier.html">DrugTier</a></strong>: Makes the DrugTier identifier of each FormularyDrug accessible for query
+    <strong><a href="SearchParameter-formulary-coverage.html">formulary-coverage</a></strong>: Makes the formulary reference of each <a href="StructureDefinition-usdf-PayerInsurancePlan.html">PayerInsurancePlan</a> accessible for query to find InsurancePlan resources that have a specific formulary.
+  </li>
+  <li>
+    <strong><a href="SearchParameter-formulary.html">formulary</a></strong>: Makes the Formulary reference of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to be able to query for drugs found in a particular formulary.
+  </li>
+  <li>
+    <strong><a href="SearchParameter-drug-tier.html">drug-tier</a></strong>: Makes the DrugTier codeableConcept of each <a href="StructureDefinition-usdf-FormularyDrug.html">FormularyItem</a> accessible for query to find drugs in a specific tier.
+  </li>
+  <li>
+    <strong><a href="SearchParameter-pharmacy-type.html">pharmacy-type</a></strong>: Makes the PharmacyType codeableConcept of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs in available through a specific pharmacy network type.
+  </li>
+  <li>
+    <strong><a href="SearchParameter-drug-name.html">drug-name</a></strong>: Makes the RxNorm name of each<a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a> accessible for query to find drugs by name, stength and form.
   </li>
 </ul>
--->
+
 <a name="expected-users"></a>
 ### Expected Users 
 <p>

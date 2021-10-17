@@ -1,17 +1,58 @@
-Instance: drug-plan
+Instance: coverage-type
 InstanceOf: SearchParameter
 Usage: #definition
 
 * status = #active
-* code = #drug-plan
-* name = "Drug Plan"
-* description = "Accesses the Drug Plan of a FormularyItem"
-* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/drug-plan"
+* code = #coverage-type
+* name = "Coverage Type"
+* description = "Accesses the Coverage Type of a PayerInsurancePlan"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/coverage-type"
+* base[0] = #InsurancePlan
+
+* type = #token
+
+* expression = "InsurancePlan.coverage.type"
+* target[+] = #InsurancePlan
+
+* comparator[0] = #eq
+* multipleOr = true
+
+
+
+Instance: formulary
+InstanceOf: SearchParameter
+Usage: #definition
+
+* status = #active
+* code = #formulary
+* name = "Formulary"
+* description = "Accesses the Formulary of a FormularyItem"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/formulary"
 * base[0] = #Basic
 
 * type = #reference
 
-* expression = "Basic.extension.where(url='http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-DrugPlanReference-extension').value"
+* expression = "Basic.extension.where(url='http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyReference-extension').value"
+* target[+] = #InsurancePlan
+
+* comparator[0] = #eq
+* multipleOr = true
+
+
+Instance: formulary-coverage
+InstanceOf: SearchParameter
+Usage: #definition
+
+* status = #active
+* code = #formulary-coverage
+* name = "Formulary Coverage"
+* description = "Accesses the Coverage Formulary Reference of a PayerInsurancePlan"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/formulary-coverage"
+* base[0] = #InsurancePlan
+
+* type = #reference
+
+* expression = "InsuancePlan.coverage.extension.where(url='http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyReference-extension').value"
 * target[+] = #InsurancePlan
 
 * comparator[0] = #eq

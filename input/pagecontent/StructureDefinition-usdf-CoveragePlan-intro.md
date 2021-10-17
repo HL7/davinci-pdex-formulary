@@ -1,1 +1,0 @@
-Note: Future versions of this Implementation Guide may base the CoveragePlan profile on the InsurancePlan resource instead of the List resource.
