@@ -43,12 +43,7 @@ Usage: #example
 * contact[patient-plan-contact][=].telecom.value = "http://url/to/health/plan/information"
 
 
-* coverage.benefit.extension[BenefitClause].extension[Section].valueString = "Formulary Drug Coverage"
-* coverage.benefit.extension[BenefitClause].extension[Clause][+].valueMarkdown = "**Closed Formulary:** Only drugs listed on the formulary are covered and may be reimbursed by the payer."
-* coverage.benefit.extension[BenefitClause].extension[Clause][+].valueMarkdown = "No exceptions are allowed for non-formulary drugs. Non-formulary drugs are not reimbursed by the payer."
-
-
-* coverage.extension[FormularyReference].valueReference = Reference(FormularyD1002)
+* coverage.extension[FormularyReferences].extension[FormularyReference].valueReference = Reference(FormularyD1002)
 
 
 
@@ -106,7 +101,7 @@ Usage: #example
 
 Instance: FormularyItem-D1002-1000091
 InstanceOf: FormlaryItem
-Description: "Formulary Item for Insurance Drug Plan D1002 Drug 1000091"
+Description: "Formulary Item for Formulary D1002 Drug 1000091"
 Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
@@ -131,7 +126,7 @@ Usage: #example
 
 Instance: FormularyItem-D1002-1049640
 InstanceOf: FormlaryItem
-Description: "Formulary Item for Insurance Drug Plan D1002 Drug 1049640"
+Description: "Formulary Item for Formulary D1002 Drug 1049640"
 Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
@@ -155,7 +150,7 @@ Usage: #example
 
 Instance: FormularyItem-QuantityTimimgTest
 InstanceOf: FormlaryItem
-Description: "Formulary Item for Insurance Drug Plan D1002 Drug QuantityTiming"
+Description: "Formulary Item for Formulary D1002 Drug QuantityTiming"
 Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
@@ -189,7 +184,7 @@ Usage: #example
 
 Instance: FormularyItem-D1002-209459
 InstanceOf: FormlaryItem
-Description: "Formulary Item for Insurance Drug Plan D1002 Drug 209459"
+Description: "Formulary Item for Formulary D1002 Drug 209459"
 Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
@@ -208,7 +203,7 @@ Usage: #example
 
 Instance: FormularyItem-D1002-284520
 InstanceOf: FormlaryItem
-Description: "Formulary Item for Insurance Drug Plan D1002 Drug 284520"
+Description: "Formulary Item for Formulary D1002 Drug 284520"
 Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"

@@ -54,7 +54,7 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 * coverage.type = http://terminology.hl7.org/CodeSystem/v3-ActCode#DRUGPOL
 * coverage.extension 1..1 MS
 * coverage.extension contains
-    FormularyReference named usdf-FormularyReference-extension 1..1 MS
+    FormularyReferences named usdf-FormularyReferences-extension 1..1 MS
 // ****************** TODO need slicing, Need a drug coverage code
 * coverage.benefit.type from PlanTypeVS (extensible)
 

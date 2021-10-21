@@ -1,27 +1,24 @@
+Extension: FormularyReferences
+Id: usdf-FormularyReferences-extension
+Title: "Formulary References"
+Description: "References to formularies."
+
+* extension contains
+	FormularyReference  1..* MS
+
+* extension[FormularyReference] ^short = "reference to a single formulary"
+* extension[FormularyReference].value[x] only Reference
+* extension[FormularyReference].valueReference only Reference(Formulary)
+
 Extension: FormularyReference
 Id: usdf-FormularyReference-extension
 Title: "Formulary Reference"
-Description: "A reference to a formulary."
+Description: "Reference to a formulary."
+
 * value[x] 1..1
 * value[x] only Reference
 * valueReference only Reference(Formulary)
 
-
-Extension: BenefitClause
-Id: usdf-BenefitClause-extension
-Title: "Benefit Clause"
-Description: "Provision describing an aspect of the benefit. These provisions may include additional conditions, type of formulary (open/closed), inclusions, exclusions, or other modifications in addition to those otherwise indicated in the plan or the formulary."
-* extension contains
-	Section 0..1 and
-	Clause 1..*
-
-* extension[Section] ^short = "Clause Section"
-* extension[Section].value[x] 1..1
-* extension[Section].value[x] only string
-
-* extension[Clause] ^short = "Individual clause"
-* extension[Clause].value[x] 1..1
-* extension[Clause].value[x] only markdown
 
 
 Extension: PriorAuthorization
@@ -64,6 +61,7 @@ Extension: QuantityLimitDetail
 Id: usdf-QuantityLimitDetail-extension
 Title: "Quantity Limit Detail"
 Description: "An indication of whether and which quantity limits the coverage plan imposes on this drug. (Only include if QuantityLimit = true)"
+* extension 1..*
 * extension contains
 	Description 0..1 and
 	Rolling 0..1 and
@@ -100,8 +98,8 @@ Description: "An indication of whether and which quantity limits the coverage pl
 * extension[DaysSupply].valueTiming.repeat.boundsDuration.system = "http://unitsofmeasure.org"
 * extension[DaysSupply].valueTiming.repeat.boundsDuration.code = #d
 * extension[DaysSupply].valueTiming.repeat.count 1..1
-* extension[DaysSupply].valueTiming.repeat.duration MS
-* extension[DaysSupply].valueTiming.repeat.durationUnit MS
+* extension[DaysSupply].valueTiming.repeat.duration 
+* extension[DaysSupply].valueTiming.repeat.durationUnit 
 * extension[DaysSupply].valueTiming.repeat.period 1..1
 * extension[DaysSupply].valueTiming.repeat.periodUnit = #d
 

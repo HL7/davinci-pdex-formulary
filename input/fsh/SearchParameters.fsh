@@ -52,7 +52,7 @@ Usage: #definition
 
 * type = #reference
 
-* expression = "InsuancePlan.coverage.extension.where(url='http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyReference-extension').value"
+* expression = "InsuancePlan.coverage.extension.where(url='http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyReference-extension').extension.where(url='FormularyReference').value"
 * target[+] = #InsurancePlan
 
 * comparator[0] = #eq

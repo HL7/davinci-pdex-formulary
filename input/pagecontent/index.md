@@ -78,7 +78,7 @@
 </p>
 <ul>
 <li>
-    <strong><a href="SearchParameter-coverage-type.html">coverage-type</a></strong>: Makes the `coverage.type` codeableConcept of each <a href="StructureDefinition-usdf-PayerInsurancePlan.html">PayerInsurancePlan</a> accessible for query to find InsurancePlan resources that have a specific coverage type, like drug coverage.
+    <strong><a href="SearchParameter-coverage-type.html">coverage-type</a></strong>: Makes the <code>coverage.type</code> codeableConcept of each <a href="StructureDefinition-usdf-PayerInsurancePlan.html">PayerInsurancePlan</a> accessible for query to find InsurancePlan resources that have a specific coverage type, like drug coverage.
   </li>
   <li>
     <strong><a href="SearchParameter-formulary-coverage.html">formulary-coverage</a></strong>: Makes the formulary reference of each <a href="StructureDefinition-usdf-PayerInsurancePlan.html">PayerInsurancePlan</a> accessible for query to find InsurancePlan resources that have a specific formulary.
