@@ -38,7 +38,6 @@
 <artifact deprecated="true" id="MedicationKnowledge/cmsip9" key="MedicationKnowledge-cmsip9" name="Formulary Drug cmsip9"/>
 <artifact id="StructureDefinition/usdf-FormularyItem" key="StructureDefinition-usdf-FormularyItem" name="Formulary Item"/>
 <artifact id="StructureDefinition/usdf-FormularyReference-extension" key="StructureDefinition-usdf-FormularyReference-extension" name="Formulary Reference"/>
-<artifact id="StructureDefinition/usdf-FormularyReferences-extension" key="StructureDefinition-usdf-FormularyReferences-extension" name="Formulary References"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-FormularyURL-extension" key="StructureDefinition-usdf-FormularyURL-extension" name="Formulary URL"/>
 <artifact id="InsurancePlan/FormularyD1002" key="InsurancePlan-FormularyD1002" name="FormularyD1002"/>
 <artifact id="InsurancePlan/FormularyD3001" key="InsurancePlan-FormularyD3001" name="FormularyD3001"/>

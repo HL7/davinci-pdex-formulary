@@ -52,12 +52,10 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 * coverage 1..* MS
 * coverage.type 1..1 MS
 * coverage.type = http://terminology.hl7.org/CodeSystem/v3-ActCode#DRUGPOL
-* coverage.extension 1..1 MS
+* coverage.extension 1..* MS
 * coverage.extension contains
-    FormularyReferences named usdf-FormularyReferences-extension 1..1 MS
+    FormularyReference named usdf-FormularyReference-extension 1..* MS
 // ****************** TODO need slicing, Need a drug coverage code
-* coverage.benefit.type from PlanTypeVS (extensible)
-
 
 * coverage.benefit.type from PlanTypeVS (extensible)
 
@@ -215,9 +213,9 @@ Description:    "Drug information which may be part of a formulary including its
 * status 1..1 MS
 * doseForm MS
 * synonym MS
-* relatedMedicationKnowledge MS
-* relatedMedicationKnowledge.type from RelatedMedicationTypeVS (extensible)
-* relatedMedicationKnowledge.reference only Reference(FormularyDrug)
+//* relatedMedicationKnowledge MS
+//* relatedMedicationKnowledge.type from RelatedMedicationTypeVS (extensible)
+//* relatedMedicationKnowledge.reference only Reference(FormularyDrug)
 
 // TODO Do we need to create a new FHIR Code System for pharmacologic class? https://www.fda.gov/regulatory-information/fdaaa-implementation-chart/usp-therapeutic-categories-model-guidelines
 * medicineClassification MS

@@ -45,9 +45,9 @@ Usage: #example
 * contact[patient-plan-contact][=].telecom.value = "http://url/to/health/plan/information"
 
 
-* coverage.extension[FormularyReferences].extension[FormularyReference].valueReference = Reference(FormularyD3004t)
+* coverage.extension[FormularyReference].valueReference = Reference(FormularyD3004t)
 
-* plan[drug-plan].type = PlanTypeCS#drug "Drug plan"
+* plan[drug-plan].type = PlanTypeCS#drug "Drug"
 
 
 

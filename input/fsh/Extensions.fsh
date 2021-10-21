@@ -1,14 +1,4 @@
-Extension: FormularyReferences
-Id: usdf-FormularyReferences-extension
-Title: "Formulary References"
-Description: "References to formularies."
 
-* extension contains
-	FormularyReference  1..* MS
-
-* extension[FormularyReference] ^short = "reference to a single formulary"
-* extension[FormularyReference].value[x] only Reference
-* extension[FormularyReference].valueReference only Reference(Formulary)
 
 Extension: FormularyReference
 Id: usdf-FormularyReference-extension

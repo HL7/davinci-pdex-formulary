@@ -4,7 +4,7 @@ Usage: #definition
 
 * status = #active
 * code = #coverage-type
-* name = "Coverage Type"
+* name = "USDFCoverageType"
 * description = "Accesses the Coverage Type of a PayerInsurancePlan"
 * url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/coverage-type"
 * base[0] = #InsurancePlan
@@ -25,7 +25,7 @@ Usage: #definition
 
 * status = #active
 * code = #formulary
-* name = "Formulary"
+* name = "USDFFormulary"
 * description = "Accesses the Formulary of a FormularyItem"
 * url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/formulary"
 * base[0] = #Basic
@@ -45,7 +45,7 @@ Usage: #definition
 
 * status = #active
 * code = #formulary-coverage
-* name = "Formulary Coverage"
+* name = "USDFFormularyCoverage"
 * description = "Accesses the Coverage Formulary Reference of a PayerInsurancePlan"
 * url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/formulary-coverage"
 * base[0] = #InsurancePlan
@@ -65,7 +65,7 @@ Usage: #definition
 
 * status = #active
 * code = #pharmacy-type
-* name = "Pharmacy Type"
+* name = "USDFPharmacyType"
 * description = "Accesses the Pharmacy Network Type of a FormularyItem"
 * url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/pharmacy-type"
 * base[0] = #Basic
@@ -84,7 +84,7 @@ Usage: #definition
 
 * status = #active
 * code = #drug-tier
-* name = "Drug Tier"
+* name = "USDFDrugTier"
 * description = "Accesses the Drug Tier of a FormularyItem"
 * url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/drug-tier"
 * base[0] = #Basic
@@ -103,7 +103,7 @@ Usage: #definition
 
 * status = #active
 * code = #drug-name
-* name = "Drug Name"
+* name = "USDFDrugName"
 * description = "Accesses the Drug Name of a FormularyDrug"
 * url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/drug-name"
 * base[0] = #MedicationKnowledge
