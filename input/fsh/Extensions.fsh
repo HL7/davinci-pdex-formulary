@@ -1,10 +1,25 @@
-Extension: DrugPlanReference
-Id: usdf-DrugPlanReference-extension
-Title: "Drug Plan Reference"
-Description: "A reference to a drug plan."
+Extension: FormularyReferences
+Id: usdf-FormularyReferences-extension
+Title: "Formulary References"
+Description: "References to formularies."
+
+* extension contains
+	FormularyReference  1..* MS
+
+* extension[FormularyReference] ^short = "reference to a single formulary"
+* extension[FormularyReference].value[x] only Reference
+* extension[FormularyReference].valueReference only Reference(Formulary)
+
+Extension: FormularyReference
+Id: usdf-FormularyReference-extension
+Title: "Formulary Reference"
+Description: "Reference to a formulary."
+
 * value[x] 1..1
 * value[x] only Reference
-* valueReference only Reference(InsuranceDrugPlan)
+* valueReference only Reference(Formulary)
+
+
 
 Extension: PriorAuthorization
 Id: usdf-PriorAuthorization-extension
@@ -46,6 +61,7 @@ Extension: QuantityLimitDetail
 Id: usdf-QuantityLimitDetail-extension
 Title: "Quantity Limit Detail"
 Description: "An indication of whether and which quantity limits the coverage plan imposes on this drug. (Only include if QuantityLimit = true)"
+* extension 1..*
 * extension contains
 	Description 0..1 and
 	Rolling 0..1 and
@@ -82,15 +98,15 @@ Description: "An indication of whether and which quantity limits the coverage pl
 * extension[DaysSupply].valueTiming.repeat.boundsDuration.system = "http://unitsofmeasure.org"
 * extension[DaysSupply].valueTiming.repeat.boundsDuration.code = #d
 * extension[DaysSupply].valueTiming.repeat.count 1..1
-* extension[DaysSupply].valueTiming.repeat.duration MS
-* extension[DaysSupply].valueTiming.repeat.durationUnit MS
+* extension[DaysSupply].valueTiming.repeat.duration 
+* extension[DaysSupply].valueTiming.repeat.durationUnit 
 * extension[DaysSupply].valueTiming.repeat.period 1..1
 * extension[DaysSupply].valueTiming.repeat.periodUnit = #d
 
 Extension: PharmacyType
 Id: usdf-PharmacyType-extension
 Title: "Pharmacy Type"
-Description: "A CodeableConcept indicating the pharmacy network type the formulary drug is available through the associated plan.  This pharmacy network type is specific to the FormularyDrug and indicates which of the pharmacy network type from the InsuranceDrugPlan applies to the particular formulary drug."
+Description: "A CodeableConcept indicating the pharmacy network type the formulary drug is available through the associated plan.  This pharmacy network type is specific to the FormularyDrug and indicates which of the pharmacy network type from the plan applies to the particular formulary drug."
 * value[x] 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept from PharmacyTypeVS (extensible)

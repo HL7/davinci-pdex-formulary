@@ -11,34 +11,46 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>InsurancePlan (PayerInsurancePlan & InsuranceDrugPlan)</td>
+			<td>InsurancePlan (PayerInsurancePlan & Formulary)</td>
 			<td><a href="http://hl7.org/fhir/R4/search.html">_id</a></td>
 			<td><a href="https://www.hl7.org/fhir/search.html#token">token</a></td>
 			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?_id=[id]</code></td>
 		</tr>
   		<tr>
-			<td>InsurancePlan (PayerInsurancePlan & InsuranceDrugPlan)</td>
+			<td>InsurancePlan (PayerInsurancePlan & Formulary)</td>
 			<td>identifier</td>
 			<td><a href="https://www.hl7.org/fhir/search.html#token">token</a></td>
 			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?identifier=[system]|[code]</code></td>
 		</tr>
 		<tr>
-			<td>InsurancePlan (PayerInsurancePlan & InsuranceDrugPlan)</td>
+			<td>InsurancePlan (PayerInsurancePlan & Formulary)</td>
 			<td>status</td>
 			<td><a href="https://www.hl7.org/fhir/search.html#token">token</a></td>
 			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?status=[code]</code></td>
 		</tr>
 		<tr>
-			<td>InsurancePlan (PayerInsurancePlan & InsuranceDrugPlan)</td>
+			<td>InsurancePlan (PayerInsurancePlan & Formulary)</td>
 			<td>type</td>
 			<td><a href="https://www.hl7.org/fhir/search.html#token">token</a></td>
 			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?type=[system]|[code]</code></td>
 		</tr>	
 		<tr>
-			<td>InsurancePlan (PayerInsurancePlan & InsuranceDrugPlan)</td>
+			<td>InsurancePlan (PayerInsurancePlan & Formulary)</td>
 			<td>name</td>
 			<td><a href="https://www.hl7.org/fhir/search.html#string">string</a></td>
 			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?name=[string]</code></td>
+		</tr>
+		<tr>
+			<td>InsurancePlan (PayerInsurancePlan & Formulary)</td>
+			<td><a href="SearchParameter-coverage-type.html">coverage-type</a></td>
+			<td><a href="https://www.hl7.org/fhir/search.html#token">token</a></td>
+			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?coverage-type=[system]|[code]</code></td>
+		</tr>			
+		<tr>
+			<td>InsurancePlan (PayerInsurancePlan & Formulary)</td>
+			<td><a href="SearchParameter-formulary-coverage.html">formulary-coverage</a></td>
+			<td><a href="https://www.hl7.org/fhir/search.html#reference">reference</a></td>
+			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?formulary-coverage=[reference]</code></td>
 		</tr>
 		<tr>
 			<td>Location (InsurancePlanLocation)</td>
@@ -72,9 +84,9 @@
 		</tr>
 		<tr>
 			<td>Basic (FormularyItem)</td>
-			<td><a href="SearchParameter-drug-plan.html">drug-plan</a></td>
+			<td><a href="SearchParameter-formulary.html">formulary</a></td>
 			<td><a href="https://www.hl7.org/fhir/search.html#reference">reference</a></td>
-			<td><code class="highlighter-rouge">GET [base]/Basic?drug-plan=[reference]</code></td>
+			<td><code class="highlighter-rouge">GET [base]/Basic?formulary=[reference]</code></td>
 		</tr>
 		<tr>
 			<td>Basic (FormularyItem)</td>

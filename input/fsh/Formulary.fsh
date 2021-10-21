@@ -1,15 +1,11 @@
+// TODO checnge to DrugPlan?
 Profile:        PayerInsurancePlan
 Parent:         InsurancePlan
 Id:             usdf-PayerInsurancePlan
 Title:          "Payer Insurance Plan"
-Description:    "The Payer InsurancePlan that defines the top level package of health insurance coverage benefits that are offered. A given payer’s products typically differ by network type and/or covered benefits. A plan pairs a product’s covered benefits with the particular cost sharing structure offered to a consumer. A given product may comprise multiple sub-plans including a Drug Plan
-
-This InsurancePlan to support Formulary describes a health insurance offering comprised of, at a minimum, a single or a set of drug plans and additional information about the offering, such as who it is owned and administered by, a coverage area, contact information, etc."
+Description:    "The Payer InsurancePlan that defines the health insurance product, which include coverage benefits that are offered, and additional information about the offering, such as a coverage area, contact information, brochure locations, etc. The health insurance product offers one or more types of coverage, each of which may define a plan of covered benefits with the particular cost sharing structure offered to a consumer. Health insurance plans that include drug coverage reference a formulary that provides details about drugs that are covered under the plan including requirements and limitations of the coverage specific to each drug."
 
 * meta.lastUpdated 1..1
-
-* extension contains
-    DrugPlanReference named usdf-DrugPlanReference-extension 1..1 MS
 
 * identifier 1..* MS
 * status 1..1 MS
@@ -49,26 +45,106 @@ This InsurancePlan to support Formulary describes a health insurance offering co
 * contact[patient-plan-contact].telecom.value 1..1 
 * contact[patient-plan-contact].telecom ^short = "Patient Info Contact (email/website/phone number)"
 
-/*
-* endpoint ^short = "Endpoint for additional information"
-* endpoint only Reference(InsurancePlanEndpoint)
-* endpoint MS 
-*/
+
+// *********TODO how do we want to deal with additional contact types (formulary vs general)
+
+
+* coverage 1..* MS
+* coverage.type 1..1 MS
+* coverage.type = http://terminology.hl7.org/CodeSystem/v3-ActCode#DRUGPOL
+* coverage.extension 1..1 MS
+* coverage.extension contains
+    FormularyReferences named usdf-FormularyReferences-extension 1..1 MS
+// ****************** TODO need slicing, Need a drug coverage code
+* coverage.benefit.type from PlanTypeVS (extensible)
+
+
+* coverage.benefit.type from PlanTypeVS (extensible)
+
+* coverage.benefit ^slicing.discriminator.path = "type"
+* coverage.benefit ^slicing.rules = #open
+* coverage.benefit ^slicing.discriminator.type = #pattern 
+* coverage.benefit ^slicing.ordered = false   // can be omitted, since false is the default
+* coverage.benefit ^slicing.description = "Slice based on $this pattern"
+
+* coverage.benefit contains
+    drug-plan 1..* MS
+
+* coverage.benefit[drug-plan].type = PlanTypeCS#drug
+
+
+* plan 1..* MS
+* plan.type from PlanTypeVS (extensible)
+
+* plan ^slicing.discriminator.path = "type"
+* plan ^slicing.rules = #open
+* plan ^slicing.discriminator.type = #pattern 
+* plan ^slicing.ordered = false   // can be omitted, since false is the default
+* plan ^slicing.description = "Slice based on $this pattern"
+* plan contains 
+   drug-plan 1..* MS
+
+
+* plan[drug-plan].type = PlanTypeCS#drug
+//* plan.type from PharmacyTypeVS (extensible)
+//* plan.type ^short = "Pharmacy network type"
+* plan[drug-plan].network MS
+
+
+
+* plan[drug-plan].specificCost 1..* MS
+* plan[drug-plan].specificCost ^short = "Pharmacy network type specific cost"
+* plan[drug-plan].specificCost.category 1..1 MS
+* plan[drug-plan].specificCost.category from PharmacyTypeVS (extensible)
+
+
+* plan[drug-plan].specificCost.benefit 1..* MS
+// TODO need a codeSystem for plan.specificCost.benefit.type to represent prescription fill
+
+* plan[drug-plan].specificCost.benefit ^short = "Drug tier benefit"
+* plan[drug-plan].specificCost.benefit.type 1..1 MS
+* plan[drug-plan].specificCost.benefit.type from DrugTierVS (required)
+
+
+* plan[drug-plan].specificCost.benefit.cost 1..* MS
+* plan[drug-plan].specificCost.benefit.cost.type from BenefitCostTypeVS (extensible)
+* plan[drug-plan].specificCost.benefit.cost.qualifiers 1..1 MS
+* plan[drug-plan].specificCost.benefit.cost.value MS
+
+* plan[drug-plan].specificCost.benefit.cost ^slicing.discriminator.path = "type"
+* plan[drug-plan].specificCost.benefit.cost ^slicing.rules = #open
+* plan[drug-plan].specificCost.benefit.cost ^slicing.discriminator.type = #pattern 
+* plan[drug-plan].specificCost.benefit.cost ^slicing.ordered = false   // can be omitted, since false is the default
+* plan[drug-plan].specificCost.benefit.cost ^slicing.description = "Slice based on $this pattern"
+* plan[drug-plan].specificCost.benefit.cost contains 
+   copay 0..1 MS and
+   coinsurance 0..1 MS
+
+* plan[drug-plan].specificCost.benefit.cost[copay].type = BenefitCostTypeCS#copay
+* plan[drug-plan].specificCost.benefit.cost[copay].qualifiers from CopayOptionVS (required)
+* plan[drug-plan].specificCost.benefit.cost[copay].value only MoneyQuantity
+* plan[drug-plan].specificCost.benefit.cost[copay].value.value 1..1 MS
+* plan[drug-plan].specificCost.benefit.cost[copay].value.system = "urn:iso:std:iso:4217"
+* plan[drug-plan].specificCost.benefit.cost[copay].value.code = #USD
+
+* plan[drug-plan].specificCost.benefit.cost[coinsurance].type = BenefitCostTypeCS#coinsurance
+* plan[drug-plan].specificCost.benefit.cost[coinsurance].qualifiers from CoinsuranceOptionVS (required)
+* plan[drug-plan].specificCost.benefit.cost[coinsurance].value.code = #%
+* plan[drug-plan].specificCost.benefit.cost[coinsurance].value.system = "http://unitsofmeasure.org"
 
 
 
 
 
-Profile:        InsuranceDrugPlan
+
+
+Profile:        Formulary
 Parent:         InsurancePlan
-Id:             usdf-InsuranceDrugPlan
-Title:          "Insurance Drug Plan"
-Description:    "The Drug InsurancePlan describes a prescription drug insurance offering comprised of drug benefits including a definition of drug tiers and their associated cost-sharing models and additional information about the plan, such as networks, a coverage area, contact information, etc."
+Id:             usdf-Formulary
+Title:          "Formulary"
+Description:    "The Formulary provides general information about a formulary and acts as an organizing construct that associated FormularyItem resources point to. The Formulary combined with its associated FormularyItem and FormularyDrug resources respresent a formulary list that includes the set of drugs covered and the requirements and limitations of the coverage."
 
 * meta.lastUpdated 1..1
-// no sub formulary plans
-//* extension contains
-//    MemberPlan named usdf-MemberPlan-extension 1..* MS
 * identifier 1..* MS
 * status 1..1 MS
 
@@ -80,81 +156,20 @@ Description:    "The Drug InsurancePlan describes a prescription drug insurance 
 //* alias MS
 * period MS
 
-//* ownedBy 1..1 MS
-//* ownedBy only Reference(PlannetOrganization)
-//* administeredBy 1..1 MS
-//* administeredBy only Reference(PlannetOrganization)
-// [TODO] We need alignment between plan net insurancePlan location and Formulary InsurancePlan location
-* coverageArea only Reference(InsurancePlanLocation)
-* coverageArea MS
 
-* contact.name MS
-* contact.name.text MS
-* contact.telecom MS
-* contact.telecom.value MS
-* contact.telecom.system MS
+// .............TODO, Is the list of pharmacy etwork types and drug tiers useful? Could be useful in terntermining which type can ve searched for.
+* plan 0..1 
+* plan.type 1..1 
+* plan.type = PlanTypeCS#drug
 
-* contact ^slicing.discriminator.path = "purpose"
-* contact ^slicing.rules = #open
-* contact ^slicing.discriminator.type = #pattern 
-* contact ^slicing.ordered = false   // can be omitted, since false is the default
-* contact ^slicing.description = "Slice based on $this pattern"
-* contact contains 
-   patient-drugplan-contact 0..* MS
-* contact[patient-drugplan-contact].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
-* contact[patient-drugplan-contact].telecom 1..* MS
-* contact[patient-drugplan-contact].telecom.system 1..1
-* contact[patient-drugplan-contact].telecom.value 1..1 
-* contact[patient-drugplan-contact].telecom ^short = "Patient Info Contact (email/website/phone number)"
-/*
-* endpoint ^short = "Endpoint for additional information"
-* endpoint only Reference(InsurancePlanEndpoint)
-* endpoint MS 
-*/
+* plan.specificCost ^short = "Pharmacy network type specific cost"
+* plan.specificCost.category from PharmacyTypeVS (extensible)
 
-* plan 1..* MS
-* plan.type 1..1 MS
-* plan.type from PharmacyTypeVS (extensible)
-* plan.type ^short = "Pharmacy network type"
-* plan.network MS
+* plan.specificCost.benefit ^short = "Drug tier benefit"
+* plan.specificCost.benefit.type from DrugTierVS (extensible)
 
-* plan.specificCost 1..* MS
-* plan.specificCost ^short = "Drug tier costs"
-* plan.specificCost.category 1..1 MS
-* plan.specificCost.category from DrugTierVS (extensible)
 
-* plan.specificCost.benefit 1..* MS
-// TODO need a codeSystem for plan.specificCost.benefit.type to represent prescription fill
-
-* plan.specificCost.benefit.type MS
-* plan.specificCost.benefit.type from BenefitTypeVS (required)
-* plan.specificCost.benefit.type = BenefitTypeCS#drug
-
-* plan.specificCost.benefit.cost 1..* MS
-* plan.specificCost.benefit.cost.type from BenefitCostTypeVS (extensible)
-* plan.specificCost.benefit.cost.qualifiers 1..1 MS
-* plan.specificCost.benefit.cost.value MS
-
-* plan.specificCost.benefit.cost ^slicing.discriminator.path = "type"
-* plan.specificCost.benefit.cost ^slicing.rules = #open
-* plan.specificCost.benefit.cost ^slicing.discriminator.type = #pattern 
-* plan.specificCost.benefit.cost ^slicing.ordered = false   // can be omitted, since false is the default
-* plan.specificCost.benefit.cost ^slicing.description = "Slice based on $this pattern"
-* plan.specificCost.benefit.cost contains 
-   copay 0..1 MS and
-   coinsurance 0..1 MS
-
-* plan.specificCost.benefit.cost[copay].type = BenefitCostTypeCS#copay
-* plan.specificCost.benefit.cost[copay].qualifiers from CopayOptionVS (required)
-* plan.specificCost.benefit.cost[copay].value only MoneyQuantity
-* plan.specificCost.benefit.cost[copay].value.value 1..1 MS
-* plan.specificCost.benefit.cost[copay].value.system = "urn:iso:std:iso:4217"
-* plan.specificCost.benefit.cost[copay].value.code = #USD
-
-* plan.specificCost.benefit.cost[coinsurance].type = BenefitCostTypeCS#coinsurance
-* plan.specificCost.benefit.cost[coinsurance].qualifiers from CoinsuranceOptionVS (required)
-* plan.specificCost.benefit.cost[coinsurance].value.code = #%
-* plan.specificCost.benefit.cost[coinsurance].value.system = "http://unitsofmeasure.org"
+// ********TODO Add guidance on the specific Costs and benefits, that they can be used to express all of the pharmacies and drug tiers available under the plan and can be used to determine what types to search for (this of course can also be under the top plan)
 
 
 
@@ -167,7 +182,7 @@ Description:    "A resource that describes a drug's relationship to a drug plan,
 * meta.lastUpdated 1..1
 
 * extension contains
-    DrugPlanReference named usdf-DrugPlanReference-extension 1..1 MS and
+    FormularyReference named usdf-FormularyReference-extension 1..1 MS and
     AvailabilityStatus named usdf-AvailabilityStatus-extension 1..1 MS and
     AvailabilityPeriod named usdf-AvailabilityPeriod-extension 0..1 MS and
     PharmacyType named usdf-PharmacyType-extension 0..* and
