@@ -13,6 +13,12 @@
 <artifact id="StructureDefinition/usdf-AvailabilityStatus-extension" key="StructureDefinition-usdf-AvailabilityStatus-extension" name="Availability Status"/>
 <artifact id="ValueSet/BenefitCostTypeVS" key="ValueSet-BenefitCostTypeVS" name="Benefit type of cost"/>
 <artifact id="CodeSystem/usdf-BenefitCostTypeCS" key="CodeSystem-usdf-BenefitCostTypeCS" name="Benefit type of cost"/>
+<artifact id="InsurancePlan/PayerPlan-10207VA0380001" key="InsurancePlan-PayerPlan-10207VA0380001" name="BlueChoice HMO"/>
+<artifact id="InsurancePlan/PayerPlan-10207VA0380004" key="InsurancePlan-PayerPlan-10207VA0380004" name="BlueChoice HMO"/>
+<artifact id="InsurancePlan/Formulary-10207VA0380001" key="InsurancePlan-Formulary-10207VA0380001" name="BlueChoice HMO Silver $3,500"/>
+<artifact id="InsurancePlan/Formulary-10207VA0380004" key="InsurancePlan-Formulary-10207VA0380004" name="BlueChoice HMO Young Adult $7,350"/>
+<artifact id="InsurancePlan/PayerPlan-40308VA0240008" key="InsurancePlan-PayerPlan-40308VA0240008" name="BluePreferred PPO"/>
+<artifact id="InsurancePlan/Formulary-40308VA0240008" key="InsurancePlan-Formulary-40308VA0240008" name="BluePreferred PPO Silver $3,500"/>
 <artifact id="CodeSystem/usdf-CoinsuranceOptionCS" key="CodeSystem-usdf-CoinsuranceOptionCS" name="Code for qualifier for coinsurance rate"/>
 <artifact id="CodeSystem/usdf-DrugTierCS" key="CodeSystem-usdf-DrugTierCS" name="Codes for medication drug tiers in health plans"/>
 <artifact id="CodeSystem/usdf-CopayOptionCS" key="CodeSystem-usdf-CopayOptionCS" name="Codes for qualifier of copay amount"/>
@@ -55,6 +61,10 @@
 <artifact id="Basic/FormularyItem-D3002-1000091" key="Basic-FormularyItem-D3002-1000091" name="FormularyItem-D3002-1000091"/>
 <artifact id="Basic/FormularyItem-D3004t-1049640" key="Basic-FormularyItem-D3004t-1049640" name="FormularyItem-D3004t-1049640"/>
 <artifact id="Basic/FormularyItem-QuantityTimimgTest" key="Basic-FormularyItem-QuantityTimimgTest" name="FormularyItem-QuantityTimimgTest"/>
+<artifact id="InsurancePlan/PayerPlan-10207VA0380003" key="InsurancePlan-PayerPlan-10207VA0380003" name="HealthyBlue HMO"/>
+<artifact id="InsurancePlan/Formulary-10207VA0380003" key="InsurancePlan-Formulary-10207VA0380003" name="HealthyBlue HMO Gold $1,000"/>
+<artifact id="InsurancePlan/PayerPlan-40308VA0240007" key="InsurancePlan-PayerPlan-40308VA0240007" name="HealthyBlue PPO"/>
+<artifact id="InsurancePlan/Formulary-40308VA0240007" key="InsurancePlan-Formulary-40308VA0240007" name="HealthyBlue PPO Gold $1,000"/>
 <artifact id="StructureDefinition/usdf-InsurancePlanLocation" key="StructureDefinition-usdf-InsurancePlanLocation" name="Insurance Plan Location"/>
 <artifact id="ValueSet/InsuranceItemTypeVS" key="ValueSet-InsuranceItemTypeVS" name="Insurance item type"/>
 <artifact id="CodeSystem/usdf-InsuranceItemTypeCS" key="CodeSystem-usdf-InsuranceItemTypeCS" name="Insurance item type"/>
@@ -82,6 +92,8 @@
 <artifact id="ValueSet/PharmacyTypeVS" key="ValueSet-PharmacyTypeVS" name="Type of pharmacies"/>
 <artifact id="ValueSet/PlanTypeVS" key="ValueSet-PlanTypeVS" name="Type of plan"/>
 <artifact id="CodeSystem/usdf-PlanTypeCS" key="CodeSystem-usdf-PlanTypeCS" name="Type of plan"/>
+<artifact id="ValueSet/PlanContactTypeVS" key="ValueSet-PlanContactTypeVS" name="Type of plan contact"/>
+<artifact id="CodeSystem/usdf-PlanContactTypeCS" key="CodeSystem-usdf-PlanContactTypeCS" name="Type of plan contact"/>
 <artifact id="ValueSet/RelatedMedicationTypeVS" key="ValueSet-RelatedMedicationTypeVS" name="Type of related medication"/>
 <artifact id="CodeSystem/usdf-RelatedMedicationTypeCS" key="CodeSystem-usdf-RelatedMedicationTypeCS" name="Type of related medication"/>
 <artifact id="CapabilityStatement/usdf-server" key="CapabilityStatement-usdf-server" name="US Drug Formulary Server Capability Statement"/>

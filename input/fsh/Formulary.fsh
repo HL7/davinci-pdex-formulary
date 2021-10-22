@@ -32,6 +32,9 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 * contact.telecom.value MS
 * contact.telecom.system MS
 
+* contact.purpose from PlanContactTypeVS (extensible)
+/*
+TODO add guidance on where to place marketing, summary, and formulary url
 * contact ^slicing.discriminator.path = "purpose"
 * contact ^slicing.rules = #open
 * contact ^slicing.discriminator.type = #pattern 
@@ -39,12 +42,12 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 * contact ^slicing.description = "Slice based on $this pattern"
 * contact contains 
    patient-plan-contact 0..* MS
-* contact[patient-plan-contact].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
+* contact[patient-plan-contact].purpose from PlanContactTypeVS (extensible)
 * contact[patient-plan-contact].telecom 1..* MS
 * contact[patient-plan-contact].telecom.system 1..1
 * contact[patient-plan-contact].telecom.value 1..1 
 * contact[patient-plan-contact].telecom ^short = "Patient Info Contact (email/website/phone number)"
-
+*/
 
 // *********TODO how do we want to deal with additional contact types (formulary vs general)
 

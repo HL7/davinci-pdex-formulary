@@ -19,31 +19,25 @@ Usage: #example
 
 * coverageArea = Reference(UnitedStatesLocation)
 
-* contact[patient-plan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
-* contact[patient-plan-contact][=].telecom.system = #phone
-* contact[patient-plan-contact][=].telecom.value = "+1 (888) 555-3001"
+* contact[+].purpose = $HL7ContactEntity-Type#PATINF
+* contact[=].telecom.system = #phone
+* contact[=].telecom.value = "+1 (888) 555-3001"
 
-* contact[patient-plan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
-* contact[patient-plan-contact][=].name.text = "Sample Medicare Advantage Plan Marketing Website"
-* contact[patient-plan-contact][=].telecom.system = #url
-* contact[patient-plan-contact][=].telecom.value = "http://url/to/health/plan/information"
+* contact[+].purpose = PlanContactTypeCS#MARKETING
+* contact[=].name.text = "Sample Medicare Advantage Plan Marketing Website"
+* contact[=].telecom.system = #url
+* contact[=].telecom.value = "http://url/to/health/plan/information"
 
+* contact[+].purpose = PlanContactTypeCS#SUMMARY
+* contact[=].name.text = "Sample Medicare Advantage Drug Plan Benefit Website"
+* contact[=].telecom.system = #url
+* contact[=].telecom.value = "http://url/to/health/plan/information"
 
+* contact[+].purpose = PlanContactTypeCS#FORMULARY
+* contact[=].name.text = "Sample Medicare Advantage Drug Plan Formulary Website"
+* contact[=].telecom.system = #url
+* contact[=].telecom.value = "http://url/to/health/plan/information"
 
-
-* contact[patient-plan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
-* contact[patient-plan-contact][=].telecom.system = #phone
-* contact[patient-plan-contact][=].telecom.value = "+1 (888) 555-3001"
-
-* contact[patient-plan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
-* contact[patient-plan-contact][=].name.text = "Sample Medicare Advantage Drug Plan Formulary Website"
-* contact[patient-plan-contact][=].telecom.system = #url
-* contact[patient-plan-contact][=].telecom.value = "http://url/to/health/plan/information"
-
-* contact[patient-plan-contact][+].purpose = http://terminology.hl7.org/CodeSystem/contactentity-type#PATINF
-* contact[patient-plan-contact][=].name.text = "Sample Medicare Advantage Drug Plan Benefit Website"
-* contact[patient-plan-contact][=].telecom.system = #url
-* contact[patient-plan-contact][=].telecom.value = "http://url/to/health/plan/information"
 
 
 * coverage.extension[FormularyReference].valueReference = Reference(FormularyD3001)

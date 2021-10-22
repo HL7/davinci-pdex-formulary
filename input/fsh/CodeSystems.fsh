@@ -70,3 +70,11 @@ Id:             usdf-PlanTypeCS
 Title: "Type of plan"
 Description: "Types of plans"
 * #drug         "Drug"  "Drug plan"
+
+CodeSystem: PlanContactTypeCS
+Id:             usdf-PlanContactTypeCS
+Title: "Type of plan contact"
+Description: "Type of plan contact"
+* #MARKETING "Plan Marketing Information"
+* #SUMMARY "Plan Summary Information"
+* #FORMULARY "Plan Formulary Information"

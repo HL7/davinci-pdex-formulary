@@ -37,3 +37,9 @@ ValueSet: PlanTypeVS
 Title: "Type of plan"
 Description: "Types of plans"
 * codes from system PlanTypeCS
+
+ValueSet: PlanContactTypeVS
+Title: "Type of plan contact"
+Description: "Type of plan contact"
+* codes from system $HL7ContactEntity-Type
+* codes from system PlanContactTypeCS
