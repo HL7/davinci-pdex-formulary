@@ -16,6 +16,7 @@ Usage: #definition
 
 * comparator[0] = #eq
 * multipleOr = true
+* multipleAnd = true
 
 
 
@@ -37,6 +38,7 @@ Usage: #definition
 
 * comparator[0] = #eq
 * multipleOr = true
+* multipleAnd = true
 
 
 Instance: formulary-coverage
@@ -46,17 +48,39 @@ Usage: #definition
 * status = #active
 * code = #formulary-coverage
 * name = "USDFFormularyCoverage"
-* description = "Accesses the Coverage Formulary Reference of a PayerInsurancePlan"
+* description = "Search Payer InsurancePlan by coverage location."
 * url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/formulary-coverage"
 * base[0] = #InsurancePlan
 
 * type = #reference
 
-* expression = "InsuancePlan.coverage.extension.where(url='http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyReference-extension').extension.where(url='FormularyReference').value"
+* expression = "InsurancePlan.coverageArea"
 * target[+] = #InsurancePlan
 
-* comparator[0] = #eq
 * multipleOr = true
+* multipleAnd = true
+
+
+
+Instance: coverage-area
+InstanceOf: SearchParameter
+Usage: #definition
+
+* status = #active
+* code = #coverage-area
+* name = "USDFCoverageArea"
+* description = "Accesses the Coverage Formulary Reference of a PayerInsurancePlan"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/coverage-area"
+* base[0] = #InsurancePlan
+
+* type = #reference
+
+* expression = "InsurancePlan.coverageArea"
+* target[+] = #InsurancePlan
+
+* multipleOr = true
+* multipleAnd = true
+
 
 
 Instance: pharmacy-type
@@ -76,6 +100,7 @@ Usage: #definition
 
 * comparator[0] = #eq
 * multipleOr = true
+
 
 
 Instance: drug-tier

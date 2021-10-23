@@ -52,7 +52,7 @@ PayerInsurancePlans may have any number of types found in the `http://hl7.org/fh
 <p>To find all PayerInsurancePlans that include a coverage with a specific formulary by id 'FormularyD1002':</p>
 <pre>
   <code>
-    GET [base]/SinsurancePlan?formulary-coverage=InsurancePlan/FormularyD1002
+    GET [base]/InsurancePlan?formulary-coverage=InsurancePlan/FormularyD1002
   </code>
 </pre>
 
@@ -70,7 +70,7 @@ PayerInsurancePlans may have any number of types found in the `http://hl7.org/fh
 <p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002' and a drug-tier of 'generic':</p>
 <pre>
   <code>
-    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item/&formulary=InsurancePlan/FormularyD1002&drug-tier=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-DrugTierCS|generic&_include=Basic:subject
+    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&drug-tier=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-DrugTierCS|generic&_include=Basic:subject
   </code>
 </pre>
 <a name="Find-all-FormularyItems-and-FormularyDrugs-in-a-Formulary-by-Pharmacy-Network-Type"></a>
@@ -78,7 +78,7 @@ PayerInsurancePlans may have any number of types found in the `http://hl7.org/fh
 <p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002' and a pharmacy-type of '3-month-in-mail':</p>
 <pre>
   <code>
-    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item/&formulary=InsurancePlan/FormularyD1002&pharmacy-type=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS|3-month-in-mail&_include=Basic:subject
+    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&pharmacy-type=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS|3-month-in-mail&_include=Basic:subject
   </code>
 </pre>
 
@@ -87,7 +87,7 @@ PayerInsurancePlans may have any number of types found in the `http://hl7.org/fh
 <p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002' and a drug name of 'doxepin hydrochloride':</p>
 <pre>
   <code>
-    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item/&formulary=InsurancePlan/FormularyD1002&subject:MedicationKnowledge.drug-name=doxepin%20hydrochloride&_include=Basic:subject
+    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&subject:MedicationKnowledge.drug-name=doxepin%20hydrochloride&_include=Basic:subject
   </code>
 </pre>
 
@@ -96,7 +96,7 @@ PayerInsurancePlans may have any number of types found in the `http://hl7.org/fh
 <p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002' and a drug with the RxNorm code of '1000091':</p>
 <pre>
   <code>
-    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item/&formulary=InsurancePlan/FormularyD1002&subject:MedicationKnowledge.code=http://www.nlm.nih.gov/research/umls/rxnorm|1000091&_include=Basic:subject
+    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&subject:MedicationKnowledge.code=http://www.nlm.nih.gov/research/umls/rxnorm|1000091&_include=Basic:subject
   </code>
 </pre>
 

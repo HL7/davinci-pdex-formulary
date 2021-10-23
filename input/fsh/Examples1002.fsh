@@ -147,7 +147,7 @@ Usage: #example
 * subject = Reference(FormularyDrug-1049640)
 
 
-
+/*
 
 Instance: FormularyItem-QuantityTimimgTest
 InstanceOf: FormlaryItem
@@ -181,7 +181,7 @@ Usage: #example
 * code = InsuranceItemTypeCS#formulary-item "Formulary Item"
 * subject = Reference(FormularyDrug-1049640)
 
-
+*/
 
 Instance: FormularyItem-D1002-209459
 InstanceOf: FormlaryItem
@@ -220,5 +220,5 @@ Usage: #example
 * extension[usdf-QuantityLimit-extension].valueBoolean = false
 
 * code = InsuranceItemTypeCS#formulary-item "Formulary Item"
-* subject = Reference(FormularyDrug-209459)
+* subject = Reference(FormularyDrug-284520)
 

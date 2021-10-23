@@ -16,6 +16,12 @@
 			<td><a href="https://www.hl7.org/fhir/search.html#token">token</a></td>
 			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?_id=[id]</code></td>
 		</tr>
+		<tr>
+			<td>InsurancePlan (PayerInsurancePlan & Formulary)</td>
+			<td><a href="http://hl7.org/fhir/R4/search.html">_last-updated</a></td>
+			<td><a href="https://www.hl7.org/fhir/search.html#date">date</a></td>
+			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?_lastUpdated=[date]</code></td>
+		</tr>
   		<tr>
 			<td>InsurancePlan (PayerInsurancePlan & Formulary)</td>
 			<td>identifier</td>
@@ -54,21 +60,33 @@
 		</tr>
 		<tr>
 			<td>Location (InsurancePlanLocation)</td>
-			<td>address</td>
-			<td><a href="https://www.hl7.org/fhir/search.html#string">string</a></td>
-			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?address=[string]</code></td>
+			<td><a href="http://hl7.org/fhir/R4/search.html">_last-updated_</a></td>
+			<td><a href="https://www.hl7.org/fhir/search.html#date">date</a></td>
+			<td><code class="highlighter-rouge">GET [base]/Location?_lastUpdated_=[date]</code></td>
 		</tr>
 		<tr>
 			<td>Location (InsurancePlanLocation)</td>
-			<td>address-postalcode</td>
+			<td>address</td>
 			<td><a href="https://www.hl7.org/fhir/search.html#string">string</a></td>
-			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?address-postalcode=[string]</code></td>
+			<td><code class="highlighter-rouge">GET [base]/Location?address=[string]</code></td>
+		</tr>
+		<tr>
+			<td>Location (InsurancePlanLocation)</td>
+			<td>address-city</td>
+			<td><a href="https://www.hl7.org/fhir/search.html#string">string</a></td>
+			<td><code class="highlighter-rouge">GET [base]/Location?address-city=[string]</code></td>
 		</tr>
 		<tr>
 			<td>Location (InsurancePlanLocation)</td>
 			<td>address-state</td>
 			<td><a href="https://www.hl7.org/fhir/search.html#string">string</a></td>
-			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?address-state=[string]</code></td>
+			<td><code class="highlighter-rouge">GET [base]/Location?address-state=[string]</code></td>
+		</tr>
+		<tr>
+			<td>Location (InsurancePlanLocation)</td>
+			<td>address-postalcode</td>
+			<td><a href="https://www.hl7.org/fhir/search.html#string">string</a></td>
+			<td><code class="highlighter-rouge">GET [base]/Location?address-postalcode=[string]</code></td>
 		</tr>
 		<tr>
 			<td>Basic (FormularyItem)</td>
