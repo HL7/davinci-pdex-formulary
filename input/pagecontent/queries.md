@@ -1,54 +1,110 @@
 <a name="anticipated-client-queries"></a>
 ### Anticipated Client Queries
 
-<a name="Find-all-CoveragePlans"></a>
-#### Find All CoveragePlans
+<a name="Find-all-PayerInsurancePlans"></a>
+#### Find All PayerInsurancePlans
+
+PayerInsurancePlans may have any number of types found in the `http://hl7.org/fhir/us/davinci-pdex-plan-net/CodeSystem/InsuranceProductTypeCS` CodeSystem. Each PayerInsurancePlan conformant to this IG will have ane or more memberPlan extensions that references a Formulary. From the PayerInsurancePlan memberPlan extension(s), it is possible to retrieve the Formulary resource(s).
+
+<pre>
+  <code>
+    GET [base]/InsurancePlan?type=http://hl7.org/fhir/us/davinci-pdex-plan-net/CodeSystem/InsuranceProductTypeCS|
+  </code>
+</pre>
+
+<a name="Find-all-InsurancePlans-With-Drug-Coverage"></a>
+#### Find All Insurance Plans with Drug Coverage
+
 <p>
-  For each CoveragePlan, the PlanID is mapped to the List.identifier field. The value of List.identifier is the most general way to query the FormularyDrugs that are part of a specific plan.
+  InsurancePlan with drug coverage can be search for with a `coverage.type` of `http://terminology.hl7.org/CodeSystem/v3-ActCode|DRUGPOL`. 
+</p>
+
+<pre>
+  <code>
+    GET [base]/InsurancePlan?coverage-type=http://terminology.hl7.org/CodeSystem/v3-ActCode|DRUGPOL
+  </code>
+</pre>
+
+<a name="Find-all-Formulary-Resources"></a>
+#### Find All Formulary Resource
+<p>
+  Formulary can be search for with a type of `http://terminology.hl7.org/CodeSystem/v3-ActCode|DRUGPOL`. 
 </p>
 <pre>
   <code>
-    GET [base]/List?code=http://terminology.hl7.org/CodeSystem/v3-ActCode|DRUGPOL
+    GET [base]/InsurancePlan?type=http://terminology.hl7.org/CodeSystem/v3-ActCode|DRUGPOL
   </code>
 </pre>
-<a name="Find-a-CoveragePlan-by-planid"></a>
-#### Find CoveragePlan by its PlanID
-<p>To find the CoveragePlan for a plan with id 'myPlanID':</p>
+
+<a name="Find-a-Formulary-by-Id"></a>
+#### Find a Formulary by its Identifier
+<p>
+  To find an Formulary for a with id 'D1002': 
+</p>
 <pre>
   <code>
-    GET [base]/List?code=http://terminology.hl7.org/CodeSystemv3-ActCode|DRUGPOL&identifier=myPlanID
+    GET [base]/InsurancePlan?type=http://terminology.hl7.org/CodeSystem/v3-ActCode|DRUGPOL&identifier=D1002
   </code>
 </pre>
-<a name="Find-all-FormularyDrugs-in-a-CoveragePlan"></a>
-#### Find All FormularyDrugs in a CoveragePlan
-<p>To find all FormularyDrugs in a CoveragePlan for a plan with id 'myPlanID':</p>
+
+<a name="Find-all-PayerInsurancePlans-by-a-Formulary"></a>
+#### Find All PayerInsurancePlans by a Formulary
+<p>To find all PayerInsurancePlans that include a coverage with a specific formulary by id 'FormularyD1002':</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?DrugPlan=myPlanID 
+    GET [base]/InsurancePlan?formulary-coverage=InsurancePlan/FormularyD1002
   </code>
 </pre>
-<p>Alternatively, these FormularyDrugs are also in the array of entries that is part of the List.</p>
-<a name="Find-all-FormularyDrugs-in-a-CoveragePlan-DrugTier"></a>
-#### Find all FormularyDrugs in a Specific Tier of CoveragePlan
-<p>To find all FormularyDrugs in the generic tier of plan myPlanID:</p>
+
+<a name="Find-all-FormularyItems-and-FormularyDrugs-in-a-Formulary"></a>
+#### Find All FormularyItems and FormularyDrugs in a Formulary
+<p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002':</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?DrugPlan=myPlanID&DrugTier=generic
+    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&_include=Basic:subject
   </code>
 </pre>
-<a name="Find-a-FormularyDrugs-by-code-in-a-CoveragePlan"></a>
-#### Find A FormularyDrug by code in a CoveragePlan
-<p>To find a FormularyDrug by its RxNorm code within a CoveragePlan:</p>
+
+<a name="Find-all-FormularyItems-and-FormularyDrugs-in-a-Formulary-by-Drug-Tier"></a>
+#### Find All FormularyItems and FormularyDrugs in an Formulary by Drug Tier 
+<p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002' and a drug-tier of 'generic':</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?DrugPlan=myPlanID&code=myCode
+    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&drug-tier=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-DrugTierCS|generic&_include=Basic:subject
   </code>
 </pre>
-<a name="Find-a-FormularyDrugs-by-code-across-all-coverage-plans"></a>
-#### Find A FormularyDrug by code across all CoveragePlans
-<p>To find a FormularyDrug by its RxNorm code within all CoveragePlans:</p>
+<a name="Find-all-FormularyItems-and-FormularyDrugs-in-a-Formulary-by-Pharmacy-Network-Type"></a>
+#### Find All FormularyItems and FormularyDrugs in a Formulary by Pharmacy Network Type 
+<p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002' and a pharmacy-type of '3-month-in-mail':</p>
 <pre>
   <code>
-    GET [base]/MedicationKnowledge?code=myCode
+    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&pharmacy-type=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS|3-month-in-mail&_include=Basic:subject
+  </code>
+</pre>
+
+<a name="Find-all-FormularyItems-and-FormularyDrugs-in-a-Formulary-by-Drug-Name"></a>
+#### Find All FormularyItems and FormularyDrugs in a Formulary by Drug Name 
+<p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002' and a drug name of 'doxepin hydrochloride':</p>
+<pre>
+  <code>
+    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&subject:MedicationKnowledge.drug-name=doxepin%20hydrochloride&_include=Basic:subject
+  </code>
+</pre>
+
+<a name="Find-all-FormularyItems-and-FormularyDrugs-in-a-Formulary-by-Drug-Code"></a>
+#### Find All FormularyItems and FormularyDrugs in a Formulary by Drug Code 
+<p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002' and a drug with the RxNorm code of '1000091':</p>
+<pre>
+  <code>
+    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&subject:MedicationKnowledge.code=http://www.nlm.nih.gov/research/umls/rxnorm|1000091&_include=Basic:subject
+  </code>
+</pre>
+
+<a name="Find-all-FormularyItems-and-Covering-Formulary-Resurces-by-Drug-Code"></a>
+#### Find All FormularyItems and Covering Formulary Resources by Drug Code 
+<p>To find all FormularyItems and the Formulary resorucs that include them for the drug with the RxNorm code of '1000091':</p>
+<pre>
+  <code>
+    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&subject:MedicationKnowledge.code=http://www.nlm.nih.gov/research/umls/rxnorm|1000091&_include=Basic:formulary
   </code>
 </pre>

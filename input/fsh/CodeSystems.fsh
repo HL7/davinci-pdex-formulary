@@ -25,6 +25,19 @@ Description: "Codes for types of Pharmacies. Each payer will have its own contro
 * #3-month-in-mail      "3 month in network mail order"  "3 Month Supply via in-network mail order pharmacy."
 * #3-month-out-mail     "3 month out of network mail order"  "3 Month Supply via out-of-network mail order pharmacy."
 
+CodeSystem: BenefitCostTypeCS
+Id:             usdf-BenefitCostTypeCS
+Title: "Benefit type of cost"
+Description: "Types of out of pockets costs associated with the benefit"
+* #copay               "Copay"  "A flat fee the member pays to fill the prescription."
+* #coinsurance         "Coinsurance"  "A percentage of the cost to fill the prescription, usually after the deductible has been met."
+
+CodeSystem: InsuranceItemTypeCS
+Id:             usdf-InsuranceItemTypeCS
+Title: "Insurance item type"
+Description: "Types of insurance items"
+* #formulary-item      "Formulary Item"  "An entry in a formulary."
+
 CodeSystem: CopayOptionCS
 Id:             usdf-CopayOptionCS
 Title: "Codes for qualifier of copay amount"
@@ -42,7 +55,26 @@ Title: "Code for qualifier for coinsurance rate"
 Description: "Code for qualifier for coinsurance rate"
 * #after-deductible              "After Deductible"  "The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
 * #no-charge                     "No Charge"  "No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
-* #no-charge-after-deductible    "No Charge After Deductible"  "The consumer first pays the deductible, and after thedeductible is met, no coinsurance is charged (this indicates that this benefit is subject to the deductible)."
+* #no-charge-after-deductible    "No Charge After Deductible"  "The consumer first pays the deductible, and after the deductible is met, no coinsurance is charged (this indicates that this benefit is subject to the deductible)."
 * #charge                        "Charge"  "The consumer always pays just the coinsurance and the issuer pays the remainder of allowed charges (this indicates that this benefit is not subject to the deductible)."
 * #not-applicable                "Not Applicable"  "The consumer pays only a copay. Note: When using Not Applicable for coinsurance, Not Applicable cannot also be used for copay (unless the drug tier type is Medical Service Drugs)."
 
+CodeSystem: RelatedMedicationTypeCS
+Id:             usdf-RelatedMedicationTypeCS
+Title: "Type of related medication"
+Description: "Types of relationships between medications"
+* #alternative         "Drug Alternative"  "Generic or Branded Drugs that could be prescribed as alternatives to the current FormularyDrug."
+
+CodeSystem: PlanTypeCS
+Id:             usdf-PlanTypeCS
+Title: "Type of plan"
+Description: "Types of plans"
+* #drug         "Drug"  "Drug plan"
+
+CodeSystem: PlanContactTypeCS
+Id:             usdf-PlanContactTypeCS
+Title: "Type of plan contact"
+Description: "Type of plan contact"
+* #MARKETING "Plan Marketing Information"
+* #SUMMARY "Plan Summary Information"
+* #FORMULARY "Plan Formulary Information"

@@ -7,10 +7,11 @@ canonical: http://hl7.org/fhir/us/davinci-drug-formulary
 name: Formulary
 title: DaVinci Payer Data Exchange (PDex) US Drug Formulary
 status: draft
-version: 1.1.0
+version: 1.2.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: release
+releaseLabel: CI Build
+
 publisher:
   name: HL7 Pharmacy Working Group
   url: http://www.hl7.org/Special/committees/medication
@@ -18,7 +19,12 @@ publisher:
 description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary STU 1.1.0
 license: CC0-1.0
 dependencies:
-  hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
+  hl7.fhir.us.core: 4.0.0   # updated from 3.1.1 on 8/30/21
+  hl7.fhir.us.davinci-pdex-plan-net: 1.0.0
+  us.nlm.vsac:
+    uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
+    version: 0.3.0
+    id: vsac
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
@@ -47,7 +53,7 @@ menu:
     Additional Guidance          : use_cases_and_overview.html#additional-guidance
     Anticipated Client Queries: queries.html
   FHIR Artifacts:
-    Profiles            : artifacts.html#3
+    Profiles            : artifacts.html#2
     Extensions          : artifacts.html#4
     Search Parameters   : search_parameters.html
     Terminology         : artifacts.html#5
@@ -78,37 +84,5 @@ pages:
     title: Change Notes
 
 resources:
-  List/covplanV1002:
-    name: Coverage Plan V1002
-    description: Sample Gold Health Plan
-    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-  List/CoveragePlanV3001:
-    name: Coverage Plan V3001
-    description: Sample Gold Health Plan
-    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-  List/CoveragePlanV3002:
-    name: Coverage Plan V3002
-    description: Sample Gold Health Plan
-    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-  List/CoveragePlanV3004t:
-    name: Coverage Plan V3004t
-    description: BluePreferred PPO HSA Silver $3,000
-    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-CoveragePlan
-  MedicationKnowledge/cmsip9:
-    name: Formulary Drug cmsip9
-    description: Doxepin HCl 5 % Topical Cream
-    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
-  MedicationKnowledge/formularydrugV1002:
-    name: Formulary Drug V1002
-    description: Percocet 5 MG / 325 MG Oral Tablet
-    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
-  MedicationKnowledge/FormularyDrugV3001:
-    name: Formulary Drug V3001
-    description: Percocet 5 MG / 325 MG Oral Tablet
-    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
-  MedicationKnowledge/FormularyDrugV3002:
-    name: Formulary Drug V3002
-    description: Tylenol Extra Strength 500 MG Oral Tablet
-    exampleCanonical: http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-FormularyDrug
   CapabilityStatement/usdf-server:
     name: US Drug Formulary Server Capability Statement
