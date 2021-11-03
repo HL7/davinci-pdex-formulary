@@ -11,6 +11,7 @@ version: 1.2.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: CI Build
+
 publisher:
   name: HL7 Pharmacy Working Group
   url: http://www.hl7.org/Special/committees/medication
@@ -61,7 +62,7 @@ menu:
   Downloads: downloads.html
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
-  
+  Change Notes: change_notes.html
 
 
 pages:
@@ -79,9 +80,9 @@ pages:
     title: Artifacts Summary
   downloads.md:
     title: Downloads
-
+  change_notes.md:
+    title: Change Notes
 
 resources:
   CapabilityStatement/usdf-server:
     name: US Drug Formulary Server Capability Statement
-

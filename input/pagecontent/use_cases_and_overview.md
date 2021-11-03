@@ -172,11 +172,27 @@
   For Example:
   `MedicationKnowledge?drug-name:contains=acetaminophen&drug-name:contains=Tablet`
 
-  This search will return all matching drug names with both the ingredient “acetaminophen” and dose form “Tablet”. This will also return any matching combination or pack drugs.
+As an alternative, this Implementation Guide provides the ability to search for FormularyDrug (MedicationKnowledge) resources by drug name through the [DrugName](SearchParameter-DrugName.html) search parameter. This search parameter is based on the MedicationKnowledge.code.coding.display and provides a full (`exact`) or partial (`contains`) equals (`eq`) string match. Per the FHIR Specification, the [Correct RxNorm Display]( https://www.hl7.org/fhir/rxnorm.html#4.3.2.3) is the Full RxNorm name of either the Semantic Clinical Drug (SCD) or Semantic Brand Drug (SBD). The full drug name has several components presented in the following formats:
 
-<p>
-  Another factor clients need to consider when searching for drugs by name, is that individual drug names may be contained within combination drugs (e.g., a search on acetaminophen will return many combination drugs). Clients may need to filter search results to fit their requirements.
-</p>
+* SCD = Ingredient + Strength + Dose Form
+* SBD = Ingredient + Strength + Dose Form + [Brand Name]
+
+In addition to these RxNorm names, drug combination packs may also appear in formularies. Drug combination packs can contain multiple drugs or strengths that are packaged and prescribed together, under a brand or generic drug name, to meet a particular set of administration requirements. The full name for drug combination packs have components presented in the following formats:
+
+* GPCK = {# (Ingredient + Strength + Dose Form) / # (Ingredient + Strength + Dose Form)} Pack
+* BPCK = {# (Ingredient + Strength + Dose Form) / # (Ingredient + Strength + Dose Form)} Pack [Brand Name]
+
+Given the format for the above RxNorm Term Types (SCD, SBD, GPCK, and BPCK), searches on drugs with more than the one component specified in a single DrugName search parameter instance, such as a search with Name + Form, may not yield the desired results. For example, a search for “acetaminophen Tablet”, will not return any results for the above RxNorm Term Types identified above since the format of those types has a strength in between the ingredient and the dose form (e.g. “acetaminophen 500 MG Oral Tablet”).
+
+The [DrugName](SearchParameter-DrugName.html) search parameter includes the `multipleAnd` capability, which allows for multiple `DrugName` search parameters within a single query. With this capability it is possible to search by drug name and form. This capability should be used sparingly, as each additional partial string search parameter increases the load on the server.
+
+For Example:
+
+`MedicationKnowledge?DrugName:contains=acetaminophen&DrugName:contains=Tablet`
+
+This search will return all matching drug names with both the ingredient “acetaminophen” and dose form “Tablet”. This will also return any matching combination or pack drugs.
+
+Another factor clients need to consider when searching for drugs by name, is that individual drug names may be contained within combination drugs (e.g., a search on acetaminophen will return many combination drugs). Clients may need to filter search results to fit their requirements.
 
 <a name="presenting-alternative-medications"></a>
 #### Presenting Drug Alternatives 
