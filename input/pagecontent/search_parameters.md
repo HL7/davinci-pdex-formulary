@@ -18,7 +18,7 @@
 		</tr>
 		<tr>
 			<td>InsurancePlan (PayerInsurancePlan & Formulary)</td>
-			<td><a href="http://hl7.org/fhir/R4/search.html">_last-updated</a></td>
+			<td><a href="http://hl7.org/fhir/R4/search.html">_lastUpdated</a></td>
 			<td><a href="https://www.hl7.org/fhir/search.html#date">date</a></td>
 			<td><code class="highlighter-rouge">GET [base]/InsurancePlan?_lastUpdated=[date]</code></td>
 		</tr>
@@ -60,9 +60,9 @@
 		</tr>
 		<tr>
 			<td>Location (InsurancePlanLocation)</td>
-			<td><a href="http://hl7.org/fhir/R4/search.html">_last-updated_</a></td>
+			<td><a href="http://hl7.org/fhir/R4/search.html">_lastUpdated</a></td>
 			<td><a href="https://www.hl7.org/fhir/search.html#date">date</a></td>
-			<td><code class="highlighter-rouge">GET [base]/Location?_lastUpdated_=[date]</code></td>
+			<td><code class="highlighter-rouge">GET [base]/Location?_lastUpdated=[date]</code></td>
 		</tr>
 		<tr>
 			<td>Location (InsurancePlanLocation)</td>

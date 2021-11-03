@@ -84,7 +84,7 @@ Usage: #example
 
 * type = $HL7v3-ActCode#DRUGPOL
 
-* name = "Sample Medicare Advantage Part D Drug Plan D1002"
+* name = "Sample Medicare Advantage Part D Formulary D1002"
 //* alias MS
 * period.start = "2021-01-01"
 * period.end = "2021-12-31"

@@ -790,7 +790,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/SearchParameter/Location-address-postal",
+                            "definition": "http://hl7.org/fhir/SearchParameter/Location-address-postalcode",
                             "name": "address-postal",
                             "type": "string"
                         }

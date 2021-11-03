@@ -13,10 +13,10 @@ Usage: #example
 * synonym[+] = "doxepin HCl 5 % Topical Cream"
 //* relatedMedicationKnowledge[0].type = RelatedMedicationTypeCS#alternative "Drug Alternative"
 //* relatedMedicationKnowledge[0].reference = Reference(FormularyDrug-284520)
-* medicineClassification[+].type = $MEDRT#EPC "Established Pharmacologic Class"
-* medicineClassification[=].classification = $MEDRT#N0000175752 "Tricyclic Antidepressant"
-* medicineClassification[+].type = $MEDRT#EPC "Established Pharmacologic Class"
-* medicineClassification[=].classification = $NDFRT#N0000146208 "DOXEPIN HYDROCHLORIDE"
+//* medicineClassification[+].type = $MEDRT#EPC "Established Pharmacologic Class"
+//* medicineClassification[=].classification = $MEDRT#N0000175752 "Tricyclic Antidepressant"
+//* medicineClassification[+].type = $MEDRT#EPC "Established Pharmacologic Class"
+//* medicineClassification[=].classification = $NDFRT#N0000146208 "DOXEPIN HYDROCHLORIDE"
 
 
 
@@ -30,10 +30,10 @@ Usage: #example
 
 * code = $RxNorm#1049640 "acetaminophen 325 MG / oxycodone hydrochloride 5 MG Oral Tablet [Percocet]"
 * status = #active
-* medicineClassification.type = $MEDRT#EPC "Established Pharmacologic Class"
-* medicineClassification.classification = $MEDRT#N0000175690 "Opioid Agonist"
-* medicineClassification[+].type = $MEDRT#EPC "Established Pharmacologic Class"
-* medicineClassification[=].classification = $NDFRT#N0000020170 "ACETAMINOPHEN/OXYCODONE"
+//* medicineClassification.type = $MEDRT#EPC "Established Pharmacologic Class"
+//* medicineClassification.classification = $MEDRT#N0000175690 "Opioid Agonist"
+//* medicineClassification[+].type = $MEDRT#EPC "Established Pharmacologic Class"
+//* medicineClassification[=].classification = $NDFRT#N0000020170 "ACETAMINOPHEN/OXYCODONE"
  
 
 
@@ -47,8 +47,8 @@ Usage: #example
 
 * code = $RxNorm#209459 "acetaminophen 500 MG Oral Tablet [Tylenol]"
 * status = #active
-* medicineClassification[+].type = $MEDRT#EPC "Established Pharmacologic Class"
-* medicineClassification[=].classification = $NDFRT#N0000177915 "Acetaminophen"
+//* medicineClassification[+].type = $MEDRT#EPC "Established Pharmacologic Class"
+//* medicineClassification[=].classification = $NDFRT#N0000177915 "Acetaminophen"
 
 Instance: FormularyDrug-284520
 InstanceOf: FormularyDrug
@@ -64,7 +64,7 @@ Usage: #example
 //* relatedMedicationKnowledge[0].type = RelatedMedicationTypeCS#alternative "Drug Alternative"
 //* relatedMedicationKnowledge[0].reference = Reference(FormularyDrug-1000091)
 
-* medicineClassification.type = $MEDRT#ATC1-4 "Anatomical Therapeutic Chemical"
-* medicineClassification.classification = $MEDRT#D11AH "Agents for dermatitis, excluding corticosteroids"
-* medicineClassification[+].type = $MEDRT#EPC "Established Pharmacologic Class"
-* medicineClassification[=].classification = $NDFRT#N0000148372 "TACROLIMUS"
+//* medicineClassification.type = $MEDRT#ATC1-4 "Anatomical Therapeutic Chemical"
+//* medicineClassification.classification = $MEDRT#D11AH "Agents for dermatitis, excluding corticosteroids"
+//* medicineClassification[+].type = $MEDRT#EPC "Established Pharmacologic Class"
+//* medicineClassification[=].classification = $NDFRT#N0000148372 "TACROLIMUS"

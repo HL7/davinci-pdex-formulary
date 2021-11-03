@@ -148,7 +148,7 @@ Usage: #example
 
 * type = $HL7v3-ActCode#DRUGPOL
 
-* name = "Sample Medicare Advantage Part D Drug Plan D3002"
+* name = "Sample Medicare Advantage Part D Formulary D3002"
 //* alias MS
 * period.start = "2021-01-01"
 * period.end = "2021-12-31"
@@ -162,7 +162,7 @@ Usage: #example
 
 Instance: FormularyItem-D3002-1000091
 InstanceOf: FormlaryItem
-Description: "Formulary Item for Insurance Drug Plan D3002 Drug 1000091"
+Description: "Formulary Item for Insurance Formulary D3002 Drug 1000091"
 Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"

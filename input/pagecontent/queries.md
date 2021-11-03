@@ -47,8 +47,8 @@ PayerInsurancePlans may have any number of types found in the `http://hl7.org/fh
   </code>
 </pre>
 
-<a name="Find-all-PayerInsurancePlans-and-that-have-a-Formulary-Coverage"></a>
-#### Find All PayerInsurancePlans that have a Formulary Referenced in coverage 
+<a name="Find-all-PayerInsurancePlans-by-a-Formulary"></a>
+#### Find All PayerInsurancePlans by a Formulary
 <p>To find all PayerInsurancePlans that include a coverage with a specific formulary by id 'FormularyD1002':</p>
 <pre>
   <code>
