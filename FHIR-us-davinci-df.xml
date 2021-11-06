@@ -45,6 +45,7 @@
 <artifact id="InsurancePlan/FormularyD3004t" key="InsurancePlan-FormularyD3004t" name="FormularyD3004t"/>
 <artifact id="MedicationKnowledge/FormularyDrug-1000091" key="MedicationKnowledge-FormularyDrug-1000091" name="FormularyDrug-1000091"/>
 <artifact id="MedicationKnowledge/FormularyDrug-1049640" key="MedicationKnowledge-FormularyDrug-1049640" name="FormularyDrug-1049640"/>
+<artifact id="MedicationKnowledge/FormularyDrug-1541228" key="MedicationKnowledge-FormularyDrug-1541228" name="FormularyDrug-1541228"/>
 <artifact id="MedicationKnowledge/FormularyDrug-209459" key="MedicationKnowledge-FormularyDrug-209459" name="FormularyDrug-209459"/>
 <artifact id="MedicationKnowledge/FormularyDrug-284520" key="MedicationKnowledge-FormularyDrug-284520" name="FormularyDrug-284520"/>
 <artifact id="Basic/FormularyItem-D1002-1000091" key="Basic-FormularyItem-D1002-1000091" name="FormularyItem-D1002-1000091"/>
@@ -74,6 +75,7 @@
 <artifact id="ValueSet/CopayOptionVS" key="ValueSet-CopayOptionVS" name="Qualifier of copay amount"/>
 <artifact id="StructureDefinition/usdf-QuantityLimit-extension" key="StructureDefinition-usdf-QuantityLimit-extension" name="Quantity Limit"/>
 <artifact id="StructureDefinition/usdf-QuantityLimitDetail-extension" key="StructureDefinition-usdf-QuantityLimitDetail-extension" name="Quantity Limit Detail"/>
+<artifact id="ValueSet/SemanticDrugVS" key="ValueSet-SemanticDrugVS" name="Semantic Drug Codes"/>
 <artifact id="Location/StateOfCTLocation" key="Location-StateOfCTLocation" name="StateOfCTLocation"/>
 <artifact id="StructureDefinition/usdf-StepTherapyLimit-extension" key="StructureDefinition-usdf-StepTherapyLimit-extension" name="Step Therapy Limit"/>
 <artifact id="StructureDefinition/usdf-StepTherapyLimitNewStartsOnly-extension" key="StructureDefinition-usdf-StepTherapyLimitNewStartsOnly-extension" name="Step Therapy Limit New Starts Only"/>
@@ -97,7 +99,7 @@
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
-<page deprecated="true" key="change_notes" name="Change Notes"/>
+<page key="change_notes" name="Change Notes"/>
 <page key="credits" name="Credits"/>
 <page key="downloads" name="Downloads"/>
 <page deprecated="true" key="examples" name="Examples"/>

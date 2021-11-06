@@ -1,4 +1,18 @@
 
+
+// Temporary test
+Instance: FormularyDrug-1541228
+InstanceOf: FormularyDrug
+Description: "Formulary Drug 1541228"
+Usage: #example
+
+* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+
+//* code = $RxNorm#1000091 "doxepin hydrochloride 50 MG/ML Topical Cream"
+* code = $RxNorm#1541228 "{32 (methotrexate 2.5 MG Oral Tablet [Rheumatrex]) } Pack [Rheumatrex Dose Pack 32]"
+* status = #active
+
+
 // NDF-RT terms retried from Archive(https://evs.nci.nih.gov/ftp1/NDF-RT/Archive/): https://evs.nci.nih.gov/ftp1/NDF-RT/Archive/NDF-RT%202018-02-05.txt
 Instance: FormularyDrug-1000091
 InstanceOf: FormularyDrug
@@ -9,8 +23,8 @@ Usage: #example
 
 * code = $RxNorm#1000091 "doxepin hydrochloride 50 MG/ML Topical Cream"
 * status = #active
-* synonym[+] = "doxepin hydrochloride 5 % Topical Cream"
-* synonym[+] = "doxepin HCl 5 % Topical Cream"
+//* synonym[+] = "doxepin hydrochloride 5 % Topical Cream"
+//* synonym[+] = "doxepin HCl 5 % Topical Cream"
 //* relatedMedicationKnowledge[0].type = RelatedMedicationTypeCS#alternative "Drug Alternative"
 //* relatedMedicationKnowledge[0].reference = Reference(FormularyDrug-284520)
 //* medicineClassification[+].type = $MEDRT#EPC "Established Pharmacologic Class"
