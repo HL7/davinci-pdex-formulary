@@ -5,7 +5,7 @@
 id: hl7.fhir.us.davinci-drug-formulary
 canonical: http://hl7.org/fhir/us/davinci-drug-formulary
 name: Formulary
-title: DaVinci Payer Data Exchange (PDex) US Drug Formulary
+title: DaVinci Payer Data Exchange (PDex) US Drug Formulary (STU2 ballot)
 status: draft
 version: 1.2.0
 fhirVersion: 4.0.1
@@ -16,7 +16,7 @@ publisher:
   name: HL7 Pharmacy Working Group
   url: http://www.hl7.org/Special/committees/medication
   email: pharmacy@lists.HL7.org
-description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary STU 1.1.0
+description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary (STU2 ballot)
 license: CC0-1.0
 dependencies:
   hl7.fhir.us.core: 4.0.0   # updated from 3.1.1 on 8/30/21
@@ -50,11 +50,12 @@ menu:
   Specification:
     Use Cases                    : use_cases_and_overview.html
     Formulary Structure          : use_cases_and_overview.html#formulary-structure
+    Searching Formulary Drugs    : use_cases_and_overview.html#searching-formulary-drugs
     Access Methods               : use_cases_and_overview.html#access-methods
     Additional Guidance          : use_cases_and_overview.html#additional-guidance
     Anticipated Client Queries: queries.html
   FHIR Artifacts:
-    Profiles            : artifacts.html#2
+    Profiles            : artifacts.html#3
     Extensions          : artifacts.html#4
     Search Parameters   : search_parameters.html
     Terminology         : artifacts.html#5

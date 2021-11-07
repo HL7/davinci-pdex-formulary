@@ -19,19 +19,19 @@
         This change also addresses:
         <ul>
           <li>
-            <a href="https://jira.hl7.org/browse/FHIR-29670">FHIR-29670</a> and <a href="https://jira.hl7.org/browse/FHIR-30923">FHIR-30923</a> - Allowing a Formulary Drug to be referenced by multiple drug plans.
+            <a href="https://jira.hl7.org/browse/FHIR-33185">FHIR-33185</a> - Creating a prescribable insurance plan <a href="StructureDefinition-usdf-PayerInsurancePlan.html">PayerInsurancePlan</a> that contains a drug coverage with a reference to a formulary and plans cost sharing information.
           </li>
           <li>
-            <a href="https://jira.hl7.org/browse/FHIR-31038">FHIR-31038</a> - Creating profiles to enable querying plans by plan and type or searching for all drug plans.
+            <a href="https://jira.hl7.org/browse/FHIR-29670">FHIR-29670</a> and <a href="https://jira.hl7.org/browse/FHIR-30923">FHIR-30923</a> - Allowing a Formulary Drug to be referenced by multiple drug plans by adding <a href="StructureDefinition-usdf-Formulary.html">Formulary</a> and <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> profiles.
           </li>
           <li>
-            <a href="https://jira.hl7.org/browse/FHIR-29670">FHIR-29670</a> - Allowing a Formulary Drug to be referenced by multiple drug plans.
+            <a href="https://jira.hl7.org/browse/FHIR-31038">FHIR-31038</a> - Creating profiles <a href="StructureDefinition-usdf-PayerInsurancePlan.html">Payer Insurance Plan</a> and <a href="StructureDefinition-usdf-Formulary.html">Formulary</a> to enable querying plans by plan and type or searching for all drug plans adding search parameters <a href="SearchParameter-InsurancePlan-identifier.html">InsurancePlan-identifier</a>, <a href="SearchParameter-InsurancePlan-type.html">InsurancePLan-type</a>, and <a href="SearchParameter-InsurancePlan-formulary-coverage.html">InsurancePlan-formulary-coverage</a> (linking the PayerInsurancePlan and Formulary).
           </li>
           <li>
-            <a href="https://jira.hl7.org/browse/FHIR-31572">FHIR-31572</a> - Addressing the need to require an element necessary to link resources.
+            <a href="https://jira.hl7.org/browse/FHIR-31572">FHIR-31572</a> - Addressing the need to require an element necessary to link resources by adding extensions <a href="StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.coverage:drug-coverage.extension:usdf-FormularyReference-extension">formulary reference to PayerInsurancePlan coverage</a> and <a href="StructureDefinition-usdf-FormularyItem-definitions.html#Basic.extension:usdf-FormularyReference-extension">formulary reference to FormularyItem</a>.
           </li>
           <li>
-            <a href="https://jira.hl7.org/browse/FHIR-31673">FHIR-31673</a> - Move the EmailPlanContact extension, which can support an email address or url to the better fitting element InsurancePlan.contact.
+            <a href="https://jira.hl7.org/browse/FHIR-31673">FHIR-31673</a> - Move the EmailPlanContact extension, which can support an email address or url to the better fitting element <a href="StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.contact">InsurancePlan.contact</a>.
           </li>
         </ul>
       </p>
@@ -48,8 +48,31 @@
         Created an <a href="StructureDefinition-usdf-InsurancePlanLocation.html">Insurance Plan Location profile</a> for an InsurancePlan to support geolocation.
       </p>
     </li>
+    <li>
+      <a href="https://jira.hl7.org/browse/FHIR-29964">FHIR-29964</a>:
+      <p>
+        Added <a href="StructureDefinition-usdf-PriorAuthorizationNewStartsOnly-extension.html">Prior Authorization new Starts Only Extension</a>, <a href="StructureDefinition-usdf-StepTherapyLimitNewStartsOnly-extension.html">Step Therapy New Starts Only Extension</a>, and <a href="StructureDefinition-usdf-QuantityLimitDetail-extension.html">Quantity Limit Detail Extension</a> on <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> to support more details beyond the original boolean values.
+      </p>
+    </li>
+    <li>
+      <a href="https://jira.hl7.org/browse/FHIR-33184">FHIR-33184</a>:
+      <p>
+        Improve drug searching through making <a href="StructureDefinition-usdf-FormularyDrug-definitions.html#MedicationKnowledge.doseForm">MedicationKnowledge.doseform</a> Must Support on the <a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a> profile and adding a <a href="SearchParameter-MedicationKnowledge-doseform.html">doseform</a> SearchParameter.
+      </p>
+    </li>
+    <li>
+      <a href="https://jira.hl7.org/browse/FHIR-33248">FHIR-33248</a>:
+      <p>
+        Remove requirement to support HTTP error response 410 for deleted resources in <a href="CapabilityStatement-usdf-server.html">server CapabilityStatement</a>
+      </p>
+    </li>
+     <li>
+      <a href="https://jira.hl7.org/browse/FHIR-34085">FHIR-34085</a>:
+      <p>
+        Added slicing on <a href="StructureDefinition-usdf-FormularyDrug-definitions.html#MedicationKnowledge.code.coding">FormularyDrug code.coding</a> to support granular (ingredient, strength, and form) RxNorm Code and general (ingredient and form group) to enable finding drugs with different strengths and added guidance on <a href="use_cases_and_overview.html#searching-formulary-drugs">searching formulary drugs</a>. 
+      </p>
+    </li>
   </ul>
-  
 </div>
 
 
@@ -72,6 +95,10 @@
     <strong><a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a></strong>: The FormularyDrug profile of the FHIR R4 <a href="http://hl7.org/fhir/medicationknowledge.html">MedicationKnowledge</a> resource provides information about a prescribable drug including its RxNorm code and dose form. Drugs not included in a formulary may not be represented by a FormularyDrug instance.
   </li>
 </ul>
+<p>
+  A detailed description of the relationship between the profiles in this guide can be found in the <a href="use_cases_and_overview.html#formulary-structure">Formulary Structure section</a>.
+</p>
+
 
 <p>
   Several <a href="search_parameters.html">searchParameters</a> have been defined in this guide to facilitate the anticipated use cases. See the <a href="queries.html">Anticipated Client Queries</a> section for a description of how to query for resources in support of the anticipated use cases. Below are some of the search parameters defined in this guide.
@@ -99,6 +126,11 @@
     <strong><a href="SearchParameter-MedicationKnowledge-drug-name.html">drug-name</a></strong>: Makes the RxNorm name of each<a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a> accessible for query to find drugs by name, strength and form.
   </li>
 </ul>
+
+<p>
+  Information about searching for formulary drugs can be found in the <a href="use_cases_and_overview.html#searching-formulary-drugs">Searching for Formulary Drugs section</a>.
+</p>
+
 
 <a name="expected-users"></a>
 ### Expected Users 

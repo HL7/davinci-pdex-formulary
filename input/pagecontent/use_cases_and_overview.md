@@ -136,11 +136,11 @@
 </p>
 
 
-<a name="additional-guidance"></a>
-### Additional Guidance 
-
-<a name="presenting-alternative-medications"></a>
-#### Searching by Drug Names 
+<a name="searching-formulary-drugs"></a>
+### Searching Formulary Drugs
+<p>
+  Searching for formulary drugs can be done by RxNorm code, RxNorm drug name, and dose form. In a formulary API, payers are likely to only include the specific drugs, specific down to form and strength, that are included in the coverage. If a search does not return the anticipated or desireable results, it is recommended that the client broaden the search (e.g. include both generic and brand RxNorm codes, search on name without strength, or search on an RxNorm code that does not include strength - see more guidance about supported RxNorm code term types below). Additionally, drugs that have special coverage rules may or may not be included in an API. These rules are often expressed in additional formulary documentation, referenced by the <a href="StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.contact">InsurancePlan.contact</a>, which <strong>SHOULD</strong> be presented to the user of the client application.
+</p>
 <p>
   Formulary searches may be restricted to just the drugs supported by the payer therefore it is up to the user or calling application to convert patient searching requirements for branded or equivalent drugs into one or more formulary searches.
 </p>
@@ -186,6 +186,10 @@ For Example:
 This search will return all matching drug names with both the ingredient “acetaminophen” and dose form “Tablet”. This will also return any matching combination or pack drugs.
 
 Another factor clients need to consider when searching for drugs by name, is that individual drug names may be contained within combination drugs (e.g., a search on acetaminophen will return many combination drugs). Clients may need to filter search results to fit their requirements.
+
+
+<a name="additional-guidance"></a>
+### Additional Guidance 
 
 <a name="presenting-alternative-medications"></a>
 #### Presenting Drug Alternatives 
