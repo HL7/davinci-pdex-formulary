@@ -6,8 +6,7 @@
 </p>
 
 <a name="authors"></a>
-### Authors
-<!-- TODO - Update, include influential parties like Kate Dech and Dan fro Primae Therapeutics? Eric ?-->
+### Authors And Notable Contributors
 <table>
   <thead>
     <tr>
@@ -27,6 +26,22 @@
     <tr>
       <td>Dave Hill</td>
       <td><a href="mailto:dwhill@mitre.org">dwhill@mitre.org</a></td>
+    </tr>
+    <tr>
+      <td>Corey Spears</td>
+      <td><a href="mailto:cspears@mitre.org">cspears@mitre.org</a></td>
+    </tr>
+    <tr>
+      <td>Bob Dieterle</td>
+      <td><a href="mailto:rdieterle@enablecare.us">rdieterle@enablecare.us</a></td>
+    </tr>
+    <tr>
+      <td>Kate Dech</td>
+      <td><a href="mailto:KDech@primetherapeutics.com">KDech@primetherapeutics.com</a></td>
+    </tr>
+    <tr>
+      <td>Eric Ellsworth</td>
+      <td><a href="mailto:eellsworth@checkbook.org">eellsworth@checkbook.org</a></td>
     </tr>
   </tbody>
 </table>

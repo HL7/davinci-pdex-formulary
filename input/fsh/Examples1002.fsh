@@ -8,15 +8,13 @@ Usage: #example
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 * meta.profile = Canonical(PayerInsurancePlan) 
 
-//* contained[0] = PayerInsurancePlanA1002-MarketingURL
-
 * identifier.value = "A1002"
 * status = #active
 
 * type = $PlanNetInsuranceProductTypeCS#mediadv
 
 * name = "Sample Medicare Advantage Plan A1002"
-//* alias MS
+
 * period.start = "2021-01-01"
 * period.end = "2021-12-31"
 
@@ -44,7 +42,7 @@ Usage: #example
 * contact[=].telecom.value = "http://url/to/health/plan/information"
 
 
-* coverage.extension[FormularyReference].valueReference = Reference(FormularyD1002)
+* coverage[drug-coverage].extension[FormularyReference].valueReference = Reference(FormularyD1002)
 
 
 
@@ -85,7 +83,7 @@ Usage: #example
 * type = $HL7v3-ActCode#DRUGPOL
 
 * name = "Sample Medicare Advantage Part D Formulary D1002"
-//* alias MS
+
 * period.start = "2021-01-01"
 * period.end = "2021-12-31"
 
@@ -101,7 +99,7 @@ Usage: #example
 
 
 Instance: FormularyItem-D1002-1000091
-InstanceOf: FormlaryItem
+InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug 1000091"
 Usage: #example
 
@@ -126,7 +124,7 @@ Usage: #example
 
 
 Instance: FormularyItem-D1002-1049640
-InstanceOf: FormlaryItem
+InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug 1049640"
 Usage: #example
 
@@ -149,8 +147,8 @@ Usage: #example
 
 /*
 
-Instance: FormularyItem-QuantityTimimgTest
-InstanceOf: FormlaryItem
+Instance: FormularyItem-QuantityTimingTest
+InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug QuantityTiming"
 Usage: #example
 
@@ -184,7 +182,7 @@ Usage: #example
 */
 
 Instance: FormularyItem-D1002-209459
-InstanceOf: FormlaryItem
+InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug 209459"
 Usage: #example
 
@@ -203,7 +201,7 @@ Usage: #example
 * subject = Reference(FormularyDrug-209459)
 
 Instance: FormularyItem-D1002-284520
-InstanceOf: FormlaryItem
+InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug 284520"
 Usage: #example
 

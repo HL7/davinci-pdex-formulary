@@ -1,7 +1,4 @@
 == Suppressed Messages ==
-# Warnings due to validators inability to validate RxNorm codes from us-core-medication-codes.   These have been manually validated.
 
-WARNING: MedicationKnowledge/formularydrugV1002: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or a code system it depends on is not known to the validator]
-WARNING: MedicationKnowledge/FormularyDrugV3001: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or a code system it depends on is not known to the validator]
-WARNING: MedicationKnowledge/FormularyDrugV3002: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or a code system it depends on is not known to the validator]
-WARNING: MedicationKnowledge/cmsip9: MedicationKnowledge.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or a code system it depends on is not known to the validator]
+# Approved US Core Variance - https://jira.hl7.org/browse/FHIR-34164
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-InsurancePlanLocation').baseDefinition: US FHIR Usage rules require that all profiles on Location derive from the core US profile

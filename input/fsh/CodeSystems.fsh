@@ -59,12 +59,6 @@ Description: "Code for qualifier for coinsurance rate"
 * #charge                        "Charge"  "The consumer always pays just the coinsurance and the issuer pays the remainder of allowed charges (this indicates that this benefit is not subject to the deductible)."
 * #not-applicable                "Not Applicable"  "The consumer pays only a copay. Note: When using Not Applicable for coinsurance, Not Applicable cannot also be used for copay (unless the drug tier type is Medical Service Drugs)."
 
-CodeSystem: RelatedMedicationTypeCS
-Id:             usdf-RelatedMedicationTypeCS
-Title: "Type of related medication"
-Description: "Types of relationships between medications"
-* #alternative         "Drug Alternative"  "Generic or Branded Drugs that could be prescribed as alternatives to the current FormularyDrug."
-
 CodeSystem: PlanTypeCS
 Id:             usdf-PlanTypeCS
 Title: "Type of plan"

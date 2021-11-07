@@ -13,7 +13,7 @@ Usage: #example
 * type = $PlanNetInsuranceProductTypeCS#mediadv
 
 * name = "Sample Medicare Advantage Plan A3002"
-//* alias MS
+
 * period.start = "2021-01-01"
 * period.end = "2021-12-31"
 
@@ -40,7 +40,7 @@ Usage: #example
 
 
 
-* coverage.extension[FormularyReference].valueReference = Reference(FormularyD3002)
+* coverage[drug-coverage].extension[FormularyReference].valueReference = Reference(FormularyD3002)
 
 
 * plan[drug-plan].type = PlanTypeCS#drug "Drug"
@@ -149,7 +149,6 @@ Usage: #example
 * type = $HL7v3-ActCode#DRUGPOL
 
 * name = "Sample Medicare Advantage Part D Formulary D3002"
-//* alias MS
 * period.start = "2021-01-01"
 * period.end = "2021-12-31"
 
@@ -161,7 +160,7 @@ Usage: #example
 
 
 Instance: FormularyItem-D3002-1000091
-InstanceOf: FormlaryItem
+InstanceOf: FormularyItem
 Description: "Formulary Item for Insurance Formulary D3002 Drug 1000091"
 Usage: #example
 

@@ -30,6 +30,7 @@ parameters:
   apply-jurisdiction: true
   apply-publisher: true
   jira-code: davinci-df
+  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 jurisdiction: urn:iso:std:iso:3166#US
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To use a provided ig-data/package-list.json file, delete the "history" property below.        │

@@ -56,6 +56,15 @@ PayerInsurancePlans may have any number of types found in the `http://hl7.org/fh
   </code>
 </pre>
 
+<a name="Find-all-PayerInsurancePlans-by-Coverage-Area"></a>
+#### Find All PayerInsurancePlans by Coverage Area
+<p>To find all PayerInsurancePlans with a coverage area Location by id 'StateOfCTLocation':</p>
+<pre>
+  <code>
+    GET [base]/InsurancePlan?coverage-area=Location/StateOfCTLocation
+  </code>
+</pre>
+
 <a name="Find-all-FormularyItems-and-FormularyDrugs-in-a-Formulary"></a>
 #### Find All FormularyItems and FormularyDrugs in a Formulary
 <p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002':</p>
@@ -100,9 +109,9 @@ PayerInsurancePlans may have any number of types found in the `http://hl7.org/fh
   </code>
 </pre>
 
-<a name="Find-all-FormularyItems-and-Covering-Formulary-Resurces-by-Drug-Code"></a>
+<a name="Find-all-FormularyItems-and-Covering-Formulary-Resources-by-Drug-Code"></a>
 #### Find All FormularyItems and Covering Formulary Resources by Drug Code 
-<p>To find all FormularyItems and the Formulary resorucs that include them for the drug with the RxNorm code of '1000091':</p>
+<p>To find all FormularyItems and the Formulary resources that include them for the drug with the RxNorm code of '1000091':</p>
 <pre>
   <code>
     GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&subject:MedicationKnowledge.code=http://www.nlm.nih.gov/research/umls/rxnorm|1000091&_include=Basic:formulary

@@ -11,6 +11,14 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/usdf-AvailabilityPeriod-extension" key="StructureDefinition-usdf-AvailabilityPeriod-extension" name="Availability Period"/>
 <artifact id="StructureDefinition/usdf-AvailabilityStatus-extension" key="StructureDefinition-usdf-AvailabilityStatus-extension" name="Availability Status"/>
+<artifact id="SearchParameter/Basic-code" key="SearchParameter-Basic-code" name="Basic-code"/>
+<artifact id="SearchParameter/Basic-drug-tier" key="SearchParameter-Basic-drug-tier" name="Basic-drug-tier"/>
+<artifact id="SearchParameter/Basic-formulary" key="SearchParameter-Basic-formulary" name="Basic-formulary"/>
+<artifact id="SearchParameter/Basic-lastupdated" key="SearchParameter-Basic-lastupdated" name="Basic-lastupdated"/>
+<artifact id="SearchParameter/Basic-period" key="SearchParameter-Basic-period" name="Basic-period"/>
+<artifact id="SearchParameter/Basic-pharmacy-type" key="SearchParameter-Basic-pharmacy-type" name="Basic-pharmacy-type"/>
+<artifact id="SearchParameter/Basic-status" key="SearchParameter-Basic-status" name="Basic-status"/>
+<artifact id="SearchParameter/Basic-subject" key="SearchParameter-Basic-subject" name="Basic-subject"/>
 <artifact id="ValueSet/BenefitCostTypeVS" key="ValueSet-BenefitCostTypeVS" name="Benefit type of cost"/>
 <artifact id="CodeSystem/usdf-BenefitCostTypeCS" key="CodeSystem-usdf-BenefitCostTypeCS" name="Benefit type of cost"/>
 <artifact id="CodeSystem/usdf-CoinsuranceOptionCS" key="CodeSystem-usdf-CoinsuranceOptionCS" name="Code for qualifier for coinsurance rate"/>
@@ -58,8 +66,22 @@
 <artifact id="StructureDefinition/usdf-InsurancePlanLocation" key="StructureDefinition-usdf-InsurancePlanLocation" name="Insurance Plan Location"/>
 <artifact id="ValueSet/InsuranceItemTypeVS" key="ValueSet-InsuranceItemTypeVS" name="Insurance item type"/>
 <artifact id="CodeSystem/usdf-InsuranceItemTypeCS" key="CodeSystem-usdf-InsuranceItemTypeCS" name="Insurance item type"/>
+<artifact id="SearchParameter/InsurancePlan-coverage-area" key="SearchParameter-InsurancePlan-coverage-area" name="InsurancePlan-coverage-area"/>
+<artifact id="SearchParameter/InsurancePlan-coverage-type" key="SearchParameter-InsurancePlan-coverage-type" name="InsurancePlan-coverage-type"/>
+<artifact id="SearchParameter/InsurancePlan-formulary-coverage" key="SearchParameter-InsurancePlan-formulary-coverage" name="InsurancePlan-formulary-coverage"/>
+<artifact id="SearchParameter/InsurancePlan-identifier" key="SearchParameter-InsurancePlan-identifier" name="InsurancePlan-identifier"/>
+<artifact id="SearchParameter/InsurancePlan-lastupdated" key="SearchParameter-InsurancePlan-lastupdated" name="InsurancePlan-lastupdated"/>
+<artifact id="SearchParameter/InsurancePlan-name" key="SearchParameter-InsurancePlan-name" name="InsurancePlan-name"/>
+<artifact id="SearchParameter/InsurancePlan-period" key="SearchParameter-InsurancePlan-period" name="InsurancePlan-period"/>
+<artifact id="SearchParameter/InsurancePlan-status" key="SearchParameter-InsurancePlan-status" name="InsurancePlan-status"/>
+<artifact id="SearchParameter/InsurancePlan-type" key="SearchParameter-InsurancePlan-type" name="InsurancePlan-type"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-MailOrder-extension" key="StructureDefinition-usdf-MailOrder-extension" name="Mail Order"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-MarketingURL-extension" key="StructureDefinition-usdf-MarketingURL-extension" name="Marketing URL"/>
+<artifact id="SearchParameter/MedicationKnowledge-code" key="SearchParameter-MedicationKnowledge-code" name="MedicationKnowledge-code"/>
+<artifact id="SearchParameter/MedicationKnowledge-doseform" key="SearchParameter-MedicationKnowledge-doseform" name="MedicationKnowledge-doseform"/>
+<artifact id="SearchParameter/MedicationKnowledge-drug-name" key="SearchParameter-MedicationKnowledge-drug-name" name="MedicationKnowledge-drug-name"/>
+<artifact id="SearchParameter/MedicationKnowledge-lastupdated" key="SearchParameter-MedicationKnowledge-lastupdated" name="MedicationKnowledge-lastupdated"/>
+<artifact id="SearchParameter/MedicationKnowledge-status" key="SearchParameter-MedicationKnowledge-status" name="MedicationKnowledge-status"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-Network-extension" key="StructureDefinition-usdf-Network-extension" name="Network"/>
 <artifact id="StructureDefinition/usdf-PayerInsurancePlan" key="StructureDefinition-usdf-PayerInsurancePlan" name="Payer Insurance Plan"/>
 <artifact id="InsurancePlan/PayerInsurancePlanA1002" key="InsurancePlan-PayerInsurancePlanA1002" name="PayerInsurancePlanA1002"/>
@@ -76,6 +98,7 @@
 <artifact id="StructureDefinition/usdf-QuantityLimit-extension" key="StructureDefinition-usdf-QuantityLimit-extension" name="Quantity Limit"/>
 <artifact id="StructureDefinition/usdf-QuantityLimitDetail-extension" key="StructureDefinition-usdf-QuantityLimitDetail-extension" name="Quantity Limit Detail"/>
 <artifact id="ValueSet/SemanticDrugVS" key="ValueSet-SemanticDrugVS" name="Semantic Drug Codes"/>
+<artifact id="ValueSet/SemanticDrugFormGroupVS" key="ValueSet-SemanticDrugFormGroupVS" name="Semantic Drug Form Group Codes"/>
 <artifact id="Location/StateOfCTLocation" key="Location-StateOfCTLocation" name="StateOfCTLocation"/>
 <artifact id="StructureDefinition/usdf-StepTherapyLimit-extension" key="StructureDefinition-usdf-StepTherapyLimit-extension" name="Step Therapy Limit"/>
 <artifact id="StructureDefinition/usdf-StepTherapyLimitNewStartsOnly-extension" key="StructureDefinition-usdf-StepTherapyLimitNewStartsOnly-extension" name="Step Therapy Limit New Starts Only"/>
@@ -85,17 +108,8 @@
 <artifact id="CodeSystem/usdf-PlanTypeCS" key="CodeSystem-usdf-PlanTypeCS" name="Type of plan"/>
 <artifact id="ValueSet/PlanContactTypeVS" key="ValueSet-PlanContactTypeVS" name="Type of plan contact"/>
 <artifact id="CodeSystem/usdf-PlanContactTypeCS" key="CodeSystem-usdf-PlanContactTypeCS" name="Type of plan contact"/>
-<artifact id="ValueSet/RelatedMedicationTypeVS" key="ValueSet-RelatedMedicationTypeVS" name="Type of related medication"/>
-<artifact id="CodeSystem/usdf-RelatedMedicationTypeCS" key="CodeSystem-usdf-RelatedMedicationTypeCS" name="Type of related medication"/>
 <artifact id="CapabilityStatement/usdf-server" key="CapabilityStatement-usdf-server" name="US Drug Formulary Server Capability Statement"/>
 <artifact id="Location/UnitedStatesLocation" key="Location-UnitedStatesLocation" name="UnitedStatesLocation"/>
-<artifact id="SearchParameter/coverage-area" key="SearchParameter-coverage-area" name="coverage-area"/>
-<artifact id="SearchParameter/coverage-type" key="SearchParameter-coverage-type" name="coverage-type"/>
-<artifact id="SearchParameter/drug-name" key="SearchParameter-drug-name" name="drug-name"/>
-<artifact id="SearchParameter/drug-tier" key="SearchParameter-drug-tier" name="drug-tier"/>
-<artifact id="SearchParameter/formulary" key="SearchParameter-formulary" name="formulary"/>
-<artifact id="SearchParameter/formulary-coverage" key="SearchParameter-formulary-coverage" name="formulary-coverage"/>
-<artifact id="SearchParameter/pharmacy-type" key="SearchParameter-pharmacy-type" name="pharmacy-type"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
