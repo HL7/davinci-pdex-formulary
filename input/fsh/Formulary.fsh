@@ -203,11 +203,17 @@ Description:    "Drug information which may be part of a formulary including its
    semantic-drug-form-group 0..* MS
 
 * code.coding[semantic-drug] ^short = "Semantic clinical or brand drug or pack including strength"
+* code.coding[semantic-drug].code 1..1 MS
+* code.coding[semantic-drug].system 1..1 MS
 * code.coding[semantic-drug].code from SemanticDrugVS (required)
 * code.coding[semantic-drug].system = $RxNorm
-* code.coding[semantic-drug] ^short = "Semantic clinical or brand drug without strength"
-* code.coding[semantic-drug-form-group] from SemanticDrugFormGroupVS (required)
+* code.coding[semantic-drug-form-group] ^short = "Semantic clinical or brand drug without strength"
+* code.coding[semantic-drug-form-group].code 1..1 MS
+* code.coding[semantic-drug-form-group].system 1..1 MS
+* code.coding[semantic-drug-form-group].code from SemanticDrugFormGroupVS (required)
 * code.coding[semantic-drug-form-group].system = $RxNorm
+
+
 
 * status 1..1 MS
 * doseForm MS
