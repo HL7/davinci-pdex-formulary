@@ -190,12 +190,14 @@ Description:    "Drug information which may be part of a formulary including its
 
 * meta.lastUpdated 1..1
 * code 1..1 MS
+* code from SemanticDrugVS (required)
+/*
 * code.coding 1..* MS
 
 
-* code.coding ^slicing.discriminator.path = "code"
+* code.coding ^slicing.discriminator.path = "$this"
 * code.coding ^slicing.rules = #open
-* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.ordered = false
 * code.coding ^slicing.description = "Slice based on code value"
 * code.coding contains 
@@ -205,14 +207,15 @@ Description:    "Drug information which may be part of a formulary including its
 * code.coding[semantic-drug] ^short = "Semantic clinical or brand drug or pack including strength"
 * code.coding[semantic-drug].code 1..1 MS
 * code.coding[semantic-drug].system 1..1 MS
-* code.coding[semantic-drug].code from SemanticDrugVS (required)
-* code.coding[semantic-drug].system = $RxNorm
+* code.coding[semantic-drug] from SemanticDrugVS (required)
+//* code.coding[semantic-drug].system = $RxNorm
+
 * code.coding[semantic-drug-form-group] ^short = "Semantic clinical or brand drug without strength"
 * code.coding[semantic-drug-form-group].code 1..1 MS
 * code.coding[semantic-drug-form-group].system 1..1 MS
-* code.coding[semantic-drug-form-group].code from SemanticDrugFormGroupVS (required)
-* code.coding[semantic-drug-form-group].system = $RxNorm
-
+* code.coding[semantic-drug-form-group] from SemanticDrugFormGroupVS (required)
+//* code.coding[semantic-drug-form-group].system = $RxNorm
+*/
 
 
 * status 1..1 MS

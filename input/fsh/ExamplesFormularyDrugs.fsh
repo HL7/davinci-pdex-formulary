@@ -8,12 +8,12 @@ Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
-
-* code.coding[semantic-drug] = $RxNorm#753532 "{21 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Levlen 28 Day]"
-* code.coding[semantic-drug-form-group] = $RxNorm#1157348 "ethinyl estradiol / levonorgestrel Oral Product"
+* code.coding = $RxNorm#753532 "{21 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Levlen 28 Day]"
+//* code.coding[semantic-drug] = $RxNorm#753532 "{21 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Levlen 28 Day]"
+//* code.coding[semantic-drug-form-group] = $RxNorm#1157348 "ethinyl estradiol / levonorgestrel Oral Product"
 * status = #active
 
-
+/*
 Instance: FormularyDrug-1000091
 InstanceOf: FormularyDrug
 Description: "Formulary Drug 1000091"
@@ -62,3 +62,5 @@ Usage: #example
 * status = #active
 * synonym[+] = "Protopic 0.001 MG/MG Topical Ointment"
 * synonym[+] = "Protopic 0.1 % Topical Ointment"
+
+*/

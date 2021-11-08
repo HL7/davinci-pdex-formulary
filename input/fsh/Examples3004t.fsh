@@ -530,7 +530,7 @@ Usage: #example
 
 
 
-
+/*
 
 Instance: FormularyItem-D3004t-1049640
 InstanceOf: FormularyItem
@@ -552,3 +552,5 @@ Usage: #example
 * extension[usdf-QuantityLimit-extension].valueBoolean = true
 * code = InsuranceItemTypeCS#formulary-item "Formulary Item"
 * subject = Reference(FormularyDrug-1049640)
+
+*/
