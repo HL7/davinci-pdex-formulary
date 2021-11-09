@@ -48,8 +48,8 @@
 <artifact id="StructureDefinition/usdf-FormularyReference-extension" key="StructureDefinition-usdf-FormularyReference-extension" name="Formulary Reference"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-FormularyURL-extension" key="StructureDefinition-usdf-FormularyURL-extension" name="Formulary URL"/>
 <artifact id="InsurancePlan/FormularyD1002" key="InsurancePlan-FormularyD1002" name="FormularyD1002"/>
-<artifact id="MedicationKnowledge/FormularyDrug-993953" key="MedicationKnowledge-FormularyDrug-993953" name="FormularyDrug-993953"/>
-<artifact id="Basic/FormularyItem-D1002-993953" key="Basic-FormularyItem-D1002-993953" name="FormularyItem-D1002-993953"/>
+<artifact id="MedicationKnowledge/FormularyDrug-993804" key="MedicationKnowledge-FormularyDrug-993804" name="FormularyDrug-993804"/>
+<artifact id="Basic/FormularyItem-D1002-993804" key="Basic-FormularyItem-D1002-993804" name="FormularyItem-D1002-993804"/>
 <artifact id="StructureDefinition/usdf-InsurancePlanLocation" key="StructureDefinition-usdf-InsurancePlanLocation" name="Insurance Plan Location"/>
 <artifact id="ValueSet/InsuranceItemTypeVS" key="ValueSet-InsuranceItemTypeVS" name="Insurance item type"/>
 <artifact id="CodeSystem/usdf-InsuranceItemTypeCS" key="CodeSystem-usdf-InsuranceItemTypeCS" name="Insurance item type"/>
