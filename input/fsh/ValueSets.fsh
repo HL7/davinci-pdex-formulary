@@ -48,7 +48,7 @@ Description: "Semantic Drug codes with Term Types (TTY) of Semantic Clinical Dru
 //* codes from system $RxNorm where TTY = #SBD
 //* codes from system $RxNorm where TTY = #SCD
 //* codes from system $RxNorm where TTY = #GPCK
-* codes from system $RxNorm where TTY = #BPCK
+* codes from system $RxNorm
 //* codes from system $HL7-USCore-MedicationCodes where TTY = "SBD"
 
 ValueSet: SemanticDrugFormGroupVS

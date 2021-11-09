@@ -51,7 +51,20 @@
 <artifact id="InsurancePlan/FormularyD3001" key="InsurancePlan-FormularyD3001" name="FormularyD3001"/>
 <artifact id="InsurancePlan/FormularyD3002" key="InsurancePlan-FormularyD3002" name="FormularyD3002"/>
 <artifact id="InsurancePlan/FormularyD3004t" key="InsurancePlan-FormularyD3004t" name="FormularyD3004t"/>
+<artifact id="MedicationKnowledge/FormularyDrug-1000091" key="MedicationKnowledge-FormularyDrug-1000091" name="FormularyDrug-1000091"/>
+<artifact id="MedicationKnowledge/FormularyDrug-1049640" key="MedicationKnowledge-FormularyDrug-1049640" name="FormularyDrug-1049640"/>
 <artifact id="MedicationKnowledge/FormularyDrug-1541228" key="MedicationKnowledge-FormularyDrug-1541228" name="FormularyDrug-1541228"/>
+<artifact id="MedicationKnowledge/FormularyDrug-209459" key="MedicationKnowledge-FormularyDrug-209459" name="FormularyDrug-209459"/>
+<artifact id="MedicationKnowledge/FormularyDrug-284520" key="MedicationKnowledge-FormularyDrug-284520" name="FormularyDrug-284520"/>
+<artifact id="MedicationKnowledge/FormularyDrug-993953" key="MedicationKnowledge-FormularyDrug-993953" name="FormularyDrug-993953"/>
+<artifact id="Basic/FormularyItem-D1002-1000091" key="Basic-FormularyItem-D1002-1000091" name="FormularyItem-D1002-1000091"/>
+<artifact id="Basic/FormularyItem-D1002-1049640" key="Basic-FormularyItem-D1002-1049640" name="FormularyItem-D1002-1049640"/>
+<artifact id="Basic/FormularyItem-D1002-209459" key="Basic-FormularyItem-D1002-209459" name="FormularyItem-D1002-209459"/>
+<artifact id="Basic/FormularyItem-D1002-284520" key="Basic-FormularyItem-D1002-284520" name="FormularyItem-D1002-284520"/>
+<artifact id="Basic/FormularyItem-D1002-993953" key="Basic-FormularyItem-D1002-993953" name="FormularyItem-D1002-993953"/>
+<artifact id="Basic/FormularyItem-D3001-1000091" key="Basic-FormularyItem-D3001-1000091" name="FormularyItem-D3001-1000091"/>
+<artifact id="Basic/FormularyItem-D3002-1000091" key="Basic-FormularyItem-D3002-1000091" name="FormularyItem-D3002-1000091"/>
+<artifact id="Basic/FormularyItem-D3004t-1049640" key="Basic-FormularyItem-D3004t-1049640" name="FormularyItem-D3004t-1049640"/>
 <artifact id="StructureDefinition/usdf-InsurancePlanLocation" key="StructureDefinition-usdf-InsurancePlanLocation" name="Insurance Plan Location"/>
 <artifact id="ValueSet/InsuranceItemTypeVS" key="ValueSet-InsuranceItemTypeVS" name="Insurance item type"/>
 <artifact id="CodeSystem/usdf-InsuranceItemTypeCS" key="CodeSystem-usdf-InsuranceItemTypeCS" name="Insurance item type"/>

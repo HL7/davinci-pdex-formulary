@@ -33,6 +33,9 @@
           <li>
             <a href="https://jira.hl7.org/browse/FHIR-31673">FHIR-31673</a> - Move the EmailPlanContact extension, which can support an email address or url to the better fitting element <a href="StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.contact">InsurancePlan.contact</a>.
           </li>
+          <li>
+            <a href="https://jira.hl7.org/browse/FHIR-33183">FHIR-33183</a> - Created a set of <a hef="search_parameters.html">search parameters</a> and <a href="queries.html">anticipated client queries</a> for the new IG structure.
+          </li>
         </ul>
       </p>
     </li>
@@ -66,10 +69,16 @@
         Remove requirement to support HTTP error response 410 for deleted resources in <a href="CapabilityStatement-usdf-server.html">server CapabilityStatement</a>
       </p>
     </li>
-     <li>
+    <li>
       <a href="https://jira.hl7.org/browse/FHIR-34085">FHIR-34085</a>:
       <p>
         Added slicing on <a href="StructureDefinition-usdf-FormularyDrug-definitions.html#MedicationKnowledge.code.coding">FormularyDrug code.coding</a> to support granular (ingredient, strength, and form) RxNorm Code and general (ingredient and form group) to enable finding drugs with different strengths and added guidance on <a href="use_cases_and_overview.html#searching-formulary-drugs">searching formulary drugs</a>. 
+      </p>
+    </li>
+    <li>
+      <a href="https://jira.hl7.org/browse/FHIR-31349">FHIR-31349</a>:
+      <p>
+        Added deductible-waived to <a href="ValueSet-CopayOptionVS.html">Copay qualifier</a> and <a href="ValueSet-CoinsuranceOptionVS.html">Coinsurance qualifier</a> CodeSystems</a>. 
       </p>
     </li>
   </ul>

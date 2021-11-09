@@ -150,7 +150,7 @@ Usage: #example
 
 
 
-/*
+
 
 
 Instance: FormularyItem-D3001-1000091
@@ -174,5 +174,3 @@ Usage: #example
 
 * code = InsuranceItemTypeCS#formulary-item "Formulary Item"
 * subject = Reference(FormularyDrug-1000091)
-
-*/

@@ -21,10 +21,6 @@ license: CC0-1.0
 dependencies:
   hl7.fhir.us.core: 4.0.0   # updated from 3.1.1 on 8/30/21
   hl7.fhir.us.davinci-pdex-plan-net: 1.0.0
-  us.nlm.vsac:
-    uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
-    version: 0.3.0
-    id: vsac
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
