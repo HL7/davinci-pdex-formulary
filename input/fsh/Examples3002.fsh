@@ -1,3 +1,4 @@
+/*
 Instance: PayerInsurancePlanA3002
 InstanceOf: PayerInsurancePlan
 Description: "Payer Insurance Plan A3002"
@@ -182,3 +183,5 @@ Usage: #example
 
 * code = InsuranceItemTypeCS#formulary-item "Formulary Item"
 * subject = Reference(FormularyDrug-1000091)
+
+*/

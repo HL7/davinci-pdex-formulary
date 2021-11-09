@@ -92,7 +92,7 @@ Usage: #example
 
 
 
-
+/*
 
 // --------------------- FormularyItems --------------------- 
 
@@ -180,7 +180,7 @@ Usage: #example
 * subject = Reference(FormularyDrug-1049640)
 
 */
-
+/*
 Instance: FormularyItem-D1002-209459
 InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug 209459"
@@ -220,7 +220,7 @@ Usage: #example
 * code = InsuranceItemTypeCS#formulary-item "Formulary Item"
 * subject = Reference(FormularyDrug-284520)
 
-
+*/
 
 Instance: FormularyItem-D1002-993953
 InstanceOf: FormularyItem
