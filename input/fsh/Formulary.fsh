@@ -190,8 +190,8 @@ Description:    "Drug information which may be part of a formulary including its
 
 * meta.lastUpdated 1..1
 * code 1..1 MS
-* code from SemanticDrugVS (required)
-/*
+//* code from SemanticDrugVS (required)
+
 * code.coding 1..* MS
 
 
@@ -215,7 +215,7 @@ Description:    "Drug information which may be part of a formulary including its
 * code.coding[semantic-drug-form-group].system 1..1 MS
 * code.coding[semantic-drug-form-group] from SemanticDrugFormGroupVS (required)
 //* code.coding[semantic-drug-form-group].system = $RxNorm
-*/
+
 
 * status 1..1 MS
 * doseForm MS

@@ -92,7 +92,7 @@ Usage: #example
 
 
 
-/*
+
 
 // --------------------- FormularyItems --------------------- 
 
@@ -141,6 +141,19 @@ Usage: #example
 * extension[usdf-StepTherapyLimit-extension].valueBoolean = true
 * extension[usdf-StepTherapyLimitNewStartsOnly-extension].valueBoolean = false
 * extension[usdf-QuantityLimit-extension].valueBoolean = true
+// Max daily - 2, Rolling 30 day - 60, Days supply - 180 cumulative days' supply per 365 days 
+// TODO Change or add quantitytieming for drug RxNorm code 993953 ?
+* extension[usdf-QuantityLimit-extension].valueBoolean = true
+* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.count = 60
+* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.period = 30
+* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.periodUnit = #d
+* extension[usdf-QuantityLimitDetail-extension].extension[MaximumDaily].valueQuantity.value = 2
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.value = 365
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.system = "http://unitsofmeasure.org"
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.code = #d
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.count = 1
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.period = 180
+* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.periodUnit = #d
 * code = InsuranceItemTypeCS#formulary-item "Formulary Item"
 * subject = Reference(FormularyDrug-1049640)
 
@@ -180,7 +193,7 @@ Usage: #example
 * subject = Reference(FormularyDrug-1049640)
 
 */
-/*
+
 Instance: FormularyItem-D1002-209459
 InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug 209459"
@@ -220,71 +233,3 @@ Usage: #example
 * code = InsuranceItemTypeCS#formulary-item "Formulary Item"
 * subject = Reference(FormularyDrug-284520)
 
-*/
-/*
-Instance: FormularyItem-D1002-993953
-InstanceOf: FormularyItem
-Description: "Formulary Item for Formulary D1002 Drug 993953"
-Usage: #example
-
-* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
-
-* extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
-* extension[usdf-AvailabilityStatus-extension].valueCode = #active
-* extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
-* extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
-* extension[usdf-PharmacyType-extension].valueCodeableConcept = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
-* extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#brand "Brand"
-* extension[usdf-PriorAuthorization-extension].valueBoolean = true
-* extension[usdf-PriorAuthorizationNewStartsOnly-extension].valueBoolean = true
-* extension[usdf-StepTherapyLimit-extension].valueBoolean = true
-* extension[usdf-StepTherapyLimitNewStartsOnly-extension].valueBoolean = false
-// Max daily - 2, Rolling 30 day - 60, Days supply - 180 cumulative days' supply per 365 days 
-* extension[usdf-QuantityLimit-extension].valueBoolean = true
-* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.count = 60
-* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.period = 30
-* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.periodUnit = #d
-* extension[usdf-QuantityLimitDetail-extension].extension[MaximumDaily].valueQuantity.value = 2
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.value = 365
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.system = "http://unitsofmeasure.org"
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.code = #d
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.count = 1
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.period = 180
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.periodUnit = #d
-
-* code = InsuranceItemTypeCS#formulary-item "Formulary Item"
-* subject = Reference(FormularyDrug-993953)
-*/
-
-Instance: FormularyItem-D1002-993804
-InstanceOf: FormularyItem
-Description: "Formulary Item for Formulary D1002 Drug 993804"
-Usage: #example
-
-* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
-
-* extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
-* extension[usdf-AvailabilityStatus-extension].valueCode = #active
-* extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
-* extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
-* extension[usdf-PharmacyType-extension].valueCodeableConcept = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
-* extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#brand "Brand"
-* extension[usdf-PriorAuthorization-extension].valueBoolean = true
-* extension[usdf-PriorAuthorizationNewStartsOnly-extension].valueBoolean = true
-* extension[usdf-StepTherapyLimit-extension].valueBoolean = true
-* extension[usdf-StepTherapyLimitNewStartsOnly-extension].valueBoolean = false
-// Max daily - 2, Rolling 30 day - 60, Days supply - 180 cumulative days' supply per 365 days 
-* extension[usdf-QuantityLimit-extension].valueBoolean = true
-* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.count = 60
-* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.period = 30
-* extension[usdf-QuantityLimitDetail-extension].extension[Rolling].valueTiming.repeat.periodUnit = #d
-* extension[usdf-QuantityLimitDetail-extension].extension[MaximumDaily].valueQuantity.value = 2
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.value = 365
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.system = "http://unitsofmeasure.org"
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.boundsDuration.code = #d
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.count = 1
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.period = 180
-* extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.periodUnit = #d
-
-* code = InsuranceItemTypeCS#formulary-item "Formulary Item"
-* subject = Reference(FormularyDrug-993804)

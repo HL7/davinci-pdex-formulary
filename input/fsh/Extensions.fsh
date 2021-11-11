@@ -93,6 +93,7 @@ Description: "An indication of whether and which quantity limits the coverage pl
 * extension[DaysSupply].valueTiming.repeat.period 1..1
 * extension[DaysSupply].valueTiming.repeat.periodUnit = #d
 
+
 Extension: PharmacyType
 Id: usdf-PharmacyType-extension
 Title: "Pharmacy Type"

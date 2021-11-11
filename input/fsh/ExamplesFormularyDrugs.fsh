@@ -1,4 +1,4 @@
-/*
+
 
 // Temporary test
 Instance: FormularyDrug-1541228
@@ -9,8 +9,8 @@ Usage: #example
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
 
-//* code.coding[semantic-drug] = $RxNorm#753532 "{21 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Levlen 28 Day]"
-* code.coding[semantic-drug] = $RxNorm#1157348 "ethinyl estradiol / levonorgestrel Oral Product"
+* code.coding[semantic-drug] = $RxNorm#753532 "{21 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Levlen 28 Day]"
+* code.coding[semantic-drug-form-group] = $RxNorm#1157348 "ethinyl estradiol / levonorgestrel Oral Product"
 * status = #active
 
 
@@ -65,7 +65,6 @@ Usage: #example
 * code.coding[semantic-drug-form-group] = $RxNorm#1182458 "Protopic Topical Product"
 * status = #active
 
-*/
 /*
 Instance: FormularyDrug-993953
 InstanceOf: FormularyDrug
@@ -74,13 +73,13 @@ Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
-* code.coding = $RxNorm#993953 "bupropion hydrochloride 150 MG [Zyban]"
-//* code.coding[semantic-drug] = $RxNorm#993953 "bupropion hydrochloride 150 MG [Zyban]"
-//* code.coding[semantic-drug-form-group] = $RxNorm#993954 "Smoking Cessation 12 HR bupropion hydrochloride 150 MG Extended Release Oral Tablet [Zyban]"
+//* code.coding = $RxNorm#993953 "bupropion hydrochloride 150 MG [Zyban]"
+* code.coding[semantic-drug] = $RxNorm#993953 "bupropion hydrochloride 150 MG [Zyban]"
+* code.coding[semantic-drug-form-group] = $RxNorm#993954 "Smoking Cessation 12 HR bupropion hydrochloride 150 MG Extended Release Oral Tablet [Zyban]"
 * status = #active
 
 
-*/
+
 
 Instance: FormularyDrug-993804
 InstanceOf: FormularyDrug
@@ -89,7 +88,8 @@ Usage: #example
 
 * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
-* code.coding = $RxNorm#993804 "Gianvi 28-Day Pack"
-//* code.coding[semantic-drug] = $RxNorm#993953 "bupropion hydrochloride 150 MG [Zyban]"
-//* code.coding[semantic-drug-form-group] = $RxNorm#993954 "Smoking Cessation 12 HR bupropion hydrochloride 150 MG Extended Release Oral Tablet [Zyban]"
+//* code.coding = $RxNorm#993804 "Gianvi 28-Day Pack"
+* code.coding[semantic-drug] = $RxNorm#993953 "bupropion hydrochloride 150 MG [Zyban]"
+* code.coding[semantic-drug-form-group] = $RxNorm#993954 "Smoking Cessation 12 HR bupropion hydrochloride 150 MG Extended Release Oral Tablet [Zyban]"
 * status = #active
+*/

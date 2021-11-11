@@ -45,16 +45,14 @@ Description: "Type of plan contact"
 ValueSet: SemanticDrugVS
 Title: "Semantic Drug Codes"
 Description: "Semantic Drug codes with Term Types (TTY) of Semantic Clinical Drug (SCD), Semantic Branded Drug (SBD), Generic Pack (GPCK), or Branded Pack (BPCK)"
-//* codes from system $RxNorm where TTY = #SBD
-//* codes from system $RxNorm where TTY = #SCD
-//* codes from system $RxNorm where TTY = #GPCK
+* codes from system $RxNorm where TTY = #SBD
+* codes from system $RxNorm where TTY = #SCD
+* codes from system $RxNorm where TTY = #GPCK
 * codes from system $RxNorm where TTY = #BPCK
 //* codes from system $HL7-USCore-MedicationCodes where TTY = "SBD"
-/*
+
 ValueSet: SemanticDrugFormGroupVS
 Title: "Semantic Drug Form Group Codes"
 Description: "Semantic Drug Form Group codes with Term Types (TTY) of Semantic Clinical Drug Form (SCDG) and Semantic Branded Drug Form Group (SBDG)"
 * codes from system $RxNorm where TTY = #SCDG
 * codes from system $RxNorm where TTY = #SBDG
-*/
-

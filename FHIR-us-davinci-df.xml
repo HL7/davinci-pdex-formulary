@@ -48,8 +48,21 @@
 <artifact id="StructureDefinition/usdf-FormularyReference-extension" key="StructureDefinition-usdf-FormularyReference-extension" name="Formulary Reference"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-FormularyURL-extension" key="StructureDefinition-usdf-FormularyURL-extension" name="Formulary URL"/>
 <artifact id="InsurancePlan/FormularyD1002" key="InsurancePlan-FormularyD1002" name="FormularyD1002"/>
-<artifact id="MedicationKnowledge/FormularyDrug-993804" key="MedicationKnowledge-FormularyDrug-993804" name="FormularyDrug-993804"/>
-<artifact id="Basic/FormularyItem-D1002-993804" key="Basic-FormularyItem-D1002-993804" name="FormularyItem-D1002-993804"/>
+<artifact id="InsurancePlan/FormularyD3001" key="InsurancePlan-FormularyD3001" name="FormularyD3001"/>
+<artifact id="InsurancePlan/FormularyD3002" key="InsurancePlan-FormularyD3002" name="FormularyD3002"/>
+<artifact id="InsurancePlan/FormularyD3004t" key="InsurancePlan-FormularyD3004t" name="FormularyD3004t"/>
+<artifact id="MedicationKnowledge/FormularyDrug-1000091" key="MedicationKnowledge-FormularyDrug-1000091" name="FormularyDrug-1000091"/>
+<artifact id="MedicationKnowledge/FormularyDrug-1049640" key="MedicationKnowledge-FormularyDrug-1049640" name="FormularyDrug-1049640"/>
+<artifact id="MedicationKnowledge/FormularyDrug-1541228" key="MedicationKnowledge-FormularyDrug-1541228" name="FormularyDrug-1541228"/>
+<artifact id="MedicationKnowledge/FormularyDrug-209459" key="MedicationKnowledge-FormularyDrug-209459" name="FormularyDrug-209459"/>
+<artifact id="MedicationKnowledge/FormularyDrug-284520" key="MedicationKnowledge-FormularyDrug-284520" name="FormularyDrug-284520"/>
+<artifact id="Basic/FormularyItem-D1002-1000091" key="Basic-FormularyItem-D1002-1000091" name="FormularyItem-D1002-1000091"/>
+<artifact id="Basic/FormularyItem-D1002-1049640" key="Basic-FormularyItem-D1002-1049640" name="FormularyItem-D1002-1049640"/>
+<artifact id="Basic/FormularyItem-D1002-209459" key="Basic-FormularyItem-D1002-209459" name="FormularyItem-D1002-209459"/>
+<artifact id="Basic/FormularyItem-D1002-284520" key="Basic-FormularyItem-D1002-284520" name="FormularyItem-D1002-284520"/>
+<artifact id="Basic/FormularyItem-D3001-1000091" key="Basic-FormularyItem-D3001-1000091" name="FormularyItem-D3001-1000091"/>
+<artifact id="Basic/FormularyItem-D3002-1000091" key="Basic-FormularyItem-D3002-1000091" name="FormularyItem-D3002-1000091"/>
+<artifact id="Basic/FormularyItem-D3004t-1049640" key="Basic-FormularyItem-D3004t-1049640" name="FormularyItem-D3004t-1049640"/>
 <artifact id="StructureDefinition/usdf-InsurancePlanLocation" key="StructureDefinition-usdf-InsurancePlanLocation" name="Insurance Plan Location"/>
 <artifact id="ValueSet/InsuranceItemTypeVS" key="ValueSet-InsuranceItemTypeVS" name="Insurance item type"/>
 <artifact id="CodeSystem/usdf-InsuranceItemTypeCS" key="CodeSystem-usdf-InsuranceItemTypeCS" name="Insurance item type"/>
@@ -72,6 +85,9 @@
 <artifact deprecated="true" id="StructureDefinition/usdf-Network-extension" key="StructureDefinition-usdf-Network-extension" name="Network"/>
 <artifact id="StructureDefinition/usdf-PayerInsurancePlan" key="StructureDefinition-usdf-PayerInsurancePlan" name="Payer Insurance Plan"/>
 <artifact id="InsurancePlan/PayerInsurancePlanA1002" key="InsurancePlan-PayerInsurancePlanA1002" name="PayerInsurancePlanA1002"/>
+<artifact id="InsurancePlan/PayerInsurancePlanA3001" key="InsurancePlan-PayerInsurancePlanA3001" name="PayerInsurancePlanA3001"/>
+<artifact id="InsurancePlan/PayerInsurancePlanA3002" key="InsurancePlan-PayerInsurancePlanA3002" name="PayerInsurancePlanA3002"/>
+<artifact id="InsurancePlan/PayerInsurancePlanA3004t" key="InsurancePlan-PayerInsurancePlanA3004t" name="PayerInsurancePlanA3004t"/>
 <artifact id="StructureDefinition/usdf-PharmacyType-extension" key="StructureDefinition-usdf-PharmacyType-extension" name="Pharmacy Type"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-PlanID-extension" key="StructureDefinition-usdf-PlanID-extension" name="Plan ID"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-PlanIDType-extension" key="StructureDefinition-usdf-PlanIDType-extension" name="Plan ID Type"/>
@@ -82,6 +98,7 @@
 <artifact id="StructureDefinition/usdf-QuantityLimit-extension" key="StructureDefinition-usdf-QuantityLimit-extension" name="Quantity Limit"/>
 <artifact id="StructureDefinition/usdf-QuantityLimitDetail-extension" key="StructureDefinition-usdf-QuantityLimitDetail-extension" name="Quantity Limit Detail"/>
 <artifact id="ValueSet/SemanticDrugVS" key="ValueSet-SemanticDrugVS" name="Semantic Drug Codes"/>
+<artifact id="ValueSet/SemanticDrugFormGroupVS" key="ValueSet-SemanticDrugFormGroupVS" name="Semantic Drug Form Group Codes"/>
 <artifact id="Location/StateOfCTLocation" key="Location-StateOfCTLocation" name="StateOfCTLocation"/>
 <artifact id="StructureDefinition/usdf-StepTherapyLimit-extension" key="StructureDefinition-usdf-StepTherapyLimit-extension" name="Step Therapy Limit"/>
 <artifact id="StructureDefinition/usdf-StepTherapyLimitNewStartsOnly-extension" key="StructureDefinition-usdf-StepTherapyLimitNewStartsOnly-extension" name="Step Therapy Limit New Starts Only"/>
