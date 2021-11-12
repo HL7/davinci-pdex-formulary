@@ -27,14 +27,14 @@ Description: "Codes for types of Pharmacies. Each payer will have its own contro
 
 CodeSystem: BenefitCostTypeCS
 Id:             usdf-BenefitCostTypeCS
-Title: "Benefit type of cost"
+Title: "Codes for benefit type of cost"
 Description: "Types of out of pockets costs associated with the benefit"
 * #copay               "Copay"  "A flat fee the member pays to fill the prescription."
 * #coinsurance         "Coinsurance"  "A percentage of the cost to fill the prescription, usually after the deductible has been met."
 
 CodeSystem: InsuranceItemTypeCS
 Id:             usdf-InsuranceItemTypeCS
-Title: "Insurance item type"
+Title: "Codes for insurance item type"
 Description: "Types of insurance items"
 * #formulary-item      "Formulary Item"  "An entry in a formulary."
 
@@ -52,7 +52,7 @@ Description: "Codes for qualifier of copay amount"
 
 CodeSystem: CoInsuranceOptionCS
 Id:             usdf-CoinsuranceOptionCS
-Title: "Code for qualifier for coinsurance rate"
+Title: "Code for qualifier for coinsurance rate codes"
 Description: "Code for qualifier for coinsurance rate"
 * #after-deductible              "After Deductible"  "The consumer first pays the deductible, and after the deductible is met, the consumer pays the coinsurance portion of allowed charges (this indicates that this benefit is subject to the deductible)."
 * #no-charge                     "No Charge"  "No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
@@ -63,13 +63,13 @@ Description: "Code for qualifier for coinsurance rate"
 
 CodeSystem: PlanTypeCS
 Id:             usdf-PlanTypeCS
-Title: "Type of plan"
+Title: "Codes for type of plan"
 Description: "Types of plans"
 * #drug         "Drug"  "Drug plan"
 
 CodeSystem: PlanContactTypeCS
 Id:             usdf-PlanContactTypeCS
-Title: "Type of plan contact"
+Title: "Codes for type of plan contact"
 Description: "Type of plan contact"
 * #MARKETING "Plan Marketing Information"
 * #SUMMARY "Plan Summary Information"
