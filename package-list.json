@@ -11,6 +11,16 @@
         "current": true
       },
       {
+        "version": "1.2.0",
+        "date": "2021-11-11",
+        "desc": "DaVinci Payer Data Exchange (PDex) US Drug Formulary | STU2 Ballot",
+        "path": "http://hl7.org/fhir/us/davinci-drug-formulary/STU1.2",
+        "status": "ballot",
+        "sequence": "STU 2",
+        "fhirversion": "4.0.1",
+        "current": true
+      },
+      {
         "version": "1.1.0",
         "date": "2021-09-23",
         "desc": "Payer Data Exchange (PDex) Drug Formulary, Release 1.1.0 - US Realm STU",

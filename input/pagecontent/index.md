@@ -78,7 +78,13 @@
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-31349">FHIR-31349</a>:
       <p>
-        Added deductible-waived to <a href="ValueSet-CopayOptionVS.html">Copay qualifier</a> and <a href="ValueSet-CoinsuranceOptionVS.html">Coinsurance qualifier</a> CodeSystems</a>. 
+        Added deductible-waived to <a href="ValueSet-CopayOptionVS.html">Copay qualifier</a> and <a href="ValueSet-CoinsuranceOptionVS.html">Coinsurance qualifier</a> CodeSystems. 
+      </p>
+    </li>
+    <li>
+      <a href="https://jira.hl7.org/browse/FHIR-33188">FHIR-33188</a>:
+      <p>
+        Added guidance for <a href="use_cases_and_overview.html#bulk-data">Bulk Data Export</a>. 
       </p>
     </li>
   </ul>
