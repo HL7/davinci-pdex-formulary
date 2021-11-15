@@ -78,6 +78,7 @@ When accessing data through an authenticated API, the response for queries on In
 #### Unauthenticated
 When accessing data through an unauthenticated API, the conformant payer formulary service **SHALL NOT** require an application to send consumer identifying information in order to query for the list of health plans provided by that payer and the medication and costs for each plan.
 
+<!-- Not included in STU2 scope
 <a name="bulk-data"></a>
 ### Bulk Data
 A server **MAY** support [Bulk Data IG](http://hl7.org/fhir/uv/bulkdata/index.html) for the retrieval of formulary data not related to an individual. The Bulk Data IG may be used because the data set for formularies could be large as a server may manage multiple formularies, each of which may contain thousands of drugs. If and how authorization is supported is not defined by this specification, however, the Bulk IG does provide guidance on SMART Backend Service Authorization. 
@@ -90,7 +91,7 @@ If a Formulary server supports the Bulk Data IG:
 * The server **SHOULD** support the Bulk Data File Request.
 * The server **MAY** support the Bulk Data Status Request.
 * The server **MAY** support the Bulk Data Delete Request.
-
+-->
 <a name="formulary-structure"></a>
 ### Formulary Structure
 Formularies in the United States are normally published by health insurers on an annual basis, with minor updates during the year. It is critical that health insurers update their published formularies following these minor updates.

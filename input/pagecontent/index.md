@@ -81,12 +81,14 @@
         Added deductible-waived to <a href="ValueSet-CopayOptionVS.html">Copay qualifier</a> and <a href="ValueSet-CoinsuranceOptionVS.html">Coinsurance qualifier</a> CodeSystems. 
       </p>
     </li>
+    <!-- Not included in STU2 scope
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-33188">FHIR-33188</a>:
       <p>
         Added guidance for <a href="use_cases_and_overview.html#bulk-data">Bulk Data Export</a>. 
       </p>
     </li>
+    -->
   </ul>
 </div>
 
