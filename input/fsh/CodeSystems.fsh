@@ -11,6 +11,7 @@ Description: "Codes to represent the drug tier of a particular medication in a h
 * #non-preferred-brand        "Non-preferred Brand"  "Brand name drugs that cost more than ‘brand’ drugs."
 * #zero-cost-share-preventative "Zero cost-share preventative"  "Preventive medications and products available at no cost."
 * #medical-service           "Medical Service"  "Drugs that must be administered by a clinician or in a facility and may be covered under a medical benefit."
+* ^caseSensitive = true
 
 CodeSystem: PharmacyTypeCS
 Id:             usdf-PharmacyTypeCS
@@ -24,6 +25,7 @@ Description: "Codes for types of Pharmacies. Each payer will have its own contro
 * #3-month-out-retail   "3 month out of network retail"  "3 Month Supply via out-of-network retail pharmacy."
 * #3-month-in-mail      "3 month in network mail order"  "3 Month Supply via in-network mail order pharmacy."
 * #3-month-out-mail     "3 month out of network mail order"  "3 Month Supply via out-of-network mail order pharmacy."
+* ^caseSensitive = true
 
 CodeSystem: BenefitCostTypeCS
 Id:             usdf-BenefitCostTypeCS
@@ -31,12 +33,14 @@ Title: "Codes for benefit type of cost"
 Description: "Types of out of pockets costs associated with the benefit"
 * #copay               "Copay"  "A flat fee the member pays to fill the prescription."
 * #coinsurance         "Coinsurance"  "A percentage of the cost to fill the prescription, usually after the deductible has been met."
+* ^caseSensitive = true
 
 CodeSystem: InsuranceItemTypeCS
 Id:             usdf-InsuranceItemTypeCS
 Title: "Codes for insurance item type"
 Description: "Types of insurance items"
 * #formulary-item      "Formulary Item"  "An entry in a formulary."
+* ^caseSensitive = true
 
 CodeSystem: CopayOptionCS
 Id:             usdf-CopayOptionCS
@@ -49,6 +53,7 @@ Description: "Codes for qualifier of copay amount"
 * #charge                         "Charge"  "The consumer always pays just the copay and the issuer pays the remainder of allowed charges (this indicates that this benefit is not subject to the deductible)."
 * #not-applicable                 "Not Applicable"  "Deductible is not applicable: Zero-deductible cost sharing represented by a co-pay value of 'Not applicable' and co-insurance value of 'No charge'."
 * #deductible-waived              "Deductible Waived"  "The consumer pays the copay with deductible requirement waived."
+* ^caseSensitive = true
 
 CodeSystem: CoInsuranceOptionCS
 Id:             usdf-CoinsuranceOptionCS
@@ -60,12 +65,14 @@ Description: "Code for qualifier for coinsurance rate"
 * #charge                        "Charge"  "The consumer always pays just the coinsurance and the issuer pays the remainder of allowed charges (this indicates that this benefit is not subject to the deductible)."
 * #not-applicable                "Not Applicable"  "The consumer pays only a copay. Note: When using Not Applicable for coinsurance, Not Applicable cannot also be used for copay (unless the drug tier type is Medical Service Drugs)."
 * #deductible-waived             "Deductible Waived"  "The consumer pays the coinsurance with deductible requirement waived."
+* ^caseSensitive = true
 
 CodeSystem: PlanTypeCS
 Id:             usdf-PlanTypeCS
 Title: "Codes for type of plan"
 Description: "Types of plans"
 * #drug         "Drug"  "Drug plan"
+* ^caseSensitive = true
 
 CodeSystem: PlanContactTypeCS
 Id:             usdf-PlanContactTypeCS
@@ -74,3 +81,4 @@ Description: "Type of plan contact"
 * #MARKETING "Plan Marketing Information"
 * #SUMMARY "Plan Summary Information"
 * #FORMULARY "Plan Formulary Information"
+* ^caseSensitive = true
