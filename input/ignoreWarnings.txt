@@ -2,3 +2,6 @@
 
 # Approved US Core Variance - https://jira.hl7.org/browse/FHIR-34164
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-InsurancePlanLocation').baseDefinition: US FHIR Usage rules require that all profiles on Location derive from the core US profile
+
+# JIRA Artifacts - Some artifacts were renamed and have a different key, but have the same concept
+WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
