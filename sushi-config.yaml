@@ -10,7 +10,7 @@ status: draft
 version: 1.2.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU2 Ballot
+releaseLabel: STU 2 Ballot
 
 publisher:
   name: HL7 Pharmacy Working Group
