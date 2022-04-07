@@ -38,7 +38,7 @@ Note that for this use case the health plan could provide non-authenticated or o
 
 <a name="access-methods"></a>
 ### Access Methods
-The formulary service can potentially be accessed two different ways:</p>
+The formulary service can potentially be accessed two different ways:
 1. __Authenticated API__: Access to the formulary service when integrated with protected health information (PHI) or personally identifiable information (PII) as part of the Patient Access API **SHALL** be protected through an authorized, authenticated transaction as described in the Da Vinci Health Record Exchange (HRex) FHIR Implementation Guide for the [September 2020 Ballot](http://hl7.org/fhir/us/davinci-hrex/2020Sep/security.html).
 2. __Unauthenticated API__: When exchanging formulary data exclusively, which is public information without any PHI or PII, the formulary service **MAY** also be accessed through an API that does not require authentication or authorization. The formulary server **SHALL NOT** maintain any records through the unauthenticated API that could associate the consumer with the medications queried.
 
