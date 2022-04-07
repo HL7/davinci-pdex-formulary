@@ -229,6 +229,7 @@ Title:          "Insurance Plan Location"
 Description:    "A Location describing a geographic region or are where the insurance plan coverage is available."
 
 * meta.lastUpdated 1..1
+* obeys Location-address-or-geolocation
 * extension contains
     $GeoJSONExtension named region 0..1 MS
 * extension[region] ^short = "Associated Region (GeoJSON) [MustSupport for this element is optional if there is support for address]" // Add conditional MS FHIR-34527
@@ -305,3 +306,9 @@ Description:    "A GraphDefinition defining a graph of resources to return in a 
 * link.target.link.target.profile = Canonical(FormularyDrug)
 
 */
+
+Invariant: Location-address-or-geolocation
+Description: "Location contains an address, geolocation, or both"
+Expression: "address.exists() or extension.where(url='http://hl7.org/fhir/StructureDefinition/location-boundary-geojson')"
+Severity: #error
+
