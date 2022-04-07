@@ -45,7 +45,7 @@ The formulary service can potentially be accessed two different ways:
 
 <a name="authenticated"></a>
 #### Authenticated 
-When accessing data through an authenticated API, the response for queries on InsurancePlan depends on whether the authenticated member is currently enrolled in a plan and whether they are a member of a group. The following table indicates how the Formulary API should respond to requests when an Insurance plan is specified and when it is not.
+When accessing data through an authenticated API, the response for queries on InsurancePlan depends on whether the authenticated member is currently enrolled in a plan and whether they are a member of a group. The following table indicates how the Formulary API should respond to requests when an Insurance plan is specified and when it is not. When Zero plans returned is a valid response, Status 200 (OK) means success.
 
 
 <table border="1">
@@ -57,23 +57,23 @@ When accessing data through an authenticated API, the response for queries on In
   <tbody>
     <tr>
       <td>No plan available</td>
-      <td>Zero plans returned (200)</td>
-      <td>Zero plans returned (200)</td>
+      <td>Zero plans returned</td>
+      <td>Zero plans returned</td>
     </tr>
     <tr>
       <td>No plan selected/no group</td>
-      <td>Zero plans returned (200)</td>
+      <td>Zero plans returned</td>
       <td>Bundle of available individual InsurancePlans</td>
     </tr>
     <tr>
       <td>No plan selected/in group</td>
-      <td>Zero plans returned (200)</td>
+      <td>Zero plans returned</td>
       <td>Bundle of available group InsurancePlans</td>
     </tr>
     <tr>
       <td>Plan selected/no group</td>
       <td>If InsurancePlan specified matches member's plan, return InsurancePlan, otherwise zero plans returned</td>
-      <td>Zero plans returned (200)</td>
+      <td>Zero plans returned</td>
     </tr>
     <tr>
       <td>Plan selected/in group</td>
