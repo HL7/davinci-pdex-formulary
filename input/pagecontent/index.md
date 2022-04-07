@@ -134,7 +134,7 @@
     <strong><a href="SearchParameter-Basic-formulary.html">formulary</a></strong>: Makes the extension Formulary reference of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs included in a particular formulary.
   </li>
   <li>
-    <strong><a href="SearchParameter-Basic-drug-tier.html">drug-tier</a></strong>: Makes the extension DrugTier codeableConcept of each <a href="StructureDefinition-usdf-FormularyDrug.html">FormularyItem</a> accessible for query to find drugs in a specific tier.
+    <strong><a href="SearchParameter-Basic-drug-tier.html">drug-tier</a></strong>: Makes the extension DrugTier codeableConcept of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs in a specific tier.
   </li>
   <li>
     <strong><a href="SearchParameter-Basic-pharmacy-type.html">pharmacy-type</a></strong>: Makes the extension PharmacyType codeableConcept of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs in available through a specific pharmacy network type.
