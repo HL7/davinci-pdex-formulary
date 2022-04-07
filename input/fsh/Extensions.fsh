@@ -3,7 +3,7 @@
 Extension: FormularyReference
 Id: usdf-FormularyReference-extension
 Title: "Formulary Reference"
-Description: "Reference to a formulary."
+Description: "Reference to the formulary this item belongs to."
 
 * value[x] 1..1
 * value[x] only Reference
@@ -28,14 +28,14 @@ Description: "A Boolean indication of whether the coverage plan imposes a prior 
 Extension: StepTherapyLimit
 Id: usdf-StepTherapyLimit-extension
 Title: "Step Therapy Limit"
-Description: "A Boolean indication of whether the coverage plan imposes a step therapy limit on this drug."
+Description: "A boolean indicating whether the coverage plan imposes a step therapy requirement on this drug meaning another drug may need to be tried beforehand."
 * value[x] only boolean
 * value[x] 1..1
 
 Extension: StepTherapyLimitNewStartsOnly
 Id: usdf-StepTherapyLimitNewStartsOnly-extension
 Title: "Step Therapy Limit New Starts Only"
-Description: "A Boolean indication of whether the coverage plan imposes a step therapy limit on this drug for new starts only. (Only include if StepTherapyLimit = true)"
+Description: "A boolean indicating whether the coverage plan imposes a step therapy requirement on this drug meaning another drug may need to be tried beforehand for new starts only (Not required if patient has previously met step therapy requirements).  (Only include if StepTherapyLimit = true)"
 * value[x] only boolean
 * value[x] 1..1
 
@@ -50,7 +50,7 @@ Description: "A Boolean indication of whether the coverage plan imposes a quanti
 Extension: QuantityLimitDetail
 Id: usdf-QuantityLimitDetail-extension
 Title: "Quantity Limit Detail"
-Description: "An indication of whether and which quantity limits the coverage plan imposes on this drug. (Only include if QuantityLimit = true)"
+Description: "A detailed definition of the quantity limits the coverage plan imposes on this drug. These limit details may include (potentially including a rolling dispense limit, maximum daily, or therapy days for a period of time. (Only include if QuantityLimit = true)"
 * extension 1..*
 * extension contains
 	Description 0..1 and
@@ -114,7 +114,7 @@ Description: "A code that describes the coverage status of a drug in a health pl
 Extension: AvailabilityStatus
 Id: usdf-AvailabilityStatus-extension
 Title: "Availability Status"
-Description: "Availability status"
+Description: "A boolean indicating whether the formulary item is currently available under the formulary. Drugs may appear on a formulary, but not considered \"active\" for the current year. Drugs may also be removed during the course of a plan year."
 * value[x] 1..1 MS
 * value[x] only code
 * valueCode from publication-status (required)
@@ -122,6 +122,6 @@ Description: "Availability status"
 Extension: AvailabilityPeriod
 Id: usdf-AvailabilityPeriod-extension
 Title: "Availability Period"
-Description: "Period of time availability"
+Description: "The period for which this item is available on the formulary. Drugs may appear on a formulary, but not considered \"active\" for the current year."
 * value[x] 1..1 MS
 * value[x] only Period
