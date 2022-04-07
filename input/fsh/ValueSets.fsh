@@ -3,10 +3,11 @@ Title: "Drug tier of medication in health plan"
 Description: "The drug tier of a particular medication in a health plan. The base set are examples. Each plan may have its own controlled vocabulary."
 * codes from system DrugTierCS
 
-ValueSet: PharmacyTypeVS
-Title: "Type of pharmacies"
-Description: "Types of pharmacies. Each payer will have its own controlled vocabulary."
-* codes from system PharmacyTypeCS
+// Renamed and title/description changes per FHIR-34756
+ValueSet: PharmacyBenefitTypeVS
+Title: "Pharmacy benefit types"
+Description: "Pharmacy benefit types. Each payer will have its own controlled vocabulary."
+* codes from system PharmacyBenefitTypeCS
 
 ValueSet: BenefitCostTypeVS
 Title: "Benefit type of cost"

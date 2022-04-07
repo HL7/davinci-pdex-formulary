@@ -49,7 +49,7 @@ Usage: #example
 
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-in-retail "1 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#generic "Generic"
 
@@ -70,7 +70,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-out-retail "1 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-out-retail "1 month out of network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#generic "Generic"
 
@@ -91,7 +91,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-in-retail "3 month in network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-in-retail "3 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#generic "Generic"
 
@@ -113,7 +113,7 @@ Usage: #example
 
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-out-retail "3 month out of network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#generic "Generic"
 
@@ -171,10 +171,10 @@ Usage: #example
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
-* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
-* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#1-month-in-mail "1 month in network mail order"
-* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#3-month-in-retail "3 month in network retail"
-* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#3-month-in-mail "3 month in network mail order"
+* extension[usdf-PharmacyBenefitType-extension][+].valueCodeableConcept = PharmacyBenefitTypeCS#1-month-in-retail "1 month in network retail"
+* extension[usdf-PharmacyBenefitType-extension][+].valueCodeableConcept = PharmacyBenefitTypeCS#1-month-in-mail "1 month in network mail order"
+* extension[usdf-PharmacyBenefitType-extension][+].valueCodeableConcept = PharmacyBenefitTypeCS#3-month-in-retail "3 month in network retail"
+* extension[usdf-PharmacyBenefitType-extension][+].valueCodeableConcept = PharmacyBenefitTypeCS#3-month-in-mail "3 month in network mail order"
 * extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#generic "Generic"
 * extension[usdf-PriorAuthorization-extension].valueBoolean = false
 * extension[usdf-StepTherapyLimit-extension].valueBoolean = true

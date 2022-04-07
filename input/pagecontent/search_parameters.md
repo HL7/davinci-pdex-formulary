@@ -208,11 +208,11 @@
 			<td><code class="highlighter-rouge">GET [base]/Basic?formulary=[reference]</code></td>
 		</tr>
 		<tr>
-			<td><a href="SearchParameter-Basic-pharmacy-type.html">pharmacy-type</a></td>
+			<td><a href="SearchParameter-Basic-pharmacy-benefit-type.html">pharmacy-benefit-type</a></td>
 			<td><a href="https://www.hl7.org/fhir/search.html#token">token</a></td>
 			<td><strong>SHALL</strong></td>
-			<td>Accesses the Pharmacy Network Type of a FormularyItem</td>
-			<td><code class="highlighter-rouge">GET [base]/Basic?pharmacy-type=[system]|[code]</code></td>
+			<td>Accesses the Pharmacy Benefit Type of a FormularyItem</td>
+			<td><code class="highlighter-rouge">GET [base]/Basic?pharmacy-benefit-type=[system]|[code]</code></td>
 		</tr>
 		<tr>
 			<td><a href="SearchParameter-Basic-drug-tier.html">drug-tier</a></td>

@@ -137,7 +137,7 @@
     <strong><a href="SearchParameter-Basic-drug-tier.html">drug-tier</a></strong>: Makes the extension DrugTier codeableConcept of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs in a specific tier.
   </li>
   <li>
-    <strong><a href="SearchParameter-Basic-pharmacy-type.html">pharmacy-type</a></strong>: Makes the extension PharmacyType codeableConcept of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs in available through a specific pharmacy network type.
+    <strong><a href="SearchParameter-Basic-pharmacy-benefit-type.html">pharmacy-benefit-type</a></strong>: Makes the extension PharmacyBenefitType codeableConcept of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs in available through a specific pharmacy benefit type.
   </li>
   <li>
     <strong><a href="SearchParameter-MedicationKnowledge-drug-name.html">drug-name</a></strong>: Makes the RxNorm name of each<a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a> accessible for query to find drugs by name, strength and form.
@@ -152,7 +152,7 @@
 <a name="expected-users"></a>
 ### Expected Users 
 <p>
-  This Implementation Guide is intended for insurers within the United States. Currently, many insurers make their formularies available to patients using PDFs or drug search forms through their websites. Providing formularies using FHIR may allow patients to find alternatives to reduce their medication costs, easily comparison-shop between plans, and could help insurers educate consumers about the differences between various drug tiers and pharmacy network types.
+  This Implementation Guide is intended for insurers within the United States. Currently, many insurers make their formularies available to patients using PDFs or drug search forms through their websites. Providing formularies using FHIR may allow patients to find alternatives to reduce their medication costs, easily comparison-shop between plans, and could help insurers educate consumers about the differences between various drug tiers and pharmacy benefit types.
 </p>
 
 <a name="disclaimers-and-assumptions"></a>

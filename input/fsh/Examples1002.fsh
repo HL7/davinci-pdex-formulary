@@ -48,7 +48,7 @@ Usage: #example
 
 * plan[drug-plan].type = PlanTypeCS#drug "Drug"
 
-* plan[drug-plan].specificCost[0].category = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
+* plan[drug-plan].specificCost[0].category = PharmacyBenefitTypeCS#1-month-in-retail "1 month in network retail"
 
 
 
@@ -109,10 +109,10 @@ Usage: #example
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
-* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
-* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#1-month-in-mail "1 month in network mail order"
-* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#3-month-in-retail "3 month in network retail"
-* extension[usdf-PharmacyType-extension][+].valueCodeableConcept = PharmacyTypeCS#3-month-in-mail "3 month in network mail order"
+* extension[usdf-PharmacyBenefitType-extension][+].valueCodeableConcept = PharmacyBenefitTypeCS#1-month-in-retail "1 month in network retail"
+* extension[usdf-PharmacyBenefitType-extension][+].valueCodeableConcept = PharmacyBenefitTypeCS#1-month-in-mail "1 month in network mail order"
+* extension[usdf-PharmacyBenefitType-extension][+].valueCodeableConcept = PharmacyBenefitTypeCS#3-month-in-retail "3 month in network retail"
+* extension[usdf-PharmacyBenefitType-extension][+].valueCodeableConcept = PharmacyBenefitTypeCS#3-month-in-mail "3 month in network mail order"
 * extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#generic "Generic"
 * extension[usdf-PriorAuthorization-extension].valueBoolean = false
 * extension[usdf-StepTherapyLimit-extension].valueBoolean = true
@@ -134,7 +134,7 @@ Usage: #example
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
-* extension[usdf-PharmacyType-extension].valueCodeableConcept = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* extension[usdf-PharmacyBenefitType-extension].valueCodeableConcept = PharmacyBenefitTypeCS#3-month-out-retail "3 month out of network retail"
 * extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#brand "Brand"
 * extension[usdf-PriorAuthorization-extension].valueBoolean = true
 * extension[usdf-PriorAuthorizationNewStartsOnly-extension].valueBoolean = true
@@ -171,7 +171,7 @@ Usage: #example
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
-* extension[usdf-PharmacyType-extension].valueCodeableConcept = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* extension[usdf-PharmacyBenefitType-extension].valueCodeableConcept = PharmacyBenefitTypeCS#3-month-out-retail "3 month out of network retail"
 * extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#brand "Brand"
 * extension[usdf-PriorAuthorization-extension].valueBoolean = true
 * extension[usdf-PriorAuthorizationNewStartsOnly-extension].valueBoolean = true
@@ -205,7 +205,7 @@ Usage: #example
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
-* extension[usdf-PharmacyType-extension].valueCodeableConcept = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* extension[usdf-PharmacyBenefitType-extension].valueCodeableConcept = PharmacyBenefitTypeCS#3-month-out-retail "3 month out of network retail"
 * extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#brand "Brand"
 * extension[usdf-PriorAuthorization-extension].valueBoolean = true
 * extension[usdf-StepTherapyLimit-extension].valueBoolean = false
@@ -224,7 +224,7 @@ Usage: #example
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
-* extension[usdf-PharmacyType-extension].valueCodeableConcept = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* extension[usdf-PharmacyBenefitType-extension].valueCodeableConcept = PharmacyBenefitTypeCS#3-month-out-retail "3 month out of network retail"
 * extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#brand "Brand"
 * extension[usdf-PriorAuthorization-extension].valueBoolean = false
 * extension[usdf-StepTherapyLimit-extension].valueBoolean = false

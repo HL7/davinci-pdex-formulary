@@ -45,7 +45,7 @@ Usage: #example
 
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-in-retail "1 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#generic "Generic"
 
@@ -66,7 +66,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-out-retail "1 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-out-retail "1 month out of network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#generic "Generic"
 
@@ -87,7 +87,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-in-retail "3 month in network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-in-retail "3 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#generic "Generic"
 
@@ -109,7 +109,7 @@ Usage: #example
 
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-out-retail "3 month out of network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#generic "Generic"
 
@@ -144,7 +144,7 @@ Usage: #example
 
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-in-retail "1 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#zero-cost-share-preventative "Zero cost-share preventative"
 
@@ -165,7 +165,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#no-charge "No Charge"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-out-retail "1 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-out-retail "1 month out of network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#zero-cost-share-preventative "Zero cost-share preventative"
 
@@ -186,29 +186,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#no-charge "No Charge"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-in-retail "3 month in network retail"
-
-* plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#zero-cost-share-preventative "Zero cost-share preventative"
-
-
-
-
-* plan[drug-plan].specificCost[=].benefit[0].cost[copay].type = BenefitCostTypeCS#copay "Copay"
-* plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.value = 0
-* plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.unit = "$"
-* plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.system = "urn:iso:std:iso:4217"
-* plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.code = #USD
-* plan[drug-plan].specificCost[=].benefit[0].cost[copay].qualifiers = CopayOptionCS#no-charge "No Charge"
-
-* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].type = BenefitCostTypeCS#coinsurance "Coinsurance"
-* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.value = 0
-* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.code = #%
-* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.system = "http://unitsofmeasure.org"
-* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#no-charge "No Charge"
-
-
-
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-in-retail "3 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#zero-cost-share-preventative "Zero cost-share preventative"
 
@@ -230,6 +208,25 @@ Usage: #example
 
 
 
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-out-retail "3 month out of network retail"
+
+* plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#zero-cost-share-preventative "Zero cost-share preventative"
+
+
+
+
+* plan[drug-plan].specificCost[=].benefit[0].cost[copay].type = BenefitCostTypeCS#copay "Copay"
+* plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.value = 0
+* plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.unit = "$"
+* plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.system = "urn:iso:std:iso:4217"
+* plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.code = #USD
+* plan[drug-plan].specificCost[=].benefit[0].cost[copay].qualifiers = CopayOptionCS#no-charge "No Charge"
+
+* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].type = BenefitCostTypeCS#coinsurance "Coinsurance"
+* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.value = 0
+* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.code = #%
+* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.system = "http://unitsofmeasure.org"
+* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#no-charge "No Charge"
 
 
 
@@ -244,7 +241,10 @@ Usage: #example
 
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
+
+
+
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-in-retail "1 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#preferred-brand "Preferred Brand"
 
@@ -265,7 +265,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-out-retail "1 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-out-retail "1 month out of network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#preferred-brand "Preferred Brand"
 
@@ -286,7 +286,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-in-retail "3 month in network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-in-retail "3 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#preferred-brand "Preferred Brand"
 
@@ -308,7 +308,7 @@ Usage: #example
 
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-out-retail "3 month out of network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#preferred-brand "Preferred Brand"
 
@@ -333,7 +333,7 @@ Usage: #example
 
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-in-retail "1 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#non-preferred-brand "Non-preferred Brand"
 
@@ -354,7 +354,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-out-retail "1 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-out-retail "1 month out of network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#non-preferred-brand "Non-preferred Brand"
 
@@ -375,7 +375,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-in-retail "3 month in network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-in-retail "3 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#non-preferred-brand "Non-preferred Brand"
 
@@ -397,7 +397,7 @@ Usage: #example
 
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-out-retail "3 month out of network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#non-preferred-brand "Non-preferred Brand"
 
@@ -419,7 +419,7 @@ Usage: #example
 
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-in-retail "1 month in network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-in-retail "1 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#specialty "Specialty"
 
@@ -440,7 +440,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#1-month-out-retail "1 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-out-retail "1 month out of network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#specialty "Specialty"
 
@@ -461,7 +461,7 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-in-retail "3 month in network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-in-retail "3 month in network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#specialty "Specialty"
 
@@ -483,7 +483,7 @@ Usage: #example
 
 
 
-* plan[drug-plan].specificCost[+].category = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-out-retail "3 month out of network retail"
 
 * plan[drug-plan].specificCost[=].benefit[0].type = DrugTierCS#specialty "Specialty"
 
@@ -543,7 +543,7 @@ Usage: #example
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.start = "2021-01-01"
 * extension[usdf-AvailabilityPeriod-extension].valuePeriod.end = "2021-12-31"
-* extension[usdf-PharmacyType-extension].valueCodeableConcept = PharmacyTypeCS#3-month-out-retail "3 month out of network retail"
+* extension[usdf-PharmacyBenefitType-extension].valueCodeableConcept = PharmacyBenefitTypeCS#3-month-out-retail "3 month out of network retail"
 * extension[usdf-DrugTierID-extension].valueCodeableConcept = DrugTierCS#preferred-brand "Preferred Brand"
 * extension[usdf-PriorAuthorization-extension].valueBoolean = true
 * extension[usdf-PriorAuthorizationNewStartsOnly-extension].valueBoolean = true

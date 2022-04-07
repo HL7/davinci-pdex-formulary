@@ -75,15 +75,15 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 
 * plan[drug-plan] ^short = "Drug plan"
 * plan[drug-plan].type = PlanTypeCS#drug
-* plan[drug-plan].network ^short = "Pharmacy Network Organizations that are part of the drug plan"
+* plan[drug-plan].network ^short = "Pharmacy benefit types that are part of the drug plan"
 
 
 
 * plan[drug-plan].specificCost 1..* MS
-* plan[drug-plan].specificCost ^short = "Pharmacy network type specific cost"
+* plan[drug-plan].specificCost ^short = "Pharmacy benefit type specific cost"
 * plan[drug-plan].specificCost.category 1..1 MS
-* plan[drug-plan].specificCost.category from PharmacyTypeVS (extensible)
-* plan[drug-plan].specificCost.category ^short = "Pharmacy Network Type"
+* plan[drug-plan].specificCost.category from PharmacyBenefitTypeVS (extensible)
+* plan[drug-plan].specificCost.category ^short = "Pharmacy Benefit Type"
 
 
 * plan[drug-plan].specificCost.benefit 1..* MS
@@ -142,12 +142,12 @@ Description:    "The Formulary provides general information about a formulary an
 * period MS
 
 * plan 0..1 
-* plan ^short = "Optional non-cost related plan information indicating pharmacy network types and drug tiers available in the formulary"
+* plan ^short = "Optional non-cost related plan information indicating pharmacy benefit types and drug tiers available in the formulary"
 * plan.type 1..1 
 * plan.type = PlanTypeCS#drug
 
-* plan.specificCost ^short = "Pharmacy network type specific cost"
-* plan.specificCost.category from PharmacyTypeVS (extensible)
+* plan.specificCost ^short = "Pharmacy benefit type specific cost"
+* plan.specificCost.category from PharmacyBenefitTypeVS (extensible)
 
 * plan.specificCost.benefit ^short = "Drug tier benefit"
 * plan.specificCost.benefit.type from DrugTierVS (extensible)
@@ -166,7 +166,7 @@ Description:    "A resource that describes a drug's relationship to a drug plan,
     FormularyReference named usdf-FormularyReference-extension 1..1 MS and
     AvailabilityStatus named usdf-AvailabilityStatus-extension 1..1 MS and
     AvailabilityPeriod named usdf-AvailabilityPeriod-extension 0..1 MS and
-    PharmacyType named usdf-PharmacyType-extension 1..* MS and // Add MS FHIR-34527, make 1..* FHIR-36142	
+    PharmacyBenefitType named usdf-PharmacyBenefitType-extension 1..* MS and // Add MS FHIR-34527, make 1..* FHIR-36142	
     DrugTierID named usdf-DrugTierID-extension 1..1 MS and
     PriorAuthorization named usdf-PriorAuthorization-extension 0..1 MS and
     PriorAuthorizationNewStartsOnly named usdf-PriorAuthorizationNewStartsOnly-extension 0..1 and // Remove MS FHIR-34527

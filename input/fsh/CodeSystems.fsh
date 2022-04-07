@@ -13,10 +13,11 @@ Description: "Codes to represent the drug tier of a particular medication in a h
 * #medical-service           "Medical Service"  "Drugs that must be administered by a clinician or in a facility and may be covered under a medical benefit."
 * ^caseSensitive = true
 
-CodeSystem: PharmacyTypeCS
-Id:             usdf-PharmacyTypeCS
-Title: "Codes for types of pharmacies"
-Description: "Codes for types of Pharmacies. Each payer will have its own controlled vocabulary."
+// Renamed and title/description changes per FHIR-34756
+CodeSystem: PharmacyBenefitTypeCS
+Id:             usdf-PharmacyBenefitTypeCS
+Title: "Codes for pharmacy benefit types"
+Description: "Codes for pharmacy benefit types. Each payer will have its own controlled vocabulary."
 * #1-month-in-retail    "1 month in network retail"  "1 Month Supply via in-network retail pharmacy."
 * #1-month-out-retail   "1 month out of network retail"  "1 Month Supply via out-of-network retail pharmacy."
 * #1-month-in-mail    	"1 month in network mail order"  "1 Month Supply via in-network mail order pharmacy."

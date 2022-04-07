@@ -127,13 +127,13 @@ Formularies in the United States are normally published by health insurers on an
 
 Insurers regularly administer multiple health insurance and drug coverage plans and each of those plans may have its own formulary.
 
-Each formulary contains a set of drugs and their limits or requirements. Drugs are placed into tiers that largely determine the cost to the consumer/patient. The number and purpose of drug tiers varies across payers. Each tier has an associated cost-sharing model that includes deductibles and/or coinsurance components for drugs in the tier when purchased through various pharmacy types.
+Each formulary contains a set of drugs and their limits or requirements. Drugs are placed into tiers that largely determine the cost to the consumer/patient. The number and purpose of drug tiers varies across payers. Each tier has an associated cost-sharing model that includes deductibles and/or coinsurance components for drugs in the tier when purchased through various pharmacy benefit types.
 
 In addition to the drug tier, drugs may also list requirements on the patient (e.g., age or gender) or limitations on prescription (e.g., quantity limits).
 
 <a name="resource-relationships"></a>
 #### Resource Relationships
-This Implementation Guide (IG) was significantly influenced by the formulary information model of the [formularies for Qualified Health Plans (QHPs) on the federal health insurance marketplace for healthcare.gov](https://github.com/CMSgov/QHP-provider-formulary-APIs). Publishing formularies in the QHP format should be familiar to many payers. Drugs are specified by RxNorm semantic drug codes. The QHP data model mandates specific value sets for some data types (e.g., types of copayments), but leaves value sets for other data types at the discretion of the payer (e.g., drug tier codes, pharmacy network types). The following object model shows the relationships between the resources in this IG. The Formulary profiled resource combined with its associated [FormularyItem](StructureDefinition-usdf-FormularyItem.html) and [FormularyDrug](StructureDefinition-usdf-FormularyDrug.html) profiled resources represent a formulary list that includes the set of drugs covered and the requirements and limitations of that coverage.
+This Implementation Guide (IG) was significantly influenced by the formulary information model of the [formularies for Qualified Health Plans (QHPs) on the federal health insurance marketplace for healthcare.gov](https://github.com/CMSgov/QHP-provider-formulary-APIs). Publishing formularies in the QHP format should be familiar to many payers. Drugs are specified by RxNorm semantic drug codes. The QHP data model mandates specific value sets for some data types (e.g., types of copayments), but leaves value sets for other data types at the discretion of the payer (e.g., drug tier codes, pharmacy benefit types). The following object model shows the relationships between the resources in this IG. The Formulary profiled resource combined with its associated [FormularyItem](StructureDefinition-usdf-FormularyItem.html) and [FormularyDrug](StructureDefinition-usdf-FormularyDrug.html) profiled resources represent a formulary list that includes the set of drugs covered and the requirements and limitations of that coverage.
 
 
 <img style="width: 100%; height: auto;" src="DaVinci_Formulary_Structure.png" />
@@ -143,11 +143,11 @@ A FormularyDrug represents the individual prescribable drug defined with a speci
 
 <a name="cost-sharing-relationship"></a>
 #### Cost Sharing Relationship
-Cost sharing information such as copay amounts and coinsurance rates are determined by a payer in the insurance plan. The amount of copay and percentage of coinsurance is a function of the pharmacy network type (e.g. in network mail order) and the drug tier (e.g. preferred generic). These specific costs are defined in the [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html) . The pharmacy network types and drug tiers, without the cost information, may optionally be included in the [Formulary](StructureDefinition-usdf-Formulary.html) as a convenience for client applications to quickly identify the pharmacy network types and drug tiers contained on the formulary without having to retrieve the [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html).
+Cost sharing information such as copay amounts and coinsurance rates are determined by a payer in the insurance plan. The amount of copay and percentage of coinsurance is a function of the pharmacy benefit type (e.g. in network mail order) and the drug tier (e.g. preferred generic). These specific costs are defined in the [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html) . The pharmacy benefit types and drug tiers, without the cost information, may optionally be included in the [Formulary](StructureDefinition-usdf-Formulary.html) as a convenience for client applications to quickly identify the pharmacy benefit types and drug tiers contained on the formulary without having to retrieve the [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html).
 
 <img style="width: 100%; height: auto;" src="DaVinci_Formulary_CostSharing.png" />
 
-The costs for a particular drug in a plan will be determined by the pharmacy network types and drug tier as indicated in the properties of the [FormularyItem](StructureDefinition-usdf-FormularyItem.html). These properties are used to link the [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html) specificCost properties (Pharmacy Network Type - `InsurancePlan.plan.specificCost.category` and Drug Tier - `InsurancePlan.plan.specificCost.benefit.type`) to identify the costs for the drug under the plan.
+The costs for a particular drug in a plan will be determined by the pharmacy benefit types and drug tier as indicated in the properties of the [FormularyItem](StructureDefinition-usdf-FormularyItem.html). These properties are used to link the [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html) specificCost properties (Pharmacy Benefit Type - `InsurancePlan.plan.specificCost.category` and Drug Tier - `InsurancePlan.plan.specificCost.benefit.type`) to identify the costs for the drug under the plan.
 
 
 <a name="searching-formulary-drugs"></a>
@@ -206,6 +206,6 @@ Finding appropriate alternatives of a prescribed medication is complex and often
 #### Representing Drug Tiers
 Drug tiers are not standardized. The current Implementation Guide provides a defined, but extensible value set for tier identifiers based on the example list in the QHP formulary specification. A move towards standardization might make this data more useful for clients of the interface.
 
-<a name="representing-pharmacy-types"></a>
-#### Representing Pharmacy Types
-Pharmacy types are not standardized. The current Implementation Guide provides a defined value set for tier identifiers based on the example list in the QHP formulary specification which mixes channels (retail and mail order) with quantity prescribed (1 month, 3 month, etc). A move towards standardization might make this data more useful for clients of the interface.
+<a name="representing-pharmacy-benefit-types"></a>
+#### Representing Pharmacy Benefit Types
+Pharmacy benefit types are not standardized. The current Implementation Guide provides a defined value set for tier identifiers based on the example list in the QHP formulary specification which mixes channels (retail and mail order) with quantity prescribed (1 month, 3 month, etc). A move towards standardization might make this data more useful for clients of the interface.

@@ -312,21 +312,21 @@ Usage: #definition
 
 
 
-
-Instance: Basic-pharmacy-type
+// Renamed and title/description changes per FHIR-34756
+Instance: Basic-pharmacy-benefit-type
 InstanceOf: SearchParameter
 Usage: #definition
 
 * status = #active
-* code = #pharmacy-type
-* name = "USDFBasicPharmacyType"
-* description = "Accesses the Pharmacy Network Type of a FormularyItem"
-* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-pharmacy-type"
+* code = #pharmacy-benefit-type
+* name = "USDFBasicPharmacyBenefitType"
+* description = "Accesses the Pharmacy Benefit Type of a FormularyItem"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-pharmacy-benefit-type"
 * base[0] = #Basic
 
 * type = #token
 
-* expression = "Basic.extension.where(url='http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-PharmacyType-extension').value"
+* expression = "Basic.extension.where(url='http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-PharmacyBenefitType-extension').value"
 
 * multipleOr = true
 * multipleAnd = true

@@ -93,14 +93,14 @@ Description: "A detailed definition of the quantity limits the coverage plan imp
 * extension[DaysSupply].valueTiming.repeat.period 1..1
 * extension[DaysSupply].valueTiming.repeat.periodUnit = #d
 
-
-Extension: PharmacyType
-Id: usdf-PharmacyType-extension
-Title: "Pharmacy Type"
-Description: "A CodeableConcept indicating the pharmacy network type the formulary drug is available through the associated plan.  This pharmacy network type is specific to the FormularyDrug and indicates which of the pharmacy network type from the plan applies to the particular formulary drug."
+// Renamed and title/description changes per FHIR-34756
+Extension: PharmacyBenefitType
+Id: usdf-PharmacyBenefitType-extension
+Title: "Pharmacy Benefit Type"
+Description: "A CodeableConcept indicating the pharmacy benefit type the formulary drug is available through the associated plan.  This pharmacy benefit type is specific to the FormularyDrug and indicates which of the pharmacy benefit type from the plan applies to the particular formulary drug."
 * value[x] 1..1
 * value[x] only CodeableConcept
-* valueCodeableConcept from PharmacyTypeVS (extensible)
+* valueCodeableConcept from PharmacyBenefitTypeVS (extensible)
 
 Extension: DrugTierID
 Id: usdf-DrugTierID-extension

@@ -82,12 +82,12 @@ PayerInsurancePlans may have any number of types found in the `http://hl7.org/fh
     GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&drug-tier=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-DrugTierCS|generic&_include=Basic:subject
   </code>
 </pre>
-<a name="Find-all-FormularyItems-and-FormularyDrugs-in-a-Formulary-by-Pharmacy-Network-Type"></a>
-#### Find All FormularyItems and FormularyDrugs in a Formulary by Pharmacy Network Type 
-<p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002' and a pharmacy-type of '3-month-in-mail':</p>
+<a name="Find-all-FormularyItems-and-FormularyDrugs-in-a-Formulary-by-Pharmacy-Benefit-Type"></a>
+#### Find All FormularyItems and FormularyDrugs in a Formulary by Pharmacy Benefit Type 
+<p>To find all FormularyItems and their respective FormularyDrugs in a Formulary with the id of 'FormularyD1002' and a pharmacy-benefit-type of '3-month-in-mail':</p>
 <pre>
   <code>
-    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&pharmacy-type=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-PharmacyTypeCS|3-month-in-mail&_include=Basic:subject
+    GET [base]/Basic?code=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-InsuranceItemTypeCS|formulary-item&formulary=InsurancePlan/FormularyD1002&pharmacy-benefit-type=http://hl7.org/fhir/us/davinci-drug-formulary/CodeSystem/usdf-PharmacyBenefitTypeCS|3-month-in-mail&_include=Basic:subject
   </code>
 </pre>
 
