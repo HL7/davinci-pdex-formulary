@@ -1,4 +1,13 @@
 
+<a name="conformance-expectations"></a>
+
+###Conformance Expectations
+‒This guide makes use of conformance language such as **SHALL**, **SHOULD**, and **MAY** to describe the behavior of systems.  The meaning of these words **SHALL**** be interpreted as per the [FHIR core spec](http://hl7.org/fhir/conformance-rules.html#conflang).
+
+* This guide inherits all conformance expectations identified in the Health Record Exchange (Hrex) [Conformance Expectations](http://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html) section. All systems claiming conformance to this guide **SHALL** conform to the requirements listed in that section.
+
+* Server systems claiming conformance to this guide **SHALL** meet the capability statement expectation requirements identified in the [US Drug Formulary Server Capability Statement](CapabilityStatement-usdf-server.html) and **SHALL** have a CapabilityStatement that has a CapabilityStatement.instantiates with a URL of http://hl7.org/fhir/us/davinci-drug-formulary/CapabilityStatement/usdf-server or a URL to the appropriate version of the CapabilityStatement.
+
 <a name="use-cases"></a>
 ### Use Cases
 
@@ -74,24 +83,44 @@ When accessing data through an authenticated API, the response for queries on In
   </tbody>
 </table>
 
+<!-- 
+https://jira.hl7.org/browse/FHIR-33188
+https://jira.hl7.org/browse/FHIR-35367
+ -->
 <a name="unauthenticated"></a>
 #### Unauthenticated
 When accessing data through an unauthenticated API, the conformant payer formulary service **SHALL NOT** require an application to send consumer identifying information in order to query for the list of health plans provided by that payer and the medication and costs for each plan.
 
-<!-- Not included in STU2 scope
+<!-->
 <a name="bulk-data"></a>
 ### Bulk Data
 A server **MAY** support [Bulk Data IG](http://hl7.org/fhir/uv/bulkdata/index.html) for the retrieval of formulary data not related to an individual. The Bulk Data IG may be used because the data set for formularies could be large as a server may manage multiple formularies, each of which may contain thousands of drugs. If and how authorization is supported is not defined by this specification, however, the Bulk IG does provide guidance on SMART Backend Service Authorization. 
 
-If a Formulary server supports the Bulk Data IG:
-* The server **SHOULD** support the system level export operation `[base]/$export`.
-* The server **SHOULD** support `InsurancePlan`, `Basic`, `MedicationKnowledge`, and `Location` resource types for the `[base]/$export?_type`.
+If a Formulary server supports bulk data export:
+* **All InsurancePlan:** The server **SHOULD** support the export operation on the InsurancePlan resource `[base]/InsurancePlan/$export` to export all plan & formulary information.
+  * The server **SHOULD** support providing all `InsurancePlan`, `Basic`, `MedicationKnowledge`, and `Location` resource types containing formulary related data associated with all formulary related plans.
+  * The server **SHOULD** support the graph structure [Payer Insurance Plan Bulk Data Graph Definition](StructureDefinition-usdf-PayerInsurancePlanBulkDataGraphDefinition.html) in returned results.
+  * The server **MAY** support a graph parameter using (e.g. `[base]/InsurancePlan/$export?graph=usdf-PayerInsurancePlanBulkDataGraphDefinition`) to request returning results starting at the [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html).
+  * The server **MAY** support a graph parameter using (e.g. `[base]/InsurancePlan/$export?graph=usdf-FormularyBulkDataGraphDefinition`) to request returning results starting at the [Formulary](StructureDefinition-usdf-Formulary.html). This request would not return [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html) resources.
+
+
+* **Specific InsurancePlan:** The server **SHOULD** support the export operation on the InsurancePlan resource `[base]/InsurancePlan/[id]/$export` to export plan specific plan & formulary information.
+  * The server **SHOULD** support providing all `InsurancePlan`, `Basic`, `MedicationKnowledge`, and `Location` resource types containing formulary related data associated with the specific plan.
+  * The server **SHOULD** support the graph structure [Payer Insurance Plan Bulk Data Graph Definition](StructureDefinition-usdf-PayerInsurancePlanBulkDataGraphDefinition.html) in returned results when the specific plan [id] is a [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html) profiled resource.
+  * The server **SHOULD** support the graph structure [Formulary Bulk Data Graph Definition](StructureDefinition-usdf-FormularyBulkDataGraphDefinition.html) in returned results when the specific plan [id] is a [Formulary](StructureDefinition-usdf-Formulary.html) profiled resource.
+  <!-- The below may not be relevant as the id specifies the type (either PayerInsurancePlan or Formulary --
+  <!--* The server **MAY** support a graph parameter using (e.g. `[base]/InsurancePlan/[id]/$export?graph=usdf-PayerInsurancePlanBulkDataGraphDefinition`). --
+  <!--* The server **MAY** support a graph parameter using (e.g. `[base]/InsurancePlan/[id]/$export?graph=usdf-FormularyBulkDataGraphDefinition`). --
+
+  
 * The server **SHOULD** return only formulary related resources conformant to this guide.
 * The server **SHOULD** support the Bulk Data Kick-off Request.
 * The server **SHOULD** support the Bulk Data File Request.
 * The server **MAY** support the Bulk Data Status Request.
 * The server **MAY** support the Bulk Data Delete Request.
+
 -->
+
 <a name="formulary-structure"></a>
 ### Formulary Structure
 Formularies in the United States are normally published by health insurers on an annual basis, with minor updates during the year. It is critical that health insurers update their published formularies following these minor updates.
