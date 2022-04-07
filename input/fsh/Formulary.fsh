@@ -166,7 +166,7 @@ Description:    "A resource that describes a drug's relationship to a drug plan,
     FormularyReference named usdf-FormularyReference-extension 1..1 MS and
     AvailabilityStatus named usdf-AvailabilityStatus-extension 1..1 MS and
     AvailabilityPeriod named usdf-AvailabilityPeriod-extension 0..1 MS and
-    PharmacyType named usdf-PharmacyType-extension 0..* MS and // Add MS FHIR-34527
+    PharmacyType named usdf-PharmacyType-extension 1..* MS and // Add MS FHIR-34527, make 1..* FHIR-36142	
     DrugTierID named usdf-DrugTierID-extension 1..1 MS and
     PriorAuthorization named usdf-PriorAuthorization-extension 0..1 MS and
     PriorAuthorizationNewStartsOnly named usdf-PriorAuthorizationNewStartsOnly-extension 0..1 and // Remove MS FHIR-34527
