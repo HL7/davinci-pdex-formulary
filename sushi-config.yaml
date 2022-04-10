@@ -44,7 +44,8 @@ menu:
   Home: index.html
   Table of Contents: toc.html
   Specification:
-    Use Cases                    : use_cases_and_overview.html
+    Conformance Expectations     : use_cases_and_overview.html#conformance-expectations
+    Use Cases                    : use_cases_and_overview.html#use-cases
     Formulary Structure          : use_cases_and_overview.html#formulary-structure
     Searching Formulary Drugs    : use_cases_and_overview.html#searching-formulary-drugs
     Access Methods               : use_cases_and_overview.html#access-methods
