@@ -130,7 +130,7 @@ Id:             usdf-Formulary
 Title:          "Formulary"
 Description:    "The Formulary provides general information about a formulary and acts as an organizing construct that associated FormularyItem resources point to. The Formulary combined with its associated FormularyItem and FormularyDrug resources represent a formulary list that includes the set of drugs covered and the requirements and limitations of the coverage."
 
-* meta.lastUpdated 1..1 // Add MS FHIR-34527
+* meta.lastUpdated 1..1 MS // Add MS FHIR-34527
 * identifier 1..* MS
 * status 1..1 MS
 
@@ -160,7 +160,7 @@ Id:             usdf-FormularyItem
 Title:          "Formulary Item"
 Description:    "A resource that describes a drug's relationship to a drug plan, including drug tier, prior authorization requirements, and more. The set of FormularyItem resources associated with a particular drug plan represents the drug plans formulary."
 
-* meta.lastUpdated 1..1 // Add MS FHIR-34527
+* meta.lastUpdated 1..1 MS // Add MS FHIR-34527
 
 * extension contains
     FormularyReference named usdf-FormularyReference-extension 1..1 MS and
@@ -188,7 +188,7 @@ Id:             usdf-FormularyDrug
 Title:          "Formulary Drug"
 Description:    "Drug information which may be part of a formulary including its RxNorm code and dose form."
 
-* meta.lastUpdated 1..1 // Add MS FHIR-34527
+* meta.lastUpdated 1..1 MS // Add MS FHIR-34527
 * code 1..1 MS
 //* code from SemanticDrugVS (required)
 
@@ -236,7 +236,7 @@ Description:    "A Location describing a geographic region or are where the insu
 * name  // Remove MS FHIR-34527
 * description  // Add MS FHIR-34527
 * address MS 
-* address ^short = "Physical location [ MustSupport for this element is optional if there is support for Extension:location-boundary-geojson]" // Add conditional MS FHIR-34527
+* address ^short = "Physical location [MustSupport for this element is optional if there is support for Extension:location-boundary-geojson]" // Add conditional MS FHIR-34527
 
 
 
