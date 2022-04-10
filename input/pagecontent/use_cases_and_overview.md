@@ -1,8 +1,8 @@
 
 <a name="conformance-expectations"></a>
 
-###Conformance Expectations
-‒This guide makes use of conformance language such as **SHALL**, **SHOULD**, and **MAY** to describe the behavior of systems.  The meaning of these words **SHALL**** be interpreted as per the [FHIR core spec](http://hl7.org/fhir/conformance-rules.html#conflang).
+### Conformance Expectations
+This guide makes use of conformance language such as **SHALL**, **SHOULD**, and **MAY** to describe the behavior of systems.  The meaning of these words **SHALL** be interpreted as per the [FHIR core spec](http://hl7.org/fhir/conformance-rules.html#conflang).
 
 * This guide inherits all conformance expectations identified in the Health Record Exchange (Hrex) [Conformance Expectations](http://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html) section. All systems claiming conformance to this guide **SHALL** conform to the requirements listed in that section.
 
