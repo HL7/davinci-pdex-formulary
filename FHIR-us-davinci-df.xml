@@ -42,6 +42,7 @@
 <artifact deprecated="true" id="SearchParameter/DrugPlan" key="SearchParameter-DrugPlan" name="DrugPlan"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-EmailPlanContact-extension" key="StructureDefinition-usdf-EmailPlanContact-extension" name="Email Plan Contact"/>
 <artifact id="StructureDefinition/usdf-Formulary" key="StructureDefinition-usdf-Formulary" name="Formulary"/>
+<artifact id="StructureDefinition/usdf-FormularyBulkDataGraphDefinition" key="StructureDefinition-usdf-FormularyBulkDataGraphDefinition" name="Formulary Bulk Data Graph Definition"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-CoveragePlan" key="StructureDefinition-usdf-CoveragePlan" name="Formulary Coverage Plan"/>
 <artifact id="StructureDefinition/usdf-FormularyDrug" key="StructureDefinition-usdf-FormularyDrug" name="Formulary Drug"/>
 <artifact deprecated="true" id="MedicationKnowledge/formularydrugV1002" key="MedicationKnowledge-formularydrugV1002" name="Formulary Drug V1002"/>
@@ -87,6 +88,7 @@
 <artifact id="SearchParameter/MedicationKnowledge-status" key="SearchParameter-MedicationKnowledge-status" name="MedicationKnowledge-status"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-Network-extension" key="StructureDefinition-usdf-Network-extension" name="Network"/>
 <artifact id="StructureDefinition/usdf-PayerInsurancePlan" key="StructureDefinition-usdf-PayerInsurancePlan" name="Payer Insurance Plan"/>
+<artifact id="StructureDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition" key="StructureDefinition-usdf-PayerInsurancePlanBulkDataGraphDefinition" name="Payer Insurance Plan Bulk Data Graph Definition"/>
 <artifact id="InsurancePlan/PayerInsurancePlanA1002" key="InsurancePlan-PayerInsurancePlanA1002" name="PayerInsurancePlanA1002"/>
 <artifact id="InsurancePlan/PayerInsurancePlanA3001" key="InsurancePlan-PayerInsurancePlanA3001" name="PayerInsurancePlanA3001"/>
 <artifact id="InsurancePlan/PayerInsurancePlanA3002" key="InsurancePlan-PayerInsurancePlanA3002" name="PayerInsurancePlanA3002"/>

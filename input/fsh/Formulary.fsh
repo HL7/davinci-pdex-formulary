@@ -240,7 +240,7 @@ Description:    "A Location describing a geographic region or are where the insu
 
 
 
-/*
+
 Profile:        PayerInsurancePlanBulkDataGraphDefinition
 Parent:         GraphDefinition
 Id:             usdf-PayerInsurancePlanBulkDataGraphDefinition
@@ -305,7 +305,7 @@ Description:    "A GraphDefinition defining a graph of resources to return in a 
 * link.target.link.target.type = #MedicationKnowledge
 * link.target.link.target.profile = Canonical(FormularyDrug)
 
-*/
+
 
 Invariant: Location-address-or-geolocation
 Description: "Location contains an address, geolocation, or both"
