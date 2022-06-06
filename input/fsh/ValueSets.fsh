@@ -22,17 +22,31 @@ Description: "Types of insurance items"
 ValueSet: CopayOptionVS
 Title: "Qualifier of copay amount"
 Description: "Qualifier of copay amount"
-* codes from system CopayOptionCS
+* include CostShareOptionCS#after-deductible          
+* include CostShareOptionCS#before-deductible
+* include CostShareOptionCS#no-charge
+* include CostShareOptionCS#no-charge-after-deductible
+* include CostShareOptionCS#charge
+* include CostShareOptionCS#copay-not-applicable
+* include CostShareOptionCS#deductible-waived
+
 
 ValueSet: CoinsuranceOptionVS
 Title: "Qualifier for coinsurance rate"
 Description: "Qualifier for coinsurance rate"
-* codes from system CoInsuranceOptionCS
+* include CostShareOptionCS#after-deductible          
+* include CostShareOptionCS#no-charge
+* include CostShareOptionCS#no-charge-after-deductible
+* include CostShareOptionCS#charge
+* include CostShareOptionCS#coinsurance-not-applicable
+* include CostShareOptionCS#deductible-waived
 
+/* FHIR-35590 - Change to different VS
 ValueSet: PlanTypeVS
 Title: "Type of plan"
 Description: "Types of plans"
 * codes from system PlanTypeCS
+*/
 
 ValueSet: PlanContactTypeVS
 Title: "Type of plan contact"

@@ -19,8 +19,9 @@ publisher:
 description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary (STU2 ballot)
 license: CC0-1.0
 dependencies:
-  hl7.fhir.us.core: 4.0.0   # updated from 3.1.1 on 8/30/21
+#  hl7.fhir.us.core: 4.0.0
   hl7.fhir.us.davinci-pdex-plan-net: 1.0.0
+  hl7.fhir.us.davinci-hrex: 1.0.0
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
@@ -46,9 +47,10 @@ menu:
   Specification:
     Conformance Expectations     : use_cases_and_overview.html#conformance-expectations
     Use Cases                    : use_cases_and_overview.html#use-cases
-    Formulary Structure          : use_cases_and_overview.html#formulary-structure
-    Searching Formulary Drugs    : use_cases_and_overview.html#searching-formulary-drugs
     Access Methods               : use_cases_and_overview.html#access-methods
+    Formulary Structure          : use_cases_and_overview.html#formulary-structure
+    Bulk Data                    : use_cases_and_overview.html#bulk-data
+    Searching Formulary Drugs    : use_cases_and_overview.html#searching-formulary-drugs
     Additional Guidance          : use_cases_and_overview.html#additional-guidance
     Anticipated Client Queries: queries.html
   FHIR Artifacts:
