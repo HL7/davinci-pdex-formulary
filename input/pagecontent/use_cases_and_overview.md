@@ -2,9 +2,7 @@
 <a name="conformance-expectations"></a>
 
 ### Conformance Expectations
-This guide makes use of conformance language such as **SHALL**, **SHOULD**, and **MAY** to describe the behavior of systems.  The meaning of these words **SHALL** be interpreted as per the [FHIR core spec](http://hl7.org/fhir/conformance-rules.html#conflang).
-
-* This guide inherits all conformance expectations identified in the Health Record Exchange (Hrex) [Conformance Expectations](http://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html) section. All systems claiming conformance to this guide **SHALL** conform to the requirements listed in that section.
+* This guide inherits all conformance expectations identified in the Health Record Exchange (Hrex) [Conformance Expectations]({{site.data.fhir.ver.hl7_fhir_us_davinci_hrex}}/conformance.html) section. All systems claiming conformance to this guide **SHALL** conform to the requirements listed in that section.
 
 * Server systems claiming conformance to this guide **SHALL** meet the capability statement expectation requirements identified in the [US Drug Formulary Server Capability Statement](CapabilityStatement-usdf-server.html) and **SHALL** have a CapabilityStatement that has a CapabilityStatement.instantiates with a URL of http://hl7.org/fhir/us/davinci-drug-formulary/CapabilityStatement/usdf-server or a URL to the appropriate version of the CapabilityStatement.
 
@@ -39,7 +37,7 @@ Note that for this use case the health plan could provide non-authenticated or o
 <a name="access-methods"></a>
 ### Access Methods
 The formulary service can potentially be accessed two different ways:
-1. __Authenticated API__: Access to the formulary service when integrated with protected health information (PHI) or personally identifiable information (PII) as part of the Patient Access API **SHALL** be protected through an authorized, authenticated transaction as described in the Da Vinci Health Record Exchange (HRex) FHIR Implementation Guide for the [September 2020 Ballot](http://hl7.org/fhir/us/davinci-hrex/2020Sep/security.html).
+1. __Authenticated API__: Access to the formulary service when integrated with protected health information (PHI) or personally identifiable information (PII) as part of the Patient Access API **SHALL** be protected through an authorized, authenticated transaction as described in the Da Vinci Health Record Exchange (HRex) FHIR Implementation Guide [Security and Privacy Section]({{site.data.fhir.ver.hl7_fhir_us_davinci_hrex}}security.html).
 2. __Unauthenticated API__: When exchanging formulary data exclusively, which is public information without any PHI or PII, the formulary service **MAY** also be accessed through an API that does not require authentication or authorization. The formulary server **SHALL NOT** maintain any records through the unauthenticated API that could associate the consumer with the medications queried.
 
 

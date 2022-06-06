@@ -125,3 +125,11 @@ Title: "Availability Period"
 Description: "The period for which this item is available on the formulary. Drugs may appear on a formulary, but not considered \"active\" for the current year."
 * value[x] 1..1 MS
 * value[x] only Period
+
+
+Extension: AdditionalCoverageInformation
+Id: usdf-AdditionalCoverageInformation-extension
+Title: "Additional Coverage Information"
+Description: "Additional drug coverage information that may include conditional coverage requirements such as a diagnosis pre-requisite, additional drug specific cost sharing information, or other coverage details not otherwise indicated."
+* value[x] 1..1 MS
+* value[x] only markdown

@@ -44,7 +44,7 @@ Usage: #example
 * coverage[drug-coverage].extension[FormularyReference].valueReference = Reference(FormularyD3002)
 
 
-* plan[drug-plan].type = PlanTypeCS#drug "Drug"
+* plan[drug-plan].type = $HL7InsurancePlanTypeCS#Drug "Drug"
 
 
 
@@ -61,13 +61,13 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.unit = "$"
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.system = "urn:iso:std:iso:4217"
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.code = #USD
-* plan[drug-plan].specificCost[=].benefit[0].cost[copay].qualifiers = CopayOptionCS#before-deductible "Before Deductible"
+* plan[drug-plan].specificCost[=].benefit[0].cost[copay].qualifiers = CostShareOptionCS#before-deductible "Before Deductible"
 
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].type = BenefitCostTypeCS#coinsurance "Coinsurance"
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.value = 1
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.code = #%
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.system = "http://unitsofmeasure.org"
-* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
+* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CostShareOptionCS#after-deductible "After Deductible"
 
 
 * plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#1-month-out-retail "1 month out of network retail"
@@ -82,13 +82,13 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.unit = "$"
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.system = "urn:iso:std:iso:4217"
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.code = #USD
-* plan[drug-plan].specificCost[=].benefit[0].cost[copay].qualifiers = CopayOptionCS#no-charge "No Charge"
+* plan[drug-plan].specificCost[=].benefit[0].cost[copay].qualifiers = CostShareOptionCS#no-charge "No Charge"
 
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].type = BenefitCostTypeCS#coinsurance "Coinsurance"
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.value = 0
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.code = #%
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.system = "http://unitsofmeasure.org"
-* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
+* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CostShareOptionCS#after-deductible "After Deductible"
 
 
 * plan[drug-plan].specificCost[+].category = PharmacyBenefitTypeCS#3-month-in-retail "3 month in network retail"
@@ -103,13 +103,13 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.unit = "$"
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.system = "urn:iso:std:iso:4217"
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.code = #USD
-* plan[drug-plan].specificCost[=].benefit[0].cost[copay].qualifiers = CopayOptionCS#no-charge "No Charge"
+* plan[drug-plan].specificCost[=].benefit[0].cost[copay].qualifiers = CostShareOptionCS#no-charge "No Charge"
 
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].type = BenefitCostTypeCS#coinsurance "Coinsurance"
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.value = 0
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.code = #%
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.system = "http://unitsofmeasure.org"
-* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
+* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CostShareOptionCS#after-deductible "After Deductible"
 
 
 
@@ -125,13 +125,13 @@ Usage: #example
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.unit = "$"
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.system = "urn:iso:std:iso:4217"
 * plan[drug-plan].specificCost[=].benefit[0].cost[copay].value.code = #USD
-* plan[drug-plan].specificCost[=].benefit[0].cost[copay].qualifiers = CopayOptionCS#no-charge "No Charge"
+* plan[drug-plan].specificCost[=].benefit[0].cost[copay].qualifiers = CostShareOptionCS#no-charge "No Charge"
 
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].type = BenefitCostTypeCS#coinsurance "Coinsurance"
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.value = 0
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.code = #%
 * plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].value.system = "http://unitsofmeasure.org"
-* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CoInsuranceOptionCS#after-deductible "After Deductible"
+* plan[drug-plan].specificCost[=].benefit[0].cost[coinsurance].qualifiers = CostShareOptionCS#after-deductible "After Deductible"
 
 
 

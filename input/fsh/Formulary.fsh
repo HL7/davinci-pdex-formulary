@@ -47,7 +47,7 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 * coverage[drug-coverage].extension contains
     FormularyReference named usdf-FormularyReference-extension 1..* MS
 
-* coverage[drug-coverage].benefit.type from PlanTypeVS (extensible)
+* coverage[drug-coverage].benefit.type from $HL7InsurancePlanTypeVS (extensible)
 
 * coverage[drug-coverage].benefit ^slicing.discriminator.path = "type"
 * coverage[drug-coverage].benefit ^slicing.rules = #open
@@ -58,11 +58,11 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 * coverage[drug-coverage].benefit contains
     drug-plan 1..* MS
 
-* coverage[drug-coverage].benefit[drug-plan].type = PlanTypeCS#drug
+* coverage[drug-coverage].benefit[drug-plan].type = $HL7InsurancePlanTypeCS#Drug "Drug"
 
 
 * plan 1..* MS
-* plan.type from PlanTypeVS (extensible)
+* plan.type from $HL7InsurancePlanTypeVS (extensible)
 
 * plan ^slicing.discriminator.path = "type"
 * plan ^slicing.rules = #open
@@ -74,7 +74,7 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 
 
 * plan[drug-plan] ^short = "Drug plan"
-* plan[drug-plan].type = PlanTypeCS#drug
+* plan[drug-plan].type = $HL7InsurancePlanTypeCS#Drug "Drug"
 * plan[drug-plan].network ^short = "Pharmacy benefit types that are part of the drug plan"
 
 
@@ -144,7 +144,7 @@ Description:    "The Formulary provides general information about a formulary an
 * plan 0..1 
 * plan ^short = "Optional non-cost related plan information indicating pharmacy benefit types and drug tiers available in the formulary"
 * plan.type 1..1 
-* plan.type = PlanTypeCS#drug
+* plan.type = $HL7InsurancePlanTypeCS#Drug "Drug"
 
 * plan.specificCost ^short = "Pharmacy benefit type specific cost"
 * plan.specificCost.category from PharmacyBenefitTypeVS (extensible)
@@ -173,7 +173,8 @@ Description:    "A resource that describes a drug's relationship to a drug plan,
     StepTherapyLimit named usdf-StepTherapyLimit-extension 0..1 MS and
     StepTherapyLimitNewStartsOnly named usdf-StepTherapyLimitNewStartsOnly-extension 0..1 and // Remove MS FHIR-34527
     QuantityLimit named usdf-QuantityLimit-extension 0..1 MS and 
-    QuantityLimitDetail named usdf-QuantityLimitDetail-extension 0..1 // Remove MS FHIR-34527
+    QuantityLimitDetail named usdf-QuantityLimitDetail-extension 0..1 and // Remove MS FHIR-34527
+    AdditionalCoverageInformation named usdf-AdditionalCoverageInformation-extension 0..1
 
 * code 1..1
 * code = InsuranceItemTypeCS#formulary-item

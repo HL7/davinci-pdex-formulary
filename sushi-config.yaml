@@ -19,8 +19,9 @@ publisher:
 description: Da Vinci Payer Data Exchange (PDex) US Drug Formulary (STU2 ballot)
 license: CC0-1.0
 dependencies:
-  hl7.fhir.us.core: 4.0.0   # updated from 3.1.1 on 8/30/21
+#  hl7.fhir.us.core: 4.0.0
   hl7.fhir.us.davinci-pdex-plan-net: 1.0.0
+  hl7.fhir.us.davinci-hrex: 1.0.0
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true

@@ -1,5 +1,5 @@
 CodeSystem: DrugTierCS
-Id:             usdf-DrugTierCS
+Id:             usdf-DrugTierCS-TEMPORARY-TRIAL-USE
 Title: "Codes for medication drug tiers in health plans"
 Description: "Codes to represent the drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own controlled vocabulary."
 * #generic                    "Generic"  "Commonly prescribed generic drugs that cost more than drugs in the ‘preferred generic’ tier."
@@ -15,7 +15,7 @@ Description: "Codes to represent the drug tier of a particular medication in a h
 
 // Renamed and title/description changes per FHIR-34756
 CodeSystem: PharmacyBenefitTypeCS
-Id:             usdf-PharmacyBenefitTypeCS
+Id:             usdf-PharmacyBenefitTypeCS-TEMPORARY-TRIAL-USE
 Title: "Codes for pharmacy benefit types"
 Description: "Codes for pharmacy benefit types. Each payer will have its own controlled vocabulary."
 * #1-month-in-retail    "1 month in network retail"  "1 Month Supply via in-network retail pharmacy."
@@ -29,7 +29,7 @@ Description: "Codes for pharmacy benefit types. Each payer will have its own con
 * ^caseSensitive = true
 
 CodeSystem: BenefitCostTypeCS
-Id:             usdf-BenefitCostTypeCS
+Id:             usdf-BenefitCostTypeCS-TEMPORARY-TRIAL-USE
 Title: "Codes for benefit type of cost"
 Description: "Types of out of pockets costs associated with the benefit"
 * #copay               "Copay"  "A flat fee the member pays to fill the prescription."
@@ -43,6 +43,8 @@ Description: "Types of insurance items"
 * #formulary-item      "Formulary Item"  "An entry in a formulary."
 * ^caseSensitive = true
 
+/* 
+FHIR-34758 - Merge copay and coinsurance option CS into CostShareOption CS
 CodeSystem: CopayOptionCS
 Id:             usdf-CopayOptionCS
 Title: "Codes for qualifier of copay amount"
@@ -67,16 +69,35 @@ Description: "Code for qualifier for coinsurance rate"
 * #not-applicable                "Not Applicable"  "The consumer pays only a copay. Note: When using Not Applicable for coinsurance, Not Applicable cannot also be used for copay (unless the drug tier type is Medical Service Drugs)."
 * #deductible-waived             "Deductible Waived"  "The consumer pays the coinsurance with deductible requirement waived."
 * ^caseSensitive = true
+*/
 
+CodeSystem: CostShareOptionCS
+Id: usdf-CostShareOptionCS-TEMPORARY-TRIAL-USE
+Title: "Codes qualifying the type of cost share amount"
+Description: "Codes for qualifier of copay amount"
+* #after-deductible             "After Deductible"	"The consumer first pays the deductible, and after the deductible is met, the consumer is responsible only for the cost-share amount (this indicates that this benefit is subject to the deductible)."
+* #before-deductible	        "Before Deductible"  "The consumer first pays the cost share amount, and any net remaining allowed charges accrue to the deductible (this indicates that this benefit is subject to the deductible)."
+* #no-charge	                "No Charge"	"No cost sharing is charged (this indicates that this benefit is not subject to the deductible)."
+* #no-charge-after-deductible   "No Charge After Deductible"	"The consumer first pays the deductible, and after the deductible is met, no cost share amount is charged (this indicates that this benefit is subject to the deductible)."
+* #charge	                    "Charge"	"The consumer always pays just the cost share amount and the issuer pays the remainder of allowed charges (this indicates that this benefit is not subject to the deductible)."
+* #coinsurance-not-applicable	"Coinsurance Not Applicable"	"The consumer pays only a copay. Note: When using Not Applicable for coinsurance, Not Applicable cannot also be used for copay (unless the drug tier type is Medical Service Drugs)."
+* #copay-not-applicable	        "Copay Not Applicable"	"Deductible is not applicable: Zero-deductible cost sharing represented by a co-pay value of 'Not applicable' and co-insurance value of 'No charge'."
+* #deductible-waived	        "Deductible Waived"	"The consumer pays the cost share amount with deductible requirement waived."
+* ^caseSensitive = true
+
+/* FHIR-35600 - Change to different CS
 CodeSystem: PlanTypeCS
 Id:             usdf-PlanTypeCS
 Title: "Codes for type of plan"
 Description: "Types of plans"
 * #drug         "Drug"  "Drug plan"
 * ^caseSensitive = true
+*/
+
+
 
 CodeSystem: PlanContactTypeCS
-Id:             usdf-PlanContactTypeCS
+Id:             usdf-PlanContactTypeCS-TEMPORARY-TRIAL-USE
 Title: "Codes for type of plan contact"
 Description: "Type of plan contact"
 * #MARKETING "Plan Marketing Information"

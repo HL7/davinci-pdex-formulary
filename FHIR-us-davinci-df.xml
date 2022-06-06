@@ -10,6 +10,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/usdf-AdditionalCoverageInformation-extension" key="StructureDefinition-usdf-AdditionalCoverageInformation-extension" name="Additional Coverage Information"/>
 <artifact id="StructureDefinition/usdf-AvailabilityPeriod-extension" key="StructureDefinition-usdf-AvailabilityPeriod-extension" name="Availability Period"/>
 <artifact id="StructureDefinition/usdf-AvailabilityStatus-extension" key="StructureDefinition-usdf-AvailabilityStatus-extension" name="Availability Status"/>
 <artifact id="SearchParameter/Basic-code" key="SearchParameter-Basic-code" name="Basic-code"/>
@@ -22,15 +23,16 @@
 <artifact id="SearchParameter/Basic-status" key="SearchParameter-Basic-status" name="Basic-status"/>
 <artifact id="SearchParameter/Basic-subject" key="SearchParameter-Basic-subject" name="Basic-subject"/>
 <artifact id="ValueSet/BenefitCostTypeVS" key="ValueSet-BenefitCostTypeVS" name="Benefit type of cost"/>
-<artifact id="CodeSystem/usdf-CoinsuranceOptionCS" key="CodeSystem-usdf-CoinsuranceOptionCS" name="Code for qualifier for coinsurance rate codes"/>
-<artifact id="CodeSystem/usdf-BenefitCostTypeCS" key="CodeSystem-usdf-BenefitCostTypeCS" name="Codes for benefit type of cost"/>
+<artifact deprecated="true" id="CodeSystem/usdf-CoinsuranceOptionCS" key="CodeSystem-usdf-CoinsuranceOptionCS" name="Code for qualifier for coinsurance rate codes"/>
+<artifact id="CodeSystem/usdf-BenefitCostTypeCS-TEMPORARY-TRIAL-USE" key="CodeSystem-usdf-BenefitCostTypeCS" name="Codes for benefit type of cost"/>
 <artifact id="CodeSystem/usdf-InsuranceItemTypeCS" key="CodeSystem-usdf-InsuranceItemTypeCS" name="Codes for insurance item type"/>
-<artifact id="CodeSystem/usdf-DrugTierCS" key="CodeSystem-usdf-DrugTierCS" name="Codes for medication drug tiers in health plans"/>
-<artifact id="CodeSystem/usdf-PharmacyBenefitTypeCS" key="CodeSystem-usdf-PharmacyBenefitTypeCS" name="Codes for pharmacy benefit types"/>
-<artifact id="CodeSystem/usdf-CopayOptionCS" key="CodeSystem-usdf-CopayOptionCS" name="Codes for qualifier of copay amount"/>
-<artifact id="CodeSystem/usdf-PlanTypeCS" key="CodeSystem-usdf-PlanTypeCS" name="Codes for type of plan"/>
-<artifact id="CodeSystem/usdf-PlanContactTypeCS" key="CodeSystem-usdf-PlanContactTypeCS" name="Codes for type of plan contact"/>
+<artifact id="CodeSystem/usdf-DrugTierCS-TEMPORARY-TRIAL-USE" key="CodeSystem-usdf-DrugTierCS" name="Codes for medication drug tiers in health plans"/>
+<artifact id="CodeSystem/usdf-PharmacyBenefitTypeCS-TEMPORARY-TRIAL-USE" key="CodeSystem-usdf-PharmacyBenefitTypeCS-TEMPORARY-TRIAL-USE" name="Codes for pharmacy benefit types"/>
+<artifact deprecated="true" id="CodeSystem/usdf-CopayOptionCS" key="CodeSystem-usdf-CopayOptionCS" name="Codes for qualifier of copay amount"/>
+<artifact deprecated="true" id="CodeSystem/usdf-PlanTypeCS" key="CodeSystem-usdf-PlanTypeCS" name="Codes for type of plan"/>
+<artifact id="CodeSystem/usdf-PlanContactTypeCS-TEMPORARY-TRIAL-USE" key="CodeSystem-usdf-PlanContactTypeCS" name="Codes for type of plan contact"/>
 <artifact deprecated="true" id="CodeSystem/usdf-PharmacyTypeCS" key="CodeSystem-usdf-PharmacyTypeCS" name="Codes for types of pharmacies"/>
+<artifact id="CodeSystem/usdf-CostShareOptionCS-TEMPORARY-TRIAL-USE" key="CodeSystem-usdf-CostShareOptionCS-TEMPORARY-TRIAL-USE" name="Codes qualifying the type of cost share amount"/>
 <artifact deprecated="true" id="List/covplanV1002" key="List-covplanV1002" name="Coverage Plan V1002"/>
 <artifact deprecated="true" id="List/CoveragePlanV3001" key="List-CoveragePlanV3001" name="Coverage Plan V3001"/>
 <artifact deprecated="true" id="List/CoveragePlanV3002" key="List-CoveragePlanV3002" name="Coverage Plan V3002"/>
@@ -111,7 +113,7 @@
 <artifact id="StructureDefinition/usdf-StepTherapyLimitNewStartsOnly-extension" key="StructureDefinition-usdf-StepTherapyLimitNewStartsOnly-extension" name="Step Therapy Limit New Starts Only"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-SummaryURL-extension" key="StructureDefinition-usdf-SummaryURL-extension" name="Summary URL"/>
 <artifact deprecated="true" id="ValueSet/PharmacyTypeVS" key="ValueSet-PharmacyTypeVS" name="Type of pharmacies"/>
-<artifact id="ValueSet/PlanTypeVS" key="ValueSet-PlanTypeVS" name="Type of plan"/>
+<artifact deprecated="true" id="ValueSet/PlanTypeVS" key="ValueSet-PlanTypeVS" name="Type of plan"/>
 <artifact id="ValueSet/PlanContactTypeVS" key="ValueSet-PlanContactTypeVS" name="Type of plan contact"/>
 <artifact id="CapabilityStatement/usdf-server" key="CapabilityStatement-usdf-server" name="US Drug Formulary Server Capability Statement"/>
 <artifact id="Location/UnitedStatesLocation" key="Location-UnitedStatesLocation" name="UnitedStatesLocation"/>
