@@ -166,32 +166,7 @@ The current official published version of Da Vinci Payer Data Exchange (PDex) US
         Added more descriptive descriptions to the extensions included in the <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem profile</a>. 
       </p>
     </li>
-    
-
-
-
-
-
-
-
-
-
-
-
   </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Changes and Updates for Version 1.1.0
 The current official published version of Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Update of STU 1)
