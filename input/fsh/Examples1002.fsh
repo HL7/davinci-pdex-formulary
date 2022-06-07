@@ -154,6 +154,10 @@ Usage: #example
 * extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.count = 1
 * extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.period = 180
 * extension[usdf-QuantityLimitDetail-extension].extension[DaysSupply].valueTiming.repeat.periodUnit = #d
+
+* extension[usdf-AdditionalCoverageInformation-extension].valueMarkdown = "Prior Authorization required only with a newly started medication
+Step Therapy required."
+
 * code = InsuranceItemTypeCS#formulary-item "Formulary Item"
 * subject = Reference(FormularyDrug-1049640)
 
@@ -232,4 +236,5 @@ Usage: #example
 
 * code = InsuranceItemTypeCS#formulary-item "Formulary Item"
 * subject = Reference(FormularyDrug-284520)
+
 

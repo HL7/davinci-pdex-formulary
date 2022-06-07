@@ -122,6 +122,10 @@ The costs for a particular drug in a plan will be determined by the pharmacy ben
 
 <a name="bulk-data"></a>
 ### Bulk Data
+<div class="stu-note">
+
+<b><i>Bulk data guidance in this version of the IG is draft only. It has not appeared in ballot and has not been fully tested.</i></b>
+</div>
 A server **MAY** support [Bulk Data IG](http://hl7.org/fhir/uv/bulkdata/index.html) for the retrieval of formulary data not related to an individual. The Bulk Data IG may be used because the data set for formularies could be large as a server may manage multiple formularies, each of which may contain thousands of drugs. If and how authorization is supported is not defined by this specification, however, the Bulk IG does provide guidance on SMART Backend Service Authorization. 
 
 If a Formulary server supports bulk data export:
