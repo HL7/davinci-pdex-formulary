@@ -43,43 +43,30 @@ The formulary service can potentially be accessed two different ways:
 
 <a name="authenticated"></a>
 #### Authenticated 
-When accessing data through an authenticated API, the response for queries on InsurancePlan depends on whether the authenticated member is currently enrolled in a plan and whether they are a member of a group. The following table indicates how the Formulary API should respond to requests when an Insurance plan is specified and when it is not. When Zero plans returned is a valid response, Status 200 (OK) means success.
+When accessing data through an authenticated API, the response for queries on InsurancePlan depends on whether the authenticated member has access to the plan in relation to their membership.  
 
+For the [Payer Insurance Plan](StructureDefinition-usdf-PayerInsurancePlan.html), this is the overall plan or plans that the individual is a member of.
+For [Formulary](StructureDefinition-usdf-Formulary.html), this means all Formularies that are generally available to the member. If the member is in a group, all group associated formularies are returned. If not in a group, all generally available formularies (that is, those that are not restricted to only one or more groups) are returned.
+Clients can determine the Formulary InsurancePlan(s) that the member is subscribed by first retrieving the Payer Insurance Plan(s) and identifying the Formulary(s) through the [Payer Insurance Plan InsurancePlan.coverage](StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.coverage:drug-coverage).
 
+The following table indicates how the Formulary API should respond to requests when a Formulary Insurance plan (by resource reference) is specified and when it is not.
 <table border="1">
   <thead>
-    <th>Situation</th>
-    <th>InsurancePlan specified</th>
-    <th>InsurancePlan not specified</th>
+    <th>InsurancePlan specified – GET by resource ID</th>
+    <th>InsurancePlan reference not specified - Search</th>
   </thead>
   <tbody>
     <tr>
-      <td>No plan available</td>
-      <td>Zero plans returned</td>
-      <td>Zero plans returned</td>
-    </tr>
-    <tr>
-      <td>No plan selected/no group</td>
-      <td>Zero plans returned</td>
-      <td>Bundle of available individual InsurancePlans</td>
-    </tr>
-    <tr>
-      <td>No plan selected/in group</td>
-      <td>Zero plans returned</td>
-      <td>Bundle of available group InsurancePlans</td>
-    </tr>
-    <tr>
-      <td>Plan selected/no group</td>
-      <td>If InsurancePlan specified matches member's plan, return InsurancePlan, otherwise zero plans returned</td>
-      <td>Zero plans returned</td>
-    </tr>
-    <tr>
-      <td>Plan selected/in group</td>
-      <td>If InsurancePlan specified matches member's plan, return InsurancePlan, otherwise zero plans returned</td>
-      <td>Bundle of available group InsurancePlans. If no plans available, zero plans returned</td>
+      <td>Return plan if covered by insurer and included in group if member is part of a group<br />If not, return 400</td>
+      <td> Return all plans if covered by insurer and included in group if member is part of a group<br />If none, return 200 </td>
     </tr>
   </tbody>
 </table>
+
+Access to other profiled resources in this IG ([FormularyItem](StructureDefinition-usdf-FormularyItem.html) & [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html)) is not constrained by this IG.
+
+Server implementers **SHALL** make other profiled resources in this IG ([FormularyItem](StructureDefinition-usdf-FormularyItem.html), [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html)) associated to a member’s available plans available through authenticated access. This IG does not define restrictions on authenticated access to resources not associated with a member’s available plan or the [Plan Location]( StructureDefinition-usdf-InsurancePlanLocation.html) resource.
+
 
 <!-- 
 https://jira.hl7.org/browse/FHIR-33188
@@ -201,6 +188,26 @@ Another factor clients need to consider when searching for drugs by name, is tha
 
 <a name="additional-guidance"></a>
 ### Additional Guidance 
+
+
+<a name="specific-drug-coverage-details"></a>
+#### Specific Drug Coverage Details
+
+RxNorm codes and descriptions were chosen as the mechanism for searching and describing covered drugs for consumer use because that is what consumers will generally have access to given the requirements laid out in US regulation. RxNorm is also the code system used for many outpatient pharmacy prescribing transactions.
+
+RxNorm provides a consumer accessible categorization for prescribable drugs. This categorization may not be specific enough for payers that have very detailed coverage constraints they feel are necessary to express to their members.
+
+This IG Provides the following ways to express various levels of coverage (coverage status, requirements, or costs) for multiple drugs represented under one RxNorm code.
+
+* Specific drugs identified by unique [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html) resource instances that are  associated to a Formulary with specific coverage conditions, requirements, and costs through a [FormularyItem](StructureDefinition-usdf-FormularyItem.html).
+    - A specific drug code using NDC or other code system is included as a [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html) MedicationKnowledge.code.coding that includes the specific name in the display to enable searching.
+  
+* Drugs identified by a general RxNorm code in a single [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html) MedicationKnowledge resource with specific coverage conditions and requirements communicated in the referenced [FormularyItem](StructureDefinition-usdf-FormularyItem.html).
+  - Specific details including drugs covered or not covered, coverage conditions, or requirements are specified in the [FormularyItem](StructureDefinition-usdf-FormularyItem.html) Basic.extensions.
+
+
+[usdf-AdditionalCoverageInformation-extension]
+
 
 <a name="presenting-alternative-medications"></a>
 #### Presenting Drug Alternatives 
