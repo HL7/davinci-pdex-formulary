@@ -5,7 +5,7 @@
 id: hl7.fhir.us.davinci-drug-formulary
 canonical: http://hl7.org/fhir/us/davinci-drug-formulary
 name: Formulary
-title: DaVinci Payer Data Exchange (PDex) US Drug Formulary STU 2
+title: DaVinci Payer Data Exchange (PDex) US Drug Formulary
 status: draft
 version: 2.0.0
 fhirVersion: 4.0.1
