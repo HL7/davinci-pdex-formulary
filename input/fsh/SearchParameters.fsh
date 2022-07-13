@@ -429,7 +429,6 @@ Usage: #definition
 
 * expression = "MedicationKnowledge.code.coding.display | synonym"
 
-* comparator[0] = #eq
 
 * multipleOr = true
 * multipleAnd = true
