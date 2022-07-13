@@ -44,13 +44,22 @@ The current official published version of Da Vinci Payer Data Exchange (PDex) US
       </p>
     </li>
     <li>
+      <a href="https://jira.hl7.org/browse/FHIR-37717">FHIR-37717</a>:
+      <p>
+        Added <a href="use_cases_and_overview.html#specific-drug-coverage-details">Specific Drug Coverage Details</a> section that includes guidance on how to provide details for drugs with different coverages but are represented by the same RxNorm code.
+      </p>
+    </li>
+    <li>
       <a href="https://jira.hl7.org/browse/FHIR-36142">FHIR-36142</a>:
       <p>
         Changed cardinality of usdf-PharmacyBenefitType-extension in <a href="StructureDefinition-usdf-FormularyItem.html">Formulary Item profile</a> (formerly usdf-MailOrder-extension in Formulary Drug profile) to 1..* and MS.
       </p>
     </li>
     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-35197">FHIR-35197</a> - Created an <a href="StructureDefinition-usdf-AdditionalCoverageInformation-extension.html">extension</a> on <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> profile to allow the expression of additional coverage information.
+      <a href="https://jira.hl7.org/browse/FHIR-35197">FHIR-35197</a>:
+      <p>
+        Created an <a href="StructureDefinition-usdf-AdditionalCoverageInformation-extension.html">extension</a> on <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> profile to allow the expression of additional coverage information.
+      </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-33186">FHIR-33186</a>:
@@ -143,9 +152,9 @@ The current official published version of Da Vinci Payer Data Exchange (PDex) US
       </p>
     </li>
     <li>
-      <a href="https://jira.hl7.org/browse/FHIR-35166">FHIR-35166</a>:
+      <a href="https://jira.hl7.org/browse/FHIR-37623">FHIR-37623</a>:
       <p>
-        Updated the <a href="use_cases_and_overview.html#authenticated">Authenticated access</a> guidance describing expected server behavior when the client is making API calls representing a member. 
+        Remove the invalid 'eq' comparator from <a href="SearchParameter-MedicationKnowledge-drug-name.html">Drug Name Search Parameter</a>. 
       </p>
     </li>
     <li>
@@ -167,6 +176,13 @@ The current official published version of Da Vinci Payer Data Exchange (PDex) US
       </p>
     </li>
   </ul>
+  <!--
+    The Following are only changes from the ballot version and final published version
+      FHIR-34756 - Improve the name of value set "Type of pharmacies"
+      FHIR-35366 - Simplify FormularyItem by inlining drug codes
+    
+
+  -->
 
 ### Changes and Updates for Version 1.1.0
 The current official published version of Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Update of STU 1)

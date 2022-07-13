@@ -206,9 +206,6 @@ This IG Provides the following ways to express various levels of coverage (cover
   - Specific details including drugs covered or not covered, coverage conditions, or requirements are specified in the [FormularyItem](StructureDefinition-usdf-FormularyItem.html) Basic.extensions.
 
 
-[usdf-AdditionalCoverageInformation-extension]
-
-
 <a name="presenting-alternative-medications"></a>
 #### Presenting Drug Alternatives 
 Finding appropriate alternatives of a prescribed medication is complex and often depends on additional clinical information about the patient well as the condition or set of conditions for which the medication is meant to address. The means to identify therapeutic alternatives to drugs does exist in the industry, but such capability is complex, requires clinical information about the patient that is not within in scope of this guide, and a clinical understanding of the intended therapeutic use of the medication which is not generally within the competency of most members.  The information and business rules necessary to identify possible therapeutic alternatives, and therefore the ability to search for such alternatives, currently lies outside of the scope of this guide.
