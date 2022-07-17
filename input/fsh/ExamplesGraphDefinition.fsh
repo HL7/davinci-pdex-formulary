@@ -1,4 +1,4 @@
-Instance:        PayerInsurancePlan_GraphDefinition
+Instance:        PayerInsurancePlanGraphDefinition
 InstanceOf:      PayerInsurancePlanBulkDataGraphDefinition
 Description:     "A GraphDefinition of PayerInsurancePlan."
 Usage: #example
@@ -27,7 +27,7 @@ Usage: #example
 
 
 
-Instance:        Formulary_GraphDefinition
+Instance:        FormularyGraphDefinition
 InstanceOf:      FormularyBulkDataGraphDefinition
 Description:     "A GraphDefinition of Formulary."
 Usage: #example
