@@ -151,7 +151,7 @@ Formulary searches may be restricted to just the drugs supported by the payer th
 
 Covered drugs may appear in the formulary and non-covered drugs are simply not included. For example, a payer may pay for a generic form of a drug, but does not have a brand in their formulary. To retrieve matching drugs and available alternatives, it may be necessary for a client to search using the ingredient (generic) in addition to a brand.
 
-Note: In addition to the guidance and requirements below regarding searching for drugs based on an RxNorm code or display, servers may with to support additional coding systems and display values in order to represent specific drugs that may have the same RxNorm code, but have different coverage specifics as defined in the [Specific Drug Coverage Details](#specific-drug-coverage-details) section. This may result in more than one [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html) with the same RxNorm code and display value.
+Note: In addition to the guidance and requirements below regarding searching for drugs based on an RxNorm code or display, servers may wish to support additional coding systems and display values in order to represent specific drugs that may have the same RxNorm code, but have different coverage specifics as defined in the [Specific Drug Coverage Details](#specific-drug-coverage-details) section. This may result in more than one [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html) with the same RxNorm code and display value.
 
 <a name="searching-by-drug-code"></a>
 #### Searching By Drug Code
