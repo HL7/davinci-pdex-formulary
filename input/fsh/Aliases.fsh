@@ -1,4 +1,5 @@
 Alias: $GeoJSONExtension = http://hl7.org/fhir/StructureDefinition/location-boundary-geojson
+Alias: $StandardsStatusExtension = http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
 Alias: $PlanNetInsuranceProductTypeVS = http://hl7.org/fhir/us/davinci-pdex-plan-net/ValueSet/InsuranceProductTypeVS
 Alias: $PlanNetInsuranceProductTypeCS = http://hl7.org/fhir/us/davinci-pdex-plan-net/CodeSystem/InsuranceProductTypeCS
 
