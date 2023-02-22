@@ -248,8 +248,7 @@ Id:             usdf-PayerInsurancePlanBulkDataGraphDefinition
 Title:          "Payer Insurance Plan Bulk Data Graph Definition"
 Description:    "A GraphDefinition defining a graph of resources to return in a query for a Formulary related Payer Insurance Plan Bulk Data request."
 
-* ^extension[2].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[2].valueCode = #draft
+* ^extension[$StandardsStatusExtension].valueCode = #draft
 
 //* url = "http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition"
 * name = "PayerInsurancePlanGraphDefinition"
@@ -295,8 +294,7 @@ Id:             usdf-FormularyBulkDataGraphDefinition
 Title:          "Formulary Bulk Data Graph Definition"
 Description:    "A GraphDefinition defining a graph of resources to return in a query for a Formulary related Bulk Data request."
 
-* ^extension[2].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[2].valueCode = #draft
+* ^extension[$StandardsStatusExtension].valueCode = #draft
 
 //* url = "http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition"
 * name = "FormularyGraphDefinition"
