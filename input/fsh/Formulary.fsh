@@ -58,7 +58,7 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 * coverage[drug-coverage].benefit contains
     drug-plan 1..* MS
 
-* coverage[drug-coverage].benefit[drug-plan].type = $HL7InsurancePlanTypeCS#Drug "Drug"
+* coverage[drug-coverage].benefit[drug-plan].type = $HL7InsurancePlanTypeCS#drug "Drug"
 
 
 * plan 1..* MS
@@ -74,7 +74,7 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 
 
 * plan[drug-plan] ^short = "Drug plan"
-* plan[drug-plan].type = $HL7InsurancePlanTypeCS#Drug "Drug"
+* plan[drug-plan].type = $HL7InsurancePlanTypeCS#drug "Drug"
 * plan[drug-plan].network ^short = "Pharmacy benefit types that are part of the drug plan"
 
 
@@ -144,7 +144,7 @@ Description:    "The Formulary provides general information about a formulary an
 * plan 0..1 
 * plan ^short = "Optional non-cost related plan information indicating pharmacy benefit types and drug tiers available in the formulary"
 * plan.type 1..1 
-* plan.type = $HL7InsurancePlanTypeCS#Drug "Drug"
+* plan.type = $HL7InsurancePlanTypeCS#drug "Drug"
 
 * plan.specificCost ^short = "Pharmacy benefit type specific cost"
 * plan.specificCost.category from PharmacyBenefitTypeVS (extensible)
@@ -240,7 +240,7 @@ Description:    "A Location describing a geographic region or are where the insu
 * address ^short = "Physical location [MustSupport for this element is optional if there is support for Extension:location-boundary-geojson]" // Add conditional MS FHIR-34527
 
 
-
+/*
 
 Profile:        PayerInsurancePlanBulkDataGraphDefinition
 Parent:         GraphDefinition
@@ -312,7 +312,7 @@ Description:    "A GraphDefinition defining a graph of resources to return in a 
 * link.target.link.target.type = #MedicationKnowledge
 * link.target.link.target.profile = Canonical(FormularyDrug)
 
-
+*/
 
 Invariant: Location-address-or-geolocation
 Description: "Location contains an address, geolocation, or both"

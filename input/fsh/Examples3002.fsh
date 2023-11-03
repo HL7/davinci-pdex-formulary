@@ -44,7 +44,7 @@ Usage: #example
 * coverage[drug-coverage].extension[FormularyReference].valueReference = Reference(FormularyD3002)
 
 
-* plan[drug-plan].type = $HL7InsurancePlanTypeCS#Drug "Drug"
+* plan[drug-plan].type = $HL7InsurancePlanTypeCS#drug "Drug"
 
 
 
