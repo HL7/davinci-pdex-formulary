@@ -4,7 +4,10 @@ Extension: FormularyReference
 Id: usdf-FormularyReference-extension
 Title: "Formulary Reference"
 Description: "Reference to the formulary this item belongs to."
-
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
+* ^context[+].type = #element
+* ^context[=].expression = "InsurancePlan.coverage"
 * value[x] 1..1
 * value[x] only Reference
 * valueReference only Reference(usdf-Formulary)
@@ -15,6 +18,8 @@ Extension: PriorAuthorization
 Id: usdf-PriorAuthorization-extension
 Title: "Prior Authorization"
 Description: "A Boolean indication of whether the coverage plan imposes a prior authorization requirement on this drug."
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
 * value[x] only boolean
 * value[x] 1..1
 
@@ -22,6 +27,8 @@ Extension: PriorAuthorizationNewStartsOnly
 Id: usdf-PriorAuthorizationNewStartsOnly-extension
 Title: "Prior Authorization New Starts Only"
 Description: "A Boolean indication of whether the coverage plan imposes a prior authorization requirement on this drug for new starts only. (Only include if PriorAuthorization = true)"
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
 * value[x] only boolean
 * value[x] 1..1
 
@@ -29,6 +36,8 @@ Extension: StepTherapyLimit
 Id: usdf-StepTherapyLimit-extension
 Title: "Step Therapy Limit"
 Description: "A boolean indicating whether the coverage plan imposes a step therapy requirement on this drug meaning another drug may need to be tried beforehand."
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
 * value[x] only boolean
 * value[x] 1..1
 
@@ -36,6 +45,8 @@ Extension: StepTherapyLimitNewStartsOnly
 Id: usdf-StepTherapyLimitNewStartsOnly-extension
 Title: "Step Therapy Limit New Starts Only"
 Description: "A boolean indicating whether the coverage plan imposes a step therapy requirement on this drug meaning another drug may need to be tried beforehand for new starts only (Not required if patient has previously met step therapy requirements).  (Only include if StepTherapyLimit = true)"
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
 * value[x] only boolean
 * value[x] 1..1
 
@@ -43,6 +54,8 @@ Extension: QuantityLimit
 Id: usdf-QuantityLimit-extension
 Title: "Quantity Limit"
 Description: "A Boolean indication of whether the coverage plan imposes a quantity limit on this drug."
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
 * value[x] 1..1
 * value[x] only boolean
 
@@ -51,6 +64,8 @@ Extension: QuantityLimitDetail
 Id: usdf-QuantityLimitDetail-extension
 Title: "Quantity Limit Detail"
 Description: "A detailed definition of the quantity limits the coverage plan imposes on this drug. These limit details may include (potentially including a rolling dispense limit, maximum daily, or therapy days for a period of time. (Only include if QuantityLimit = true)"
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
 * extension 1..*
 * extension contains
 	Description 0..1 and
@@ -98,6 +113,8 @@ Extension: PharmacyBenefitType
 Id: usdf-PharmacyBenefitType-extension
 Title: "Pharmacy Benefit Type"
 Description: "A CodeableConcept indicating the pharmacy benefit type the formulary drug is available through the associated plan.  This pharmacy benefit type is specific to the FormularyDrug and indicates which of the pharmacy benefit type from the plan applies to the particular formulary drug."
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept from PharmacyBenefitTypeVS (extensible)
@@ -106,6 +123,8 @@ Extension: DrugTierID
 Id: usdf-DrugTierID-extension
 Title: "Drug Tier ID"
 Description: "A code that describes the coverage status of a drug in a health plan (e.g., preferred generic, specialty, etc.)"
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
 * value[x] 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept from DrugTierVS (extensible)
@@ -115,6 +134,8 @@ Extension: AvailabilityStatus
 Id: usdf-AvailabilityStatus-extension
 Title: "Availability Status"
 Description: "A boolean indicating whether the formulary item is currently available under the formulary. Drugs may appear on a formulary, but not considered \"active\" for the current year. Drugs may also be removed during the course of a plan year."
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
 * value[x] 1..1 MS
 * value[x] only code
 * valueCode from publication-status (required)
@@ -123,6 +144,8 @@ Extension: AvailabilityPeriod
 Id: usdf-AvailabilityPeriod-extension
 Title: "Availability Period"
 Description: "The period for which this item is available on the formulary. Drugs may appear on a formulary, but not considered \"active\" for the current year."
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
 * value[x] 1..1 MS
 * value[x] only Period
 
@@ -131,5 +154,7 @@ Extension: AdditionalCoverageInformation
 Id: usdf-AdditionalCoverageInformation-extension
 Title: "Additional Coverage Information"
 Description: "Additional drug coverage information that may include conditional coverage requirements such as a diagnosis pre-requisite, additional drug specific cost sharing information, or other coverage details not otherwise indicated."
+* ^context[+].type = #element
+* ^context[=].expression = "Basic"
 * value[x] 1..1 MS
 * value[x] only markdown
