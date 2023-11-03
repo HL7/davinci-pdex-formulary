@@ -227,8 +227,8 @@ InstanceOf: SearchParameter
 Usage: #definition
 
 * status = #active
-* code = #code
-* name = "USDFBasicCode"
+* code = #subject
+* name = "USDFBasicSubject"
 * description = "Accesses the subject FormularyDrug (MedicationKnowledge) reference of a FormularyItem"
 * url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-subject"
 * base[0] = #Basic
