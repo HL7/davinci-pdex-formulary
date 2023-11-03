@@ -90,7 +90,7 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 
 * plan[drug-plan].specificCost.benefit ^short = "Drug tier benefit"
 * plan[drug-plan].specificCost.benefit.type 1..1 MS
-* plan[drug-plan].specificCost.benefit.type from DrugTierVS (required)
+* plan[drug-plan].specificCost.benefit.type from DrugTierVS (extensible)
 
 
 * plan[drug-plan].specificCost.benefit.cost 1..* MS
