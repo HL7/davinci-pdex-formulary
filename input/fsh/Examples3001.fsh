@@ -46,7 +46,7 @@ Usage: #example
 
 
 
-* plan[drug-plan].type = $HL7InsurancePlanTypeCS#Drug "Drug"
+* plan[drug-plan].type = $HL7InsurancePlanTypeCS#drug "Drug"
 
 
 
