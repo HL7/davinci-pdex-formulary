@@ -240,7 +240,7 @@ Description:    "A Location describing a geographic region or are where the insu
 * address ^short = "Physical location [MustSupport for this element is optional if there is support for Extension:location-boundary-geojson]" // Add conditional MS FHIR-34527
 
 
-/*
+
 
 Profile:        PayerInsurancePlanBulkDataGraphDefinition
 Parent:         GraphDefinition
@@ -248,8 +248,26 @@ Id:             usdf-PayerInsurancePlanBulkDataGraphDefinition
 Title:          "Payer Insurance Plan Bulk Data Graph Definition"
 Description:    "A GraphDefinition defining a graph of resources to return in a query for a Formulary related Payer Insurance Plan Bulk Data request."
 
-* ^extension[2].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[2].valueCode = #draft
+
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
+* ^extension[=].valueCode = #draft
+* ^status = #draft
+/*
+* ^extension[+].url = $WG
+* ^extension[=].valueCode = #phx
+* ^version = "2.1.0"
+* ^status = #draft
+* ^publisher = "HL7 International / Pharmacy"
+
+
+* ^contact[+].name = "HL7 International / Pharmacy"
+* ^contact[=].telecom[+].system = #url
+* ^contact[=].telecom[=].value = "http://www.hl7.org/Special/committees/medication"
+* ^contact[=].telecom[+].system = #email
+* ^contact[=].telecom[=].value = "pharmacy@lists.HL7.org"
+* ^jurisdiction[+].coding.system = "urn:iso:std:iso:3166"
+* ^jurisdiction[=].coding.code = #US
+*/
 
 //* url = "http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition"
 * name = "PayerInsurancePlanGraphDefinition"
@@ -295,8 +313,25 @@ Id:             usdf-FormularyBulkDataGraphDefinition
 Title:          "Formulary Bulk Data Graph Definition"
 Description:    "A GraphDefinition defining a graph of resources to return in a query for a Formulary related Bulk Data request."
 
-* ^extension[2].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[2].valueCode = #draft
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
+* ^extension[=].valueCode = #draft
+* ^status = #draft
+/*
+* ^extension[+].url = $WG
+* ^extension[=].valueCode = #phx
+* ^version = "2.1.0"
+* ^status = #draft
+* ^publisher = "HL7 International / Pharmacy"
+
+
+* ^contact[+].name = "HL7 International / Pharmacy"
+* ^contact[=].telecom[+].system = #url
+* ^contact[=].telecom[=].value = "http://www.hl7.org/Special/committees/medication"
+* ^contact[=].telecom[+].system = #email
+* ^contact[=].telecom[=].value = "pharmacy@lists.HL7.org"
+* ^jurisdiction[+].coding.system = "urn:iso:std:iso:3166"
+* ^jurisdiction[=].coding.code = #US
+*/
 
 //* url = "http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition"
 * name = "FormularyGraphDefinition"
@@ -312,7 +347,7 @@ Description:    "A GraphDefinition defining a graph of resources to return in a 
 * link.target.link.target.type = #MedicationKnowledge
 * link.target.link.target.profile = Canonical(FormularyDrug)
 
-*/
+
 
 Invariant: Location-address-or-geolocation
 Description: "Location contains an address, geolocation, or both"

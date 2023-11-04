@@ -11,3 +11,5 @@ Alias: $HL7InsurancePlanTypeCS = http://terminology.hl7.org/CodeSystem/insurance
 Alias: $HL7InsurancePlanTypeVS = http://terminology.hl7.org/ValueSet/insuranceplan-type
 
 Alias: $RxNorm = http://www.nlm.nih.gov/research/umls/rxnorm
+
+Alias: $WG = http://hl7.org/fhir/StructureDefinition/structuredefinition-wg

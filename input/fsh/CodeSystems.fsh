@@ -12,6 +12,7 @@ Description: "Codes to represent the drug tier of a particular medication in a h
 * #zero-cost-share-preventative "Zero cost-share preventative"  "Preventive medications and products available at no cost."
 * #medical-service           "Medical Service"  "Drugs that must be administered by a clinician or in a facility and may be covered under a medical benefit."
 * ^caseSensitive = true
+* ^experimental = false
 
 // Renamed and title/description changes per FHIR-34756
 CodeSystem: PharmacyBenefitTypeCS
@@ -27,6 +28,7 @@ Description: "Codes for pharmacy benefit types. Each payer will have its own con
 * #3-month-in-mail      "3 month in network mail order"  "3 Month Supply via in-network mail order pharmacy."
 * #3-month-out-mail     "3 month out of network mail order"  "3 Month Supply via out-of-network mail order pharmacy."
 * ^caseSensitive = true
+* ^experimental = false
 
 CodeSystem: BenefitCostTypeCS
 Id:             usdf-BenefitCostTypeCS-TEMPORARY-TRIAL-USE
@@ -35,6 +37,7 @@ Description: "Types of out of pockets costs associated with the benefit"
 * #copay               "Copay"  "A flat fee the member pays to fill the prescription."
 * #coinsurance         "Coinsurance"  "A percentage of the cost to fill the prescription, usually after the deductible has been met."
 * ^caseSensitive = true
+* ^experimental = false
 
 CodeSystem: InsuranceItemTypeCS
 Id:             usdf-InsuranceItemTypeCS
@@ -42,6 +45,7 @@ Title: "Codes for insurance item type"
 Description: "Types of insurance items"
 * #formulary-item      "Formulary Item"  "An entry in a formulary."
 * ^caseSensitive = true
+* ^experimental = false
 
 /* 
 FHIR-34758 - Merge copay and coinsurance option CS into CostShareOption CS
@@ -84,6 +88,7 @@ Description: "Codes for qualifier of copay amount"
 * #copay-not-applicable	        "Copay Not Applicable"	"Deductible is not applicable: Zero-deductible cost sharing represented by a co-pay value of 'Not applicable' and co-insurance value of 'No charge'."
 * #deductible-waived	        "Deductible Waived"	"The consumer pays the cost share amount with deductible requirement waived."
 * ^caseSensitive = true
+* ^experimental = false
 
 /* FHIR-35600 - Change to different CS
 CodeSystem: PlanTypeCS
@@ -104,3 +109,4 @@ Description: "Type of plan contact"
 * #SUMMARY "Plan Summary Information"
 * #FORMULARY "Plan Formulary Information"
 * ^caseSensitive = true
+* ^experimental = false

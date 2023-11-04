@@ -2,8 +2,22 @@ Instance:        PayerInsurancePlanGraphDefinition
 InstanceOf:      PayerInsurancePlanBulkDataGraphDefinition
 Description:     "A GraphDefinition of PayerInsurancePlan."
 Usage: #example
-
+/*
+* extension[+].url = $WG
+* extension[=].valueCode = #phx
+* version = "2.1.0"
 * status = #active
+
+* publisher = "HL7 International / Pharmacy"
+* contact[+].name = "HL7 International / Pharmacy"
+* contact[=].telecom[+].system = #url
+* contact[=].telecom[=].value = "http://www.hl7.org/Special/committees/medication"
+* contact[=].telecom[+].system = #email
+* contact[=].telecom[=].value = "pharmacy@lists.HL7.org"
+* jurisdiction[+].coding.system = "urn:iso:std:iso:3166"
+* jurisdiction[=].coding.code = #US
+*/
+
 * start = #InsurancePlan
 * profile = Canonical(PayerInsurancePlan)
 
@@ -25,15 +39,26 @@ Usage: #example
 * link[formulary].target.link.target.link.target.type = #MedicationKnowledge
 * link[formulary].target.link.target.link.target.profile = Canonical(FormularyDrug)
 
-
-
 Instance:        FormularyGraphDefinition
 InstanceOf:      FormularyBulkDataGraphDefinition
 Description:     "A GraphDefinition of Formulary."
 Usage: #example
 
-//* url = "http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition"
+/*
+* extension[+].url = $WG
+* extension[=].valueCode = #phx
+* version = "2.1.0"
 * status = #active
+
+* publisher = "HL7 International / Pharmacy"
+* contact[+].name = "HL7 International / Pharmacy"
+* contact[=].telecom[+].system = #url
+* contact[=].telecom[=].value = "http://www.hl7.org/Special/committees/medication"
+* contact[=].telecom[+].system = #email
+* contact[=].telecom[=].value = "pharmacy@lists.HL7.org"
+* jurisdiction[+].coding.system = "urn:iso:std:iso:3166"
+* jurisdiction[=].coding.code = #US
+*/
 * start = #InsurancePlan
 * profile = Canonical(Formulary)
 
@@ -44,4 +69,3 @@ Usage: #example
 * link.target.link.path = "Basic.subject"
 * link.target.link.target.type = #MedicationKnowledge
 * link.target.link.target.profile = Canonical(FormularyDrug)
-
