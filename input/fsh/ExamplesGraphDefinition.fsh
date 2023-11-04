@@ -2,12 +2,18 @@ Instance:        PayerInsurancePlanGraphDefinition
 InstanceOf:      PayerInsurancePlanBulkDataGraphDefinition
 Description:     "A GraphDefinition of PayerInsurancePlan."
 Usage: #example
-/*
+
 * extension[+].url = $WG
 * extension[=].valueCode = #phx
+
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
+* extension[=].valueCode = #trial-use
+//* extension[=].valueCode.extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
+//* extension[=].valueCode.extension[=].valueCanonical = "http://hl7.org/fhir/us/davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.davinci-drug-formulary"
+
 * version = "2.1.0"
 * status = #active
-
+* date = "2023-11-03T19:55:21-07:00"
 * publisher = "HL7 International / Pharmacy"
 * contact[+].name = "HL7 International / Pharmacy"
 * contact[=].telecom[+].system = #url
@@ -16,7 +22,6 @@ Usage: #example
 * contact[=].telecom[=].value = "pharmacy@lists.HL7.org"
 * jurisdiction[+].coding.system = "urn:iso:std:iso:3166"
 * jurisdiction[=].coding.code = #US
-*/
 
 * start = #InsurancePlan
 * profile = Canonical(PayerInsurancePlan)
@@ -44,12 +49,18 @@ InstanceOf:      FormularyBulkDataGraphDefinition
 Description:     "A GraphDefinition of Formulary."
 Usage: #example
 
-/*
+
 * extension[+].url = $WG
 * extension[=].valueCode = #phx
+
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
+* extension[=].valueCode = #trial-use
+//* extension[=].valueCode.extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
+//* extension[=].valueCode.extension[=].valueCanonical = "http://hl7.org/fhir/us/davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.davinci-drug-formulary"
+
 * version = "2.1.0"
 * status = #active
-
+* date = "2023-11-03T19:55:21-07:00"
 * publisher = "HL7 International / Pharmacy"
 * contact[+].name = "HL7 International / Pharmacy"
 * contact[=].telecom[+].system = #url
@@ -58,7 +69,7 @@ Usage: #example
 * contact[=].telecom[=].value = "pharmacy@lists.HL7.org"
 * jurisdiction[+].coding.system = "urn:iso:std:iso:3166"
 * jurisdiction[=].coding.code = #US
-*/
+
 * start = #InsurancePlan
 * profile = Canonical(Formulary)
 

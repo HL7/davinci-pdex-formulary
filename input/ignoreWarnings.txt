@@ -6,5 +6,3 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-fo
 # Use of draft Code System, already in production use. THO may need to be updated
 Reference to draft item http://terminology.hl7.org/CodeSystem/contactentity-type|0.5.0
 
-# IG Publisher does not yet support version conversion completely for GraphDefinition - https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Common.20Headers.20isn't.20possible.20for.20the.20type.20GraphDefinition
-The resource needed to modified during loading to apply common headers version=2.1.0, wg=phx, contact, jurisdiction, publisher=HL7 International / Pharmacy, date but this isn't possible for the type GraphDefinition because version conversion isn't working completely
