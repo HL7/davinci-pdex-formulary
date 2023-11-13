@@ -11,7 +11,7 @@ Usage: #example
 //* extension[=].valueCode.extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 //* extension[=].valueCode.extension[=].valueCanonical = "http://hl7.org/fhir/us/davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.davinci-drug-formulary"
 
-* version = "2.1.0"
+* version = "2.0.1"
 * status = #active
 * date = "2023-11-03T19:55:21-07:00"
 * publisher = "HL7 International / Pharmacy"
@@ -58,7 +58,7 @@ Usage: #example
 //* extension[=].valueCode.extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 //* extension[=].valueCode.extension[=].valueCanonical = "http://hl7.org/fhir/us/davinci-drug-formulary/ImplementationGuide/hl7.fhir.us.davinci-drug-formulary"
 
-* version = "2.1.0"
+* version = "2.0.1"
 * status = #active
 * date = "2023-11-03T19:55:21-07:00"
 * publisher = "HL7 International / Pharmacy"

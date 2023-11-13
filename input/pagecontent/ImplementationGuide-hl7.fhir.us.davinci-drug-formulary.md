@@ -1,7 +1,7 @@
 
 |||
 |---|---|
-|*Official URL*: http://hl7.org/fhir/us/davinci-drug-formulary |*Version*: 2.1.0|
+|*Official URL*: http://hl7.org/fhir/us/davinci-drug-formulary |*Version*: 2.0.1|
 |*NPM package name*: hl7.fhir.us.davinci-drug-formulary |*ComputableName*: Formulary |
 |*Copyright/Legal*: Used by permission of HL7 International, all rights reserved Creative Commons License|
 {:.grid}

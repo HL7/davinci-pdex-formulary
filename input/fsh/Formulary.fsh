@@ -253,24 +253,6 @@ Description:    "A GraphDefinition defining a graph of resources to return in a 
 * ^extension[=].valueCode = #draft
 * ^status = #draft
 
-/*
-* ^extension[+].url = $WG
-* ^extension[=].valueCode = #phx
-* ^version = "2.1.0"
-* ^status = #draft
-* ^publisher = "HL7 International / Pharmacy"
-
-
-* ^contact[+].name = "HL7 International / Pharmacy"
-* ^contact[=].telecom[+].system = #url
-* ^contact[=].telecom[=].value = "http://www.hl7.org/Special/committees/medication"
-* ^contact[=].telecom[+].system = #email
-* ^contact[=].telecom[=].value = "pharmacy@lists.HL7.org"
-* ^jurisdiction[+].coding.system = "urn:iso:std:iso:3166"
-* ^jurisdiction[=].coding.code = #US
-*/
-
-//* url = "http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition"
 * name = "PayerInsurancePlanGraphDefinition"
 * status = #active
 * start = #InsurancePlan
@@ -317,24 +299,7 @@ Description:    "A GraphDefinition defining a graph of resources to return in a 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 * ^status = #draft
-/*
-* ^extension[+].url = $WG
-* ^extension[=].valueCode = #phx
-* ^version = "2.1.0"
-* ^status = #draft
-* ^publisher = "HL7 International / Pharmacy"
 
-
-* ^contact[+].name = "HL7 International / Pharmacy"
-* ^contact[=].telecom[+].system = #url
-* ^contact[=].telecom[=].value = "http://www.hl7.org/Special/committees/medication"
-* ^contact[=].telecom[+].system = #email
-* ^contact[=].telecom[=].value = "pharmacy@lists.HL7.org"
-* ^jurisdiction[+].coding.system = "urn:iso:std:iso:3166"
-* ^jurisdiction[=].coding.code = #US
-*/
-
-//* url = "http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition"
 * name = "FormularyGraphDefinition"
 * status = #active
 * start = #InsurancePlan

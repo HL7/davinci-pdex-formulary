@@ -1,7 +1,7 @@
 <a name="change_notes"></a>
 
-### Changes and Updates for Version 2.1.0
-The current official published version of Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Update of STU 2)
+### Changes and Updates for Version 2.0.1
+The current official published version of Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Technical Correction of STU 2)
   <p>
     <b>The following issues are addressed in this release:</b>
   </p>

@@ -1,7 +1,7 @@
 {
     "package-id": "hl7.fhir.us.davinci-drug-formulary",
-    "version": "2.1.0",
-    "path": "http://hl7.org/fhir/us/davinci-drug-formulary/STU2.1",
+    "version": "2.0.1",
+    "path": "http://hl7.org/fhir/us/davinci-drug-formulary/STU2.0.1",
     "mode" : "milestone",
     "status" : "trial-use",
     "sequence" : "STU 2",
