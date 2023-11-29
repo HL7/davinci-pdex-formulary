@@ -317,6 +317,6 @@ Description:    "A GraphDefinition defining a graph of resources to return in a 
 
 Invariant: Location-address-or-geolocation
 Description: "Location contains an address, geolocation, or both"
-Expression: "address.exists() or extension.where(url='http://hl7.org/fhir/StructureDefinition/location-boundary-geojson')"
+Expression: "address.exists() or extension.where(url='http://hl7.org/fhir/StructureDefinition/location-boundary-geojson').exists()"
 Severity: #error
 
