@@ -7,7 +7,7 @@ canonical: http://hl7.org/fhir/us/davinci-drug-formulary
 name: Formulary
 title: DaVinci Payer Data Exchange (PDex) US Drug Formulary
 status: active
-version: 2.0.1
+version: 2.1.0
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
     valueCode: phx  # <<< The value must be the code for the workgroup
@@ -15,7 +15,7 @@ extension:
     valueCode: trial-use
 fhirVersion: 4.0.1
 copyrightYear: 2022+
-releaseLabel: STU 2
+releaseLabel: STU 3 (ci-build)
 
 publisher:
   name: HL7 International / Pharmacy
@@ -24,9 +24,10 @@ publisher:
 description: DaVinci Payer Data Exchange (PDex) US Drug Formulary, Release 2.0.1 - US Realm STU"
 license: CC0-1.0
 dependencies:
-#  hl7.fhir.us.core: 4.0.0
-  hl7.fhir.us.davinci-pdex-plan-net: 1.1.0
-  hl7.fhir.us.davinci-hrex: 1.0.0
+  hl7.fhir.us.core: 6.1.0
+  hl7.fhir.us.davinci-pdex-plan-net: current
+#  hl7.terminology: 5.5.0
+#  hl7.fhir.us.davinci-hrex: current
 parameters:
   show-inherited-invariants: false
   default-jurisdiction: true

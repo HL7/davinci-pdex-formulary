@@ -3,32 +3,23 @@ Parent:         InsurancePlan
 Id:             usdf-PayerInsurancePlan
 Title:          "Payer Insurance Plan"
 Description:    "The Payer InsurancePlan that defines the health insurance product, which include coverage benefits that are offered, and additional information about the offering, such as a coverage area, contact information, brochure locations, etc. The health insurance product offers one or more types of coverage, each of which may define a plan of covered benefits with the particular cost sharing structure offered to a consumer. Health insurance plans that include drug coverage reference a formulary that provides details about drugs that are covered under the plan including requirements and limitations of the coverage specific to each drug."
-
 * meta.lastUpdated 1..1 MS // Add MS FHIR-34527
-
 * identifier 1..* MS
 * status 1..1 MS
-
 * type 1..1 MS 
 * type from $PlanNetInsuranceProductTypeVS (extensible)
 * type ^short = "Product type"
-
 * name MS
 * period MS
-
 * coverageArea only Reference(InsurancePlanLocation)
 * coverageArea MS
-
 * contact ^short = "Contact information for the Insurance Plan including URLs for brochure and formulary information"
 * contact.name MS
 * contact.name.text MS
 * contact.telecom MS
 * contact.telecom.value MS
 * contact.telecom.system MS
-
 * contact.purpose from PlanContactTypeVS (extensible)
-
-
 * coverage 1..* MS
 * coverage.type 1..1 MS
 * coverage ^slicing.discriminator.path = "type"
@@ -36,19 +27,13 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 * coverage ^slicing.discriminator.type = #pattern 
 * coverage ^slicing.ordered = false   // can be omitted, since false is the default
 * coverage ^slicing.description = "Slice based on $this pattern"
-
 * coverage contains
     drug-coverage 1..* MS
-
-
-
 * coverage[drug-coverage].type = http://terminology.hl7.org/CodeSystem/v3-ActCode#DRUGPOL
 * coverage[drug-coverage].extension 1..* MS
 * coverage[drug-coverage].extension contains
     FormularyReference named usdf-FormularyReference-extension 1..* MS
-
 * coverage[drug-coverage].benefit.type from $HL7InsurancePlanTypeVS (extensible)
-
 * coverage[drug-coverage].benefit ^slicing.discriminator.path = "type"
 * coverage[drug-coverage].benefit ^slicing.rules = #open
 * coverage[drug-coverage].benefit ^slicing.discriminator.type = #pattern 
@@ -224,7 +209,7 @@ Description:    "Drug information which may be part of a formulary including its
 
 
 Profile:        InsurancePlanLocation
-Parent:         Location
+Parent:         USCoreLocation
 Id:             usdf-InsurancePlanLocation
 Title:          "Insurance Plan Location"
 Description:    "A Location describing a geographic region or are where the insurance plan coverage is available."
