@@ -209,7 +209,7 @@ Description:    "Drug information which may be part of a formulary including its
 
 
 Profile:        InsurancePlanLocation
-Parent:         USCoreLocation
+Parent:         USCoreLocationProfile
 Id:             usdf-InsurancePlanLocation
 Title:          "Insurance Plan Location"
 Description:    "A Location describing a geographic region or are where the insurance plan coverage is available."

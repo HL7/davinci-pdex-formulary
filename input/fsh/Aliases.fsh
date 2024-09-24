@@ -7,8 +7,8 @@ Alias: $HL7ContactEntity-Type = http://terminology.hl7.org/CodeSystem/contactent
 
 //Alias: $HL7-USCore-MedicationCodes = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4
 
-Alias: $HL7InsurancePlanTypeCS = http://terminology.hl7.org/CodeSystem/insurance-plan-type|2.0.0
-Alias: $HL7InsurancePlanTypeVS = http://terminology.hl7.org/ValueSet/insuranceplan-type|1.0.0
+Alias: $HL7InsurancePlanTypeCS = http://terminology.hl7.org/CodeSystem/insurance-plan-type
+Alias: $HL7InsurancePlanTypeVS = http://terminology.hl7.org/ValueSet/insuranceplan-type
 
 Alias: $RxNorm = http://www.nlm.nih.gov/research/umls/rxnorm
 

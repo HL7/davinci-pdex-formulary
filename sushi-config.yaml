@@ -24,9 +24,9 @@ publisher:
 description: DaVinci Payer Data Exchange (PDex) US Drug Formulary, Release 2.0.1 - US Realm STU"
 license: CC0-1.0
 dependencies:
-  hl7.fhir.us.core: 6.1.0
+  hl7.fhir.us.core: 7.0.0
   hl7.fhir.us.davinci-pdex-plan-net: current
-#  hl7.terminology: 5.5.0
+  hl7.terminology: 6.0.2
 #  hl7.fhir.us.davinci-hrex: current
 parameters:
   show-inherited-invariants: false
