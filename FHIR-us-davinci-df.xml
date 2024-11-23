@@ -85,14 +85,17 @@
 <artifact id="SearchParameter/InsurancePlan-period" key="SearchParameter-InsurancePlan-period" name="InsurancePlan-period"/>
 <artifact id="SearchParameter/InsurancePlan-status" key="SearchParameter-InsurancePlan-status" name="InsurancePlan-status"/>
 <artifact id="SearchParameter/InsurancePlan-type" key="SearchParameter-InsurancePlan-type" name="InsurancePlan-type"/>
+<artifact id="List/list-example-ach-individual-measurereport-list" key="List-list-example-ach-individual-measurereport-list" name="List - Example ACH Individual Measure Report List"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-MailOrder-extension" key="StructureDefinition-usdf-MailOrder-extension" name="Mail Order"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-MarketingURL-extension" key="StructureDefinition-usdf-MarketingURL-extension" name="Marketing URL"/>
+<artifact id="MeasureReport/measurereport-example-ach-subjectlist1" key="MeasureReport-measurereport-example-ach-subjectlist1" name="MeasureReport - Example ACH Subject List 1"/>
 <artifact id="SearchParameter/MedicationKnowledge-code" key="SearchParameter-MedicationKnowledge-code" name="MedicationKnowledge-code"/>
 <artifact id="SearchParameter/MedicationKnowledge-doseform" key="SearchParameter-MedicationKnowledge-doseform" name="MedicationKnowledge-doseform"/>
 <artifact id="SearchParameter/MedicationKnowledge-drug-name" key="SearchParameter-DrugName" name="MedicationKnowledge-drug-name"/>
 <artifact id="SearchParameter/MedicationKnowledge-lastupdated" key="SearchParameter-MedicationKnowledge-lastupdated" name="MedicationKnowledge-lastupdated"/>
 <artifact id="SearchParameter/MedicationKnowledge-status" key="SearchParameter-MedicationKnowledge-status" name="MedicationKnowledge-status"/>
 <artifact deprecated="true" id="StructureDefinition/usdf-Network-extension" key="StructureDefinition-usdf-Network-extension" name="Network"/>
+<artifact id="Organization/organization-example-submitting-organization" key="Organization-organization-example-submitting-organization" name="Organization - Example Submitting Organization 1"/>
 <artifact id="StructureDefinition/usdf-PayerInsurancePlan" key="StructureDefinition-usdf-PayerInsurancePlan" name="Payer Insurance Plan"/>
 <artifact id="StructureDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition" key="StructureDefinition-usdf-PayerInsurancePlanBulkDataGraphDefinition" name="Payer Insurance Plan Bulk Data Graph Definition"/>
 <artifact id="InsurancePlan/PayerInsurancePlanA1002" key="InsurancePlan-PayerInsurancePlanA1002" name="PayerInsurancePlanA1002"/>

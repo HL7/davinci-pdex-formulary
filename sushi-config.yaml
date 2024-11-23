@@ -27,6 +27,8 @@ dependencies:
   hl7.fhir.us.core: 7.0.0
   hl7.fhir.us.davinci-pdex-plan-net: current
   hl7.terminology: 6.0.2
+  hl7.fhir.us.davinci-deqm: 5.0.0-ballot
+  hl7.fhir.us.qicore: 4.1.1
 #  hl7.fhir.us.davinci-hrex: current
 parameters:
   show-inherited-invariants: false
