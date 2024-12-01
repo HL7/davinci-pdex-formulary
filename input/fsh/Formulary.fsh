@@ -94,6 +94,7 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 
 * plan[drug-plan].specificCost.benefit.cost[copay].type = BenefitCostTypeCS#copay
 * plan[drug-plan].specificCost.benefit.cost[copay].qualifiers from CopayOptionVS (required)
+* plan[drug-plan].specificCost.benefit.cost[copay].value 1..1 MS
 * plan[drug-plan].specificCost.benefit.cost[copay].value only MoneyQuantity
 * plan[drug-plan].specificCost.benefit.cost[copay].value.value 1..1 MS
 * plan[drug-plan].specificCost.benefit.cost[copay].value.system = "urn:iso:std:iso:4217"
@@ -103,6 +104,8 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 
 * plan[drug-plan].specificCost.benefit.cost[coinsurance].type = BenefitCostTypeCS#coinsurance
 * plan[drug-plan].specificCost.benefit.cost[coinsurance].qualifiers from CoinsuranceOptionVS (required)
+* plan[drug-plan].specificCost.benefit.cost[coinsurance].value 1..1 MS
+* plan[drug-plan].specificCost.benefit.cost[coinsurance].value.value 1..1 MS
 * plan[drug-plan].specificCost.benefit.cost[coinsurance].value.code = #%
 * plan[drug-plan].specificCost.benefit.cost[coinsurance].value.system = "http://unitsofmeasure.org"
 
