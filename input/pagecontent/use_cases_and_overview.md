@@ -135,6 +135,7 @@ If a Formulary server supports bulk data export:
 * The server **SHOULD** return only formulary related resources conformant to this guide.
 * The server **SHOULD** support the Bulk Data Kick-off Request.
 * The server **SHOULD** support the Bulk Data File Request.
+* The server SHOULD support the _since parameter where the response will include resources where the state has changed after the supplied time (e.g., if Resource.meta.lastUpdated is later than the supplied _since time). The server SHOULD return all resources modified prior to the supplied time containing formulary related data associated that are directly referenced from or contain direct references to all matching InsurancePlan.
 * The server **MAY** support the Bulk Data Status Request.
 * The server **MAY** support the Bulk Data Delete Request.
 
