@@ -1,8 +1,10 @@
 CodeSystem: DrugTierCS
-Id:             usdf-DrugTierCS-TEMPORARY-TRIAL-USE
+Id: usdf-DrugTierCS-TEMPORARY-TRIAL-USE
 Title: "Codes for medication drug tiers in health plans"
 Description: "Codes to represent the drug tier of a particular medication in a health plan.  Base set are examples.  Each plan may have its own controlled vocabulary."
-* #generic                    "Generic"  "Commonly prescribed generic drugs that cost more than drugs in the ‘preferred generic’ tier."
+* #generic                    "Generic"  "Commonly prescribed generic drugs that cost more than drugs in the 'preferred generic' tier."
+* #preferred "Preferred" "Commonly prescribed drugs that are preferred by the plan."
+* #non-preferred "Non-preferred" "Commonly prescribed drugs that cost more than drugs in the 'preferred' tier."
 * #preferred-generic          "Preferred Generic"  "Commonly prescribed generic drugs."
 * #non-preferred-generic      "Non-preferred Generic"  "Generic drugs that cost more than drugs in ‘generic’ tier."
 * #specialty                  "Specialty"  "Drugs used to treat complex conditions like cancer and multiple sclerosis. They can be generic or brand name, and are typically the most expensive drugs on the formulary."
