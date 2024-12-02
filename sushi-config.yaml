@@ -58,7 +58,7 @@ menu:
   Home: index.html
   Table of Contents: toc.html
   Specification:
-    Conformance Expectations     : use_cases_and_overview.html#conformance-expectations
+    Conformance Expectations     : confexpectations.html
     Use Cases                    : use_cases_and_overview.html#use-cases
     Access Methods               : use_cases_and_overview.html#access-methods
     Formulary Structure          : use_cases_and_overview.html#formulary-structure
@@ -84,6 +84,8 @@ pages:
     title: Home
   credits.md: 
     title: Credits
+  confexpectations.md:
+    title: Conformance Expectations
   use_cases_and_overview.md:
     title: Use Cases and Overview
   search_parameters.md:

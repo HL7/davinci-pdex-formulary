@@ -121,7 +121,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-34526">FHIR-34526</a> and <a href="https://jira.hl7.org/browse/FHIR-36264">FHIR-36264</a>:
       <p>
-        Created a <a href="use_cases_and_overview.html#conformance-expectations">Conformance Expectations section</a> which inherits the HRex conformance expectations which includes the definition of Must Support.
+        Created a Conformance Expectations section which inherits the HRex conformance expectations which includes the definition of Must Support.
       </p>
     </li>
     <li>
@@ -151,7 +151,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-36169">FHIR-36169</a>:
       <p>
-        Add requirement in the <a href="use_cases_and_overview.html#conformance-expectations">Conformance Expectations</a> that servers support CapabilityStatement.instantiates pointing to the included CapabilityStatement.
+        Add requirement in the Conformance Expectations that servers support CapabilityStatement.instantiates pointing to the included CapabilityStatement.
       </p>
     </li>
     <li>

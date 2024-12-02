@@ -127,6 +127,7 @@
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="change_notes" name="Change Notes"/>
+<page key="confexpectations" name="Conformance Expectations"/>
 <page key="credits" name="Credits"/>
 <page key="downloads" name="Downloads"/>
 <page deprecated="true" key="examples" name="Examples"/>
