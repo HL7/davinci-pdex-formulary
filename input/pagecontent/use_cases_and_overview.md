@@ -25,6 +25,8 @@ This use case allows a consumer to compare the drug coverage of several differen
 
 Note that for this use case the health plan could provide non-authenticated or open access to the formulary. Non-authenticated access should not maintain any records that could associate an individual with the medications or plans queried.
 
+Also note that the same InsurancePlan may be present in multiple directories and if they have the same identifier they are assumed to be the same plan.
+
 <img src="Slide2.jpg" alt="Authenticated Access Workflow" style="width: 100%; float: none; align: middle;"/>
 
 
@@ -184,8 +186,25 @@ This search will return all matching drug names with both the ingredient “acet
 Another factor clients need to consider when searching for drugs by name, is that individual drug names may be contained within combination drugs (e.g., a search on acetaminophen will return many combination drugs). Clients may need to filter search results to fit their requirements.
 
 <a name="additional-guidance"></a>
-### Additional Guidance 
+### Additional Guidance
 
+Specific Drug Coverage Details
+
+RxNorm codes and descriptions were chosen as the mechanism for searching and describing covered drugs for consumer use because that is what consumers will generally have access to given the requirements laid out in US regulation. RxNorm is also the code system used for many outpatient pharmacy prescribing transactions.
+
+RxNorm provides a consumer accessible categorization for prescribable drugs. This categorization may not be specific enough for payers that have very detailed coverage constraints they feel are necessary to express to their members.
+
+This IG Provides the following ways to express various levels of coverage (coverage status, requirements, or costs) for multiple drugs represented under one RxNorm code.
+
+Specific drugs identified by unique FormularyDrug resource instances that are  associated to a Formulary with specific coverage conditions, requirements, and costs through a FormularyItem.
+A specific drug code using NDC or other code system is included as a FormularyDrug MedicationKnowledge.code.coding that includes the specific name in the display to enable searching.
+Drugs identified by a general RxNorm code in a single FormularyDrug MedicationKnowledge resource with specific coverage conditions and requirements communicated in the referenced FormularyItem.
+Specific details including drugs covered or not covered, coverage conditions, or requirements are specified in the FormularyItem Basic.extensions[usdf-AdditionalCoverageInformation-extension].
+ 
+
+To the Searching Formulary Drugs section, at the bottom of the main section add:
+
+Note: In addition to the guidance and requirements below regarding searching for drugs based on an RxNorm code or display, servers may wish to support additional coding systems and display values in order to represent specific drugs that may have the same RxNorm code, but have different coverage specifics as defined in [Specific DrugCoverage Details](specific-drug-coverage-details). This may result in more than one [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html) with the same RxNorm code and display value.
 
 <a name="specific-drug-coverage-details"></a>
 #### Specific Drug Coverage Details

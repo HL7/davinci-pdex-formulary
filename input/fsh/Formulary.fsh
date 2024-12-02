@@ -5,6 +5,7 @@ Title:          "Payer Insurance Plan"
 Description:    "The Payer InsurancePlan that defines the health insurance product, which include coverage benefits that are offered, and additional information about the offering, such as a coverage area, contact information, brochure locations, etc. The health insurance product offers one or more types of coverage, each of which may define a plan of covered benefits with the particular cost sharing structure offered to a consumer. Health insurance plans that include drug coverage reference a formulary that provides details about drugs that are covered under the plan including requirements and limitations of the coverage specific to each drug."
 * meta.lastUpdated 1..1 MS // Add MS FHIR-34527
 * identifier 1..* MS
+* identifier ^short = "The business identifier for the plan. The same InsurancePlan may be present in multiple directories and if they have the same identifier they are assumed to be the same plan."
 * status 1..1 MS
 * type 1..1 MS 
 * type from $PlanNetInsuranceProductTypeVS (extensible)
