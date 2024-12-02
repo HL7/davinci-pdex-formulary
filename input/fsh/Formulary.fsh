@@ -179,6 +179,8 @@ Title:          "Formulary Drug"
 Description:    "Drug information which may be part of a formulary including its RxNorm code and dose form."
 
 * meta.lastUpdated 1..1 MS // Add MS FHIR-34527
+
+* obeys scd-sbd-requires-scdg-sbdg
 * code 1..1 MS
 //* code from SemanticDrugVS (required)
 
@@ -309,3 +311,8 @@ Description: "Location contains an address, geolocation, or both"
 Expression: "address.exists() or extension.where(url='http://hl7.org/fhir/StructureDefinition/location-boundary-geojson').exists()"
 Severity: #error
 
+
+Invariant: scd-sbd-requires-scdg-sbdg
+Description: "All drugs with RxNorm Term Type of SCD or SBD SHALL have a coding repetition and RxNorm Term Type of SCDG or SBDG respectively"
+// Expression: "address.exists() or extension.where(url='http://hl7.org/fhir/StructureDefinition/location-boundary-geojson').exists()"
+Severity: #error
