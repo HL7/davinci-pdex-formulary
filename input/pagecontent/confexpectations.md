@@ -10,4 +10,4 @@ Additional conformance expectations specific to this guide are as follows:
 
 ### MustSupport
 
-The must support requirements for this IG are taken directly from the [Conformance Expectations](https://www.hl7.org/fhir/us/davinci-hrex/conformance.html) section of the Da Vinci HRex IG. 
+The must support requirements for this IG are taken directly from the [Conformance Expectations](https://www.hl7.org/fhir/us/davinci-hrex/conformance.html#mustsupport ) section of the Da Vinci HRex IG. 

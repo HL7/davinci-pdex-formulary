@@ -26,8 +26,8 @@ license: CC0-1.0
 dependencies:
   hl7.fhir.us.core: 7.0.0
   hl7.fhir.us.davinci-pdex-plan-net: current
-  hl7.terminology: 6.0.2
-#  hl7.fhir.us.davinci-hrex: current
+  hl7.terminology: 6.1.0
+  hl7.fhir.us.davinci-hrex: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
 parameters:
   show-inherited-invariants: false
@@ -57,16 +57,14 @@ jurisdiction: urn:iso:std:iso:3166#US
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   IG Home: index.html
-  Table of Contents: toc.html
+  Background: background.html
+  Conformance Expectations: confexpectations.html
   Specification:
-    Conformance Expectations     : confexpectations.html
-    Use Cases                    : use_cases_and_overview.html#use-cases
-    Access Methods               : use_cases_and_overview.html#access-methods
-    Formulary Structure          : use_cases_and_overview.html#formulary-structure
-    Bulk Data                    : use_cases_and_overview.html#bulk-data
-    Searching Formulary Drugs    : use_cases_and_overview.html#searching-formulary-drugs
-    Additional Guidance          : use_cases_and_overview.html#additional-guidance
-    Anticipated Client Queries   : queries.html
+    Access Methods               : specification.html#access-methods
+    Bulk Data                    : specification.html#bulk-data
+    Searching Formulary Drugs    : specification.html#searching-formulary-drugs
+    Additional Guidance          : specification.html#additional-guidance
+  Anticipated Client Queries   : queries.html 
   FHIR Artifacts:
     Profiles            : artifacts.html#3
     Extensions          : artifacts.html#4
@@ -92,8 +90,10 @@ pages:
     title: Credits
   confexpectations.md:
     title: Conformance Expectations
-  use_cases_and_overview.md:
-    title: Use Cases and Overview
+  background.md:
+    title: Background
+  specification.md:
+    title: Specification
   search_parameters.md:
     title: Search Parameters
   queries.md:

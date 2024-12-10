@@ -127,6 +127,7 @@
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
+<page key="background" name="Background"/>
 <page key="change_notes" name="Change Notes"/>
 <page key="confexpectations" name="Conformance Expectations"/>
 <page key="credits" name="Credits"/>
@@ -136,8 +137,9 @@
 <page deprecated="true" key="profiles" name="Profiles"/>
 <page key="queries" name="Queries"/>
 <page key="search_parameters" name="Search Parameters"/>
+<page key="specification" name="Specification"/>
 <page key="toc" name="Table of Contents"/>
 <page key="ImplementationGuide-hl7.fhir.us.davinci-drug-formulary" name="US Drug Formulary ImplementationGuide Resource"/>
-<page key="use_cases_and_overview" name="Use Cases and Overview"/>
+<page deprecated="true" key="use_cases_and_overview" name="Use Cases and Overview"/>
 <page deprecated="true" key="methodology" name="methodology"/>
 </specification>
