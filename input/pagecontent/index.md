@@ -62,6 +62,19 @@
   Information about searching for formulary drugs can be found in the <a href="use_cases_and_overview.html#searching-formulary-drugs">Searching for Formulary Drugs section</a>.
 </p>
 
+### Content and Organization
+
+The IG is organized into the following sections:
+
+* [Conformance Expectations](confexpectations.html): Conformance rules for this IG.
+* [Use Cases](use_cases_and_overview.html#use-cases): Provides examples of how this specification can be used healthcare organizations.
+* [Access Methods](use_cases_and_overview.html#access-methods): Describes the methods for accessing the server (authenticated or unauthenticated).
+* [Formulary Structure](use_cases_and_overview.html#formulary-structure): Describes how formularies are structured in this IG including relationships between profiles.
+* [Bulk Data](use_cases_and_overview.html#bulk-data): Describes the Formulary IG approach to bulk data.
+* [Searching Formulary Drugs](use_cases_and_overview.html#searching-formulary-drugs): Describes how to search for drugs by code or name.
+* [Additional Guidance](use_cases_and_overview.html#additional-guidance): Provides additional guidance on using the IG.
+* [Anticipated Client Queries](queries.html): Example queries that should be useful to implementers.
+* [Artifacts](artifacts.html): The computable FHIR artifacts (profiles, value sets, etc.) for this specification.
 
 <a name="expected-users"></a>
 ### Expected Users 
@@ -83,5 +96,9 @@
   </li>
 </ul>
 
+
+### Dependencies
+
+{% include dependency-table.xhtml %}
 
 

@@ -60,10 +60,10 @@ Description:    "The Payer InsurancePlan that defines the health insurance produ
 
 
 * plan[drug-plan] ^short = "Drug plan"
+
+* plan[drug-plan].identifier 0..* MS
 * plan[drug-plan].type = $HL7InsurancePlanTypeCS#drug "Drug"
 * plan[drug-plan].network ^short = "Pharmacy benefit types that are part of the drug plan"
-
-
 
 * plan[drug-plan].specificCost 1..* MS
 * plan[drug-plan].specificCost ^short = "Pharmacy benefit type specific cost"
@@ -316,3 +316,20 @@ Invariant: scd-sbd-requires-scdg-sbdg
 Description: "All drugs with RxNorm Term Type of SCD or SBD SHALL have a coding repetition and RxNorm Term Type of SCDG or SBDG respectively"
 // Expression: "address.exists() or extension.where(url='http://hl7.org/fhir/StructureDefinition/location-boundary-geojson').exists()"
 Severity: #error
+
+
+
+
+Profile:        InsurancePlanCoverage
+Parent:         USCoreCoverageProfile
+Id:             usdf-InsurancePlanCoverage
+Title:          "Insurance Plan Coverage"
+Description:    "Coverage for an insurance plan"
+
+* extension contains
+    http://hl7.org/fhir/5.0/StructureDefinition/extension-Coverage.insurancePlan named insurancePlan 0..1 MS
+* extension[insurancePlan] ^short = "Insurance plan details, pre-adopted from FHIR R5"
+* class[plan].extension contains
+    http://hl7.org/fhir/5.0/StructureDefinition/extension-Coverage.class.value named valueIdentifier 0..1 MS
+* class[plan].extension[valueIdentifier] ^short = "Value associated with the type, pre-adopted from FHIR R5 since it is just a string in R4"
+

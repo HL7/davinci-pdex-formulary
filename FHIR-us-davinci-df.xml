@@ -74,6 +74,7 @@
 <artifact id="Basic/FormularyItem-D3002-1000091" key="Basic-FormularyItem-D3002-1000091" name="FormularyItem-D3002-1000091"/>
 <artifact id="Basic/FormularyItem-D3004t-1049640" key="Basic-FormularyItem-D3004t-1049640" name="FormularyItem-D3004t-1049640"/>
 <artifact deprecated="true" id="GraphDefinition/Formulary-GraphDefinition" key="GraphDefinition-Formulary-GraphDefinition" name="Formulary_GraphDefinition"/>
+<artifact id="StructureDefinition/usdf-InsurancePlanCoverage" key="StructureDefinition-usdf-InsurancePlanCoverage" name="Insurance Plan Coverage"/>
 <artifact id="StructureDefinition/usdf-InsurancePlanLocation" key="StructureDefinition-usdf-InsurancePlanLocation" name="Insurance Plan Location"/>
 <artifact id="ValueSet/InsuranceItemTypeVS" key="ValueSet-InsuranceItemTypeVS" name="Insurance item type"/>
 <artifact id="SearchParameter/InsurancePlan-coverage-area" key="SearchParameter-InsurancePlan-coverage-area" name="InsurancePlan-coverage-area"/>

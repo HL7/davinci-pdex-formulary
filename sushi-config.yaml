@@ -28,6 +28,7 @@ dependencies:
   hl7.fhir.us.davinci-pdex-plan-net: current
   hl7.terminology: 6.0.2
 #  hl7.fhir.us.davinci-hrex: current
+  hl7.fhir.extensions.r5: 4.0.1
 parameters:
   show-inherited-invariants: false
   default-jurisdiction: true
@@ -65,7 +66,7 @@ menu:
     Bulk Data                    : use_cases_and_overview.html#bulk-data
     Searching Formulary Drugs    : use_cases_and_overview.html#searching-formulary-drugs
     Additional Guidance          : use_cases_and_overview.html#additional-guidance
-    Anticipated Client Queries: queries.html
+    Anticipated Client Queries   : queries.html
   FHIR Artifacts:
     Profiles            : artifacts.html#3
     Extensions          : artifacts.html#4
