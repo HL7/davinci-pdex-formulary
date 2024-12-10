@@ -101,4 +101,7 @@ The IG is organized into the following sections:
 
 {% include dependency-table.xhtml %}
 
+### Intellectual Property Considerations
+This implementation guide and the underlying FHIR specification are licensed as public domain under the [FHIR license](http://hl7.org/fhir/R4/license.html#license). The license page also describes rules for the use of the FHIR name and logo.
 
+{% include ip-statements.xhtml %}

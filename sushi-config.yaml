@@ -56,7 +56,7 @@ jurisdiction: urn:iso:std:iso:3166#US
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html
+  IG Home: index.html
   Table of Contents: toc.html
   Specification:
     Conformance Expectations     : confexpectations.html
@@ -77,6 +77,11 @@ menu:
   Downloads: downloads.html
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
+    HRex 1.1.0: new-tab {{site.data.fhir.ver.hrex}}
+    US Core 3.1.1: new-tab http://hl7.org/fhir/us/core/STU3.1.1/index.html
+    US Core 6.1.0: new-tab https://hl7.org/fhir/us/core/STU6.1/index.html
+    US Core 7.0.0: new-tab https://hl7.org/fhir/us/core/STU7/index.html
+    
   Change Notes: change_notes.html
 
 
