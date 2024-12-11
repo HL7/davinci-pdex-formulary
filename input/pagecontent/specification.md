@@ -1,12 +1,10 @@
 
-<a name="access-methods"></a>
 ### Access Methods
 The formulary service can potentially be accessed two different ways:
 1. __Authenticated API__: Access to the formulary service when integrated with protected health information (PHI) or personally identifiable information (PII) as part of the Patient Access API **SHALL** be protected through an authorized, authenticated transaction as described in the Da Vinci Health Record Exchange (HRex) FHIR Implementation Guide [Security and Privacy Section]({{site.data.fhir.ver.hl7_fhir_us_davinci_hrex}}security.html).
 2. __Unauthenticated API__: When exchanging formulary data exclusively, which is public information without any PHI or PII, the formulary service **MAY** also be accessed through an API that does not require authentication or authorization. The formulary server **SHALL NOT** maintain any records through the unauthenticated API that could associate the consumer with the medications queried.
 
 
-<a name="authenticated"></a>
 #### Authenticated 
 When accessing data through an authenticated API, the response for queries on InsurancePlan depends on whether the authenticated member has access to the plan in relation to their membership.  
 
@@ -34,21 +32,14 @@ Access to other profiled resources in this IG ([FormularyItem](StructureDefiniti
 Server implementers **SHALL** make other profiled resources in this IG ([FormularyItem](StructureDefinition-usdf-FormularyItem.html), [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html)) associated to a member’s available plans available through authenticated access. This IG does not define restrictions on authenticated access to resources not associated with a member’s available plan or the [Plan Location]( StructureDefinition-usdf-InsurancePlanLocation.html) resource.
 
 
-<!-- 
-https://jira.hl7.org/browse/FHIR-33188
-https://jira.hl7.org/browse/FHIR-35367
- -->
-<a name="unauthenticated"></a>
 #### Unauthenticated
 When accessing data through an unauthenticated API, the conformant payer formulary service **SHALL NOT** require an application to send consumer identifying information in order to query for the list of health plans provided by that payer and the medication and costs for each plan.
 
 
-<a name="bulk-data"></a>
 ### Bulk Data
-<div class="stu-note">
+Bulk data guidance in this version of the IG is draft only. It has not appeared in ballot and has not been fully tested.</i></b>
 
-<b><i>Bulk data guidance in this version of the IG is draft only. It has not appeared in ballot and has not been fully tested.</i></b>
-</div>
+
 A server **MAY** support [Bulk Data IG](http://hl7.org/fhir/uv/bulkdata/index.html) for the retrieval of formulary data not related to an individual. The Bulk Data IG may be used because the data set for formularies could be large as a server may manage multiple formularies, each of which may contain thousands of drugs. If and how authorization is supported is not defined by this specification, however, the Bulk IG does provide guidance on SMART Backend Service Authorization. 
 
 If a Formulary server supports bulk data export:
@@ -77,8 +68,6 @@ If a Formulary server supports bulk data export:
 
 
 
-
-<a name="searching-formulary-drugs"></a>
 ### Searching Formulary Drugs
 This guide provides a mechanism for rudimentary drug searching and filtering based on drug codes, names, and forms, by requiring server systems to support this data. This capability is not robust and client systems are encouraged to augment their drug searching capabilities using outside services or data sources to better meet the needs of their users.
 
@@ -90,7 +79,6 @@ Covered drugs may appear in the formulary and non-covered drugs are simply not i
 
 Note: In addition to the guidance and requirements below regarding searching for drugs based on an RxNorm code or display, servers may wish to support additional coding systems and display values in order to represent specific drugs that may have the same RxNorm code, but have different coverage specifics as defined in the [Specific Drug Coverage Details](#specific-drug-coverage-details) section. This may result in more than one [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html) with the same RxNorm code and display value.
 
-<a name="searching-by-drug-code"></a>
 #### Searching By Drug Code
 
 The preferred way to search for drugs is to use an RxNorm code (RxCUI). The RxNorm codes and names are freely available and services to look-up codes exist. If a client application is performing a query with the intent on finding generic or brand alternatives, the client application **SHOULD** search using both the brand and the generic RxNorm code.
@@ -99,7 +87,6 @@ Servers **SHALL** support a MedicationKnowledge.code.coding repetition including
 
 Searches for drugs with the above RxNorm Term Types (SCDG and SBDG) by either code will provide the client with a way to search for drugs without a specified strength.
 
-<a name="searching-by-drug-name"></a>
 #### Searching By Drug Name
 
 This Implementation Guide provides the ability to search for FormularyDrug (MedicationKnowledge) resources by drug name through the [drug-name](SearchParameter-MedicationKnowledge-drug-name.html) search parameter. This search parameter is based on the MedicationKnowledge.code.coding.display and provides a full (`exact`) or partial (`contains`) equals (`eq`) string match. Per the FHIR Specification, the [Correct RxNorm Display](https://www.hl7.org/fhir/rxnorm.html#4.3.2.3) is the Full RxNorm name of either the Semantic Clinical Drug (SCD) or Semantic Brand Drug (SBD). The full drug name has several components presented in the following formats:
@@ -125,7 +112,6 @@ This search will return all matching drug names with both the ingredient “acet
 
 Another factor clients need to consider when searching for drugs by name, is that individual drug names may be contained within combination drugs (e.g., a search on acetaminophen will return many combination drugs). Clients may need to filter search results to fit their requirements.
 
-<a name="additional-guidance"></a>
 ### Additional Guidance
 
 Specific Drug Coverage Details
@@ -146,7 +132,6 @@ To the Searching Formulary Drugs section, at the bottom of the main section add:
 
 Note: In addition to the guidance and requirements below regarding searching for drugs based on an RxNorm code or display, servers may wish to support additional coding systems and display values in order to represent specific drugs that may have the same RxNorm code, but have different coverage specifics as defined in [Specific DrugCoverage Details](specific-drug-coverage-details). This may result in more than one [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html) with the same RxNorm code and display value.
 
-<a name="specific-drug-coverage-details"></a>
 #### Specific Drug Coverage Details
 
 RxNorm codes and descriptions were chosen as the mechanism for searching and describing covered drugs for consumer use because that is what consumers will generally have access to given the requirements laid out in US regulation. RxNorm is also the code system used for many outpatient pharmacy prescribing transactions.
@@ -160,9 +145,17 @@ This IG Provides the following ways to express various levels of coverage (cover
   
 * Drugs identified by a general RxNorm code in a single [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html) MedicationKnowledge resource with specific coverage conditions and requirements communicated in the referenced [FormularyItem](StructureDefinition-usdf-FormularyItem.html).
   - Specific details including drugs covered or not covered, coverage conditions, or requirements are specified in the [FormularyItem](StructureDefinition-usdf-FormularyItem.html) Basic.extensions.
+  
+#### Linking Coverage to Plans
 
+Version 2.1.0 of this IG added the [Insurance Plan Coverage](StructureDefinition-usdf-InsurancePlanCoverage.html) profile for linking a patient's coverage to specific drug plans in a [Payer Insurance Plan](StructureDefinition-usdf-PayerInsurancePlan.html).
 
-<a name="presenting-alternative-medications"></a>
+First, the Payer Insurance Plan profile added a new constraint under Coverage making InsurancePlan.plan:drug-plan.identifier must-support, providing an identifier to link to inside the InsurancePlan resource which may include multiple actual plans (later versions of FHIR have a new resource called InsuranceProduct, which addresses this confusions (a given product may have multiple plans).
+
+The new Coverage profile extends the US Core Coverage profile and adds two cross-version extensions to enable features of Converage not available in FHIR R4, specifically a reference to an InsurancePlan resource that contains the specific drug plan in question, as well as adding an identifier extension under Coverage.class:plan to reference InsurancePlan.plan:drug-plan.identifier, since in FHIR R4 Coverage.class only allows a string to identify the actual plan.
+
+This solution may require multiple Coverage resources on a given FHIR server even though in the real world there may be a single plan that covers all situations, one for drug coverages and another for everything else, and that the current solution will be revisited for FHIR R6. 
+
 #### Presenting Drug Alternatives 
 Finding appropriate alternatives of a prescribed medication is complex and often depends on additional clinical information about the patient well as the condition or set of conditions for which the medication is meant to address. The means to identify therapeutic alternatives to drugs does exist in the industry, but such capability is complex, requires clinical information about the patient that is not within in scope of this guide, and a clinical understanding of the intended therapeutic use of the medication which is not generally within the competency of most members.  The information and business rules necessary to identify possible therapeutic alternatives, and therefore the ability to search for such alternatives, currently lies outside of the scope of this guide.
 
