@@ -31,3 +31,9 @@ WARNING: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapsh
 WARNING: StructureDefinition/usdf-FormularyDrug: StructureDefinition.snapshot.element[0].constraint[5]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them'
 
 WARNING: StructureDefinition/usdf-FormularyDrug: StructureDefinition.differential.element[0].constraint[0]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them'
+
+# Tooling issue with GraphDefinition conversion
+
+WARNING: GraphDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/FormularyGraphDefinition'): The resource needed to modified during loading to apply common headers copyright=null but this isn't possible for the type GraphDefinition because version conversion isn't working completely
+
+WARNING: GraphDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/PayerInsurancePlanGraphDefinition'): The resource needed to modified during loading to apply common headers copyright=null but this isn't possible for the type GraphDefinition because version conversion isn't working completely
