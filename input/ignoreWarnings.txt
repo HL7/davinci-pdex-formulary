@@ -1,8 +1,13 @@
 == Suppressed Messages ==
 
 # Approved US Core Variance - https://jira.hl7.org/browse/FHIR-34164
+
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-InsurancePlanLocation').baseDefinition: US FHIR Usage rules require that all profiles on Location derive from the core US profile
 
-# Use of draft Code System, already in production use. THO may need to be updated
-Reference to draft item http://terminology.hl7.org/CodeSystem/contactentity-type|0.5.0
+# Code system fragment in THO missing valid code of 'drug'
 
+WARNING: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.coverage[0].benefit[0].type.coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+
+# Unable to express this constraint as FHIRPath: All drugs with RxNorm Term Type of SCD or SBD SHALL have a coding repetition and RxNorm Term Type of SCDG or SBDG respectively
+
+WARNING: StructureDefinition/usdf-FormularyDrug: StructureDefinition.snapshot.element[0].constraint[5]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them'

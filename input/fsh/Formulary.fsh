@@ -304,8 +304,6 @@ Description:    "A GraphDefinition defining a graph of resources to return in a 
 * link.target.link.target.type = #MedicationKnowledge
 * link.target.link.target.profile = Canonical(FormularyDrug)
 
-
-
 Invariant: Location-address-or-geolocation
 Description: "Location contains an address, geolocation, or both"
 Expression: "address.exists() or extension.where(url='http://hl7.org/fhir/StructureDefinition/location-boundary-geojson').exists()"
@@ -313,11 +311,8 @@ Severity: #error
 
 
 Invariant: scd-sbd-requires-scdg-sbdg
-Description: "All drugs with RxNorm Term Type of SCD or SBD SHALL have a coding repetition and RxNorm Term Type of SCDG or SBDG respectively"
-// Expression: "address.exists() or extension.where(url='http://hl7.org/fhir/StructureDefinition/location-boundary-geojson').exists()"
+Description: "All drugs with RxNorm Term Type of Semantic Clinical Drug (SCD) or Semantic Branded Drug (SBD) SHALL have a coding repetition and RxNorm Term Type of Semantic Clinical Drug Group (SCDG) or Semantic Branded Drug Group (SBDG) respectively"
 Severity: #error
-
-
 
 
 Profile:        InsurancePlanCoverage
