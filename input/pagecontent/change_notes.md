@@ -79,7 +79,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-37717">FHIR-37717</a>:
       <p>
-        Added <a href="use_cases_and_overview.html#specific-drug-coverage-details">Specific Drug Coverage Details</a> section that includes guidance on how to provide details for drugs with different coverages but are represented by the same RxNorm code.
+        Added <a href="specification.html#specific-drug-coverage-details">Specific Drug Coverage Details</a> section that includes guidance on how to provide details for drugs with different coverages but are represented by the same RxNorm code.
       </p>
     </li>
     <li>
@@ -157,7 +157,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-34085">FHIR-34085</a>:
       <p>
-        Added slicing on <a href="StructureDefinition-usdf-FormularyDrug-definitions.html#MedicationKnowledge.code.coding">FormularyDrug code.coding</a> to support granular (ingredient, strength, and form) RxNorm Code and general (ingredient and form group) to enable finding drugs with different strengths and added guidance on <a href="use_cases_and_overview.html#searching-formulary-drugs">searching formulary drugs</a>. 
+        Added slicing on <a href="StructureDefinition-usdf-FormularyDrug-definitions.html#MedicationKnowledge.code.coding">FormularyDrug code.coding</a> to support granular (ingredient, strength, and form) RxNorm Code and general (ingredient and form group) to enable finding drugs with different strengths and added guidance on <a href="specification.html#searching-formulary-drugs">searching formulary drugs</a>. 
       </p>
     </li>
     <li>
@@ -181,7 +181,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-33188">FHIR-33188</a> and <a href="https://jira.hl7.org/browse/FHIR-35367">FHIR-35367</a>:
       <p>
-        Added guidance for <a href="use_cases_and_overview.html#bulk-data">Bulk Data Export</a>. 
+        Added guidance for <a href="specification.html#bulk-data">Bulk Data Export</a>. 
       </p>
     </li>
     <li>
@@ -199,7 +199,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-35196">FHIR-35196</a>:
       <p>
-        Added guidance regarding <a href="use_cases_and_overview.html#presenting-drug-alternatives"> presenting drug alternative</a>. 
+        Added guidance regarding <a href="specification.html#presenting-drug-alternatives"> presenting drug alternative</a>. 
       </p>
     </li>
     <li>
@@ -281,7 +281,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Update of
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-31073">FHIR-31073</a>:
       <p>
-        Added guidance for behavior for <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/use_cases_and_overview.html#authenticated">authenticated member access</a>, when the member has already selected a plan or not, when they belong to a plan group or not.
+        Added guidance for behavior for <a href="specification.html#authenticated">authenticated member access</a>, when the member has already selected a plan or not, when they belong to a plan group or not.
       </p>
     </li>
      <li>
@@ -305,7 +305,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Update of
      <li>
       <a href="https://jira.hl7.org/browse/FHIR-31684">FHIR-31684</a>:
       <p>
-        Guidance was added to <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/use_cases_and_overview.html#searching-for-formulary-drugs">Additional Guidance</a> regarding searching for FormularyDrugs with know PlanIDs and without.
+        Guidance was added to <a href="specification#searching-for-formulary-drugs">Additional Guidance</a> regarding searching for FormularyDrugs with know PlanIDs and without.
       </p>
     </li>
     <li>
@@ -347,7 +347,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Update of
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-32958">FHIR-32958</a>:
       <p>
-        Added guidance for searching by <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/use_cases_and_overview.html#searching-by-drug-names">drug name</a> strings.
+        Added guidance for searching by <a href="specification.html#searching-by-drug-names">drug name</a> strings.
       </p>
     </li>
     <li>
