@@ -76,8 +76,7 @@ menu:
     US Core 3.1.1: new-tab http://hl7.org/fhir/us/core/STU3.1.1/index.html
     US Core 6.1.0: new-tab https://hl7.org/fhir/us/core/STU6.1/index.html
     US Core 7.0.0: new-tab https://hl7.org/fhir/us/core/STU7/index.html
-    
-  Change Notes: change_notes.html
+  Change Log: change_notes.html
 
 
 pages:
