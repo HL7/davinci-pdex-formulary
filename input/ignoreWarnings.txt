@@ -34,12 +34,6 @@ WARNING: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapsh
 
 WARNING: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[93].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
-# Unable to express this constraint as FHIRPath: All drugs with RxNorm Term Type of SCD or SBD SHALL have a coding repetition and RxNorm Term Type of SCDG or SBDG respectively
-
-WARNING: StructureDefinition/usdf-FormularyDrug: StructureDefinition.snapshot.element[0].constraint[5]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them'
-
-WARNING: StructureDefinition/usdf-FormularyDrug: StructureDefinition.differential.element[0].constraint[0]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them'
-
 # Tooling issue with GraphDefinition conversion
 
 WARNING: GraphDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/FormularyGraphDefinition'): The resource needed to modified during loading to apply common headers copyright=null but this isn't possible for the type GraphDefinition because version conversion isn't working completely

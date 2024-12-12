@@ -23,11 +23,25 @@ publisher:
   email: pharmacy@lists.HL7.org
 description: DaVinci Payer Data Exchange (PDex) US Drug Formulary, Release 2.0.1 - US Realm STU"
 license: CC0-1.0
-dependencies:
-  hl7.fhir.us.core: 7.0.0
+dependencies:  
+  hl7.fhir.us.core.v311:
+    version: 3.1.1
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore3
+  hl7.fhir.us.core.v610:
+    version: 6.1.0
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore6
+  hl7.fhir.us.core:
+    version: 7.0.0
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore7
+  hl7.fhir.us.davinci-hrex:
+    uri: http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex
+    version: 1.1.0
+    id: hrex
+  hl7.terminology: 6.1.0  
   hl7.fhir.us.davinci-pdex-plan-net: current
-  hl7.terminology: 6.1.0
-  hl7.fhir.us.davinci-hrex: current
   hl7.fhir.extensions.r5: 4.0.1
 parameters:
   show-inherited-invariants: false
