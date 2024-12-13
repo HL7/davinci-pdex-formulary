@@ -309,11 +309,10 @@ Description: "Location contains an address, geolocation, or both"
 Expression: "address.exists() or extension.where(url='http://hl7.org/fhir/StructureDefinition/location-boundary-geojson').exists()"
 Severity: #error
 
-
 Invariant: scd-sbd-requires-scdg-sbdg
 Description: "All drugs with RxNorm Term Type of Semantic Clinical Drug (SCD) or Semantic Branded Drug (SBD) SHALL have a coding repetition and RxNorm Term Type of Semantic Clinical Drug Group (SCDG) or Semantic Branded Drug Group (SBDG) respectively"
+Expression: "code.where(coding[0].memberOf('http://hl7.org/fhir/us/davinci-drug-formulary/ValueSet/NonPackSemanticDrugVS')).exists() implies code.where(coding[1].memberOf('http://hl7.org/fhir/us/davinci-drug-formulary/ValueSet/SemanticDrugFormGroupVS')).exists()"
 Severity: #error
-
 
 Profile:        InsurancePlanCoverage
 Parent:         USCoreCoverageProfile

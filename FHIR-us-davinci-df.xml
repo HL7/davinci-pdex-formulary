@@ -113,6 +113,7 @@
 <artifact id="ValueSet/CopayOptionVS" key="ValueSet-CopayOptionVS" name="Qualifier of copay amount"/>
 <artifact id="StructureDefinition/usdf-QuantityLimit-extension" key="StructureDefinition-usdf-QuantityLimit-extension" name="Quantity Limit"/>
 <artifact id="StructureDefinition/usdf-QuantityLimitDetail-extension" key="StructureDefinition-usdf-QuantityLimitDetail-extension" name="Quantity Limit Detail"/>
+<artifact id="ValueSet/NonPackSemanticDrugVS" key="ValueSet-SemanticDrugVS" name="Semantic Drug Codes"/>
 <artifact id="ValueSet/SemanticDrugVS" key="ValueSet-SemanticDrugVS" name="Semantic Drug Codes"/>
 <artifact id="ValueSet/SemanticDrugFormGroupVS" key="ValueSet-SemanticDrugFormGroupVS" name="Semantic Drug Form Group Codes"/>
 <artifact id="Location/StateOfCTLocation" key="Location-StateOfCTLocation" name="StateOfCTLocation"/>
@@ -134,7 +135,9 @@
 <page key="downloads" name="Downloads"/>
 <page deprecated="true" key="examples" name="Examples"/>
 <page key="index" name="Home"/>
+<page key="security" name="Privacy, Safety, and Security"/>
 <page deprecated="true" key="profiles" name="Profiles"/>
+<page key="project" name="Project and Participants"/>
 <page key="queries" name="Queries"/>
 <page key="search_parameters" name="Search Parameters"/>
 <page key="specification" name="Specification"/>

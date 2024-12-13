@@ -311,7 +311,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Update of
      <li>
       <a href="https://jira.hl7.org/browse/FHIR-31684">FHIR-31684</a>:
       <p>
-        Guidance was added to <a href="specification#searching-for-formulary-drugs">Additional Guidance</a> regarding searching for FormularyDrugs with know PlanIDs and without.
+        Guidance was added to <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/use_cases_and_overview.html#additional-guidance">Additional Guidance</a> regarding searching for FormularyDrugs with know PlanIDs and without.
       </p>
     </li>
     <li>

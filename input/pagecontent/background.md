@@ -1,9 +1,5 @@
-
-
-<a name="use-cases"></a>
 ### Use Cases
 
-<a name="actors"></a>
 #### Actors
 * **Member**: A person to whom health care coverage has been extended by the policyholder (generally their employer) or any of their covered family members. Sometimes referred to as the insured or insured person. The cost of medications for a member is a function of the drug coverage under their health insurance plan, their benefits based on their already satisfied deductibles, and the pharmacy where their prescriptions are filled.
 * **Consumer**: A person who may or may not be a member, who wishes to explore the formulary content and plan-level co-insurance.

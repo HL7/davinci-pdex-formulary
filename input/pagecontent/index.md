@@ -1,13 +1,8 @@
-<a name="drug-formulary"></a>
 ### Da Vinci Payer Data Exchange (PDex) US Drug Formulary
-<p>
-  This implementation guide defines a FHIR interface to a health insurer's drug formulary information for patients/consumers. A drug formulary is a list of brand-name and generic prescription drugs a health insurer agrees to pay for, at least partially, as part of health insurance coverage. Drug formularies are developed based on the efficacy, safety, and cost of drugs. The primary <a href="use_cases_and_overview.html#use-cases">use cases</a> for this FHIR interface enable consumers/members/patients to understand the costs and alternatives for drugs that have been prescribed, and to compare their drug costs across different insurance plans.
-</p>
-<p>
-  A key architectural issue that is beyond the scope of this implementation guide is how a user finds the FHIR endpoint for a particular formulary. This implementation guide assumes that the FHIR endpoint is known to the user.
-</p>
+This implementation guide defines a FHIR interface to a health insurer's drug formulary information for patients/consumers. A drug formulary is a list of brand-name and generic prescription drugs a health insurer agrees to pay for, at least partially, as part of health insurance coverage. Drug formularies are developed based on the efficacy, safety, and cost of drugs. The primary <a href="background.html#use-cases">use cases</a> for this FHIR interface enable consumers/members/patients to understand the costs and alternatives for drugs that have been prescribed, and to compare their drug costs across different insurance plans.
 
-<a name="introduction"></a>
+A key architectural issue that is beyond the scope of this implementation guide is how a user finds the FHIR endpoint for a particular formulary. This implementation guide assumes that the FHIR endpoint is known to the user.
+
 ### Introduction
 <p>
   This Implementation Guide (IG) includes a number of profiles, extensions, search parameters, and value sets.
@@ -27,7 +22,7 @@
   </li>
 </ul>
 <p>
-  A detailed description of the relationship between the profiles in this guide can be found in the <a href="specification.html#formulary-structure">Formulary Structure section</a>.
+  A detailed description of the relationship between the profiles in this guide can be found in the <a href="background.html#formulary-structure">Formulary Structure section</a>.
 </p>
 
 

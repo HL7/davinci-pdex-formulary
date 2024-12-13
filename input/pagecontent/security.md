@@ -1,0 +1,1 @@
+This implementation guide uses the same privacy, safety, and security guidelines as the [Da Vinci HRex](https://www.hl7.org/fhir/us/davinci-hrex/security.html) specification.

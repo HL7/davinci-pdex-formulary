@@ -69,13 +69,17 @@ jurisdiction: urn:iso:std:iso:3166#US
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
 menu:
   IG Home: index.html
-  Background: background.html
+  Background:
+    Project and Participants: project.html
+    Use Cases: background.html
   Specification:
     Conformance Expectations: confexpectations.html
     Formal Specification: specification.html
-    Anticipated Client Queries: queries.html 
+    Anticipated Client Queries: queries.html
+    Privacy, Safety, and Security: security.html
   FHIR Artifacts:
     Profiles            : artifacts.html#3
     Extensions          : artifacts.html#4
@@ -100,10 +104,14 @@ pages:
     title: Credits
   confexpectations.md:
     title: Conformance Expectations
+  project.md:
+    title: Project and Participants
   background.md:
     title: Background
   specification.md:
     title: Specification
+  security.md:
+    title: Privacy, Safety, and Security
   search_parameters.md:
     title: Search Parameters
   queries.md:
