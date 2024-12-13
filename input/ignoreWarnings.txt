@@ -4,6 +4,13 @@
 
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-InsurancePlanLocation').baseDefinition: US FHIR Usage rules require that all profiles on Location derive from the core US profile
 
+# The following historical IG versions did not include any JIRA trackers in their change logs, if they had a change log at all.
+
+WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any Jira tracker items links for the section with title Changes and Updates for Version 1.2.0
+WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any Jira tracker items links for the section with title Changes and Updates for Version 1.0.1
+WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any Jira tracker items links for the section with title Changes and Updates for Version 1.0.0
+WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any Jira tracker items links for the section with title Changes and Updates for Version 0.1.0
+
 # Code system fragment in THO missing valid code of 'drug'
 
 WARNING: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.coverage[0].benefit[0].type.coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment

@@ -1,4 +1,6 @@
-<a name="change_notes"></a>
+### Changes and Updates for Version 2.1.0
+
+* TBD
 
 ### Changes and Updates for Version 2.0.1
 The current official published version of Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Technical Correction of STU 2)
@@ -43,29 +45,29 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
      <li>
       <a href="https://jira.hl7.org/browse/FHIR-33181">FHIR-33181</a>:
       <p>
-        Changed CoveragePlan profile from using a List resource to two InsurancePlan profiles; one defining the higher level <a href="StructureDefinition-usdf-PayerInsurancePlan.html">Payer Insurance Plan</a> and the other defining the <a href="StructureDefinition-usdf-Formulary.html">Formulary</a> provides general information about a formulary and acts as an organizing construct to create a formulary list.
+        Changed CoveragePlan profile from using a List resource to two InsurancePlan profiles; one defining the higher level <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/StructureDefinition-usdf-PayerInsurancePlan.html">Payer Insurance Plan</a> and the other defining the <a href="StructureDefinition-usdf-Formulary.html">Formulary</a> provides general information about a formulary and acts as an organizing construct to create a formulary list.
         This change also addresses:
         <ul>
           <li>
             <a href="https://jira.hl7.org/browse/FHIR-33185">FHIR-33185</a> - Creating a prescribable insurance plan <a href="StructureDefinition-usdf-PayerInsurancePlan.html">PayerInsurancePlan</a> that contains a drug coverage with a reference to a formulary and plans cost sharing information.
           </li>
           <li>
-            <a href="https://jira.hl7.org/browse/FHIR-29670">FHIR-29670</a> and <a href="https://jira.hl7.org/browse/FHIR-30923">FHIR-30923</a> - Allowing a Formulary Drug to be referenced by multiple drug plans by adding <a href="StructureDefinition-usdf-Formulary.html">Formulary</a> and <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> profiles.
+            <a href="https://jira.hl7.org/browse/FHIR-29670">FHIR-29670</a> and <a href="https://jira.hl7.org/browse/FHIR-30923">FHIR-30923</a> - Allowing a Formulary Drug to be referenced by multiple drug plans by adding <a href="StructureDefinition-usdf-Formulary.html">Formulary</a> and <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> profiles.
           </li>
           <li>
-            <a href="https://jira.hl7.org/browse/FHIR-31038">FHIR-31038</a> - Creating profiles <a href="StructureDefinition-usdf-PayerInsurancePlan.html">Payer Insurance Plan</a> and <a href="StructureDefinition-usdf-Formulary.html">Formulary</a> to enable querying plans by plan and type or searching for all drug plans adding search parameters <a href="SearchParameter-InsurancePlan-identifier.html">InsurancePlan-identifier</a>, <a href="SearchParameter-InsurancePlan-type.html">InsurancePLan-type</a>, and <a href="SearchParameter-InsurancePlan-formulary-coverage.html">InsurancePlan-formulary-coverage</a> (linking the PayerInsurancePlan and Formulary).
+            <a href="https://jira.hl7.org/browse/FHIR-31038">FHIR-31038</a> - Creating profiles <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/StructureDefinition-usdf-PayerInsurancePlan.html">Payer Insurance Plan</a> and <a href="StructureDefinition-usdf-Formulary.html">Formulary</a> to enable querying plans by plan and type or searching for all drug plans adding search parameters <a href="SearchParameter-InsurancePlan-identifier.html">InsurancePlan-identifier</a>, <a href="SearchParameter-InsurancePlan-type.html">InsurancePLan-type</a>, and <a href="SearchParameter-InsurancePlan-formulary-coverage.html">InsurancePlan-formulary-coverage</a> (linking the PayerInsurancePlan and Formulary).
           </li>
           <li>
-            <a href="https://jira.hl7.org/browse/FHIR-31572">FHIR-31572</a> - Addressing the need to require an element necessary to link resources by adding extensions <a href="StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.coverage:drug-coverage.extension:usdf-FormularyReference-extension">formulary reference to PayerInsurancePlan coverage</a> and <a href="StructureDefinition-usdf-FormularyItem-definitions.html#Basic.extension:usdf-FormularyReference-extension">formulary reference to FormularyItem</a>.
+            <a href="https://jira.hl7.org/browse/FHIR-31572">FHIR-31572</a> - Addressing the need to require an element necessary to link resources by adding extensions <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.coverage:drug-coverage.extension:usdf-FormularyReference-extension">formulary reference to PayerInsurancePlan coverage</a> and <a href="StructureDefinition-usdf-FormularyItem-definitions.html#Basic.extension:usdf-FormularyReference-extension">formulary reference to FormularyItem</a>.
           </li>
           <li>
-            <a href="https://jira.hl7.org/browse/FHIR-31673">FHIR-31673</a> - Move the EmailPlanContact extension, which can support an email address or url to the better fitting element <a href="StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.contact">InsurancePlan.contact</a>.
+            <a href="https://jira.hl7.org/browse/FHIR-31673">FHIR-31673</a> - Move the EmailPlanContact extension, which can support an email address or url to the better fitting element <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.contact">InsurancePlan.contact</a>.
           </li>
           <li>
-            <a href="https://jira.hl7.org/browse/FHIR-33183">FHIR-33183</a> - Created a set of <a hef="search_parameters.html">search parameters</a> and <a href="queries.html">anticipated client queries</a> for the new IG structure.
+            <a href="https://jira.hl7.org/browse/FHIR-33183">FHIR-33183</a> - Created a set of <a hef="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/search_parameters.html">search parameters</a> and <a href="queries.html">anticipated client queries</a> for the new IG structure.
           </li>
           <li>
-            <a href="https://jira.hl7.org/browse/FHIR-35600">FHIR-35600</a> and <a href="https://jira.hl7.org/browse/FHIR-35590">FHIR-35590</a> - Use http://terminology.hl7.org/CodeSystem/insurance-plan-type CodeSystem and http://terminology.hl7.org/CodeSystem/insurance-plan-type ValueSet for <a href="StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.plan.type">Payer InsurancePlan.plan.type</a>, <a href="StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.coverage:drug-coverage.benefit.type">Payer InsurancePlan.coverage.benefit.type</a>, and <a href="StructureDefinition-usdf-Formulary-definitions.html#InsurancePlan.plan.type">Formulary InsurancePlan.plan.type</a>.
+            <a href="https://jira.hl7.org/browse/FHIR-35600">FHIR-35600</a> and <a href="https://jira.hl7.org/browse/FHIR-35590">FHIR-35590</a> - Use https://terminology.hl7.org/CodeSystem/insurance-plan-type CodeSystem and https://terminology.hl7.org/CodeSystem/insurance-plan-type ValueSet for <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.plan.type">Payer InsurancePlan.plan.type</a>, <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.coverage:drug-coverage.benefit.type">Payer InsurancePlan.coverage.benefit.type</a>, and <a href="StructureDefinition-usdf-Formulary-definitions.html#InsurancePlan.plan.type">Formulary InsurancePlan.plan.type</a>.
           </li>
         </ul>
       </p>
@@ -73,13 +75,13 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-33182">FHIR-33182</a>:
       <p>
-        Created a <a href="StructureDefinition-usdf-FormularyItem.html">Formulary Item profile</a> that links a drug with a drug (formulary) plan and includes the attributes that relate the two. As part of this change, several extensions moved to this profile from the <a href="StructureDefinition-usdf-FormularyDrug.html">Formulary Drug profile</a>.
+        Created a <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/StructureDefinition-usdf-FormularyItem.html">Formulary Item profile</a> that links a drug with a drug (formulary) plan and includes the attributes that relate the two. As part of this change, several extensions moved to this profile from the <a href="StructureDefinition-usdf-FormularyDrug.html">Formulary Drug profile</a>.
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-37717">FHIR-37717</a>:
       <p>
-        Added <a href="specification.html#specific-drug-coverage-details">Specific Drug Coverage Details</a> section that includes guidance on how to provide details for drugs with different coverages but are represented by the same RxNorm code.
+        Added <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/specification.html#specific-drug-coverage-details">Specific Drug Coverage Details</a> section that includes guidance on how to provide details for drugs with different coverages but are represented by the same RxNorm code.
       </p>
     </li>
     <li>
@@ -157,7 +159,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-34085">FHIR-34085</a>:
       <p>
-        Added slicing on <a href="StructureDefinition-usdf-FormularyDrug-definitions.html#MedicationKnowledge.code.coding">FormularyDrug code.coding</a> to support granular (ingredient, strength, and form) RxNorm Code and general (ingredient and form group) to enable finding drugs with different strengths and added guidance on <a href="specification.html#searching-formulary-drugs">searching formulary drugs</a>. 
+        Added slicing on <a href="StructureDefinition-usdf-FormularyDrug-definitions.html#MedicationKnowledge.code.coding">FormularyDrug code.coding</a> to support granular (ingredient, strength, and form) RxNorm Code and general (ingredient and form group) to enable finding drugs with different strengths and added guidance on <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/specification.html#searching-formulary-drugs">searching formulary drugs</a>. 
       </p>
     </li>
     <li>
@@ -181,7 +183,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-33188">FHIR-33188</a> and <a href="https://jira.hl7.org/browse/FHIR-35367">FHIR-35367</a>:
       <p>
-        Added guidance for <a href="specification.html#bulk-data">Bulk Data Export</a>. 
+        Added guidance for <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/specification.html#bulk-data">Bulk Data Export</a>. 
       </p>
     </li>
     <li>
@@ -199,7 +201,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-35196">FHIR-35196</a>:
       <p>
-        Added guidance regarding <a href="specification.html#presenting-drug-alternatives"> presenting drug alternative</a>. 
+        Added guidance regarding <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/specification.html#presenting-drug-alternatives"> presenting drug alternative</a>. 
       </p>
     </li>
     <li>
@@ -216,6 +218,10 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU 2)
     
 
   -->
+  
+### Changes and Updates for Version 1.2.0
+
+* STU2 Ballot
 
 ### Changes and Updates for Version 1.1.0
 Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Update of STU 1)
@@ -226,7 +232,7 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Update of
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-28293">FHIR-28293</a>:
       <p>
-        Changed the <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-PlanID-extension.html">PlanID extension</a> description to from:
+        Changed the <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-PlanID-extension.html">PlanID extension</a> description to from:
       </p>
       <p>
         <i>“Unique, 14-character, HIOS-generated Plan ID number (Plan IDs must be unique, even across different markets.)”</i>
@@ -239,67 +245,67 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Update of
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-29965">FHIR-29965</a>:
       <p>
-        Added guidance that <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-MarketingURL-extension.html">CoveragePlan.MarketingURL</a>, <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-SummaryURL-extension.html">CoveragePlan.SummaryURL</a>, and <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-FormularyURL-extension.html">CoveragePlan.FormularyURL</a> can point to a page providing links for multiple language options.
+        Added guidance that <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-MarketingURL-extension.html">CoveragePlan.MarketingURL</a>, <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-SummaryURL-extension.html">CoveragePlan.SummaryURL</a>, and <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-FormularyURL-extension.html">CoveragePlan.FormularyURL</a> can point to a page providing links for multiple language options.
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-30412">FHIR-30412</a>:
       <p>
-        Changed the type of <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-MarketingURL-extension.html">CoveragePlan.MarketingURL</a>, <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-SummaryURL-extension.html">CoveragePlan.SummaryURL</a>, and <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-FormularyURL-extension.html">CoveragePlan.FormularyURL</a> extensions from a String value to a URL value.
+        Changed the type of <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-MarketingURL-extension.html">CoveragePlan.MarketingURL</a>, <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-SummaryURL-extension.html">CoveragePlan.SummaryURL</a>, and <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-FormularyURL-extension.html">CoveragePlan.FormularyURL</a> extensions from a String value to a URL value.
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-30924">FHIR-30924</a>:
       <p>
-        Added "Not applicable" to the <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/CodeSystem-usdf-CopayOptionCS.html">usdf-CopayOptionCS</a> code system.  Zero-deductible cost sharing is represented by a co-pay value of "Not applicable" and a co-insurance value of "No charge", consistent with updated QHP guidelines.
+        Added "Not applicable" to the <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/CodeSystem-usdf-CopayOptionCS.html">usdf-CopayOptionCS</a> code system.  Zero-deductible cost sharing is represented by a co-pay value of "Not applicable" and a co-insurance value of "No charge", consistent with updated QHP guidelines.
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-30925">FHIR-30925</a>:
       <p>
-        Added an optional boolean <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-MailOrder-extension.html">MailOrder</a> extension to FormularyDrug profile.  The MailOrder value in FormularyDrug overrides the MailOrder value in the <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-DrugTierDefinition-extension.html">DrugTierDefinition</a> extension for <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-CoveragePlan.html">CoveragePlan</a>.
+        Added an optional boolean <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-MailOrder-extension.html">MailOrder</a> extension to FormularyDrug profile.  The MailOrder value in FormularyDrug overrides the MailOrder value in the <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-DrugTierDefinition-extension.html">DrugTierDefinition</a> extension for <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-CoveragePlan.html">CoveragePlan</a>.
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-30933">FHIR-30933</a>:
       <p>
-        Changed the type of <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-EmailPlanContact-extension.html">EmailPlanContact</a> extension from String to URL. We also added narrative to <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-EmailPlanContact-extension.html">EmailPlanContact</a> that a FHIR URL type can be a web-url or an email address. 
+        Changed the type of <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-EmailPlanContact-extension.html">EmailPlanContact</a> extension from String to URL. We also added narrative to <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-EmailPlanContact-extension.html">EmailPlanContact</a> that a FHIR URL type can be a web-url or an email address. 
       </p>
     </li>
      <li>
       <a href="https://jira.hl7.org/browse/FHIR-31031">FHIR-31031</a>:
       <p>
-        Since _profile search parameter is not required for <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/queries.html#anticipated-client-queries">anticipated client queries</a>, we removed the "_profile" search parameter for the Medication Knowledge and List resource examples.
+        Since _profile search parameter is not required for <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/queries.html#anticipated-client-queries">anticipated client queries</a>, we removed the "_profile" search parameter for the Medication Knowledge and List resource examples.
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-31037">FHIR-31037</a>:
       <p>
-        The CoveragePlan PlanIDType extension was not defined for non-HIOS plans so we included narrative in <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-PlanIDType-extension.html">Plan ID Type</a>, to include "For all other plans this should be: OTHER-PLAN-ID as part of the definition. 
+        The CoveragePlan PlanIDType extension was not defined for non-HIOS plans so we included narrative in <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-PlanIDType-extension.html">Plan ID Type</a>, to include "For all other plans this should be: OTHER-PLAN-ID as part of the definition. 
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-31073">FHIR-31073</a>:
       <p>
-        Added guidance for behavior for <a href="specification.html#authenticated">authenticated member access</a>, when the member has already selected a plan or not, when they belong to a plan group or not.
+        Added guidance for behavior for <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU2/specification.html#authenticated">authenticated member access</a>, when the member has already selected a plan or not, when they belong to a plan group or not.
       </p>
     </li>
      <li>
       <a href="https://jira.hl7.org/browse/FHIR-31591">FHIR-31591</a>:
       <p>
-        Changed the code display in <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/MedicationKnowledge-cmsip9.html">Formulary Drug cmspi9</a>, to "doxepin hydrochloride 50 MG/ML Topical Cream" to match the given code of #1000091.
+        Changed the code display in <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/MedicationKnowledge-cmsip9.html">Formulary Drug cmspi9</a>, to "doxepin hydrochloride 50 MG/ML Topical Cream" to match the given code of #1000091.
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-31672">FHIR-31672</a>:
       <p>
-        Added guidance to enter "Not applicable" in the <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-Network-extension.html">Network</a> extension for a CoveragePlan that has no applicable network associated with it.
+        Added guidance to enter "Not applicable" in the <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-Network-extension.html">Network</a> extension for a CoveragePlan that has no applicable network associated with it.
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-31683">FHIR-31683</a>:
       <p>
-        We changed List.code to be set to the code <code>DRUGPOL</code> and changed the cardinality to 1..1 in the <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-CoveragePlan.html#profile">Formulary Coverage Plan</a>. Additionally, in <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/queries.html#find-coverageplan-by-its-planid">Anticipated Client Queries</a> the queries that reference list now reference the <code>DRUGPOL</code> code.
+        We changed List.code to be set to the code <code>DRUGPOL</code> and changed the cardinality to 1..1 in the <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-CoveragePlan.html#profile">Formulary Coverage Plan</a>. Additionally, in <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/queries.html#find-coverageplan-by-its-planid">Anticipated Client Queries</a> the queries that reference list now reference the <code>DRUGPOL</code> code.
       </p>
     </li>
      <li>
@@ -311,50 +317,64 @@ Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Update of
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-31672">FHIR-31762</a>:
       <p>
-        Updated <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/search_parameters.html">search parameter</a> descriptions to include all of the search parameters in the <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/CapabilityStatement-usdf-server.html">CapabilityStatement</a>.
+        Updated <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/search_parameters.html">search parameter</a> descriptions to include all of the search parameters in the <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/CapabilityStatement-usdf-server.html">CapabilityStatement</a>.
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-32178">FHIR-32178</a>:
       <p>
-        Added "charge" to the <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/CodeSystem-usdf-CopayOptionCS.html">usdf-CopayOptionCS</a> and the <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/CodeSystem-usdf-CoinsuranceOptionCS.html">usdf-CoinsuranceOptionCS</a>code systems to handle drugs that consist of a charge, but are not subject to a deductible.
+        Added "charge" to the <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/CodeSystem-usdf-CopayOptionCS.html">usdf-CopayOptionCS</a> and the <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/CodeSystem-usdf-CoinsuranceOptionCS.html">usdf-CoinsuranceOptionCS</a>code systems to handle drugs that consist of a charge, but are not subject to a deductible.
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-32622">FHIR-32622</a>:
       <p>
-        Guidance was added to  <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-CoveragePlan.html">Formulary Coverage Plan</a> indicating that we are considering basing the CoveragePlan profile off of the InsurancePlan resource in a future release instead of the List resource.
+        Guidance was added to  <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/StructureDefinition-usdf-CoveragePlan.html">Formulary Coverage Plan</a> indicating that we are considering basing the CoveragePlan profile off of the InsurancePlan resource in a future release instead of the List resource.
       </p>
     </li>
      <li>
       <a href="https://jira.hl7.org/browse/FHIR-32625">FHIR-32625</a>:
       <p>
-        Changes were implemented to improve the navigation by updating the <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/toc.html">Table of Contents</a>, the specification menu, and page design.
+        Changes were implemented to improve the navigation by updating the <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/toc.html">Table of Contents</a>, the specification menu, and page design.
       </p>
     </li>
      <li>
       <a href="https://jira.hl7.org/browse/FHIR-32627">FHIR-32627</a>:
       <p>
-        Guidance was added to  <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/search_parameters.html">Search Parameters</a> indicating that the search parameters DrugName, DrugPlan, and DrugTier will be changed to more compliant names like: lower-case 'drug-name', 'drug-plan', and 'drug-tier' in a future release. 
+        Guidance was added to  <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/search_parameters.html">Search Parameters</a> indicating that the search parameters DrugName, DrugPlan, and DrugTier will be changed to more compliant names like: lower-case 'drug-name', 'drug-plan', and 'drug-tier' in a future release. 
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-32723">FHIR-32723</a>:
       <p>
-        Several value sets found in <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/artifacts.html#terminology-code-systems">Terminology: Code Systems</a> were not properly displaying the value and description correctly for "code for qualifier for coinsurance rate", "codes for qualifier of copay amount" and "codes for medication drug tiers in health plans". This has been corrected. The definition column has been updated to no longer be blank and contain the proper information. 
+        Several value sets found in <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/artifacts.html#terminology-code-systems">Terminology: Code Systems</a> were not properly displaying the value and description correctly for "code for qualifier for coinsurance rate", "codes for qualifier of copay amount" and "codes for medication drug tiers in health plans". This has been corrected. The definition column has been updated to no longer be blank and contain the proper information. 
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-32958">FHIR-32958</a>:
       <p>
-        Added guidance for searching by <a href="specification.html#searching-by-drug-names">drug name</a> strings.
+        Added guidance for searching by <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/specification.html#searching-by-drug-names">drug name</a> strings.
       </p>
     </li>
     <li>
       <a href="https://jira.hl7.org/browse/FHIR-32958">FHIR-32958</a>:
       <p>
-        Added guidance on <a href="http://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/use_cases_and_overview.html#searching-by-drug-names">drug name searching</a> with description of RxNorm term types, formats, and drug names that might appear on a formulary.
+        Added guidance on <a href="https://hl7.org/fhir/us/davinci-drug-formulary/STU1.1/use_cases_and_overview.html#searching-by-drug-names">drug name searching</a> with description of RxNorm term types, formats, and drug names that might appear on a formulary.
       </p>
     </li>
   </ul>
 <p>&nbsp;</p>
+
+
+
+### Changes and Updates for Version 1.0.1
+
+* Technical correction to version 1.0.0
+
+### Changes and Updates for Version 1.0.0
+
+* Initial publication
+
+### Changes and Updates for Version 0.1.0
+
+* Initial draft implementation guide for testing
