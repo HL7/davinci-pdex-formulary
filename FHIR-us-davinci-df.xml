@@ -131,7 +131,7 @@
 <page key="background" name="Background"/>
 <page key="change_notes" name="Change Notes"/>
 <page key="confexpectations" name="Conformance Expectations"/>
-<page key="credits" name="Credits"/>
+<page deprecated="true" key="credits" name="Credits"/>
 <page key="downloads" name="Downloads"/>
 <page deprecated="true" key="examples" name="Examples"/>
 <page key="index" name="Home"/>
@@ -139,6 +139,7 @@
 <page deprecated="true" key="profiles" name="Profiles"/>
 <page key="project" name="Project and Participants"/>
 <page key="queries" name="Queries"/>
+<page key="reading" name="Reading this IG"/>
 <page key="search_parameters" name="Search Parameters"/>
 <page key="specification" name="Specification"/>
 <page key="toc" name="Table of Contents"/>

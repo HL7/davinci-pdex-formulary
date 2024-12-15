@@ -73,8 +73,9 @@ jurisdiction: urn:iso:std:iso:3166#US
 menu:
   IG Home: index.html
   Background:
-    Project and Participants: project.html
+    Reading this IG: reading.html
     Use Cases: background.html
+    Project and Participants: project.html
   Specification:
     Conformance Expectations: confexpectations.html
     Formal Specification: specification.html
@@ -87,21 +88,27 @@ menu:
     Terminology         : artifacts.html#5
     Capability Statement: CapabilityStatement-usdf-server.html
     Examples            : artifacts.html#7
-  Downloads: downloads.html
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
     HRex 1.1.0: new-tab {{site.data.fhir.ver.hrex}}
     US Core 3.1.1: new-tab http://hl7.org/fhir/us/core/STU3.1.1/index.html
     US Core 6.1.0: new-tab https://hl7.org/fhir/us/core/STU6.1/index.html
     US Core 7.0.0: new-tab https://hl7.org/fhir/us/core/STU7/index.html
+  Support:
+    Discussion Forum: https://chat.fhir.org/#narrow/channel/197730-Da-Vinci-PDex-Drug-Formulary/
+    Project Page: https://confluence.hl7.org/display/DVP/PDex+Formulary
+    Implementer Support: https://confluence.hl7.org/display/DVP/PDex+Formulary
+    Specification Dashboard: https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=11904
+    Propose a Change: https://jira.hl7.org/secure/CreateIssueDetails!init.jspa?pid=10405&amp;issuetype=10600&amp;customfield_11302=FHIR-us-davinci-drug-formulary
+    Downloads: downloads.html
   Change Log: change_notes.html
 
 
 pages:
   index.md:
     title: Home
-  credits.md: 
-    title: Credits
+  reading.md:
+    title: Reading this IG
   confexpectations.md:
     title: Conformance Expectations
   project.md:
