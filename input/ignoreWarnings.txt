@@ -13,7 +13,7 @@ WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any 
 
 # The project page has such a section, but this warning appears anyway
 
-WARNING: DA VINCI: The Project page (project.html) should include a section called ^The Da Vinci [Something] project^.
+WARNING: DA VINCI: The Project page (project.html) should include a section called ^The Da Vinci [Something] project^
 
 # Code system fragment in THO missing valid code of 'drug'
 
