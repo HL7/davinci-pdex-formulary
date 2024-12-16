@@ -1,9 +1,16 @@
 ### Changes and Updates for Version 2.1.0
 
+The following high level changes addressed in this release:
+
+* Updated dependencies to reference to multiple versions of US Core per latest Da Vinci recommendations (7.0.0, 6.1.0, and 3.1.1)
+* Updated dependencies to reference Da Vinci HRex version 1.1.0
+* Updated IG organization and structure to match the latest Da Vinci recommendations
+
+Specific JIRA tickets applied in this update are listed below:
+
 * TBD
 
 ### Changes and Updates for Version 2.0.1
-The current official published version of Da Vinci Payer Data Exchange (PDex) US Drug Formulary for FHIR R4 (STU Technical Correction of STU 2)
   <p>
     <b>The following issues are addressed in this release:</b>
   </p>
