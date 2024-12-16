@@ -8,7 +8,7 @@ The following high level changes addressed in this release:
 
 Specific JIRA tickets applied in this update are listed below:
 
-* TBD
+* TBD (will populate after STU Update review period since we expect additional JIRA tickets through that process)
 
 ### Changes and Updates for Version 2.0.1
   <p>
