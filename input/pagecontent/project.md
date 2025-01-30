@@ -18,13 +18,11 @@ Additional information can be found on the [PDex Formulary page](https://conflue
 Authors:
 
 * Saul A. Kravitz: <a href="mailto:saul@mitre.org">saul@mitre.org</a>
-* May Terry: <a href="mailto:mayt@mitre.org">mayt@mitre.org
-* Dave Hill: <a href="mailto:dwhill@mitre.org">dwhill@mitre.org
-* Corey Spears: <a href="mailto:cspears@mitre.org">cspears@mitre.org
-* Bob Dieterle: <a href="mailto:rdieterle@enablecare.us">rdieterle@enablecare.us
-* Kate Dech: <a href="mailto:KDech@primetherapeutics.com">KDech@primetherapeutics.com
-* Eric Ellsworth: <a href="mailto:eellsworth@checkbook.org">eellsworth@checkbook.org
-* Rick Geimer: < href="mailto:rick.geimer@lantanagroup.com>rick.geimer@lantanagroup.com
-
-
+* May Terry: <a href="mailto:mayt@mitre.org">mayt@mitre.org</a>
+* Dave Hill: <a href="mailto:dwhill@mitre.org">dwhill@mitre.org</a>
+* Corey Spears: <a href="mailto:cspears@mitre.org">cspears@mitre.org</a>
+* Bob Dieterle: <a href="mailto:rdieterle@enablecare.us">rdieterle@enablecare.us</a>
+* Kate Dech: <a href="mailto:KDech@primetherapeutics.com">KDech@primetherapeutics.com</a>
+* Eric Ellsworth: <a href="mailto:eellsworth@checkbook.org">eellsworth@checkbook.org</a>
+* Rick Geimer: <href="mailto:rick.geimer@lantanagroup.com>rick.geimer@lantanagroup.com</a>
 
