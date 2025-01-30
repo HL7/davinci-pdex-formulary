@@ -148,7 +148,7 @@ This IG Provides the following ways to express various levels of coverage (cover
   
 #### Linking Coverage to Plans
 
-Version 2.1.0 of this IG added the [Insurance Plan Coverage](StructureDefinition-usdf-InsurancePlanCoverage.html) profile for linking a patient's coverage to specific drug plans in a [Payer Insurance Plan](StructureDefinition-usdf-PayerInsurancePlan.html).
+Version 2.1.0 of this IG added the [Insurance Plan Coverage](StructureDefinition-insurance-plan-coverage.html) profile for linking a patient's coverage to specific drug plans in a [Payer Insurance Plan](StructureDefinition-usdf-PayerInsurancePlan.html).
 
 First, the Payer Insurance Plan profile added a new constraint under Coverage making InsurancePlan.plan:drug-plan.identifier must-support, providing an identifier to link to inside the InsurancePlan resource which may include multiple actual plans (later versions of FHIR have a new resource called InsuranceProduct, which addresses this confusions (a given product may have multiple plans).
 

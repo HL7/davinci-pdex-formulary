@@ -62,7 +62,7 @@ Description: "Type of plan contact"
 * ^experimental = false
 
 ValueSet: NonPackSemanticDrugVS
-Title: "Semantic Drug Codes"
+Title: "Non-Pack Semantic Drug Codes"
 Description: "Semantic Drug codes with Term Types (TTY) of Semantic Clinical Drug (SCD)"
 * codes from system $RxNorm where TTY = #SBD
 * codes from system $RxNorm where TTY = #SCD

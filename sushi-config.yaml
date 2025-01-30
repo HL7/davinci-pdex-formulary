@@ -40,7 +40,7 @@ dependencies:
     uri: http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex
     version: 1.1.0
     id: hrex
-  hl7.terminology: 6.1.0  
+#  hl7.terminology: 6.1.0  
   hl7.fhir.us.davinci-pdex-plan-net: current
   hl7.fhir.extensions.r5: 4.0.1
 parameters:

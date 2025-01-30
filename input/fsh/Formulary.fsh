@@ -220,7 +220,6 @@ Id:             usdf-InsurancePlanLocation
 Title:          "Insurance Plan Location"
 Description:    "A Location describing a geographic region or are where the insurance plan coverage is available."
 
-* meta.lastUpdated 1..1
 * obeys Location-address-or-geolocation
 * extension contains
     $GeoJSONExtension named region 0..1 MS
@@ -316,7 +315,7 @@ Severity: #error
 
 Profile:        InsurancePlanCoverage
 Parent:         USCoreCoverageProfile
-Id:             usdf-InsurancePlanCoverage
+Id:             insurance-plan-coverage
 Title:          "Insurance Plan Coverage"
 Description:    "Coverage for an insurance plan"
 
