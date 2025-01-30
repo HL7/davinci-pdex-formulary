@@ -15,6 +15,10 @@ WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any 
 
 WARNING: This IG is version 4.0.1, while the IG 'hl7.terminology' is from version 5.0.0
 
+# Warning about a drug missing in a fragment (the code is part of the code system)
+
+Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+
 # The project page has such a section, but this warning appears anyway
 
 WARNING: DA VINCI: The Project page (project.html) should include a section called ^The Da Vinci [Something] project^

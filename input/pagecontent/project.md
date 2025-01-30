@@ -14,39 +14,17 @@ The project is sponsored by the [HL7 Pharmacy Work Group](https://confluence.hl7
 Additional information can be found on the [PDex Formulary page](https://confluence.hl7.org/display/DVP/PDex+Formulary) on the HL7 Confluence site.
 
 ### Credits
+
 Authors:
 
-<tr>
-  <td>Saul A. Kravitz</td>
-  <td><a href="mailto:saul@mitre.org">saul@mitre.org</a></td>
-</tr>
-<tr>
-  <td>May Terry</td>
-  <td><a href="mailto:mayt@mitre.org">mayt@mitre.org</a></td>
-</tr>
-<tr>
-  <td>Dave Hill</td>
-  <td><a href="mailto:dwhill@mitre.org">dwhill@mitre.org</a></td>
-</tr>
-<tr>
-  <td>Corey Spears</td>
-  <td><a href="mailto:cspears@mitre.org">cspears@mitre.org</a></td>
-</tr>
-<tr>
-  <td>Bob Dieterle</td>
-  <td><a href="mailto:rdieterle@enablecare.us">rdieterle@enablecare.us</a></td>
-</tr>
-<tr>
-  <td>Kate Dech</td>
-  <td><a href="mailto:KDech@primetherapeutics.com">KDech@primetherapeutics.com</a></td>
-</tr>
-<tr>
-  <td>Eric Ellsworth</td>
-  <td><a href="mailto:eellsworth@checkbook.org">eellsworth@checkbook.org</a></td>
-</tr>
-<tr>
-  <td>Rick Geimer</td>
-  <td>< href="mailto:rick.geimer@lantanagroup.com>rick.geimer@lantanagroup.com</a></td>
-</tr>
+* Saul A. Kravitz: <a href="mailto:saul@mitre.org">saul@mitre.org</a>
+* May Terry: <a href="mailto:mayt@mitre.org">mayt@mitre.org
+* Dave Hill: <a href="mailto:dwhill@mitre.org">dwhill@mitre.org
+* Corey Spears: <a href="mailto:cspears@mitre.org">cspears@mitre.org
+* Bob Dieterle: <a href="mailto:rdieterle@enablecare.us">rdieterle@enablecare.us
+* Kate Dech: <a href="mailto:KDech@primetherapeutics.com">KDech@primetherapeutics.com
+* Eric Ellsworth: <a href="mailto:eellsworth@checkbook.org">eellsworth@checkbook.org
+* Rick Geimer: < href="mailto:rick.geimer@lantanagroup.com>rick.geimer@lantanagroup.com
+
 
 
