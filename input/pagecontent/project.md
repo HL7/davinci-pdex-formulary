@@ -3,7 +3,7 @@
 ### Da Vinci
 {% include davinci.md %}
 
-### The Da Vinci PDex Formulary project:
+### The Da Vinci PDex Formulary project
 
 * Enables payers to share drug estimated cost and information (drug formulary) for patients/consumers applications
 * Improves clarity of patient cost under current or potential health plan. 
