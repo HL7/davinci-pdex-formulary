@@ -107,8 +107,8 @@ CodeSystem: PlanContactTypeCS
 Id:             usdf-PlanContactTypeCS-TEMPORARY-TRIAL-USE
 Title: "Codes for type of plan contact"
 Description: "Type of plan contact"
-* #MARKETING "Plan Marketing Information"
-* #SUMMARY "Plan Summary Information"
-* #FORMULARY "Plan Formulary Information"
+* #MARKETING "Marketting" "Plan Marketing Information"
+* #SUMMARY "Summary" "Plan Summary Information"
+* #FORMULARY "Formulary" "Plan Formulary Information"
 * ^caseSensitive = true
 * ^experimental = false

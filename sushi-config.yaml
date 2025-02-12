@@ -14,8 +14,8 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
 fhirVersion: 4.0.1
-copyrightYear: 2022+
-releaseLabel: STU 3 (ci-build)
+copyrightYear: 2025+
+releaseLabel: STU 2
 
 publisher:
   name: HL7 International / Pharmacy
@@ -53,7 +53,7 @@ parameters:
   apply-publisher: false
   apply-version: false
   apply-contact: false
-  
+  auto-oid-root: '2.16.840.1.113883.4.642.40.5'
   jira-code: davinci-df
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 jurisdiction: urn:iso:std:iso:3166#US
@@ -81,13 +81,7 @@ menu:
     Formal Specification: specification.html
     Anticipated Client Queries: queries.html
     Privacy, Safety, and Security: security.html
-  FHIR Artifacts:
-    Profiles            : artifacts.html#3
-    Extensions          : artifacts.html#4
-    Search Parameters   : search_parameters.html
-    Terminology         : artifacts.html#5
-    Capability Statement: CapabilityStatement-usdf-server.html
-    Examples            : artifacts.html#7
+  FHIR Artifacts: artifacts.html
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
     HRex 1.1.0: new-tab {{site.data.fhir.ver.hrex}}

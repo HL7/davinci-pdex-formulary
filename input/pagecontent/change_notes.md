@@ -8,17 +8,17 @@ The following high level changes addressed in this release:
 
 Specific JIRA tickets applied in this update are listed below:
 
-* [FHIR-45633](https://jira.hl7.org/browse/45633)	DaVinci vs. Da Vinci for IG name/title/narrative	
-* [FHIR-45443](https://jira.hl7.org/browse/45443)	Incorrect _include search format in examples	
-* [FHIR-45280](https://jira.hl7.org/browse/45280)	Change Cardinality of PayerInsurancePlan InsurancePlan.plan:drug-plan.specificCost.benefit.cost.value	
-* [FHIR-44796](https://jira.hl7.org/browse/44796)	Clients & Servers need a way to know which Payer Insurance Plan InsurancePlan.plan entries (plans) a member has access to	
-* [FHIR-44720](https://jira.hl7.org/browse/44720)	Formulary Drug Profile - Add an invariant for slices on MedicationKnowledge.code.coding 	
-* [FHIR-41608](https://jira.hl7.org/browse/41608)	Add guidance for support of Bulk data changes	
-* [FHIR-40542](https://jira.hl7.org/browse/40542)	Add "preferred" and "non-preferred" to Drug Tier Value Set	
-* [FHIR-37717](https://jira.hl7.org/browse/37717)	Add guidance for granular pharmacy benefits	
-* [FHIR-37623](https://jira.hl7.org/browse/37623)	String and Token Search Parameters for FormularyDrug (DrugName, DrugTier, and DrugPlan) incorrectly include the comparator "eq"	
-* [FHIR-37587](https://jira.hl7.org/browse/37587)	References Plan Net InsurancePlan <> Formulary Payer Insurance Plan	
-* [FHIR-36330](https://jira.hl7.org/browse/36330)	Provide more guidance for authenticated access 	
+* [FHIR-45633](https://jira.hl7.org/browse/FHIR-45633)	DaVinci vs. Da Vinci for IG name/title/narrative	
+* [FHIR-45443](https://jira.hl7.org/browse/FHIR-45443)	Incorrect _include search format in examples	
+* [FHIR-45280](https://jira.hl7.org/browse/FHIR-45280)	Change Cardinality of PayerInsurancePlan InsurancePlan.plan:drug-plan.specificCost.benefit.cost.value	
+* [FHIR-44796](https://jira.hl7.org/browse/FHIR-44796)	Clients & Servers need a way to know which Payer Insurance Plan InsurancePlan.plan entries (plans) a member has access to	
+* [FHIR-44720](https://jira.hl7.org/browse/FHIR-44720)	Formulary Drug Profile - Add an invariant for slices on MedicationKnowledge.code.coding 	
+* [FHIR-41608](https://jira.hl7.org/browse/FHIR-41608)	Add guidance for support of Bulk data changes	
+* [FHIR-40542](https://jira.hl7.org/browse/FHIR-40542)	Add "preferred" and "non-preferred" to Drug Tier Value Set	
+* [FHIR-37717](https://jira.hl7.org/browse/FHIR-37717)	Add guidance for granular pharmacy benefits	
+* [FHIR-37623](https://jira.hl7.org/browse/FHIR-37623)	String and Token Search Parameters for FormularyDrug (DrugName, DrugTier, and DrugPlan) incorrectly include the comparator "eq"	
+* [FHIR-37587](https://jira.hl7.org/browse/FHIR-37587)	References Plan Net InsurancePlan <> Formulary Payer Insurance Plan	
+* [FHIR-36330](https://jira.hl7.org/browse/FHIR-36330)	Provide more guidance for authenticated access 	
 
 
 ### Changes and Updates for Version 2.0.1

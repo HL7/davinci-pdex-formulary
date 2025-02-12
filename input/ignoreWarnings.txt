@@ -1,9 +1,5 @@
 == Suppressed Messages ==
 
-# Approved US Core Variance - https://jira.hl7.org/browse/FHIR-34164
-
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-formulary/StructureDefinition/usdf-InsurancePlanLocation').baseDefinition: US FHIR Usage rules require that all profiles on Location derive from the core US profile
-
 # The following historical IG versions did not include any JIRA trackers in their change logs, if they had a change log at all.
 
 WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any Jira tracker items links for the section with title Changes and Updates for Version 1.2.0
@@ -11,47 +7,97 @@ WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any 
 WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any Jira tracker items links for the section with title Changes and Updates for Version 1.0.0
 WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any Jira tracker items links for the section with title Changes and Updates for Version 0.1.0
 
-# Terminology 5.0.0 is inherited from US Core through the latest extensions pack
+# Will not move code systems to THO for this STU update, since that would break backwards comnpatibility when the URLs change. Will move for next balloted release
 
-WARNING: This IG is version 4.0.1, while the IG 'hl7.terminology' is from version 5.0.0
+INFORMATION: CodeSystem/usdf-BenefitCostTypeCS-TEMPORARY-TRIAL-USE: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# Warning about a drug missing in a fragment (the code is part of the code system)
+INFORMATION: CodeSystem/usdf-CostShareOptionCS-TEMPORARY-TRIAL-USE: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+INFORMATION: CodeSystem/usdf-DrugTierCS-TEMPORARY-TRIAL-USE: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# The project page has such a section, but this warning appears anyway
+INFORMATION: CodeSystem/usdf-InsuranceItemTypeCS: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-WARNING: DA VINCI: The Project page (project.html) should include a section called ^The Da Vinci [Something] project^
+INFORMATION: CodeSystem/usdf-PharmacyBenefitTypeCS-TEMPORARY-TRIAL-USE: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# Code system fragment in THO missing valid code of 'drug'
+INFORMATION: CodeSystem/usdf-PlanContactTypeCS-TEMPORARY-TRIAL-USE: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-WARNING: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.coverage[0].benefit[0].type.coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+# Acknowledge using deprecated extension. Keeping now for backwards compatibility. Will update with next balloted release.
 
-WARNING: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.plan[0].type.coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+INFORMATION: StructureDefinition/insurance-plan-coverage: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
-WARNING: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.coverage[0].benefit[0].type.coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+# Code drug is actually present in the code system, but not in the current fragment in THO
 
-WARNING: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.plan[0].type.coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: StructureDefinition/usdf-Formulary: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: StructureDefinition/usdf-Formulary: StructureDefinition.differential.element[8].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[93].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[140].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[24].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
-WARNING: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.coverage[0].benefit[0].type.coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.coverage[0].benefit[0].type.coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.plan[0].type.coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
-WARNING: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.plan[0].type.coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.coverage[0].benefit[0].type.coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.plan[0].type.coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
-WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.coverage[0].benefit[0].type.coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.coverage[0].benefit[0].type.coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.plan[0].type.coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
-WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].type.coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.coverage[0].benefit[0].type.coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].type.coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
-WARNING: StructureDefinition/usdf-Formulary: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
-WARNING: StructureDefinition/usdf-Formulary: StructureDefinition.differential.element[8].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+# Acknowledge we are using code systems that are draft in THO
 
-WARNING: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+INFORMATION: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.contact[0].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.coverage[0].benefit[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
+INFORMATION: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.plan[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
 
-WARNING: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[24].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+INFORMATION: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.contact[0].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.coverage[0].benefit[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
+INFORMATION: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.plan[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
 
-WARNING: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[140].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+INFORMATION: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.contact[0].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.coverage[0].benefit[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
+INFORMATION: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.plan[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
 
-WARNING: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[93].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the system 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+INFORMATION: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.contact[0].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
+INFORMATION: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.coverage[0].benefit[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
+INFORMATION: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
+
+INFORMATION: StructureDefinition/usdf-Formulary: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
+INFORMATION: StructureDefinition/usdf-Formulary: StructureDefinition.differential.element[8].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
+
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[93].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[140].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[24].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
+
+# Will leave the discriminator type as pattern for this STU update, but consider moving to value for the next balloted update
+
+INFORMATION: StructureDefinition/insurance-plan-coverage: StructureDefinition.snapshot.element[10].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/insurance-plan-coverage: StructureDefinition.snapshot.element[30].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[15].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[21].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[25].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[35].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[52].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[77].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[101].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[161].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition: StructureDefinition.differential.element[5].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition: StructureDefinition.snapshot.element[23].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+
+# Value sets that are too large to expand
+
+INFORMATION: ValueSet.where(id = 'NonPackSemanticDrugVS'): The value set expansion is too large, and only a subset has been displayed
+
+INFORMATION: ValueSet.where(id = 'SemanticDrugFormGroupVS'): The value set expansion is too large, and only a subset has been displayed
+
+INFORMATION: ValueSet.where(id = 'SemanticDrugVS'): The value set expansion is too large, and only a subset has been displayed
+
 
 # Tooling issue with GraphDefinition conversion
 
