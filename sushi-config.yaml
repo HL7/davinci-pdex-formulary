@@ -15,7 +15,7 @@ extension:
     valueCode: trial-use
 fhirVersion: 4.0.1
 copyrightYear: 2025+
-releaseLabel: STU 2
+releaseLabel: STU2.1
 
 publisher:
   name: HL7 International / Pharmacy
