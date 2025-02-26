@@ -1,6 +1,6 @@
 == Suppressed Messages ==
 
-# This is a Da Vinci requirement, but the following historical IG versions did not include any JIRA trackers in their change logs, if they had a change log at all.
+# 1 - This is a Da Vinci requirement, but the following historical IG versions did not include any JIRA trackers in their change logs, if they had a change log at all.
 
 WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any Jira tracker items links for the section with title Changes and Updates for Version 1.2.0
 WARNING: DA VINCI: The Change Log page (change_notes.html) does not include any Jira tracker items links for the section with title Changes and Updates for Version 1.0.1
@@ -21,11 +21,12 @@ INFORMATION: CodeSystem/usdf-PharmacyBenefitTypeCS-TEMPORARY-TRIAL-USE: CodeSyst
 
 INFORMATION: CodeSystem/usdf-PlanContactTypeCS-TEMPORARY-TRIAL-USE: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# Acknowledge using deprecated extension. Keeping now for backwards compatibility. Will update with next balloted release.
+# 2 - Acknowledge using deprecated extension. Keeping now for backwards compatibility. Will update with next balloted release.
 
 INFORMATION: StructureDefinition/insurance-plan-coverage: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
-# Code drug is actually present in the code system, but not in the current fragment in THO
+
+# 3 - Code drug is actually present in the code system, but not in the current fragment in THO
 
 WARNING: StructureDefinition/usdf-Formulary: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 WARNING: StructureDefinition/usdf-Formulary: StructureDefinition.differential.element[8].pattern.ofType(CodeableConcept).coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
@@ -47,7 +48,7 @@ WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.coverage[0].benef
 WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].type.coding[0].code: Unknown Code 'drug' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/insurance-plan-type' version '4.0.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
 
-# Acknowledge we are using code systems that are draft in THO
+# 4 - Acknowledge we are using code systems that are draft in THO
 
 INFORMATION: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.contact[0].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
 INFORMATION: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.coverage[0].benefit[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
@@ -73,7 +74,7 @@ INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.sn
 INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[24].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
 INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
 
-# Will leave the discriminator type as pattern for this STU update, but consider moving to value for the next balloted update
+# 5 - Will leave the discriminator type as pattern for this STU update, but consider moving to value for the next balloted update
 
 INFORMATION: StructureDefinition/insurance-plan-coverage: StructureDefinition.snapshot.element[10].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/insurance-plan-coverage: StructureDefinition.snapshot.element[30].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
@@ -90,7 +91,7 @@ INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.sn
 INFORMATION: StructureDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition: StructureDefinition.differential.element[5].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition: StructureDefinition.snapshot.element[23].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
-# Value sets that are too large to expand
+# 6 - Value sets that are too large to expand
 
 INFORMATION: ValueSet.where(id = 'NonPackSemanticDrugVS'): The value set expansion is too large, and only a subset has been displayed
 
@@ -99,8 +100,11 @@ INFORMATION: ValueSet.where(id = 'SemanticDrugFormGroupVS'): The value set expan
 INFORMATION: ValueSet.where(id = 'SemanticDrugVS'): The value set expansion is too large, and only a subset has been displayed
 
 
-# Tooling issue with GraphDefinition conversion
+# 7 - Tooling issue with GraphDefinition conversion
 
 WARNING: GraphDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/FormularyGraphDefinition'): The resource needed to modified during loading to apply common headers copyright=null but this isn't possible for the type GraphDefinition because version conversion isn't working completely
 
 WARNING: GraphDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-formulary/GraphDefinition/PayerInsurancePlanGraphDefinition'): The resource needed to modified during loading to apply common headers copyright=null but this isn't possible for the type GraphDefinition because version conversion isn't working completely
+
+# 8 - NEW Warning about FMM Level Being missed - This warning showed up after all publication approvals, but before the IG was able to be published.
+WARNING: ImplementationGuide/hl7.fhir.us.davinci-drug-formulary: ImplementationGuide: HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
