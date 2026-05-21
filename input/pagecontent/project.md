@@ -24,5 +24,5 @@ Authors:
 * Bob Dieterle: <a href="mailto:rdieterle@enablecare.us">rdieterle@enablecare.us</a>
 * Kate Dech: <a href="mailto:KDech@primetherapeutics.com">KDech@primetherapeutics.com</a>
 * Eric Ellsworth: <a href="mailto:eellsworth@checkbook.org">eellsworth@checkbook.org</a>
-* Rick Geimer: <href="mailto:rick.geimer@lantanagroup.com>rick.geimer@lantanagroup.com</a>
+* Rick Geimer: <a href="mailto:rick.geimer@lantanagroup.com">rick.geimer@lantanagroup.com</a>
 
