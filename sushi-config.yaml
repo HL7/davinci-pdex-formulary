@@ -7,15 +7,15 @@ canonical: http://hl7.org/fhir/us/davinci-drug-formulary
 name: Formulary
 title: DaVinci Payer Data Exchange (PDex) US Drug Formulary
 status: active
-version: 2.1.0
+version: 3.0.0-ballot
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
     valueCode: phx  # <<< The value must be the code for the workgroup
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
 fhirVersion: 4.0.1
-copyrightYear: 2025+
-releaseLabel: STU2.1
+copyrightYear: 2026+
+releaseLabel: STU3
 
 publisher:
   name: HL7 International / Pharmacy
