@@ -1,10 +1,10 @@
 {
     "package-id": "hl7.fhir.us.davinci-drug-formulary",
-    "version": "2.1.0",
-    "path": "http://hl7.org/fhir/us/davinci-drug-formulary/STU2.1",
-    "mode" : "milestone",
+    "version": "3.0.0-ballot",
+    "path": "http://hl7.org/fhir/us/davinci-drug-formulary/3.0.0-ballot",
+    "mode" : "working",
     "status" : "trial-use",
-    "sequence" : "STU2",
-    "desc" : "STU update to move to latest US Core versions",
+    "sequence" : "STU 3",
+    "desc" : "First ballot of version 3.0.0",
     "first" : false
 }
