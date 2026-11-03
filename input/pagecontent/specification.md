@@ -13,7 +13,11 @@ When accessing data through an authenticated API, the response for queries on In
 
 Clients can determine the Formulary InsurancePlan(s) that the member is subscribed by first retrieving the Payer Insurance Plan(s) and identifying the Formulary(s) through the [Payer Insurance Plan InsurancePlan.coverage](StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.coverage:drug-coverage).
 
+This can be done by searching for Coverage resources where Coverage.type=DRUGPOL for the authenticated member. Next, extract Payer InsurancePlan from the [profile-InsurancePlan](https://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-profile-InsurancePlan.html) extension on returned Coverage(s).
+
+
 The following table indicates how the Formulary API should respond to requests when a Formulary Insurance plan (by resource reference) is specified and when it is not.
+
 <table border="1">
   <thead>
     <th>InsurancePlan specified – GET by resource ID</th>
