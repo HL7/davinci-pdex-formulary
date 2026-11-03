@@ -9,7 +9,7 @@ Usage: #example
 * identifier.value = "A3004t"
 * status = #active
 
-* type = $PlanNetInsuranceProductTypeCS#mediadv
+* type = http://terminology.hl7.org/CodeSystem/insurance-product-type#mediadv
 
 * name = "Sample Medicare Advantage Plan A3004t"
 * period.start = "2021-01-01"

@@ -11,7 +11,7 @@ Usage: #example
 * identifier.value = "A1002"
 * status = #active
 
-* type = $PlanNetInsuranceProductTypeCS#mediadv
+* type = http://terminology.hl7.org/CodeSystem/insurance-product-type#mediadv
 
 * name = "Sample Medicare Advantage Plan A1002"
 
