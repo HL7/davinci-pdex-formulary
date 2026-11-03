@@ -133,7 +133,7 @@ Description: "A code that describes the coverage status of a drug in a health pl
 Extension: AvailabilityStatus
 Id: usdf-AvailabilityStatus-extension
 Title: "Availability Status"
-Description: "A boolean indicating whether the formulary item is currently available under the formulary. Drugs may appear on a formulary, but not considered \"active\" for the current year. Drugs may also be removed during the course of a plan year."
+Description: "A code indicating whether the formulary item is currently available under the formulary. Drugs may appear on a formulary, but not considered \"active\" for the current year. Drugs may also be removed during the course of a plan year. "
 * ^context[+].type = #element
 * ^context[=].expression = "Basic"
 * value[x] 1..1 MS
