@@ -108,3 +108,37 @@ WARNING: GraphDefinition.where(url = 'http://hl7.org/fhir/us/davinci-drug-formul
 
 # 8 - NEW Warning about FMM Level Being missed - This warning showed up after all publication approvals, but before the IG was able to be published.
 WARNING: ImplementationGuide/hl7.fhir.us.davinci-drug-formulary: ImplementationGuide: HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+
+#9 This system is actually required by core FHIR R4, so should be defined in THO for all IGs, not submitted just for this one. See https://hl7.org/fhir/R4/datatypes.html#MoneyQuantity
+
+== fsh-generated\resources\InsurancePlan-PayerInsurancePlanA1002.json ==
+WARNING: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.plan[0].specificCost[0].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.plan[0].specificCost[0].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.plan[0].specificCost[1].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.plan[0].specificCost[2].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.plan[0].specificCost[3].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.plan[0].specificCost[0].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.plan[0].specificCost[1].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.plan[0].specificCost[2].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.plan[0].specificCost[3].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[0].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[1].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[2].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[3].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[4].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[5].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[6].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[7].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[8].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[9].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[10].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[11].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[12].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[13].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[14].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[15].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[16].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[17].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[18].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[19].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
+
