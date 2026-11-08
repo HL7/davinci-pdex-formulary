@@ -95,7 +95,7 @@ Usage: #example
 * identifier.use = #usual
 * identifier.type = $v2-0203#MR "Medical Record Number"
 * identifier.type.text = "Medical Record Number"
-* identifier.system = "http://hospital.smarthealthit.org"
+* identifier.system = "http://example.org/hospital-id"
 * identifier.value = "1032702"
 * active = true
 * name[0].use = #old
