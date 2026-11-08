@@ -41,36 +41,77 @@ When accessing data through an unauthenticated API, the conformant payer formula
 
 
 ### Bulk Data
-Bulk data guidance in this version of the IG is draft only. It has not appeared in ballot and has not been fully tested.
 
+The [HL7 FHIR Bulk Data Access Implementation Guide (4.0.0-ballot)](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/) defines mechanisms for exchanging large datasets of FHIR resources. Drug formularies may contain thousands of drugs across multiple insurance plans, with associated coverage, restrictions, and cost-sharing information. Bulk Data provides an efficient alternative to retrieving this information through individual FHIR RESTful queries.
 
-A server **MAY** support [Bulk Data IG](http://hl7.org/fhir/uv/bulkdata/index.html) for the retrieval of formulary data not related to an individual. The Bulk Data IG may be used because the data set for formularies could be large as a server may manage multiple formularies, each of which may contain thousands of drugs. If and how authorization is supported is not defined by this specification, however, the Bulk IG does provide guidance on SMART Backend Service Authorization. 
+Formulary servers **SHOULD** support one or both of the following Bulk Data mechanisms:
 
-If a Formulary server supports bulk data export:
-* **All InsurancePlan:** The server **SHOULD** support the export operation on the InsurancePlan resource `[base]/InsurancePlan/$export` to export all plan & formulary information.
-  * The server **SHOULD** support providing all `InsurancePlan`, `Basic`, `MedicationKnowledge`, and `Location` resource types containing formulary related data associated with all formulary related plans.
-  * The server **SHOULD** support the graph structure [Payer Insurance Plan Bulk Data Graph Definition](StructureDefinition-usdf-PayerInsurancePlanBulkDataGraphDefinition.html) in returned results.
-  * The server **MAY** support a graph parameter using (e.g. `[base]/InsurancePlan/$export?graph=usdf-PayerInsurancePlanBulkDataGraphDefinition`) to request returning results starting at the [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html).
-  * The server **MAY** support a graph parameter using (e.g. `[base]/InsurancePlan/$export?graph=usdf-FormularyBulkDataGraphDefinition`) to request returning results starting at the [Formulary](StructureDefinition-usdf-Formulary.html). This request would not return [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html) resources.
+- [Bulk Export](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/export.html): Enables a Data Consumer to request and retrieve formulary information from a Formulary server using an asynchronous export operation.
+- [Bulk Publish](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/publish.html): Enables a Data Provider to publish formulary information as downloadable files for retrieval by multiple Data Consumers without requiring each consumer to initiate a separate export.
 
+Implementations supporting either mechanism **SHALL** conform to the applicable requirements of the Bulk Data Access IG.
 
-* **Specific InsurancePlan:** The server **SHOULD** support the export operation on the InsurancePlan resource `[base]/InsurancePlan/[id]/$export` to export plan specific plan & formulary information.
-  * The server **SHOULD** support providing all `InsurancePlan`, `Basic`, `MedicationKnowledge`, and `Location` resource types containing formulary related data associated with the specific plan.
-  * The server **SHOULD** support the graph structure [Payer Insurance Plan Bulk Data Graph Definition](StructureDefinition-usdf-PayerInsurancePlanBulkDataGraphDefinition.html) in returned results when the specific plan [id] is a [PayerInsurancePlan](StructureDefinition-usdf-PayerInsurancePlan.html) profiled resource.
-  * The server **SHOULD** support the graph structure [Formulary Bulk Data Graph Definition](StructureDefinition-usdf-FormularyBulkDataGraphDefinition.html) in returned results when the specific plan [id] is a [Formulary](StructureDefinition-usdf-Formulary.html) profiled resource.
-  <!-- The below may not be relevant as the id specifies the type (either PayerInsurancePlan or Formulary -->
-  <!-- The server **MAY** support a graph parameter using (e.g. `[base]/InsurancePlan/[id]/$export?graph=usdf-PayerInsurancePlanBulkDataGraphDefinition`). -->
-  <!-- The server **MAY** support a graph parameter using (e.g. `[base]/InsurancePlan/[id]/$export?graph=usdf-FormularyBulkDataGraphDefinition`). -->
+#### Formulary Bulk Data Resources
 
-  
-* The server **SHOULD** return only formulary related resources conformant to this guide.
-* The server **SHOULD** support the Bulk Data Kick-off Request.
-* The server **SHOULD** support the Bulk Data File Request.
-* The server SHOULD support the _since parameter where the response will include resources where the state has changed after the supplied time (e.g., if Resource.meta.lastUpdated is later than the supplied _since time). The server SHOULD return all resources modified prior to the supplied time containing formulary related data associated that are directly referenced from or contain direct references to all matching InsurancePlan.
-* The server **MAY** support the Bulk Data Status Request.
-* The server **MAY** support the Bulk Data Delete Request.
+A Formulary Bulk Data dataset **SHOULD** include all applicable resources conforming to the Formulary profiles defined in this IG, including the following FHIR resource types:
 
+| Resource Type | Description |
+|---------------|-------------|
+| `InsurancePlan` | Payer insurance plans and their associated formularies, represented using the Payer Insurance Plan and Formulary profiles. |
+| `Basic` | Formulary items representing drug coverage within a formulary, including associated coverage details and restrictions. |
+| `MedicationKnowledge` | Formulary drugs, including drug identification and descriptive information. |
+| `Location` | Geographic locations or coverage areas associated with insurance plans and formularies. |
 
+The dataset **SHOULD** include sufficient related resources to allow Data Consumers to resolve references and reconstruct the relationships between payer insurance plans, formularies, formulary items, drugs, and coverage areas.
+
+Resources included in a Bulk Data dataset **SHALL** conform to the applicable Formulary profiles and requirements defined in this IG.
+
+The following GraphDefinitions describe relationships between Formulary resources and **MAY** be used to determine the resources included in a Bulk Data dataset:
+
+- [Payer Insurance Plan Bulk Data Graph Definition](StructureDefinition-usdf-PayerInsurancePlanBulkDataGraphDefinition.html): Describes resources associated with a Payer Insurance Plan, including related formularies.
+- [Formulary Bulk Data Graph Definition](StructureDefinition-usdf-FormularyBulkDataGraphDefinition.html): Describes resources associated with a Formulary, without requiring inclusion of the associated Payer Insurance Plan.
+
+#### Bulk Export
+
+Formulary servers supporting Bulk Export **SHOULD** support the [System Level Export](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/export.html) operation:
+
+`POST [base]/$export`
+
+The system-level export enables Data Consumers to retrieve formulary information, including resources that are not associated with individual patients.
+
+For Bulk Export:
+
+- The server **SHALL** support exporting all four Formulary resource types listed above.
+- The server **SHOULD** support the `_type` parameter to allow Data Consumers to request specific resource types.
+- The server **SHOULD** support the `_since` parameter to allow Data Consumers to retrieve resources updated since a specified point in time, consistent with the Bulk Data Access IG.
+- The server **SHOULD** include resources of the requested types that are necessary to represent the formulary information within the scope of the export.
+- The server **SHALL** implement the applicable Bulk Data Export kick-off, status, and file retrieval interactions as defined in the Bulk Data Access IG.
+
+Exported resources are delivered in newline-delimited JSON (NDJSON) files, with the file locations identified in the Bulk Data Export completion manifest.
+
+#### Bulk Publish
+
+Formulary servers supporting Bulk Publish **SHOULD** implement the [Bulk Publish](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/publish.html) mechanism defined in the Bulk Data Access IG.
+
+Bulk Publish allows a Data Provider to make formulary information available through a published manifest and associated downloadable resource files. Unlike Bulk Export, the Data Provider determines the contents of the published dataset, and multiple Data Consumers may retrieve the same published files.
+
+For Bulk Publish:
+
+- The Data Provider **SHALL** support publishing all four Formulary resource types listed above, as applicable to the formularies being published.
+- The Data Provider **SHALL** make a Bulk Publish manifest available through an HTTP GET endpoint terminating in `$bulk-publish`, as defined in the Bulk Data Access IG.
+- The manifest **SHALL** identify the downloadable files containing the published FHIR resources.
+- The published files **SHALL** conform to the applicable file format, access, and retrieval requirements of the Bulk Data Access IG.
+- The Data Provider **SHOULD** update the published dataset regularly to reflect changes to formulary information, including changes to covered drugs, coverage restrictions, and cost-sharing information.
+
+Bulk Publish also supports incremental updates, allowing Data Providers to publish changes to formulary information without requiring Data Consumers to download the entire dataset each time. Implementations **MAY** use this capability to distribute additions, modifications, and deletions to formulary resources.
+
+#### Bulk Data Security and Authorization
+
+Formulary information that does not contain protected health information (PHI) or personally identifiable information (PII) is generally intended to be publicly accessible. Bulk Data implementations **SHOULD** provide unauthenticated access to public formulary data, consistent with the privacy and security requirements of this IG.
+
+When Bulk Data access involves member-specific information, PHI, or PII, implementations **SHALL** follow the applicable authentication and authorization requirements of this IG and the Bulk Data Access IG.
+
+When authentication or authorization is required, implementations **SHALL** follow the applicable security requirements of the Bulk Data Access IG, including its guidance for [SMART Backend Services Authorization](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/authorization.html).
 
 ### Searching Formulary Drugs
 This guide provides a mechanism for rudimentary drug searching and filtering based on drug codes, names, and forms, by requiring server systems to support this data. This capability is not robust and client systems are encouraged to augment their drug searching capabilities using outside services or data sources to better meet the needs of their users.
