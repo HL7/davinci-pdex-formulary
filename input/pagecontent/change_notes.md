@@ -1,3 +1,14 @@
+### Changes and Updates for Version 3.0.0-ballot
+
+The following high level changes were addressed in this release:
+
+* Added support for Bulk Publish and updated details on Bulk Export for compatibility with Bulk Data 4.0.0-ballot (will move to the published version when available. 
+* Updated PDex Dependency to the 2.0.0-ballot version
+
+Specific JIRA tickets applied in this update are listed below:
+
+* TBD
+
 ### Changes and Updates for Version 2.1.0
 
 The following high level changes addressed in this release:

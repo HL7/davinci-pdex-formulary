@@ -1,5 +1,5 @@
 ### Downloads 
-* The full [Implementation Guide](full-ig.zip)
+* The full [Implementation Guide](../full-ig.zip)
 * Resource Definitions [(JSON)](../definitions.json.zip) [(XML)](../definitions.xml.zip) [(TTL)](../definitions.ttl.zip)
 * Profile Examples [(JSON)](../examples.json.zip) [(XML)](../examples.xml.zip) [(TTL)](../examples.ttl.zip)
 * [Validator Pack](../validator-hl7.fhir.us.davinci-drug-formulary.pack)

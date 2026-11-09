@@ -26,7 +26,7 @@ license: CC0-1.0
 dependencies:  
   hl7.fhir.us.davinci-pdex-plan-net: current
   hl7.fhir.extensions.r5: 4.0.1 
-  hl7.fhir.uv.extensions.r4: 5.3.0
+  hl7.fhir.uv.extensions.r4: 5.4.0
   hl7.fhir.us.davinci-hrex:
     uri: http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex
     version: 1.2.0
@@ -84,7 +84,7 @@ menu:
   FHIR Artifacts: artifacts.html
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
-    HRex 1.1.0: new-tab {{site.data.fhir.ver.hrex}}
+    HRex 1.2.0: new-tab {{site.data.fhir.ver.hrex}}
     US Core 3.1.1: new-tab http://hl7.org/fhir/us/core/STU3.1.1/index.html
     US Core 6.1.0: new-tab https://hl7.org/fhir/us/core/STU6.1/index.html
     US Core 7.0.0: new-tab https://hl7.org/fhir/us/core/STU7/index.html

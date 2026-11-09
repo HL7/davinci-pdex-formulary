@@ -3,6 +3,15 @@ This implementation guide defines a FHIR interface to a health insurer's drug fo
 
 A key architectural issue that is beyond the scope of this implementation guide is how a user finds the FHIR endpoint for a particular formulary. This implementation guide assumes that the FHIR endpoint is known to the user.
 
+<div class="note-to-balloters" markdown="1">
+
+**Note to Balloters**
+
+This ballot includes significant changes to the Bulk Data requirements. Balloters are specifically requested to review the new guidance on Bulk Publish and updated Bulk Export details.
+Also note that many of the code systems defined in this IG will move to THO prior to publication.
+Please submit comments through the HL7 ballot process.
+</div>
+
 ### Introduction
 <p>
   This Implementation Guide (IG) includes a number of profiles, extensions, search parameters, and value sets.
