@@ -24,11 +24,23 @@ publisher:
 description: DaVinci Payer Data Exchange (PDex) US Drug Formulary"
 license: CC0-1.0
 dependencies:  
-  hl7.fhir.us.core: 7.0.0
   hl7.fhir.us.davinci-pdex-plan-net: current
   hl7.fhir.extensions.r5: 4.0.1 
   hl7.fhir.uv.extensions.r4: 5.3.0
-#  hl7.fhir.uv.xver-r5.r4: 0.1.0
+  hl7.fhir.us.davinci-hrex:
+    uri: http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex
+    version: 1.2.0
+    id: hrex
+  hl7.fhir.uv.bulkdata:
+    uri: http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata
+    version: 4.0.0-ballot
+    id: bulk
+  hl7.fhir.us.core:
+    version: 7.0.0
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore7
+    reason: |
+      Needed for systems supporting USCDI v4
 parameters:
   show-inherited-invariants: false
   default-jurisdiction: true
