@@ -143,9 +143,15 @@ WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificC
 WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[19].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
 
 # Acknowledge dependencies on older IG versions
-WARNING: ImplementationGuide/hl7.fhir.us.davinci-drug-formulary: ImplementationGuide.dependsOn[1]: The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08, but the most recent appropriate version is 9.0.0. This reference is getting old and the more recent version should be considered
+
+WARNING: ImplementationGuide/hl7.fhir.us.davinci-drug-formulary: ImplementationGuide.dependsOn[5]: The ImplementationGuide uses package hl7.fhir.uv.bulkdata#4.0.0-ballot released on 2026-08-07, but the most recent appropriate version is 3.0.0. This reference is getting old and the more recent version should be considered
+WARNING: ImplementationGuide/hl7.fhir.us.davinci-drug-formulary: ImplementationGuide.dependsOn[6]: The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08, but the most recent appropriate version is 9.0.0. This reference is getting old and the more recent version should be considered
 WARNING: ImplementationGuide/hl7.fhir.us.davinci-drug-formulary: ImplementationGuide.dependsOn[4]: The ImplementationGuide uses package hl7.fhir.uv.extensions.r4#5.3.0 released on 2026-05-16, but the most recent appropriate version is 5.4.0. This reference is getting old and the more recent version should be considered
 
 # Acknowledge this value set has too many codes for the publisher to expand
 WARNING: ValueSet.where(id = 'SemanticDrugVS'): Unable to expand included value set 'http://hl7.org/fhir/us/davinci-drug-formulary/ValueSet/NonPackSemanticDrugVS': The value set 'http://hl7.org/fhir/us/davinci-drug-formulary/ValueSet/NonPackSemanticDrugVS|3.0.0-ballot' expansion has too many codes to produce (>1000) (and Error from https://tx.fhir.org/r4: Error: The value set 'http://hl7.org/fhir/us/davinci-drug-formulary/ValueSet/NonPackSemanticDrugVS' expansion has too many codes to produce (>10000))
+
+# These dependencies are inherited from Plan-Net so are already in the dependency list
+WARNING: DA VINCI: This IG does not include an explicit dependency on US Core 6.1.0.
+WARNING: DA VINCI: This IG does not include an explicit dependency on US Core 3.1.1.
 
