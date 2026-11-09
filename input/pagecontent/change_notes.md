@@ -55,7 +55,7 @@ Specific JIRA tickets applied in this update are listed below:
 ### Changes and Updates for Version 2.0.1
 **The following issues are addressed in this release:**
 
-* [FHIR-39401](https://jira.hl7.org/browse/FHIR-39401): Corrected [SearchParameter-Basic-Subject](SearchParameter-Basic-subject.html) by changing `code` from `code` to `subject`.
+* [FHIR-39401](https://jira.hl7.org/browse/FHIR-39401): Corrected SearchParameter-Basic-Subject by changing `code` from `code` to `subject`.
 * [FHIR-43049](https://jira.hl7.org/browse/FHIR-43049): Changed the `InsurancePlan.coverage[drug-coverage].benefit[drug-plan].type` in [Payer Insurance Plan](StructureDefinition-usdf-PayerInsurancePlan.html) from the deprecated code `Drug` to `drug`.
 * [FHIR-42930](https://jira.hl7.org/browse/FHIR-42930): Changed the binding of [Payer Insurance Plan](StructureDefinition-usdf-PayerInsurancePlan.html) `PayerInsurancePlan.plan[drug-plan].specificCost.benefit.type` [Drug Tier VS](ValueSet-DrugTierVS.html) from a required to extensible to match the [Formulary Item](StructureDefinition-usdf-FormularyItem.html) Drug Tier binding to allow the inclusion of drug tiers beyond those identified in the IG.
 * [FHIR-43055](https://jira.hl7.org/browse/FHIR-43055): Specify the contexts for [all IG defined extensions](artifacts.html#4).
