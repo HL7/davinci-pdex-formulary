@@ -166,56 +166,56 @@
 			<td><code class="highlighter-rouge">GET [base]/Basic?_id=[id]</code></td>
 		</tr>
 		<tr>
-			<td><a href="SearchParameter-Basic-lastupdated.html">_lastUpdated</a></td>
+			<td><a href="SearchParameter-FormularyItem-lastupdated.html">_lastUpdated</a></td>
 			<td><a href="{{site.data.fhir.path}}search.html#date">date</a></td>
 			<td><strong>SHALL</strong></td>
 			<td>Accesses the last updated date of a FormularyItem</td>
 			<td><code class="highlighter-rouge">GET [base]/Basic?_lastUpdated=[date]</code></td>
 		</tr>
 		<tr>
-			<td><a href="SearchParameter-Basic-code.html">code</a></td>
+			<td><a href="SearchParameter-FormularyItem-code.html">code</a></td>
 			<td><a href="{{site.data.fhir.path}}search.html#token">token</a></td>
 			<td><strong>SHALL</strong></td>
 			<td>Accesses the Code of a Basis resource to find a FormularyItem</td>
 			<td><code class="highlighter-rouge">GET [base]/Basic?code=formulary-item</code></td>
 		</tr>
 		<tr>
-			<td><a href="SearchParameter-Basic-subject.html">subject</a></td>
+			<td><a href="SearchParameter-FormularyItem-subject.html">subject</a></td>
 			<td><a href="{{site.data.fhir.path}}search.html#reference">reference</a></td>
 			<td><strong>SHALL</strong></td>
 			<td>Accesses the subject FormularyDrug (MedicationKnowledge) reference of a FormularyItem</td>
 			<td><code class="highlighter-rouge">GET [base]/Basic?subject=[reference]</code></td>
 		</tr>
 		<tr>
-			<td><a href="SearchParameter-Basic-status.html">status</a></td>
+			<td><a href="SearchParameter-FormularyItem-status.html">status</a></td>
 			<td><a href="{{site.data.fhir.path}}search.html#token">token</a></td>
 			<td><strong>SHALL</strong></td>
 			<td>Accesses the status of a FormularyItem</td>
 			<td><code class="highlighter-rouge">GET [base]/Basic?status=[code]</code></td>
 		</tr>
 		<tr>
-			<td><a href="SearchParameter-Basic-period.html">period</a></td>
+			<td><a href="SearchParameter-FormularyItem-period.html">period</a></td>
 			<td><a href="{{site.data.fhir.path}}search.html#date">date</a></td>
 			<td><strong>SHALL</strong></td>
 			<td>Accesses the active period of a FormularyItem</td>
 			<td><code class="highlighter-rouge">GET [base]/Basic?period=[date]</code></td>
 		</tr>
 		<tr>
-			<td><a href="SearchParameter-Basic-formulary.html">formulary</a></td>
+			<td><a href="SearchParameter-FormularyItem-formulary.html">formulary</a></td>
 			<td><a href="{{site.data.fhir.path}}search.html#reference">reference</a></td>
 			<td><strong>SHALL</strong></td>
 			<td>Accesses the formulary reference of a FormularyItem</td>
 			<td><code class="highlighter-rouge">GET [base]/Basic?formulary=[reference]</code></td>
 		</tr>
 		<tr>
-			<td><a href="SearchParameter-Basic-pharmacy-benefit-type.html">pharmacy-benefit-type</a></td>
+			<td><a href="SearchParameter-FormularyItem-pharmacy-benefit-type.html">pharmacy-benefit-type</a></td>
 			<td><a href="{{site.data.fhir.path}}search.html#token">token</a></td>
 			<td><strong>SHALL</strong></td>
 			<td>Accesses the Pharmacy Benefit Type of a FormularyItem</td>
 			<td><code class="highlighter-rouge">GET [base]/Basic?pharmacy-benefit-type=[system]|[code]</code></td>
 		</tr>
 		<tr>
-			<td><a href="SearchParameter-Basic-drug-tier.html">drug-tier</a></td>
+			<td><a href="SearchParameter-FormularyItem-drug-tier.html">drug-tier</a></td>
 			<td><a href="{{site.data.fhir.path}}search.html#token">token</a></td>
 			<td><strong>SHALL</strong></td>
 			<td>Accesses the Drug Tier of a FormularyItem</td>

@@ -183,7 +183,7 @@ Usage: #definition
 
 
 
-Instance: Basic-lastupdated
+Instance: FormularyItem-lastupdated
 InstanceOf: SearchParameter
 Usage: #definition
 
@@ -191,7 +191,7 @@ Usage: #definition
 * code = #_lastUpdated
 * name = "USDFBasicLastUpdated"
 * description = "Accesses the last updated date of a FormularyItem"
-* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-lastupdated"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-lastupdated"
 * base[0] = #Basic
 
 * type = #date
@@ -203,7 +203,7 @@ Usage: #definition
 
 
 
-Instance: Basic-code
+Instance: FormularyItem-code
 InstanceOf: SearchParameter
 Usage: #definition
 
@@ -211,7 +211,7 @@ Usage: #definition
 * code = #code
 * name = "USDFBasicCode"
 * description = "Accesses the Code of a Basis resource to find a FormularyItem"
-* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-code"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-code"
 * base[0] = #Basic
 
 * type = #token
@@ -222,7 +222,7 @@ Usage: #definition
 * multipleAnd = true
 
 
-Instance: Basic-subject
+Instance: FormularyItem-subject
 InstanceOf: SearchParameter
 Usage: #definition
 
@@ -230,7 +230,7 @@ Usage: #definition
 * code = #subject
 * name = "USDFBasicSubject"
 * description = "Accesses the subject FormularyDrug (MedicationKnowledge) reference of a FormularyItem"
-* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-subject"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-subject"
 * base[0] = #Basic
 
 * type = #reference
@@ -241,7 +241,7 @@ Usage: #definition
 * multipleAnd = true
 
 
-Instance: Basic-status
+Instance: FormularyItem-status
 InstanceOf: SearchParameter
 Usage: #definition
 
@@ -249,7 +249,7 @@ Usage: #definition
 * code = #status
 * name = "USDFBasicStatus"
 * description = "Accesses the status of a FormularyItem"
-* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-status"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-status"
 * base[0] = #Basic
 
 * type = #token
@@ -264,7 +264,7 @@ Usage: #definition
 
 
 
-Instance: Basic-period
+Instance: FormularyItem-period
 InstanceOf: SearchParameter
 Usage: #definition
 
@@ -272,7 +272,7 @@ Usage: #definition
 * code = #period
 * name = "USDFBasicPeriod"
 * description = "Accesses the active period of a FormularyItem"
-* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-period"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-period"
 * base[0] = #Basic
 
 * type = #date
@@ -291,7 +291,7 @@ Usage: #definition
 
 
 
-Instance: Basic-formulary
+Instance: FormularyItem-formulary
 InstanceOf: SearchParameter
 Usage: #definition
 
@@ -299,7 +299,7 @@ Usage: #definition
 * code = #formulary
 * name = "USDFBasicFormulary"
 * description = "Accesses the formulary reference of a FormularyItem"
-* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-formulary"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-formulary"
 * base[0] = #Basic
 
 * type = #reference
@@ -313,7 +313,7 @@ Usage: #definition
 
 
 // Renamed and title/description changes per FHIR-34756
-Instance: Basic-pharmacy-benefit-type
+Instance: FormularyItem-pharmacy-benefit-type
 InstanceOf: SearchParameter
 Usage: #definition
 
@@ -321,7 +321,7 @@ Usage: #definition
 * code = #pharmacy-benefit-type
 * name = "USDFBasicPharmacyBenefitType"
 * description = "Accesses the Pharmacy Benefit Type of a FormularyItem"
-* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-pharmacy-benefit-type"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-pharmacy-benefit-type"
 * base[0] = #Basic
 
 * type = #token
@@ -333,7 +333,7 @@ Usage: #definition
 
 
 
-Instance: Basic-drug-tier
+Instance: FormularyItem-drug-tier
 InstanceOf: SearchParameter
 Usage: #definition
 
@@ -341,7 +341,7 @@ Usage: #definition
 * code = #drug-tier
 * name = "USDFBasicDrugTier"
 * description = "Accesses the Drug Tier of a FormularyItem"
-* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-drug-tier"
+* url = "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-drug-tier"
 * base[0] = #Basic
 
 * type = #token

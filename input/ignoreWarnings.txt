@@ -155,3 +155,7 @@ WARNING: ValueSet.where(id = 'SemanticDrugVS'): Unable to expand included value 
 WARNING: DA VINCI: This IG does not include an explicit dependency on US Core 6.1.0.
 WARNING: DA VINCI: This IG does not include an explicit dependency on US Core 3.1.1.
 
+# Acknowledge pinned versions
+%Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage to 7.0.0 from choices of 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)%
+%Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient to 7.0.0 from choices of 3.1.1 (hl7.fhir.us.core#3.1.1), 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)%
+

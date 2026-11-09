@@ -7,7 +7,7 @@ Description: "The drug tier of a particular medication in a health plan. The bas
 // Renamed and title/description changes per FHIR-34756
 ValueSet: PharmacyBenefitTypeVS
 Title: "Pharmacy benefit types"
-Description: "Pharmacy benefit types. Each payer will have its own controlled vocabulary."
+Description: "Pharmacy benefit types. Each payer will likely have its own controlled vocabulary which will need to be mapped to the codes in this value set."
 * codes from system PharmacyBenefitTypeCS
 * ^experimental = false
 

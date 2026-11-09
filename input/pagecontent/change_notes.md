@@ -4,32 +4,29 @@ The following high level changes were addressed in this release:
 
 * Added support for Bulk Publish and updated details on Bulk Export for compatibility with Bulk Data 4.0.0-ballot (will move to the published version when available).
 * Updated PDex dependency to the 2.0.0-ballot version.
-* Addressed additional issues related to formulary drug alternatives, indication-based coverage, drug cost-sharing terminology, and FormularyItem representation and extension descriptions.
-* Addressed conformance and implementation guidance, including Must Support expectations, authenticated API references, and terminology canonical URLs.
+* Updated formulary guidance on authenticated lookups using the Coverage resource and corrected the Availability Status extension description.
+* Updated Formulary Item search parameter naming and addressed the extensible binding of PayerInsurancePlan.type.
+* Added the CPT intellectual property statement to the IG's IP statements.
 
 Specific JIRA tickets included in this update are grouped below by the JIRA **Change Impact** classification:
 
+
 #### **Non-Compatible**
 
-* [FHIR-34758](https://jira.hl7.org/browse/FHIR-34758) Combine coinsurance and copay qualifier code systems into one code system
-* [FHIR-35600](https://jira.hl7.org/browse/FHIR-35600) Defining URL should be anchored in THO not hl7.org/fhir.8 PlanTypeCS
-* [FHIR-34756](https://jira.hl7.org/browse/FHIR-34756) Improve the name of value set "Type of pharmacies"
-* [FHIR-34527](https://jira.hl7.org/browse/FHIR-34527) Remove most must-support flags on profiles
+* [FHIR-48865](https://jira.hl7.org/browse/FHIR-48865) Add a prefix to Formulary-Item search parameters
+
 
 #### **Substantive**
 
-* [FHIR-35197](https://jira.hl7.org/browse/FHIR-35197) Add Indication-Based Formulary Design
-* [FHIR-34456](https://jira.hl7.org/browse/FHIR-34456) Update Authenticated API HRex Reference
-* [FHIR-35590](https://jira.hl7.org/browse/FHIR-35590) Defining URL should be anchored in THO not hl7.org/fhir. Only those with required binding to a 'code' data type should be anchored in hl7.fhir.org.8
-* [FHIR-34526](https://jira.hl7.org/browse/FHIR-34526) IG needs a definition of "must-support"
-* [FHIR-35367](https://jira.hl7.org/browse/FHIR-35367) Add Bulk Publication as an optional access method
+* [FHIR-44804](https://jira.hl7.org/browse/FHIR-44804) PayerInsurancePlan.type extensible binding may cause issues w/use of InsurancePlan.type in client queries
+
 
 #### **Non-substantive**
 
-* [FHIR-35196](https://jira.hl7.org/browse/FHIR-35196) Issue with Presenting Drug Alternatives description
-* [FHIR-35366](https://jira.hl7.org/browse/FHIR-35366) Simplify FormularyItem by inlining drug codes
-* [FHIR-35365](https://jira.hl7.org/browse/FHIR-35365) FormularyItem extensions need descriptive descsriptions
-* [FHIR-34455](https://jira.hl7.org/browse/FHIR-34455) Remove extra markup appearing on page
+* [FHIR-54002](https://jira.hl7.org/browse/FHIR-54002) Missing Guidance around use of Coverage resource for Formulary Authenticated lookups
+
+* [FHIR-50879](https://jira.hl7.org/browse/FHIR-50879) Description on "Extension: Availability Status" indicates boolean, but expected value is a code
+* [FHIR-53595](https://jira.hl7.org/browse/FHIR-53595) Add CPT IP statement to rest of IP statements
 
 
 ### Changes and Updates for Version 2.1.0

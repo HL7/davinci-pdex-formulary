@@ -49,13 +49,13 @@ Please submit comments through the HL7 ballot process.
     <strong><a href="SearchParameter-InsurancePlan-coverage-area.html">coverage-area</a></strong>: Makes the coverageArea reference of each <a href="StructureDefinition-usdf-PayerInsurancePlan.html">PayerInsurancePlan</a> accessible for query to find an InsurancePlan by coverage location.
   </li>
   <li>
-    <strong><a href="SearchParameter-Basic-formulary.html">formulary</a></strong>: Makes the extension Formulary reference of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs included in a particular formulary.
+    <strong><a href="SearchParameter-FormularyItem-formulary.html">formulary</a></strong>: Makes the extension Formulary reference of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs included in a particular formulary.
   </li>
   <li>
-    <strong><a href="SearchParameter-Basic-drug-tier.html">drug-tier</a></strong>: Makes the extension DrugTier codeableConcept of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs in a specific tier.
+    <strong><a href="SearchParameter-FormularyItem-drug-tier.html">drug-tier</a></strong>: Makes the extension DrugTier codeableConcept of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs in a specific tier.
   </li>
   <li>
-    <strong><a href="SearchParameter-Basic-pharmacy-benefit-type.html">pharmacy-benefit-type</a></strong>: Makes the extension PharmacyBenefitType codeableConcept of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs in available through a specific pharmacy benefit type.
+    <strong><a href="SearchParameter-FormularyItem-pharmacy-benefit-type.html">pharmacy-benefit-type</a></strong>: Makes the extension PharmacyBenefitType codeableConcept of each <a href="StructureDefinition-usdf-FormularyItem.html">FormularyItem</a> accessible for query to find drugs in available through a specific pharmacy benefit type.
   </li>
   <li>
     <strong><a href="SearchParameter-MedicationKnowledge-drug-name.html">drug-name</a></strong>: Makes the RxNorm name of each<a href="StructureDefinition-usdf-FormularyDrug.html">FormularyDrug</a> accessible for query to find drugs by name, strength and form.

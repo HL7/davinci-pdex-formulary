@@ -413,7 +413,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-lastupdated",
+                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-lastupdated",
                             "name": "_lastUpdated",
                             "type": "date"
                         },
@@ -424,7 +424,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-code",
+                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-code",
                             "name": "code",
                             "type": "token"
                         },
@@ -435,7 +435,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-subject",
+                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-subject",
                             "name": "subject",
                             "type": "reference"
                         },
@@ -446,7 +446,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-status",
+                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-status",
                             "name": "status",
                             "type": "token"
                         },
@@ -457,7 +457,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-period",
+                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-period",
                             "name": "period",
                             "type": "date"
                         },
@@ -468,7 +468,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-formulary",
+                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-formulary",
                             "name": "formulary",
                             "type": "reference"
                         },
@@ -479,7 +479,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-pharmacy-benefit-type",
+                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-pharmacy-benefit-type",
                             "name": "pharmacy-benefit-type",
                             "type": "token"
                         },
@@ -490,7 +490,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/Basic-drug-tier",
+                            "definition": "http://hl7.org/fhir/us/davinci-drug-formulary/SearchParameter/FormularyItem-drug-tier",
                             "name": "drug-tier",
                             "type": "token"
                         }
