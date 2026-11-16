@@ -21,10 +21,10 @@ INFORMATION: CodeSystem/usdf-PharmacyBenefitTypeCS-TEMPORARY-TRIAL-USE: CodeSyst
 
 INFORMATION: CodeSystem/usdf-PlanContactTypeCS-TEMPORARY-TRIAL-USE: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# 2 - Acknowledge using deprecated extension. Keeping now for backwards compatibility. Will update with next balloted release.
+# 2 - Acknowledge using deprecated extension in an inherited snapshot (not added by this IG)
 
-INFORMATION: StructureDefinition/insurance-plan-coverage: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
-
+%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated%
+%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.4.0 is deprecated with the note: 'Use additionalBinding extension or element instead'%
 
 # 3 - Code drug is actually present in the code system, but not in the current fragment in THO
 
@@ -74,22 +74,9 @@ INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.sn
 INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[24].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
 INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
 
-# 5 - Will leave the discriminator type as pattern for this STU update, but consider moving to value for the next balloted update
+# 5 - Will leave the discriminator type as pattern for now, but consider moving to value when the bound version of US Core does the same
 
-INFORMATION: StructureDefinition/insurance-plan-coverage: StructureDefinition.snapshot.element[10].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/insurance-plan-coverage: StructureDefinition.snapshot.element[30].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[15].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[21].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[25].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[35].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[52].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[77].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[101].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[161].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition: StructureDefinition.differential.element[5].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlanBulkDataGraphDefinition: StructureDefinition.snapshot.element[23].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+%The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)%
 
 # 6 - Value sets that are too large to expand
 
@@ -158,4 +145,17 @@ WARNING: DA VINCI: This IG does not include an explicit dependency on US Core 3.
 # Acknowledge pinned versions
 %Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage to 7.0.0 from choices of 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)%
 %Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient to 7.0.0 from choices of 3.1.1 (hl7.fhir.us.core#3.1.1), 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)%
+%Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization to 7.0.0 from choices of 3.1.1 (hl7.fhir.us.core#3.1.1), 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)%
+%Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson to 7.0.0 from choices of 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)%
+%Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-location to 7.0.0 from choices of 3.1.1 (hl7.fhir.us.core#3.1.1), 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)
+%Pinned the version of http://hl7.org/fhir/StructureDefinition/location-boundary-geojson to 5.4.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0-cibuild (hl7.fhir.uv.extensions.r4#5.1.0-snapshot1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0), 5.4.0 (hl7.fhir.uv.extensions.r4#5.4.0)
+%Pinned the version of http://terminology.hl7.org/ValueSet/v2-0116 to 3.0.0 from choices of 2.0.0 (hl7.terminology.r4#5.5.0), 3.0.0 (hl7.terminology.r4#7.5.0)
+%Pinned the version of http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType to 3.0.0 from choices of 2.0.0 (hl7.terminology.r4#5.0.0), 3.0.0 (hl7.terminology.r4#7.5.0)
+%Pinned the version of http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state to 7.0.0 from choices of 3.1.1 (hl7.fhir.us.core#3.1.1), 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)
+%Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization to 7.0.0 from choices of 3.1.1 (hl7.fhir.us.core#3.1.1), 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)
+%Pinned the version of http://hl7.org/fhir/StructureDefinition/location-boundary-geojson to 5.4.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0-cibuild (hl7.fhir.uv.extensions.r4#5.1.0-snapshot1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0), 5.4.0 (hl7.fhir.uv.extensions.r4#5.4.0)
+%Pinned the version of http://terminology.hl7.org/ValueSet/insuranceplan-type to 1.0.1 from choices of 0.1.0 (hl7.terminology.r4#5.0.0), 1.0.0 (hl7.terminology.r4#5.5.0), 1.0.1 (hl7.terminology.r4#7.5.0)%
+%Pinned the version of http://terminology.hl7.org/CodeSystem/contactentity-type to 2.0.0 from choices of 0.5.0 (hl7.terminology.r4#5.0.0), 1.0.0 (hl7.terminology.r4#5.5.0), 2.0.0 (hl7.terminology.r4#7.5.0)%
 
+# Some pages mention conf verbs without actually being conf statements (such as in the change log)
+The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'FHIR-36137: Made the capability expectation for Insurance Plan Location profile SHALL in the CapabilityStatement.'

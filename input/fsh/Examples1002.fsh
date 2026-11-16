@@ -5,7 +5,7 @@ InstanceOf: PayerInsurancePlan
 Description: "Payer Insurance Plan A1002"
 Usage: #example
 
-* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+// * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 * meta.profile = Canonical(PayerInsurancePlan) 
 
 * identifier.value = "A1002"
@@ -74,7 +74,7 @@ InstanceOf: Formulary
 Description: "Formulary D1002"
 Usage: #example
 
-* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+// * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 * meta.profile = Canonical(Formulary) 
 
 * identifier.value = "D1002"
@@ -103,7 +103,7 @@ InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug 1000091"
 Usage: #example
 
-* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+// * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
 * extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
@@ -128,7 +128,7 @@ InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug 1049640"
 Usage: #example
 
-* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+// * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
 * extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
@@ -169,7 +169,7 @@ InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug QuantityTiming"
 Usage: #example
 
-* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+// * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
 * extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
@@ -203,7 +203,7 @@ InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug 209459"
 Usage: #example
 
-* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+// * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
 * extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
@@ -222,7 +222,7 @@ InstanceOf: FormularyItem
 Description: "Formulary Item for Formulary D1002 Drug 284520"
 Usage: #example
 
-* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+// * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
 * extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD1002)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active
@@ -235,6 +235,6 @@ Usage: #example
 * extension[usdf-QuantityLimit-extension].valueBoolean = false
 
 * code = InsuranceItemTypeCS#formulary-item "Formulary Item"
-* subject = Reference(FormularyDrug-284520)
+* subject = Reference(FormularyDrug-314266)
 
 

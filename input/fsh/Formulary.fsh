@@ -3,7 +3,7 @@ Parent:         InsurancePlan
 Id:             usdf-PayerInsurancePlan
 Title:          "Payer Insurance Plan"
 Description:    "The Payer InsurancePlan that defines the health insurance product, which include coverage benefits that are offered, and additional information about the offering, such as a coverage area, contact information, brochure locations, etc. The health insurance product offers one or more types of coverage, each of which may define a plan of covered benefits with the particular cost sharing structure offered to a consumer. Health insurance plans that include drug coverage reference a formulary that provides details about drugs that are covered under the plan including requirements and limitations of the coverage specific to each drug."
-* meta.lastUpdated 1..1 MS // Add MS FHIR-34527
+// * meta.lastUpdated 1..1 MS // Add MS FHIR-34527
 * identifier 1..* MS
 * identifier ^short = "The business identifier for the plan. The same InsurancePlan may be present in multiple directories and if they have the same identifier they are assumed to be the same plan."
 * status 1..1 MS
@@ -119,7 +119,7 @@ Id:             usdf-Formulary
 Title:          "Formulary"
 Description:    "The Formulary provides general information about a formulary and acts as an organizing construct that associated FormularyItem resources point to. The Formulary combined with its associated FormularyItem and FormularyDrug resources represent a formulary list that includes the set of drugs covered and the requirements and limitations of the coverage."
 
-* meta.lastUpdated 1..1 MS // Add MS FHIR-34527
+// * meta.lastUpdated 1..1 MS // Add MS FHIR-34527
 * identifier 1..* MS
 * status 1..1 MS
 
@@ -149,7 +149,7 @@ Id:             usdf-FormularyItem
 Title:          "Formulary Item"
 Description:    "A resource that describes a drug's relationship to a drug plan, including drug tier, prior authorization requirements, and more. The set of FormularyItem resources associated with a particular drug plan represents the drug plans formulary."
 
-* meta.lastUpdated 1..1 MS // Add MS FHIR-34527
+// * meta.lastUpdated 1..1 MS // Add MS FHIR-34527
 
 * extension contains
     FormularyReference named usdf-FormularyReference-extension 1..1 MS and
@@ -178,7 +178,7 @@ Id:             usdf-FormularyDrug
 Title:          "Formulary Drug"
 Description:    "Drug information which may be part of a formulary including its RxNorm code and dose form."
 
-* meta.lastUpdated 1..1 MS // Add MS FHIR-34527
+// * meta.lastUpdated 1..1 MS // Add MS FHIR-34527
 
 * obeys scd-sbd-requires-scdg-sbdg
 * code 1..1 MS

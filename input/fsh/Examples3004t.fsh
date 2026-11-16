@@ -3,7 +3,7 @@ InstanceOf: PayerInsurancePlan
 Description: "Payer Insurance Plan A3004t"
 Usage: #example
 
-* meta.lastUpdated = "2021-08-04T18:36:03.000+00:00"
+// * meta.lastUpdated = "2021-08-04T18:36:03.000+00:00"
 * meta.profile = Canonical(PayerInsurancePlan) 
 
 * identifier.value = "A3004t"
@@ -516,7 +516,7 @@ InstanceOf: Formulary
 Description: "Formulary D3004t"
 Usage: #example
 
-* meta.lastUpdated = "2021-08-04T18:36:03.000+00:00"
+// * meta.lastUpdated = "2021-08-04T18:36:03.000+00:00"
 * meta.profile = Canonical(Formulary) 
 
 * identifier.value = "D3004t"
@@ -537,7 +537,7 @@ InstanceOf: FormularyItem
 Description: "Formulary Item for Insurance Formulary D3004t Drug 1049640"
 Usage: #example
 
-* meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
+// * meta.lastUpdated = "2021-08-22T18:36:03.000+00:00"
 
 * extension[usdf-FormularyReference-extension].valueReference = Reference(FormularyD3004t)
 * extension[usdf-AvailabilityStatus-extension].valueCode = #active

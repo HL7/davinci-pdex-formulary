@@ -1,8 +1,10 @@
-<a name="Search Parameters Required By This Implementation Guide"></a>
-
 ### Search Parameters Required by This Implementation Guide
-<p>&nbsp;</p>
+
+
 #### PayerInsurancePlan & Formulary (InsurancePlan)
+
+§§plan-net-conf-5:Search Parameter Requirements^Search Parameter Requirements
+
 <table class="grid" style="width: 100%">
 	<thead>
 		<tr>
@@ -282,6 +284,7 @@
 	</tbody>
 </table>
 
+§§
 
 <p>
 <ul>
