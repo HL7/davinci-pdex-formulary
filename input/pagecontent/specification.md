@@ -44,7 +44,7 @@ Access to other profiled resources in this IG ([FormularyItem](StructureDefiniti
 
 The [HL7 FHIR Bulk Data Access Implementation Guide (4.0.0-ballot)](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/) defines mechanisms for exchanging large datasets of FHIR resources. Drug formularies may contain thousands of drugs across multiple insurance plans, with associated coverage, restrictions, and cost-sharing information. Bulk Data provides an efficient alternative to retrieving this information through individual FHIR RESTful queries.
 
-§§plan-net-conf-5:Bulk Data mechanism requirements^Bulk Data mechanism requirements
+§§plan-net-spec-5:Bulk Data mechanism requirements^Bulk Data mechanism requirements
 
 Formulary servers **SHOULD** support one or both of the following Bulk Data mechanisms:
 
@@ -57,7 +57,7 @@ Implementations supporting either mechanism **SHALL** conform to the applicable 
 
 #### Formulary Bulk Data Resources
 
-§§plan-net-conf-6:Bulk Data resource requirements^Bulk Data resource requirements
+§§plan-net-spec-6:Bulk Data resource requirements^Bulk Data resource requirements
 
 A Formulary Bulk Data dataset **SHOULD** include all applicable resources conforming to the Formulary profiles defined in this IG, including the following FHIR resource types:
 
@@ -81,7 +81,7 @@ The following GraphDefinitions describe relationships between Formulary resource
 
 #### Bulk Export
 
-§§plan-net-conf-7:Bulk Export requirements^Bulk Export requirements
+§§plan-net-spec-7:Bulk Export requirements^Bulk Export requirements
 
 Formulary servers supporting Bulk Export **SHOULD** support the [System Level Export](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/export.html) operation:
 
@@ -103,7 +103,7 @@ Exported resources are delivered in newline-delimited JSON (NDJSON) files, with 
 
 #### Bulk Publish
 
-§§plan-net-conf-8:Bulk Publish requirements^Bulk Publish requirements
+§§plan-net-spec-8:Bulk Publish requirements^Bulk Publish requirements
 
 Formulary servers supporting Bulk Publish **SHOULD** implement the [Bulk Publish](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/publish.html) mechanism defined in the Bulk Data Access IG.
 
@@ -123,7 +123,7 @@ Bulk Publish also supports incremental updates, allowing Data Providers to publi
 
 #### Bulk Data Security and Authorization
 
-§§plan-net-conf-8:Bulk Data security requirements^Bulk Data security requirements
+§§plan-net-spec-9:Bulk Data security requirements^Bulk Data security requirements
 
 Formulary information that does not contain protected health information (PHI) or personally identifiable information (PII) is generally intended to be publicly accessible. Bulk Data implementations **SHOULD** provide unauthenticated access to public formulary data, consistent with the privacy and security requirements of this IG.
 
@@ -136,7 +136,7 @@ When authentication or authorization is required, implementations **SHALL** foll
 ### Searching Formulary Drugs
 This guide provides a mechanism for rudimentary drug searching and filtering based on drug codes, names, and forms, by requiring server systems to support this data. This capability is not robust and client systems are encouraged to augment their drug searching capabilities using outside services or data sources to better meet the needs of their users.
 
-§formulary-spec-9:Searching for formulary drugs can be done by RxNorm code, RxNorm drug name, and dose form. In a formulary API, payers are likely to only include the specific drugs, specific down to form and strength, that are included in the coverage. If a search does not return the anticipated or desireable results, it is recommended that the client broaden the search (e.g. include both generic and brand RxNorm codes, search on name without strength, or search on an RxNorm code that does not include strength - see more guidance about supported RxNorm code term types below). Additionally, drugs that have special coverage rules may or may not be included in an API. These rules are often expressed in additional formulary documentation, referenced by the [InsurancePlan.contact](StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.contact), which **SHOULD** be presented to the user of the client application.§
+§formulary-spec-10:Searching for formulary drugs can be done by RxNorm code, RxNorm drug name, and dose form. In a formulary API, payers are likely to only include the specific drugs, specific down to form and strength, that are included in the coverage. If a search does not return the anticipated or desireable results, it is recommended that the client broaden the search (e.g. include both generic and brand RxNorm codes, search on name without strength, or search on an RxNorm code that does not include strength - see more guidance about supported RxNorm code term types below). Additionally, drugs that have special coverage rules may or may not be included in an API. These rules are often expressed in additional formulary documentation, referenced by the [InsurancePlan.contact](StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.contact), which **SHOULD** be presented to the user of the client application.§
 
 Formulary searches may be restricted to just the drugs supported by the payer therefore it is up to the user or calling application to convert patient searching requirements for branded or equivalent drugs into one or more formulary searches.
 
@@ -146,7 +146,7 @@ Note: In addition to the guidance and requirements below regarding searching for
 
 #### Searching By Drug Code
 
-§§plan-net-conf-8:Drug Code search requirements^Drug Code search requirements
+§§plan-net-spec-11:Drug Code search requirements^Drug Code search requirements
 
 The preferred way to search for drugs is to use an RxNorm code (RxCUI). The RxNorm codes and names are freely available and services to look-up codes exist. If a client application is performing a query with the intent on finding generic or brand alternatives, the client application **SHOULD** search using both the brand and the generic RxNorm code.
 
