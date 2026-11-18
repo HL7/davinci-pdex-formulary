@@ -15,7 +15,7 @@ extension:
     valueCode: trial-use
 fhirVersion: 4.0.1
 copyrightYear: 2026+
-releaseLabel: STU3
+releaseLabel: STU 3 ballot
 
 publisher:
   name: HL7 International / Pharmacy
@@ -41,6 +41,18 @@ dependencies:
     id: uscore7
     reason: |
       Needed for systems supporting USCDI v4
+  hl7.fhir.us.core.v610:
+    version: 6.1.0
+    uri: http://hl7.org/fhir/us/core/v610/ImplementationGuide/hl7.fhir.us.core.v610
+    id: uscore6
+    reason: |
+      Needed for systems supporting USCDI v3
+  hl7.fhir.us.core.v311:
+    version: 3.1.1
+    uri: http://hl7.org/fhir/us/core/v311/ImplementationGuide/hl7.fhir.us.core.v311
+    id: uscore3
+    reason: |
+      Needed for systems supporting USCDI v1
 parameters:
   show-inherited-invariants: false
   default-jurisdiction: true
