@@ -1,8 +1,8 @@
 
 ### Access Methods
 The formulary service can potentially be accessed two different ways:
-* Authenticated API: Access to the formulary service when integrated with protected health information (PHI) or personally identifiable information (PII) as part of the Patient Access API **SHALL** be protected through an authorized, authenticated transaction as described in the Da Vinci Health Record Exchange (HRex) FHIR Implementation Guide [Security and Privacy Section](({{site.data.fhir.ver.hrex}}/security.html).
-* Unauthenticated API: When exchanging formulary data exclusively, which is public information without any PHI or PII, the formulary service **MAY** also be accessed through an API that does not require authentication or authorization. The formulary server **SHALL NOT** maintain any records through the unauthenticated API that could associate the consumer with the medications queried.
+* §formulary-spec-1:Authenticated API: Access to the formulary service when integrated with protected health information (PHI) or personally identifiable information (PII) as part of the Patient Access API **SHALL** be protected through an authorized, authenticated transaction as described in the Da Vinci Health Record Exchange (HRex) FHIR Implementation Guide [Security and Privacy Section](({{site.data.fhir.ver.hrex}}/security.html).§
+* §formulary-spec-2:Unauthenticated API: When exchanging formulary data exclusively, which is public information without any PHI or PII, the formulary service **MAY** also be accessed through an API that does not require authentication or authorization. The formulary server **SHALL NOT** maintain any records through the unauthenticated API that could associate the consumer with the medications queried.§
 
 
 #### Authenticated 
@@ -33,16 +33,18 @@ The following table indicates how the Formulary API should respond to requests w
 
 Access to other profiled resources in this IG ([FormularyItem](StructureDefinition-usdf-FormularyItem.html) & [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html)) is not constrained by this IG.
 
-Server implementers **SHALL** make other profiled resources in this IG ([FormularyItem](StructureDefinition-usdf-FormularyItem.html), [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html)) associated to a member’s available plans available through authenticated access. This IG does not define restrictions on authenticated access to resources not associated with a member’s available plan or the [Plan Location]( StructureDefinition-usdf-InsurancePlanLocation.html) resource.
+§formulary-spec-3:Server implementers **SHALL** make other profiled resources in this IG ([FormularyItem](StructureDefinition-usdf-FormularyItem.html), [FormularyDrug]( StructureDefinition-usdf-FormularyDrug.html)) associated to a member’s available plans available through authenticated access. This IG does not define restrictions on authenticated access to resources not associated with a member’s available plan or the [Plan Location]( StructureDefinition-usdf-InsurancePlanLocation.html) resource.§
 
 
 #### Unauthenticated
-When accessing data through an unauthenticated API, the conformant payer formulary service **SHALL NOT** require an application to send consumer identifying information in order to query for the list of health plans provided by that payer and the medication and costs for each plan.
+§formulary-spec-4:When accessing data through an unauthenticated API, the conformant payer formulary service **SHALL NOT** require an application to send consumer identifying information in order to query for the list of health plans provided by that payer and the medication and costs for each plan.§
 
 
 ### Bulk Data
 
 The [HL7 FHIR Bulk Data Access Implementation Guide (4.0.0-ballot)](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/) defines mechanisms for exchanging large datasets of FHIR resources. Drug formularies may contain thousands of drugs across multiple insurance plans, with associated coverage, restrictions, and cost-sharing information. Bulk Data provides an efficient alternative to retrieving this information through individual FHIR RESTful queries.
+
+§§plan-net-conf-5:Bulk Data mechanism requirements^Bulk Data mechanism requirements
 
 Formulary servers **SHOULD** support one or both of the following Bulk Data mechanisms:
 
@@ -51,7 +53,11 @@ Formulary servers **SHOULD** support one or both of the following Bulk Data mech
 
 Implementations supporting either mechanism **SHALL** conform to the applicable requirements of the Bulk Data Access IG.
 
+§§
+
 #### Formulary Bulk Data Resources
+
+§§plan-net-conf-6:Bulk Data resource requirements^Bulk Data resource requirements
 
 A Formulary Bulk Data dataset **SHOULD** include all applicable resources conforming to the Formulary profiles defined in this IG, including the following FHIR resource types:
 
@@ -71,7 +77,11 @@ The following GraphDefinitions describe relationships between Formulary resource
 - [Payer Insurance Plan Bulk Data Graph Definition](StructureDefinition-usdf-PayerInsurancePlanBulkDataGraphDefinition.html): Describes resources associated with a Payer Insurance Plan, including related formularies.
 - [Formulary Bulk Data Graph Definition](StructureDefinition-usdf-FormularyBulkDataGraphDefinition.html): Describes resources associated with a Formulary, without requiring inclusion of the associated Payer Insurance Plan.
 
+§§
+
 #### Bulk Export
+
+§§plan-net-conf-7:Bulk Export requirements^Bulk Export requirements
 
 Formulary servers supporting Bulk Export **SHOULD** support the [System Level Export](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/export.html) operation:
 
@@ -89,7 +99,11 @@ For Bulk Export:
 
 Exported resources are delivered in newline-delimited JSON (NDJSON) files, with the file locations identified in the Bulk Data Export completion manifest.
 
+§§
+
 #### Bulk Publish
+
+§§plan-net-conf-8:Bulk Publish requirements^Bulk Publish requirements
 
 Formulary servers supporting Bulk Publish **SHOULD** implement the [Bulk Publish](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/publish.html) mechanism defined in the Bulk Data Access IG.
 
@@ -105,7 +119,11 @@ For Bulk Publish:
 
 Bulk Publish also supports incremental updates, allowing Data Providers to publish changes to formulary information without requiring Data Consumers to download the entire dataset each time. Implementations **MAY** use this capability to distribute additions, modifications, and deletions to formulary resources.
 
+§§
+
 #### Bulk Data Security and Authorization
+
+§§plan-net-conf-8:Bulk Data security requirements^Bulk Data security requirements
 
 Formulary information that does not contain protected health information (PHI) or personally identifiable information (PII) is generally intended to be publicly accessible. Bulk Data implementations **SHOULD** provide unauthenticated access to public formulary data, consistent with the privacy and security requirements of this IG.
 
@@ -113,10 +131,12 @@ When Bulk Data access involves member-specific information, PHI, or PII, impleme
 
 When authentication or authorization is required, implementations **SHALL** follow the applicable security requirements of the Bulk Data Access IG, including its guidance for [SMART Backend Services Authorization](https://hl7.org/fhir/uv/bulkdata/4.0.0-202609-ballot/en/authorization.html).
 
+§§
+
 ### Searching Formulary Drugs
 This guide provides a mechanism for rudimentary drug searching and filtering based on drug codes, names, and forms, by requiring server systems to support this data. This capability is not robust and client systems are encouraged to augment their drug searching capabilities using outside services or data sources to better meet the needs of their users.
 
-Searching for formulary drugs can be done by RxNorm code, RxNorm drug name, and dose form. In a formulary API, payers are likely to only include the specific drugs, specific down to form and strength, that are included in the coverage. If a search does not return the anticipated or desireable results, it is recommended that the client broaden the search (e.g. include both generic and brand RxNorm codes, search on name without strength, or search on an RxNorm code that does not include strength - see more guidance about supported RxNorm code term types below). Additionally, drugs that have special coverage rules may or may not be included in an API. These rules are often expressed in additional formulary documentation, referenced by the [InsurancePlan.contact](StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.contact), which **SHOULD** be presented to the user of the client application.
+§formulary-spec-9:Searching for formulary drugs can be done by RxNorm code, RxNorm drug name, and dose form. In a formulary API, payers are likely to only include the specific drugs, specific down to form and strength, that are included in the coverage. If a search does not return the anticipated or desireable results, it is recommended that the client broaden the search (e.g. include both generic and brand RxNorm codes, search on name without strength, or search on an RxNorm code that does not include strength - see more guidance about supported RxNorm code term types below). Additionally, drugs that have special coverage rules may or may not be included in an API. These rules are often expressed in additional formulary documentation, referenced by the [InsurancePlan.contact](StructureDefinition-usdf-PayerInsurancePlan-definitions.html#InsurancePlan.contact), which **SHOULD** be presented to the user of the client application.§
 
 Formulary searches may be restricted to just the drugs supported by the payer therefore it is up to the user or calling application to convert patient searching requirements for branded or equivalent drugs into one or more formulary searches.
 
@@ -126,11 +146,15 @@ Note: In addition to the guidance and requirements below regarding searching for
 
 #### Searching By Drug Code
 
+§§plan-net-conf-8:Drug Code search requirements^Drug Code search requirements
+
 The preferred way to search for drugs is to use an RxNorm code (RxCUI). The RxNorm codes and names are freely available and services to look-up codes exist. If a client application is performing a query with the intent on finding generic or brand alternatives, the client application **SHOULD** search using both the brand and the generic RxNorm code.
 
 Servers **SHALL** support a MedicationKnowledge.code.coding repetition including the detailed drug, strength, and form, including RxNorm Term Types (TTY) of `SCD` (Semantic Clinical Drug), `SBD` Semantic Branded Drug), `GPCK` (Generic Pack), or `BPCK` (Branded Pack). Additionally, servers **SHALL** support a MedicationKnowledge.code.coding repetition including the general RxNorm code (and name) with Term Type of` SCDG` (Semantic Clinical Drug Form Group) or `SBDG` (Semantic Branded Drug Form Group) when there is a concept matching the primary code represented by the Term Type `SCD` or `SBD` respectively. This requirement includes using the respective RxNorm name in the display of the coding repetition. 
 
 Searches for drugs with the above RxNorm Term Types (SCDG and SBDG) by either code will provide the client with a way to search for drugs without a specified strength.
+
+§§
 
 #### Searching By Drug Name
 
@@ -204,10 +228,9 @@ This solution may require multiple Coverage resources on a given FHIR server eve
 #### Presenting Drug Alternatives 
 Finding appropriate alternatives of a prescribed medication is complex and often depends on additional clinical information about the patient well as the condition or set of conditions for which the medication is meant to address. The means to identify therapeutic alternatives to drugs does exist in the industry, but such capability is complex, requires clinical information about the patient that is not within in scope of this guide, and a clinical understanding of the intended therapeutic use of the medication which is not generally within the competency of most members.  The information and business rules necessary to identify possible therapeutic alternatives, and therefore the ability to search for such alternatives, currently lies outside of the scope of this guide.
 
-<a name="representing-drug-tiers"></a>
+
 #### Representing Drug Tiers
 Drug tiers are not standardized. The current Implementation Guide provides a defined, but extensible value set for tier identifiers based on the example list in the QHP formulary specification. A move towards standardization might make this data more useful for clients of the interface.
 
-<a name="representing-pharmacy-benefit-types"></a>
 #### Representing Pharmacy Benefit Types
 Pharmacy benefit types are not standardized. The current Implementation Guide provides a defined value set for tier identifiers based on the example list in the QHP formulary specification which mixes channels (retail and mail order) with quantity prescribed (1 month, 3 month, etc). A move towards standardization might make this data more useful for clients of the interface.

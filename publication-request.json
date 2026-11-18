@@ -3,7 +3,7 @@
     "version": "3.0.0-ballot",
     "path": "http://hl7.org/fhir/us/davinci-drug-formulary/3.0.0-202701-ballot",
     "mode" : "working",
-    "status" : "trial-use",
+    "status" : "ballot",
     "sequence" : "STU 3",
     "desc" : "First ballot of version 3.0.0",
     "first" : false

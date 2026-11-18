@@ -8,6 +8,13 @@
   "experimental" : false,
   "description" : "Conformance statements found throughout the narrative of the IG consolidated into this computable resource for traceability purposes",
   "statement" : [{
+    "key" : "1",
+    "conformance" : ["SHALL",
+    "SHOULD",
+    "MAY"],
+    "requirement" : "formulary-conf-1This implementation guide uses specific terminology such as SHALL, SHOULD, MAY to flag statements that have relevance for the evaluation of conformance with the guide. As well, profiles in this implementation guide make use of the [mustSupport](http://hl7.org/fhir/R4/profiling.html#mustsupport) element. Base expectations for the intepretations of these terms are set in the [FHIR core specification](http://hl7.org/fhir/R4/conformance-rules.html#conflang) and general Da Vinci-wide expectations are defined in [HRex](http://hl7.org/fhir/us/davinci-hrex/1.2.0/conformance.html)"
+  },
+  {
     "key" : "formulary-background-1",
     "conformance" : ["SHOULD-NOT"],
     "requirement" : "Note that for this use case the health plan could provide non-authenticated or open access to the formulary. Non-authenticated access **SHOULD NOT** maintain any records that could associate an individual with the medications or plans queried."
@@ -17,6 +24,21 @@
     "conformance" : ["SHALL",
     "SHOULD"],
     "requirement" : "A FormularyDrug represents the individual prescribable drug defined with a specific RxNorm semantic drug code that includes ingredient, strength, dose form, and brand name for branded drugs. These codes are represented in RxNorm with the Term Type (TTY) of Semantic Clinical Drug (SCD), Semantic Branded Drug (SBD), Generic Pack (GPCK), or Branded Pack (BPCK). Additionally, a more general RxNorm semantic drug form group code **SHOULD** be present for searching across drugs with the same ingredient, brand, and form (regardless of strength). These codes are represented in RxNorm with the Term Type (TTY) of Semantic Clinical Drug Form (SCDG) and Semantic Branded Drug Form Group (SBDG). All drugs with RxNorm Term Type of SCD or SBD **SHALL** have a coding repetition and RxNorm Term Type of SCDG or SBDG respectively. Drug packs, represented by RxNorm codes GPCK or BPCK may not have a corresponding drug form group. The FormularyItem links a drug with a formulary and includes the attributes that drug has in relation to the formulary, including the drug tier and coverage constraints."
+  },
+  {
+    "key" : "formulary-conf-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "This guide inherits all conformance expectations identified in the Health Record Exchange (Hrex) Conformance Expectations section. All systems claiming conformance to this guide **SHALL** conform to the requirements listed in that section."
+  },
+  {
+    "key" : "formulary-conf-3",
+    "conformance" : ["SHALL"],
+    "requirement" : "Server systems claiming conformance to this guide **SHALL** meet the capability statement expectation requirements identified in the [US Drug Formulary Server Capability Statement](CapabilityStatement-usdf-server.html) and **SHALL** have a CapabilityStatement that has a CapabilityStatement.instantiates with a URL of http://hl7.org/fhir/us/davinci-drug-formulary/CapabilityStatement/usdf-server or a URL to the appropriate version of the CapabilityStatement."
+  },
+  {
+    "key" : "formulary-index-1",
+    "conformance" : ["SHOULD"],
+    "requirement" : "**Drug Formulary Data Use**: The intent of this implementation guide is to make the plan-level information regarding formulary content and cost-sharing available through a standard interface to enable consumers to have an informed discussion with their practitioner about their medication options. Most consumers will access this data through a third party application. These applications **SHOULD** clearly communicate to the user that the cost-sharing information in the formulary may not tell them precisely what they will pay at the pharmacy, and might not fully reflect their drug benefit. Situational inclusions, exclusions, and requirements may apply. The presence or lack of presence of a particular drug in a query response shouldn't be construed as a guarantee of coverage or lack thereof. An insurer may only support searching for drugs that are part of the formulary or formularies in the context of the query. Insurers **SHOULD** provide appropriate information and disclaimers regarding the interpretation and expected use of the data made available through this guide, including how the presence or lack of presence of a drug would be interpreted."
   },
   {
     "key" : "formulary-security-1",

@@ -50,30 +50,6 @@ WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].type.codi
 
 # 4 - Acknowledge we are using code systems that are draft in THO
 
-INFORMATION: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.contact[0].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
-INFORMATION: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.coverage[0].benefit[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-INFORMATION: InsurancePlan/PayerInsurancePlanA1002: InsurancePlan.plan[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-
-INFORMATION: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.contact[0].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
-INFORMATION: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.coverage[0].benefit[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-INFORMATION: InsurancePlan/PayerInsurancePlanA3001: InsurancePlan.plan[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-
-INFORMATION: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.contact[0].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
-INFORMATION: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.coverage[0].benefit[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-INFORMATION: InsurancePlan/PayerInsurancePlanA3002: InsurancePlan.plan[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-
-INFORMATION: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.contact[0].purpose: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/contactentity-type|1.0.0
-INFORMATION: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.coverage[0].benefit[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-INFORMATION: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-
-INFORMATION: StructureDefinition/usdf-Formulary: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-INFORMATION: StructureDefinition/usdf-Formulary: StructureDefinition.differential.element[8].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[93].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.snapshot.element[140].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[24].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-INFORMATION: StructureDefinition/usdf-PayerInsurancePlan: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/insurance-plan-type|4.0.1 from hl7.fhir.r4.core#4.0.1
-
 # 5 - Will leave the discriminator type as pattern for now, but consider moving to value when the bound version of US Core does the same
 
 %The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)%
@@ -129,20 +105,20 @@ WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificC
 WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[18].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
 WARNING: InsurancePlan/PayerInsurancePlanA3004t: InsurancePlan.plan[0].specificCost[19].benefit[0].cost[0].value.system: No definition could be found for URL value 'urn:iso:std:iso:4217'
 
-# Acknowledge dependencies on older IG versions
+# 10 Acknowledge dependencies on older IG versions
 
 WARNING: ImplementationGuide/hl7.fhir.us.davinci-drug-formulary: ImplementationGuide.dependsOn[5]: The ImplementationGuide uses package hl7.fhir.uv.bulkdata#4.0.0-ballot released on 2026-08-07, but the most recent appropriate version is 3.0.0. This reference is getting old and the more recent version should be considered
 WARNING: ImplementationGuide/hl7.fhir.us.davinci-drug-formulary: ImplementationGuide.dependsOn[6]: The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08, but the most recent appropriate version is 9.0.0. This reference is getting old and the more recent version should be considered
 WARNING: ImplementationGuide/hl7.fhir.us.davinci-drug-formulary: ImplementationGuide.dependsOn[4]: The ImplementationGuide uses package hl7.fhir.uv.extensions.r4#5.3.0 released on 2026-05-16, but the most recent appropriate version is 5.4.0. This reference is getting old and the more recent version should be considered
 
-# Acknowledge this value set has too many codes for the publisher to expand
+# 11 Acknowledge this value set has too many codes for the publisher to expand
 WARNING: ValueSet.where(id = 'SemanticDrugVS'): Unable to expand included value set 'http://hl7.org/fhir/us/davinci-drug-formulary/ValueSet/NonPackSemanticDrugVS': The value set 'http://hl7.org/fhir/us/davinci-drug-formulary/ValueSet/NonPackSemanticDrugVS|3.0.0-ballot' expansion has too many codes to produce (>1000) (and Error from https://tx.fhir.org/r4: Error: The value set 'http://hl7.org/fhir/us/davinci-drug-formulary/ValueSet/NonPackSemanticDrugVS' expansion has too many codes to produce (>10000))
 
-# These dependencies are inherited from Plan-Net so are already in the dependency list
+# 12 These dependencies are inherited from Plan-Net so are already in the dependency list
 WARNING: DA VINCI: This IG does not include an explicit dependency on US Core 6.1.0.
 WARNING: DA VINCI: This IG does not include an explicit dependency on US Core 3.1.1.
 
-# Acknowledge pinned versions
+# 13 Acknowledge pinned versions
 %Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage to 7.0.0 from choices of 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)%
 %Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient to 7.0.0 from choices of 3.1.1 (hl7.fhir.us.core#3.1.1), 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)%
 %Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization to 7.0.0 from choices of 3.1.1 (hl7.fhir.us.core#3.1.1), 6.1.0 (hl7.fhir.us.core#6.1.0), 7.0.0 (hl7.fhir.us.core#7.0.0)%
@@ -157,5 +133,11 @@ WARNING: DA VINCI: This IG does not include an explicit dependency on US Core 3.
 %Pinned the version of http://terminology.hl7.org/ValueSet/insuranceplan-type to 1.0.1 from choices of 0.1.0 (hl7.terminology.r4#5.0.0), 1.0.0 (hl7.terminology.r4#5.5.0), 1.0.1 (hl7.terminology.r4#7.5.0)%
 %Pinned the version of http://terminology.hl7.org/CodeSystem/contactentity-type to 2.0.0 from choices of 0.5.0 (hl7.terminology.r4#5.0.0), 1.0.0 (hl7.terminology.r4#5.5.0), 2.0.0 (hl7.terminology.r4#7.5.0)%
 
-# Some pages mention conf verbs without actually being conf statements (such as in the change log)
+# 14 Some pages mention conf verbs without actually being conf statements (such as in the change log)
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'FHIR-36137: Made the capability expectation for Insurance Plan Location profile SHALL in the CapabilityStatement.'
+
+# 15 New IG publisher error that unfortunately is causing an issue with SUSHI. See this thread for details https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/IG.20Build.20error.20on.20FSH.20generated.20menu.2Exml
+ERROR: In your menu.xml file, it's no longer allowed to have href='#' on dropdown items.  Change them to be href='menu.html' instead.  (It won't link, but it needs to be something valid.)
+
+# 16 Yeah, it's a Da Vinci IG. This is a useless warning. 
+WARNING: DA VINCI: true
