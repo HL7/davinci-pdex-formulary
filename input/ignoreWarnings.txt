@@ -105,7 +105,7 @@ WARNING: DA VINCI: This IG does not include an explicit dependency on US Core 3.
 # 14 Some pages mention conf verbs without actually being conf statements (such as in the change log)
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'FHIR-36137: Made the capability expectation for Insurance Plan Location profile SHALL in the CapabilityStatement.'
 
-# 15 Will not move code systems to THO for this STU update, since that would break backwards comnpatibility when the URLs change. Will move for next balloted release
+# 15 Will not move code systems to THO for this STU update, since that would break backwards compatibility when the URLs change. Will move for next balloted release
 
 INFORMATION: CodeSystem/usdf-BenefitCostTypeCS-TEMPORARY-TRIAL-USE: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
@@ -118,6 +118,3 @@ INFORMATION: CodeSystem/usdf-InsuranceItemTypeCS: CodeSystem: Most code systems 
 INFORMATION: CodeSystem/usdf-PharmacyBenefitTypeCS-TEMPORARY-TRIAL-USE: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 INFORMATION: CodeSystem/usdf-PlanContactTypeCS-TEMPORARY-TRIAL-USE: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-
-# 16 Yeah, it's a Da Vinci IG. This is a useless warning. 
-WARNING: DA VINCI: true

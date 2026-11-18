@@ -13,6 +13,8 @@ extension:
     valueCode: phx  # <<< The value must be the code for the workgroup
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
 fhirVersion: 4.0.1
 copyrightYear: 2026+
 releaseLabel: STU 3 ballot
